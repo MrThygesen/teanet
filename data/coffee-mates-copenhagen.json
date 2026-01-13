@@ -1,0 +1,18 @@
+{
+  "name": "Morning Coffee Mates",
+  "description": "Start your day with a calm coffee chat rotating among partners. Weekly drop-in perks shared on Telegram.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/cafecoffee.jpg",
+  "external_url": "https://t.me/TeaNetworkCphCafe",
+  "attributes": [
+    { "trait_type": "Venue", "value": "Cafe" },
+    { "trait_type": "Theme", "value": "Friendship" },
+    { "trait_type": "Formality", "value": "Informal" },
+    { "trait_type": "Time Limits", "value": "Weekly Announcement" },
+    { "trait_type": "Time-Limited", "value": "Weekly update of perks during Alpha Test" },
+    { "trait_type": "Telegram Announced", "value": "Yes" },
+    { "trait_type": "Reservation Required", "value": "No (Optional)" },
+    { "trait_type": "Proof", "value": "SBT shown at the venue" },
+    { "trait_type": "Tags", "value": "Coffee, Friends, Morning" }
+  ]
+}
+
