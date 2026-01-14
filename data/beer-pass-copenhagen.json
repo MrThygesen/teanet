@@ -1,0 +1,22 @@
+{
+  "name": "Beer Walk",
+  "description": "Casual drinks and great company at partner beer pubs in Copenhagen. Perks announced weekly in Telegram.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/beer-club.png",
+  "external_url": "https://t.me/TeaNetworkCphBar",
+  "attributes": [
+    { "trait_type": "Venue", "value": "Bar" },
+    { "trait_type": "Theme", "value": "Social" },
+    { "trait_type": "Formality", "value": "Informal" },
+    { "trait_type": "Time-Limited", "value": "Weekly update of perks during Alpha Test" },
+    { "trait_type": "Offer", "value": "Weekly update of perks" },
+    { "trait_type": "Telegram Announced", "value": "Yes" },
+    { "trait_type": "Reservation", "value": "No" },
+    { "trait_type": "Proof", "value": "SBT shown at the venue" },
+    { "trait_type": "Tags", "value": "Evening, Beer, Social" }
+  ]
+}
+
+
+
+
+
