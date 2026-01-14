@@ -10,6 +10,6 @@
     { "trait_type": "Jurisdiction", "value": "Global" },
     { "trait_type": "Compliance", "value": "Policy Acceptance Required" },
     { "trait_type": "Transferable", "value": "No (Soulbound)" },
-    { "trait_type": "Tags", "value": "Utility,Consulting,Services" }
+    { "trait_type": "Tags", "value": "Utility, Consulting, Services" }
   ]
 }
