@@ -1,5 +1,4 @@
-// WebAccessSBT
-'use client'    
+'use client'
 
 import { useEffect, useState, useCallback } from 'react'
 import { useAccount, useWriteContract, usePublicClient } from 'wagmi'
@@ -55,7 +54,6 @@ export default function WebAccessSBT() {
   const [policyAccepted, setPolicyAccepted] = useState({})
   const [filter, setFilter] = useState('all')
 
-  // ---------- Mount guard ----------
   useEffect(() => setMounted(true), [])
 
   // ---------- Load Available SBT Types ----------
@@ -103,7 +101,7 @@ export default function WebAccessSBT() {
     setLoading(false)
   }, [publicClient])
 
-  // ---------- Load My SBTs ----------
+  // ---------- Load My SBTs using Transfer events ----------
   const fetchMySBTs = useCallback(async () => {
     if (!publicClient || !address) {
       setMySBTs([])
@@ -113,32 +111,24 @@ export default function WebAccessSBT() {
     setLoadingMySBTs(true)
 
     try {
-      const abi = parseAbi([
-        'function balanceOf(address) view returns (uint256)',
-        'function tokenOfOwnerByIndex(address,uint256) view returns (uint256)',
-        'function tokenURI(uint256) view returns (string)',
-      ])
-
-      const balance = await publicClient.readContract({
+      const logs = await publicClient.getLogs({
         address: CONTRACT_ADDRESS,
-        abi,
-        functionName: 'balanceOf',
-        args: [address],
+        event: parseAbi([
+          'event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)'
+        ])[0],
+        args: { to: address },
+        fromBlock: 0n,
+        toBlock: 'latest',
       })
 
       const owned = []
 
-      for (let i = 0; i < Number(balance); i++) {
-        const tokenId = await publicClient.readContract({
-          address: CONTRACT_ADDRESS,
-          abi,
-          functionName: 'tokenOfOwnerByIndex',
-          args: [address, i],
-        })
+      for (const log of logs) {
+        const tokenId = log.args.tokenId
 
         const uri = await publicClient.readContract({
           address: CONTRACT_ADDRESS,
-          abi,
+          abi: parseAbi(['function tokenURI(uint256) view returns (string)']),
           functionName: 'tokenURI',
           args: [tokenId],
         })
@@ -199,7 +189,6 @@ export default function WebAccessSBT() {
     }
   }
 
-  // ---------- Filter ----------
   const filtered =
     filter === 'all'
       ? available
