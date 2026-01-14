@@ -1,0 +1,18 @@
+{
+  "name": "European Green City Pool — Series 1",
+  "description": "A diversified pool of renewable-energy and sustainable infrastructure projects across Northern Europe. The SPV finances operating solar, wind, and district-heating assets and distributes operational revenues to SBT holders.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/turbines.jpg",
+  "external_url": "https://teanetwork.example/legal/green-infrastructure-pool",
+  "attributes": [
+    { "trait_type": "RWA Type", "value": "Security" },
+    { "trait_type": "Model", "value": "Pool" },
+    { "trait_type": "Investor Rights", "value": "Infrastructure revenue distributions" },
+    { "trait_type": "Underlying Assets", "value": "Solar, wind, heating plants" },
+    { "trait_type": "Jurisdiction", "value": "EU" },
+    { "trait_type": "SPV", "value": "TEA Green Infrastructure SPV ApS" },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" },
+    { "trait_type": "Tags", "value": "RWA,Pool,Green,Infrastructure" }
+  ]
+}
+

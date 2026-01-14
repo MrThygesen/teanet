@@ -1,0 +1,17 @@
+{
+  "name": "Women in Tech Expansion — Series A",
+  "description": "Participation in an SPV financing women in tech with expansion through our pool. Revenues and voting are shared with SBT holders according to defined participation terms.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/women.jpg",
+  "external_url": "https://teanetwork.example/legal/copenhagen-brewery-series-a",
+  "attributes": [
+    { "trait_type": "RWA Type", "value": "Security" },
+    { "trait_type": "Model", "value": "Bilateral" },
+    { "trait_type": "Investor Rights", "value": "Revenue share from brewery operations" },
+    { "trait_type": "Underlying Asset", "value": "Craft beer production facility" },
+    { "trait_type": "Jurisdiction", "value": "Denmark" },
+    { "trait_type": "SPV", "value": "TEA Brewery SPV ApS" },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" },
+    { "trait_type": "Tags", "value": "RWA,Security,Hospitality,RevenueShare" }
+  ]
+}
