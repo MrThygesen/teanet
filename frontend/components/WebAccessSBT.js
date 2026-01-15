@@ -446,33 +446,25 @@ export default function WebAccessSBT() {
       <div className="space-y-4 text-zinc-300 text-sm leading-relaxed">
 
         <p>
-          This demo showcases blockchain-based proof of ownership using Soulbound Tokens (SBTs).
-          Each SBT represents a non-transferable digital certificate linked to a real-world asset model,
-          membership, or participation right. Once claimed, ownership or access rights are permanently
-          recorded on-chain.
+This demo showcases blockchain-based proof of ownership using Soulbound Tokens (SBTs). 
+Each SBT represents a non-transferable digital certificate linked to a real-world asset model, membership, or participation right. 
+Once claimed, ownership or access rights are permanently recorded on-chain.
         </p>
 
         <p>
-          Some assets represent participation in a pooled structure.
-          In a real deployment, a Special Purpose Vehicle (SPV) would hold underlying assets or revenue contracts.
-          Each SBT represents one participation unit in the pool — conceptually
-          <span className="font-semibold text-white">{" "}1 investor = 1 share</span>.
-          Benefits or revenues would be distributed pro-rata to SBT holders.
+Some assets represent participation in a pooled structure. In a real product version, a Special Purpose Vehicle (SPV) would hold underlying assets or revenue contracts. Each SBT represents one participation unit in the pool — conceptually in the demo purchasing is limited to 1 investor = 1 share. Benefits or revenues would be distributed pro-rata to SBT holders.
         </p>
 
         <p>
-          Some SBTs may additionally grant governance or voting participation in pool or community decisions.
+Some SBTs may additionally grant governance or voting participation in pool or community decisions.
         </p>
 
         <p>
-          This demo does <span className="font-semibold text-white">not</span> create legal securities,
-          regulated investments, or real SPVs. It illustrates the technical ownership and participation model only.
+This demo does NOT create legal securities, regulated investments, or provide real SPVs. It illustrates the ownership based on fractional NFT / SBT technology, which can be combined with legal and investment related arrangements. The next version implements a community token with participatory rights.
         </p>
 
         <p>
-          Pricing and payment logic are intentionally excluded.
-          In production, investment amounts, compliance, and settlement would occur off-chain
-          before minting ownership SBTs and eventual transfer in stablecoin or FIAT.
+Pricing and payment logic are intentionally excluded. In production, investment amounts, compliance, and settlement would occur off-chain before minting ownership - and eventual transfer in stablecoin or FIAT.
         </p>
 
       </div>
