@@ -5,7 +5,9 @@ import { useAccount, useWriteContract, usePublicClient } from 'wagmi'
 import WebAccessSBTV33_ABI from '../abis/WebAccessSBTV33_ABI.json'
 import { toast } from 'react-hot-toast'
 
-const CONTRACT_ADDRESS = '0xA508A0f5733bcfcf6eA0b41ca9344c27855FeEF0'
+
+
+const CONTRACT_ADDRESS = '0x146CE24B31eb28dA2159c8b2162889969cf8Ef03'
 const MAX_TYPES = 100
 
 const GITHUB_REPO = 'MrThygesen/teanet'
