@@ -34,6 +34,16 @@ function getAttr(metadata, name) {
   return attr?.value || ''
 }
 
+function Spinner({ label }) {
+  return (
+    <div className="flex flex-col items-center justify-center py-16 text-zinc-400">
+      <div className="w-10 h-10 border-4 border-zinc-700 border-t-blue-500 rounded-full animate-spin mb-4"></div>
+      <p className="text-sm">{label || 'Loading...'}</p>
+    </div>
+  )
+}
+
+
 // ---------------- Component ----------------
 
 export default function WebAccessSBT() {
@@ -292,7 +302,7 @@ export default function WebAccessSBT() {
       {/* AVAILABLE */}
       {activeTab === 'available' && (
         <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
-          {loading && <p className="text-zinc-400">Loading assets…</p>}
+          {loading && <Spinner label="Loading assets from blockchain…" />}
 
           {!loading && available.map((sbt) => (
             <div key={sbt.typeId} className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
@@ -357,10 +367,9 @@ export default function WebAccessSBT() {
     )}
 
     {address && loadingMySBTs && (
-      <p className="text-zinc-400">
-        Loading your assets…
-      </p>
-    )}
+  <Spinner label="Loading your owned SBTs…" />
+)}
+
 
     {address && !loadingMySBTs && mySBTs.length === 0 && (
       <p className="text-zinc-500">
