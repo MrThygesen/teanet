@@ -2,7 +2,7 @@
   "name": "Venture Studio — Advisory Access Pass",
   "description": "Grants access to TEA’s venture studio advisory services, including startup strategy sessions, tokenomics workshops, and investor pitch coaching.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/advisory.jpg",
-  "external_url": "https://teanetwork.example/legal/advisory-terms",
+ "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/Advisory-Access-IC.pdf",
   "attributes": [
     { "trait_type": "RWA Type", "value": "Utility" },
     { "trait_type": "Model", "value": "Service Access" },

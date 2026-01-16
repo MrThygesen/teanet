@@ -2,7 +2,7 @@
   "name": "Nordic Startup Growth Pool — Genesis",
   "description": "A diversified revenue-participation pool providing exposure to early-stage Nordic technology startups. The SPV acquires revenue-share agreements from selected startups, distributing pro-rata income to SBT holders. Designed for investors seeking broad exposure to regional innovation growth.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/industry.jpg",
-  "external_url": "https://teanetwork.example/legal/nordic-growth-pool",
+"external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/NordicGrowthPool-Genesis-IC.pdf",
   "attributes": [
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Pool" },

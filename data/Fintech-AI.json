@@ -2,7 +2,7 @@
   "name": "AI in Fintech — Series B",
   "description": "Direct participation in an SPV owning a fixed annual outcome according to investments in AI tradebots in diverse analytical segments. SBT holders receive defined APR.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet//main/data/fintech.jpg",
-  "external_url": "https://teanetwork.example/legal/robotics-facility-series-b",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/AI-Fintech-SeriesB-IC.pdf",
   "attributes": [
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Bilateral" },

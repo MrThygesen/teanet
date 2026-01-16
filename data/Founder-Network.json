@@ -2,7 +2,7 @@
   "name": "Business Circle — Copenhagen Membership",
   "description": "Access membership to a curated executive and founder network in Copenhagen. Membership includes private events, curated deal-flow access, and advisory roundtables.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/founders.jpg",
-  "external_url": "https://teanetwork.example/legal/business-circle-terms",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/BusinessCircle-Membership-IC.pdf",
   "attributes": [
     { "trait_type": "RWA Type", "value": "Utility" },
     { "trait_type": "Model", "value": "Access Membership" },

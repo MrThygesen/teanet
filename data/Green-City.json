@@ -2,7 +2,7 @@
   "name": "European Green City Pool — Series 1",
   "description": "A diversified pool of renewable-energy and sustainable infrastructure projects across Northern Europe. The SPV finances operating solar, wind, and district-heating assets and distributes operational revenues to SBT holders.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/turbines.jpg",
-  "external_url": "https://teanetwork.example/legal/green-infrastructure-pool",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/GreenCity-Pool1-IC.pdf",
   "attributes": [
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Pool" },
