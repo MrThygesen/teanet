@@ -302,7 +302,7 @@ export default function WebAccessSBT() {
       {/* AVAILABLE */}
       {activeTab === 'available' && (
         <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
-          {loading && <Spinner label="Loading assets from blockchain…" />}
+          {loading && <Spinner label="Loading assets from the Polygon Blockchain..." />}
 
           {!loading && available.map((sbt) => (
             <div key={sbt.typeId} className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
