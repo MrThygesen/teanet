@@ -1,17 +1,17 @@
 {
   "name": "AI in Fintech — Series B",
-  "description": "Direct participation in an SPV owning a fixed annual outcome according to investments in AI tradebots in diverse analytical segments. SBT holders receive defined APR.",
+  "description": "Direct participation in an SPV owning a fixed annual outcome according to investments in AI PREDICTION SOFTWARE in diverse analytical segments. SBT holders receive defined annual return.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet//main/data/fintech.jpg",
   "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/AI-Fintech-SeriesB-IC.pdf",
   "attributes": [
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Bilateral" },
-    { "trait_type": "Investor Rights", "value": "Revenue participation from manufacturing output" },
-    { "trait_type": "Underlying Asset", "value": "Robotics production facility" },
+    { "trait_type": "Investor Rights", "value": "Revenue participation" },
+    { "trait_type": "Underlying Asset", "value": "Polymarket Trading Software " },
     { "trait_type": "Jurisdiction", "value": "Germany" },
-    { "trait_type": "SPV", "value": "TEA Robotics SPV GmbH" },
+    { "trait_type": "SPV", "value": "TEAFIN SPV GmbH" },
     { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
     { "trait_type": "Transferable", "value": "No (Soulbound)" },
-    { "trait_type": "Tags", "value": "RWA,Security,Industry,Manufacturing" }
+    { "trait_type": "Tags", "value": "Info Prediction Markets" }
   ]
 }
