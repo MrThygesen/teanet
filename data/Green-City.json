@@ -6,6 +6,7 @@
   "attributes": [
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Pool" },
+    { "trait_type": "Pool Size", "value": "5000000" }
     { "trait_type": "Investor Rights", "value": "Infrastructure revenue distributions" },
     { "trait_type": "Underlying Assets", "value": "Solar, wind, heating plants" },
     { "trait_type": "Jurisdiction", "value": "EU" },

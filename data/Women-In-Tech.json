@@ -6,6 +6,7 @@
   "attributes": [
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Bilateral" },
+    { "trait_type": "Pool Size", "value": "5000000" }
     { "trait_type": "Investor Rights", "value": "Revenue share from tech company operations" },
     { "trait_type": "Underlying Asset", "value": "Tech Production Facilities" },
     { "trait_type": "Jurisdiction", "value": "Denmark" },
