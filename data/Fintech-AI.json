@@ -2,11 +2,11 @@
   "name": "AI in Fintech — Series B",
   "description": "Direct participation in an SPV owning a fixed annual outcome according to investments in AI PREDICTION SOFTWARE in diverse analytical segments. SBT holders receive defined annual return.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet//main/data/fintech.jpg",
-  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/AI-Fintech-SeriesB-IC.pdf",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/AI-Fintech-SeriesB-IC.pdf",
   "attributes": [
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Bilateral" },
-    { "trait_type": "Pool Size", "value": "5000000" }
+    { "trait_type": "Pool Size", "value": "5000000" },
     { "trait_type": "Investor Rights", "value": "Revenue participation" },
     { "trait_type": "Underlying Asset", "value": "Polymarket Trading Software " },
     { "trait_type": "Jurisdiction", "value": "Germany" },

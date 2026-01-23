@@ -2,11 +2,11 @@
   "name": "Women in Tech Expansion — Series A",
   "description": "Participation in an SPV financing women in scaleup tech companies with expansion through our pool. Revenues and voting are shared with SBT holders according to defined participation terms.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/women.jpg",
-  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/WomenInTech-SeriesA-IC.pdf",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/WomenInTech-SeriesA-IC.pdf",
   "attributes": [
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Bilateral" },
-    { "trait_type": "Pool Size", "value": "5000000" }
+    { "trait_type": "Pool Size", "value": "5000000" },
     { "trait_type": "Investor Rights", "value": "Revenue share from tech company operations" },
     { "trait_type": "Underlying Asset", "value": "Tech Production Facilities" },
     { "trait_type": "Jurisdiction", "value": "Denmark" },
