@@ -4,6 +4,7 @@
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/women.jpg",
   "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/WomenInTech-SeriesA-IC.pdf",
   "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Bilateral" },
     { "trait_type": "Pool Size", "value": "5000000" },

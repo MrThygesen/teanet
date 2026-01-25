@@ -4,6 +4,7 @@
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/founders.jpg",
   "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/BusinessCircle-Membership-IC.pdf",
   "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Membership and Voting Agreement v1" },
     { "trait_type": "RWA Type", "value": "Utility" },
     { "trait_type": "Model", "value": "Access Membership" },
     { "trait_type": "Member Rights", "value": "Event access + curated network participation" },

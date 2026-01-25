@@ -4,6 +4,7 @@
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/turbines.jpg",
   "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/GreenCity-Pool1-IC.pdf",
   "attributes": [
+    { "trait_type": "Legal Document Name",   "value": "Investor Allocation Agreement v3" },
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Pool" },
     { "trait_type": "Pool Size", "value": "5000000" },
@@ -16,4 +17,3 @@
     { "trait_type": "Tags", "value": "RWA,Pool,Green,Infrastructure" }
   ]
 }
-
