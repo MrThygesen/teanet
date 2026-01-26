@@ -1,0 +1,21 @@
+{
+  "name": "Kalimantan Carbon Revenue Pool — Series A",
+  "description": "Participation in a defined revenue stream generated from the issuance and sale of verified carbon credits from the Kalimantan forest conservation project. Investors receive pro-rata annual distributions based on certified carbon credit sales.",
+   "image": "https://raw.githubusercontent.com/MrThygesen/teanet//main/data/forest2.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/legal/Carbon-Revenue-Participation-Agreement.pdf",
+  "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Carbon Revenue Participation Agreement v1" },
+    { "trait_type": "RWA Type", "value": "Security" },
+    { "trait_type": "Model", "value": "Revenue Participation Pool" },
+    { "trait_type": "Pool Size", "value": "8000000" },
+    { "trait_type": "Investor Rights", "value": "Pro-rata participation in annual carbon credit revenue" },
+    { "trait_type": "Underlying Asset", "value": "Verified carbon credit issuance from forest conservation project" },
+    { "trait_type": "Revenue Source", "value": "Primary sale of Verra-certified carbon credits" },
+    { "trait_type": "Certification", "value": "Verra VCS + CCB Gold + BeZero A-rated" },
+    { "trait_type": "Jurisdiction", "value": "Singapore" },
+    { "trait_type": "Issuer", "value": "Kalimantan Carbon Issuer Pte. Ltd." },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" },
+    { "trait_type": "Tags", "value": "RWA,CarbonCredits,RevenueShare,ESG,Pool" }
+  ]
+}

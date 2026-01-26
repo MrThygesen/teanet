@@ -1,0 +1,22 @@
+{
+  "name": "Kalimantan Forest Conservation SPV — Series 1",
+  "description": "This SPV finances and owns a protected rainforest conservation project in Kalimantan, Indonesia. Investor capital funds land protection, community programs, and monitoring operations. Investors hold registered participation rights in the SPV and receive distributions from project revenues, including carbon credit sales.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/forest1.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/legal/Kalimantan-Forest-SPV-IAA.pdf",
+  "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Investor Participation Agreement v1" },
+    { "trait_type": "RWA Type", "value": "Security" },
+    { "trait_type": "Model", "value": "Project Ownership SPV" },
+    { "trait_type": "Pool Size", "value": "15000000" },
+    { "trait_type": "Investor Rights", "value": "Registered participation in SPV ownership and revenue distributions" },
+    { "trait_type": "Underlying Assets", "value": "Protected rainforest land and conservation project operations" },
+    { "trait_type": "Revenue Source", "value": "Sale of verified carbon credits and conservation grants" },
+    { "trait_type": "Certification", "value": "Verra VCS + CCB Gold + BeZero A-rated" },
+    { "trait_type": "Jurisdiction", "value": "Indonesia" },
+    { "trait_type": "SPV", "value": "Kalimantan Forest Conservation SPV Ltd." },
+    { "trait_type": "Compliance", "value": "KYC + Investor Suitability Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" },
+    { "trait_type": "Tags", "value": "RWA,Forestry,CarbonCredits,Conservation,SPV" }
+  ]
+}
+
