@@ -8,6 +8,8 @@
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Revenue Participation Pool" },
     { "trait_type": "Pool Size", "value": "8000000" },
+    { "trait_type": "Minimum Ticket", "value": "100000" },
+    { "trait_type": "Typical Ticket", "value": "250000" },
     { "trait_type": "Investor Rights", "value": "Pro-rata participation in annual carbon credit revenue" },
     { "trait_type": "Underlying Asset", "value": "Verified carbon credit issuance from forest conservation project" },
     { "trait_type": "Revenue Source", "value": "Primary sale of Verra-certified carbon credits" },
