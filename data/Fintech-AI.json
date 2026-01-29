@@ -7,6 +7,8 @@
     { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
     { "trait_type": "RWA Type", "value": "Security" },
     { "trait_type": "Model", "value": "Bilateral" },
+    { "trait_type": "Minimum Ticket", "value": "100000" },
+    { "trait_type": "Typical Ticket", "value": "250000" },
     { "trait_type": "Pool Size", "value": "5000000" },
     { "trait_type": "Investor Rights", "value": "Revenue participation" },
     { "trait_type": "Underlying Asset", "value": "Polymarket Trading Software " },
