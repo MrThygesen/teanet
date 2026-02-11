@@ -1,16 +1,21 @@
 {
-  "name": "Venture Studio — Advisory Access Pass",
-  "description": "Grants access to TEA’s venture studio advisory services, including startup strategy sessions, tokenomics workshops, and investor pitch coaching.",
+  "name": "Venture Studio Advisory Revenue SPV",
+  "description": "An economic participation SPV deriving revenues from advisory, consulting, and venture studio services.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/advisory.jpg",
- "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/Advisory-Access-IC.pdf",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/Advisory-Access-IC.pdf",
   "attributes": [
-    { "trait_type": "Legal Document Name", "value": "Membership and Voting Agreement v1" },
-    { "trait_type": "RWA Type", "value": "Utility" },
-    { "trait_type": "Model", "value": "Service Access" },
-    { "trait_type": "Member Rights", "value": "Consulting and venture studio services" },
+    { "trait_type": "Legal Document Name", "value": "Advisory Revenue Participation Agreement v1" },
+    { "trait_type": "Structure", "value": "Alternative Finance (Service-Backed Economics)" },
+    { "trait_type": "Participation Model", "value": "Bilateral" },
+    { "trait_type": "Asset Class", "value": "Advisory & Venture Studio Services" },
+    { "trait_type": "Instrument Type", "value": "Advisory Revenue Participation Certificate" },
+    { "trait_type": "Model", "value": "Operating SPV" },
+    { "trait_type": "Minimum Ticket", "value": "10000" },
+    { "trait_type": "Typical Ticket", "value": "25000" },
+    { "trait_type": "Economic Purpose", "value": "Participation in net revenues generated from advisory and venture studio services" },
     { "trait_type": "Jurisdiction", "value": "Global" },
     { "trait_type": "Compliance", "value": "Policy Acceptance Required" },
-    { "trait_type": "Transferable", "value": "No (Soulbound)" },
-    { "trait_type": "Tags", "value": "Utility, Consulting, Services" }
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
   ]
 }
+

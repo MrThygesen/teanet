@@ -1,20 +1,23 @@
 {
-  "name": "Nordic Startup Growth Pool — Genesis",
-  "description": "A diversified revenue-participation pool providing exposure to early-stage Nordic technology startups. The SPV acquires revenue-share agreements from selected startups, distributing pro-rata income to SBT holders. Designed for investors seeking broad exposure to regional innovation growth.",
+  "name": "Nordic Startup Growth Revenue SPV — Genesis",
+  "description": "A revenue-based venture SPV acquiring startup revenue-share contracts across the Nordic region.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/industry.jpg",
-"external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/NordicGrowthPool-Genesis-IC.pdf",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/NordicGrowthPool-Genesis-IC.pdf",
   "attributes": [
     { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
-    { "trait_type": "RWA Type", "value": "Security" },
-    { "trait_type": "Model", "value": "Pool" },
+    { "trait_type": "Structure", "value": "Alternative Finance (Revenue-Based Venture)" },
+    { "trait_type": "Participation Model", "value": "Multilateral Pool (Restricted Access)" },
+    { "trait_type": "Asset Class", "value": "Startup Revenue Contracts" },
+    { "trait_type": "Instrument Type", "value": "Revenue Participation Certificate" },
+    { "trait_type": "Model", "value": "Pool SPV" },
     { "trait_type": "Pool Size", "value": "5000000" },
-    { "trait_type": "Investor Rights", "value": "Pro-rata revenue participation across asset pool" },
-    { "trait_type": "Underlying Assets", "value": "Startup revenue contracts" },
+    { "trait_type": "Minimum Ticket", "value": "100000" },
+    { "trait_type": "Typical Ticket", "value": "250000" },
+    { "trait_type": "Investor Rights", "value": "Pro-rata participation in portfolio revenues" },
     { "trait_type": "Jurisdiction", "value": "Denmark" },
     { "trait_type": "SPV", "value": "TEA Nordic Growth Pool SPV ApS" },
     { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
-    { "trait_type": "Transferable", "value": "No (Soulbound)" },
-    { "trait_type": "Tags", "value": "RWA,Pool,Startup,Index" }
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
   ]
 }
 

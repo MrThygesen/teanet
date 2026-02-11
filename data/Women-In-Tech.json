@@ -1,19 +1,23 @@
 {
-  "name": "Women in Tech Expansion — Series A",
-  "description": "Participation in an SPV financing women in scaleup tech companies with expansion through our pool. Revenues and voting are shared with SBT holders according to defined participation terms.",
+  "name": "Women in Tech Expansion SPV — Series A",
+  "description": "A private equity SPV investing in growth-stage, women-led technology companies.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/women.jpg",
   "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/WomenInTech-SeriesA-IC.pdf",
   "attributes": [
     { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
-    { "trait_type": "RWA Type", "value": "Security" },
-    { "trait_type": "Model", "value": "Bilateral" },
+    { "trait_type": "Structure", "value": "Private Equity" },
+    { "trait_type": "Participation Model", "value": "Multilateral Pool (Restricted Access)" },
+    { "trait_type": "Asset Class", "value": "Growth-Stage Technology Companies" },
+    { "trait_type": "Instrument Type", "value": "Equity Participation Interest" },
+    { "trait_type": "Model", "value": "Equity SPV" },
     { "trait_type": "Pool Size", "value": "5000000" },
-    { "trait_type": "Investor Rights", "value": "Revenue share from tech company operations" },
-    { "trait_type": "Underlying Asset", "value": "Tech Production Facilities" },
+    { "trait_type": "Minimum Ticket", "value": "100000" },
+    { "trait_type": "Typical Ticket", "value": "250000" },
+    { "trait_type": "Investor Rights", "value": "Economic participation in dividends and exit proceeds" },
     { "trait_type": "Jurisdiction", "value": "Denmark" },
     { "trait_type": "SPV", "value": "TechNow SPV ApS" },
     { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
-    { "trait_type": "Transferable", "value": "No (Soulbound)" },
-    { "trait_type": "Tags", "value": "RWA,Security,Hospitality,RevenueShare" }
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
   ]
 }
+

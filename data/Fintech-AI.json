@@ -1,21 +1,23 @@
 {
-  "name": "AI in Fintech — Series B",
-  "description": "Direct participation in an SPV owning a fixed annual outcome according to investments in AI PREDICTION SOFTWARE in diverse analytical segments. SBT holders receive defined annual return.",
+  "name": "AI in Fintech Outcomes SPV — Series B",
+  "description": "Participation in a structured-outcome SPV delivering defined annual returns derived from AI-driven software deployments.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet//main/data/fintech.jpg",
   "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/AI-Fintech-SeriesB-IC.pdf",
   "attributes": [
     { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
-    { "trait_type": "RWA Type", "value": "Security" },
-    { "trait_type": "Model", "value": "Bilateral" },
+    { "trait_type": "Structure", "value": "Alternative Finance (Structured Outcomes)" },
+    { "trait_type": "Participation Model", "value": "Bilateral" },
+    { "trait_type": "Asset Class", "value": "AI & Software Systems" },
+    { "trait_type": "Instrument Type", "value": "Fixed-Outcome Participation Certificate" },
+    { "trait_type": "Model", "value": "Bilateral SPV" },
+    { "trait_type": "Pool Size", "value": "5000000" },
     { "trait_type": "Minimum Ticket", "value": "100000" },
     { "trait_type": "Typical Ticket", "value": "250000" },
-    { "trait_type": "Pool Size", "value": "5000000" },
-    { "trait_type": "Investor Rights", "value": "Revenue participation" },
-    { "trait_type": "Underlying Asset", "value": "Polymarket Trading Software " },
+    { "trait_type": "Investor Rights", "value": "Defined annual economic outcome" },
     { "trait_type": "Jurisdiction", "value": "Germany" },
     { "trait_type": "SPV", "value": "TEAFIN SPV GmbH" },
     { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
-    { "trait_type": "Transferable", "value": "No (Soulbound)" },
-    { "trait_type": "Tags", "value": "Info Prediction Markets" }
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
   ]
 }
+

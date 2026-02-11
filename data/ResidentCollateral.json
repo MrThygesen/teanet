@@ -1,21 +1,23 @@
 {
   "name": "Copenhagen Residential Collateral SPV — Series 1",
-  "description": "This SPV finances the acquisition of residential land and construction of housing units in Copenhagen. Investor capital is secured by first-ranking collateral over the underlying real estate. Rental and/or sale proceeds are distributed to certificate holders.",
+  "description": "An asset-backed SPV financing residential real estate secured by first-ranking mortgage collateral.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/housing.jpg",
   "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/Copenhagen-Housing-SPV-IAA.pdf",
   "attributes": [
     { "trait_type": "Legal Document Name", "value": "Investor Collateral Participation Agreement v1" },
-    { "trait_type": "RWA Type", "value": "Security" },
+    { "trait_type": "Structure", "value": "Private Credit (Asset-Backed)" },
+    { "trait_type": "Participation Model", "value": "Tranched Pool" },
+    { "trait_type": "Asset Class", "value": "Residential Real Estate" },
+    { "trait_type": "Instrument Type", "value": "Secured Collateral Participation Certificate" },
     { "trait_type": "Model", "value": "Collateral SPV" },
     { "trait_type": "Pool Size", "value": "12000000" },
-    { "trait_type": "Investor Rights", "value": "Secured claim on real estate collateral and revenue distributions" },
-    { "trait_type": "Underlying Assets", "value": "Residential land and housing units in Copenhagen" },
-    { "trait_type": "Collateral Type", "value": "First-ranking mortgage over property" },
-    { "trait_type": "Revenue Source", "value": "Rental income and/or property sale proceeds" },
+    { "trait_type": "Minimum Ticket", "value": "100000" },
+    { "trait_type": "Typical Ticket", "value": "250000" },
+    { "trait_type": "Investor Rights", "value": "Secured economic claim on property cashflows and sale proceeds" },
     { "trait_type": "Jurisdiction", "value": "Denmark" },
     { "trait_type": "SPV", "value": "TEA Copenhagen Residential SPV ApS" },
     { "trait_type": "Compliance", "value": "KYC + Investor Suitability Policy" },
-    { "trait_type": "Transferable", "value": "No (Soulbound)" },
-    { "trait_type": "Tags", "value": "RWA,Collateral,RealEstate,Housing,Secured" }
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
   ]
 }
+

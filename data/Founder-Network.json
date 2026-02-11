@@ -1,17 +1,21 @@
 {
-  "name": "Business Circle — Copenhagen Membership",
-  "description": "Access membership to a curated executive and founder network in Copenhagen. Membership includes private events, curated deal-flow access, and advisory roundtables.",
+  "name": "Business Circle Platform Revenue SPV — Copenhagen",
+  "description": "An economic participation SPV deriving revenues from a curated executive and founder network.",
   "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/founders.jpg",
-  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet//main/legal/BusinessCircle-Membership-IC.pdf",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/BusinessCircle-Membership-IC.pdf",
   "attributes": [
-    { "trait_type": "Legal Document Name", "value": "Membership and Voting Agreement v1" },
-    { "trait_type": "RWA Type", "value": "Utility" },
-    { "trait_type": "Model", "value": "Access Membership" },
-    { "trait_type": "Member Rights", "value": "Event access + curated network participation" },
+    { "trait_type": "Legal Document Name", "value": "Platform Revenue Participation Agreement v1" },
+    { "trait_type": "Structure", "value": "Alternative Finance (Platform Economics)" },
+    { "trait_type": "Participation Model", "value": "Syndicated" },
+    { "trait_type": "Asset Class", "value": "Professional Network Platform" },
+    { "trait_type": "Instrument Type", "value": "Platform Revenue Participation Certificate" },
+    { "trait_type": "Model", "value": "Operating SPV" },
+    { "trait_type": "Minimum Ticket", "value": "10000" },
+    { "trait_type": "Typical Ticket", "value": "25000" },
+    { "trait_type": "Economic Purpose", "value": "Participation in net revenues from events, sponsorships, and partnerships" },
     { "trait_type": "Jurisdiction", "value": "Denmark" },
     { "trait_type": "Compliance", "value": "Policy Acceptance Required" },
-    { "trait_type": "Transferable", "value": "No (Soulbound)" },
-    { "trait_type": "Tags", "value": "Utility,Membership,Networking" }
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
   ]
 }
 
