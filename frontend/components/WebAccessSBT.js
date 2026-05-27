@@ -415,12 +415,11 @@ export default function WebAccessSBT() {
 
             <div className="space-y-3 text-zinc-300 text-sm">
               <p>This demo lets you obtain blockchain-based proof of ownership.</p>
-              <p>Each SBT represents:</p>
+              <p>Each SBT represents an already existing legal security:</p>
               <ul className="list-disc list-inside ml-2">
-                <li>A share in a pool</li>
-                <li>A security</li>
-                <li>A voting right</li>
-                <li>Access to a service</li>
+                <li>Access to a real life service</li>         
+                <li>Represents the legal ownership of the fractioned SBT  </li>
+        
               </ul>
               <p>Once claimed, ownership proof cannot be lost.</p>
 
