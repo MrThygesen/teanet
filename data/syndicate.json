@@ -1,0 +1,19 @@
+{
+"name": "Nordic Syndicate Membership",
+"description": "Membership credential providing access to syndicate activities, investor networking and participation initiatives.",
+"image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/syndicate-membership.jpg",
+"external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/Nordic-Syndicate-Membership.pdf",
+"attributes": [
+{ "trait_type": "Membership Type", "value": "Syndicate" },
+{ "trait_type": "Organisation", "value": "Nordic Syndicate" },
+{ "trait_type": "Participation Model", "value": "Investor Membership" },
+{ "trait_type": "Credential Type", "value": "Membership Badge" },
+{ "trait_type": "Participation Rights", "value": "Community Participation" },
+{ "trait_type": "Governance", "value": "Future Voting Eligible" },
+{ "trait_type": "Jurisdiction", "value": "Global" },
+{ "trait_type": "Transferable", "value": "No (Soulbound)" },
+{ "trait_type": "Community Layer", "value": "Participation Infrastructure"},
+{ "trait_type": "Issuer", "value": "EDGE Expansion Toolkit"}
+]
+}
+

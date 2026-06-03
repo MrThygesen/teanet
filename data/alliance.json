@@ -1,0 +1,20 @@
+{
+"name": "HealthTech Alliance Membership",
+"description": "Membership credential for ecosystem operators participating in alliance activities and working groups.",
+"image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/alliance-membership.jpg",
+"external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/Alliance-Membership.pdf",
+"attributes": [
+{ "trait_type": "Membership Type", "value": "Alliance" },
+{ "trait_type": "Organisation", "value": "HealthTech Alliance" },
+{ "trait_type": "Participation Model", "value": "Alliance Membership" },
+{ "trait_type": "Credential Type", "value": "Membership Badge" },
+{ "trait_type": "Participation Rights", "value": "Working Group Access" },
+{ "trait_type": "Governance", "value": "Future Voting Eligible" },
+{ "trait_type": "Jurisdiction", "value": "Global" },
+{ "trait_type": "Transferable", "value": "No (Soulbound)" },
+{ "trait_type": "Community Layer", "value": "Participation Infrastructure"},
+{ "trait_type": "Issuer", "value": "EDGE Expansion Toolkit"}
+
+]
+}
+
