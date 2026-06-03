@@ -39,6 +39,8 @@ export default function AdminSBTManager() {
   const [availableTemplates, setAvailableTemplates] = useState([])
   const [burnTokenId, setBurnTokenId] = useState('')
   const [previewData, setPreviewData] = useState(null)
+  const [mintAddress, setMintAddress] = useState('')
+  const [mintTypeId, setMintTypeId] = useState('')
 
   const isAdmin =
     address?.toLowerCase() === process.env.NEXT_PUBLIC_ADMIN?.toLowerCase()
@@ -218,6 +220,41 @@ export default function AdminSBTManager() {
     setLoading(false)
   }
 
+
+
+const handleMintMembership = async () => {
+  if (!mintAddress || !mintTypeId) {
+    toast.error('Wallet address and Type ID required')
+    return
+  }
+
+  setLoading(true)
+
+  try {
+    await writeContractAsync({
+      address: CONTRACT_ADDRESS,
+      abi: WebAccessSBTV33_ABI,
+      functionName: 'batchMint',
+      args: [
+        [mintAddress],      // address[]
+        BigInt(mintTypeId), // typeId
+      ],
+    })
+
+    toast.success(
+      `Issued membership type ${mintTypeId} to ${mintAddress}`
+    )
+
+    setMintAddress('')
+    setMintTypeId('')
+  } catch (err) {
+    console.error(err)
+    toast.error(err?.shortMessage || err?.message || 'Mint failed')
+  }
+
+  setLoading(false)
+}
+
   // ---------------- SAFE RETURNS ----------------
   if (!mounted) return null
 
@@ -339,6 +376,40 @@ return (
           </table>
         </div>
       </div>
+
+
+{/* --- Admin Mint --- */}
+
+<div className="border rounded p-4 mb-4">
+  <h3 className="font-semibold mb-3">
+    Issue Membership
+  </h3>
+
+  <input
+    type="text"
+    placeholder="Wallet Address"
+    value={mintAddress}
+    onChange={(e) => setMintAddress(e.target.value)}
+    className="w-full border rounded p-2 mb-2"
+  />
+
+  <input
+    type="number"
+    placeholder="Membership Type ID"
+    value={mintTypeId}
+    onChange={(e) => setMintTypeId(e.target.value)}
+    className="w-full border rounded p-2 mb-3"
+  />
+
+  <button
+    onClick={handleMintMembership}
+    disabled={loading}
+    className="px-4 py-2 rounded bg-purple-600 text-white"
+  >
+    Issue Membership
+  </button>
+</div>
+
 
       {/* BURN */}
       <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl">
