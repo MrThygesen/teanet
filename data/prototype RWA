@@ -1,0 +1,21 @@
+  "name": "Kalimantan Carbon Revenue SPV — Series A",
+  "description": "Participation in a defined revenue stream generated from the issuance and sale of verified carbon credits.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet//main/data/forest2.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/legal/Carbon-Revenue-Participation-Agreement.pdf",
+  "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Carbon Revenue Participation Agreement v1" },
+    { "trait_type": "Structure", "value": "Real World Assets (RWA)" },
+    { "trait_type": "Participation Model", "value": "Syndicated" },
+    { "trait_type": "Asset Class", "value": "Carbon Credit Revenue Streams" },
+    { "trait_type": "Instrument Type", "value": "Revenue Participation Certificate" },
+    { "trait_type": "Model", "value": "Revenue Participation SPV" },
+    { "trait_type": "Pool Size", "value": "8000000" },
+    { "trait_type": "Minimum Ticket", "value": "100000" },
+    { "trait_type": "Typical Ticket", "value": "250000" },
+    { "trait_type": "Investor Rights", "value": "Pro-rata participation in certified carbon credit revenues" },
+    { "trait_type": "Jurisdiction", "value": "Singapore" },
+    { "trait_type": "Issuer", "value": "Kalimantan Carbon Issuer Pte. Ltd." },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
+  ]
+}

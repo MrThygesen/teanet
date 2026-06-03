@@ -1,0 +1,22 @@
+{
+  "name": "Women in Tech Expansion SPV — Series A",
+  "description": "A private equity SPV investing in growth-stage, women-led technology companies.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/women.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/WomenInTech-SeriesA-IC.pdf",
+  "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
+    { "trait_type": "Structure", "value": "Private Equity" },
+    { "trait_type": "Participation Model", "value": "Multilateral Pool (Restricted Access)" },
+    { "trait_type": "Asset Class", "value": "Growth-Stage Technology Companies" },
+    { "trait_type": "Instrument Type", "value": "Equity Participation Interest" },
+    { "trait_type": "Model", "value": "Equity SPV" },
+    { "trait_type": "Pool Size", "value": "5000000" },
+    { "trait_type": "Minimum Ticket", "value": "100000" },
+    { "trait_type": "Typical Ticket", "value": "250000" },
+    { "trait_type": "Investor Rights", "value": "Economic participation in dividends and exit proceeds" },
+    { "trait_type": "Jurisdiction", "value": "Denmark" },
+    { "trait_type": "SPV", "value": "TechNow SPV ApS" },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
+  ]
+}
