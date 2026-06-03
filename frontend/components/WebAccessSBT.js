@@ -106,7 +106,7 @@ export default function WebAccessSBT() {
 
     const list = []
 
-    for (let i = 1; i <= 100; i++) {
+    for (let i = 1; i <= 2000; i++) {
       try {
         const sbtType = await publicClient.readContract({
           address: CONTRACT_ADDRESS,
