@@ -1,148 +1,167 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { useAccount, useWriteContract, usePublicClient } from 'wagmi'
 import WebAccessSBTV33_ABI from '../abis/WebAccessSBTV33_ABI.json'
 import { toast } from 'react-hot-toast'
-import { isAddress } from 'viem'
 
 
-const CONTRACT_ADDRESS = '0xA508A0f5733bcfcf6eA0b41ca9344c27855FeEF0'
-const MAX_TYPES = 4000
+
+const CONTRACT_ADDRESS = '0x146CE24B31eb28dA2159c8b2162889969cf8Ef03'
+const MAX_TYPES = 100
+
+const GITHUB_REPO = 'MrThygesen/teanet'
+const GITHUB_BRANCH = 'main'
+const DATA_PATH = 'data'
+
+const buildUri = (filename) =>
+  `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${DATA_PATH}/${filename}`
+
+const TEMPLATE_LIST_URL =
+  `https://api.github.com/repos/${GITHUB_REPO}/contents/${DATA_PATH}`
 
 export default function AdminSBTManager() {
+
+  // ---------------- WALLET HOOKS ----------------
   const { address } = useAccount()
   const publicClient = usePublicClient()
   const { writeContractAsync } = useWriteContract()
 
-  const [typeId, setTypeId] = useState(1n)
+  // ---------------- STATE HOOKS ----------------
+  const [mounted, setMounted] = useState(false)
+
   const [title, setTitle] = useState('')
   const [burnable, setBurnable] = useState(false)
   const [maxSupply, setMaxSupply] = useState('')
-  const [previewData, setPreviewData] = useState(null)
+  const [typeId, setTypeId] = useState(1n)
   const [loading, setLoading] = useState(false)
-  const [burnTokenId, setBurnTokenId] = useState('')
-  const [mintAddress, setMintAddress] = useState('')
-  const [mintTypeId, setMintTypeId] = useState('')   
-  const [availableTemplates, setAvailableTemplates] = useState([])
   const [sbtTypesData, setSbtTypesData] = useState([])
+  const [availableTemplates, setAvailableTemplates] = useState([])
+  const [burnTokenId, setBurnTokenId] = useState('')
+  const [previewData, setPreviewData] = useState(null)
 
-  const isAdmin = address?.toLowerCase() === process.env.NEXT_PUBLIC_ADMIN?.toLowerCase()
-  const previewCache = useRef({})
+  const isAdmin =
+    address?.toLowerCase() === process.env.NEXT_PUBLIC_ADMIN?.toLowerCase()
 
-  const buildUri = (filename) => `https://raw.githubusercontent.com/MrThygesen/TEA/main/data/${filename}`
-  const formatDisplayName = (filename) =>
-    filename.replace('.json', '').replace(/[_-]/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())
+  // ---------------- MOUNT GUARD ----------------
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
-  // Fetch metadata templates from GitHub
+  // ---------------- LOAD TEMPLATE LIST ----------------
   useEffect(() => {
     async function fetchTemplates() {
       try {
-        const res = await fetch('https://api.github.com/repos/MrThygesen/TEA/contents/data')
+        const res = await fetch(TEMPLATE_LIST_URL)
         const data = await res.json()
-        const jsonFiles = data.filter((file) => file.name.endsWith('.json')).map((file) => file.name)
+
+        const jsonFiles = Array.isArray(data)
+          ? data.filter((f) => f.name?.endsWith('.json')).map((f) => f.name)
+          : []
+
         setAvailableTemplates(jsonFiles)
       } catch (err) {
-        console.error('Failed to fetch templates from GitHub:', err)
+        console.error('❌ Failed to fetch templates:', err)
       }
     }
     fetchTemplates()
   }, [])
 
-  // Fetch SBT types from contract
+  // ---------------- LOAD ONCHAIN TYPES ----------------
   useEffect(() => {
     if (!publicClient) return
-    async function fetchTypes() {
-      const typePromises = Array.from({ length: MAX_TYPES }, (_, i) =>
-        publicClient.readContract({
-          address: CONTRACT_ADDRESS,
-          abi: WebAccessSBTV33_ABI,
-          functionName: 'sbtTypes',
-          args: [i + 1],
-        }).catch(() => null)
-      )
 
-      const typesRaw = await Promise.all(typePromises)
+    async function fetchTypes() {
       const types = []
 
-      for (let i = 0; i < typesRaw.length; i++) {
-        const sbtType = typesRaw[i]
-        if (!sbtType) continue
+      for (let i = 1; i <= MAX_TYPES; i++) {
         try {
+          const sbtType = await publicClient.readContract({
+            address: CONTRACT_ADDRESS,
+            abi: WebAccessSBTV33_ABI,
+            functionName: 'sbtTypes',
+            args: [i],
+          })
+
           const [uri, active, maxSupplyBig, mintedBig, , burnableFlag] = sbtType
           if (!uri) continue
-          let typeTitle = ''
-          if (previewCache.current[uri]) {
-            typeTitle = previewCache.current[uri].name
-          } else {
-            try {
-              const res = await fetch(uri)
-              const metadata = await res.json()
-              typeTitle = metadata?.name || ''
-              previewCache.current[uri] = metadata
-            } catch {}
-          }
+
+          let title = ''
+          try {
+            const res = await fetch(uri)
+            const metadata = await res.json()
+            title = metadata?.name || ''
+          } catch {}
 
           types.push({
-            id: i + 1,
+            id: i,
             uri,
             active,
             burnable: burnableFlag,
             maxSupply: Number(maxSupplyBig),
             minted: Number(mintedBig),
-            title: typeTitle,
+            title,
           })
-        } catch (err) {
-          console.error('Error parsing SBT type:', err)
-        }
+        } catch {}
       }
+
       setSbtTypesData(types)
     }
+
     fetchTypes()
   }, [publicClient, loading])
 
-  // --- SBT Creation ---
+  // ---------------- HELPERS ----------------
+  const formatDisplayName = (filename) =>
+    filename
+      .replace('.json', '')
+      .replace(/[_-]/g, ' ')
+      .replace(/\b\w/g, (l) => l.toUpperCase())
+
+  // ---------------- ACTIONS ----------------
   const handlePreview = async () => {
-    if (!title) return toast.error('Select a metadata template first')
+    if (!title) return toast.error('Select a template first')
+
     const uri = buildUri(title)
-    if (previewCache.current[uri]) {
-      setPreviewData(previewCache.current[uri])
-      toast.success(`🔍 Preview: ${previewCache.current[uri].name}`)
-      return
-    }
+
     try {
       const res = await fetch(uri)
       const metadata = await res.json()
       setPreviewData(metadata)
-      previewCache.current[uri] = metadata
-      toast.success(`🔍 Preview: ${metadata.name}`)
+      toast.success(`🔍 Preview loaded`)
     } catch {
       toast.error('Preview failed')
     }
   }
 
   const handleCreateType = async () => {
-    if (!title || !maxSupply || !typeId) return toast.error('Fill in all fields')
+    if (!title || !maxSupply || !typeId)
+      return toast.error('Please fill all fields')
+
     setLoading(true)
+
     try {
       const uri = buildUri(title)
+
       await writeContractAsync({
         address: CONTRACT_ADDRESS,
         abi: WebAccessSBTV33_ABI,
         functionName: 'createType',
         args: [typeId, uri, BigInt(maxSupply), burnable],
       })
-      toast.success('SBT type created')
+
+      toast.success('SBT type created successfully')
     } catch (err) {
       console.error(err)
-      toast.error('Failed to create SBT type')
+      toast.error('Creation failed')
     }
+
     setLoading(false)
   }
 
   const handleActivate = async () => {
-    if (!typeId) return toast.error('Select Type ID')
     setLoading(true)
+
     try {
       await writeContractAsync({
         address: CONTRACT_ADDRESS,
@@ -150,17 +169,18 @@ export default function AdminSBTManager() {
         functionName: 'setTypeStatus',
         args: [typeId, true],
       })
-      toast.success('SBT type activated')
-    } catch (err) {
-      console.error(err)
+
+      toast.success('SBT activated')
+    } catch {
       toast.error('Activation failed')
     }
+
     setLoading(false)
   }
 
   const handleDeactivate = async () => {
-    if (!typeId) return toast.error('Select Type ID')
     setLoading(true)
+
     try {
       await writeContractAsync({
         address: CONTRACT_ADDRESS,
@@ -168,204 +188,175 @@ export default function AdminSBTManager() {
         functionName: 'setTypeStatus',
         args: [typeId, false],
       })
-      toast.success('SBT type deactivated')
-    } catch (err) {
-      console.error(err)
+
+      toast.success('SBT deactivated')
+    } catch {
       toast.error('Deactivation failed')
     }
+
     setLoading(false)
   }
 
+  const handleBurn = async () => {
+    if (!burnTokenId) return toast.error('Enter a Token ID')
 
-const handleMintMembership = async () => {
-  if (!mintAddress || !mintTypeId) {
-    toast.error('Wallet and Type ID required')
-    return
+    setLoading(true)
+
+    try {
+      await writeContractAsync({
+        address: CONTRACT_ADDRESS,
+        abi: WebAccessSBTV33_ABI,
+        functionName: 'burn',
+        args: [BigInt(burnTokenId)],
+      })
+
+      toast.success('Token burned')
+    } catch {
+      toast.error('Burn failed')
+    }
+
+    setLoading(false)
   }
 
-  if (!isAddress(mintAddress)) {
-    toast.error('Invalid wallet address')
-    return
-  }
+  // ---------------- SAFE RETURNS ----------------
+  if (!mounted) return null
 
-  setLoading(true)
-
-  try {
-    await writeContractAsync({
-      address: CONTRACT_ADDRESS,
-      abi: WebAccessSBTV33_ABI,
-      functionName: 'batchMint',
-      args: [
-        [mintAddress],
-        BigInt(mintTypeId),
-      ],
-    })
-
-    toast.success(
-      `Membership Type ${mintTypeId} issued to ${mintAddress}`
+  if (!isAdmin) {
+    return (
+      <div className="text-center text-red-600 font-semibold p-4">
+        You must be admin to access SBT panel.
+      </div>
     )
-
-    setMintAddress('')
-    setMintTypeId('')
-  } catch (err) {
-    console.error('Mint failed:', err)
-    toast.error(err?.shortMessage || err?.message || 'Mint failed')
   }
 
-  setLoading(false)
-}
+  // ---------------- RENDER ----------------
+return (
+  <div className="bg-black text-white min-h-screen py-10">
+    <div className="p-4 max-w-6xl mx-auto space-y-8">
 
-const handleBurn = async () => {
-  if (!burnTokenId) {
-    toast.error('Missing Token ID')
-    return
-  }
+      <h2 className="text-3xl font-bold">
+        Admin — Manage SBT Types
+      </h2>
 
-  setLoading(true)
+      {/* CREATE */}
+      <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl shadow space-y-4">
+        <h3 className="text-lg font-semibold">Create New SBT Type</h3>
 
-  try {
-    await writeContractAsync({
-      address: CONTRACT_ADDRESS,
-      abi: WebAccessSBTV33_ABI,
-      functionName: 'burn',
-      args: [BigInt(burnTokenId)],
-    })
+        <input
+          type="number"
+          value={typeId.toString()}
+          onChange={(e) => setTypeId(BigInt(e.target.value))}
+          className="w-full bg-zinc-800 border border-zinc-600 p-2 rounded text-white"
+          placeholder="Type ID"
+        />
 
-    toast.success('Token burned')
-    setBurnTokenId('')
-  } catch (err) {
-    console.error(err)
-    toast.error(err?.shortMessage || err?.message || 'Burn failed')
-  }
-
-  setLoading(false)
-}
-
-  if (!isAdmin) return <div className="text-center text-red-600 font-semibold p-4">You must be the admin to access this panel.</div>
-
-  return (
-    <div className="p-4 border rounded max-w-4xl mx-auto bg-white text-black space-y-6">
-      <h2 className="text-xl font-bold">Admin: Manage SBTs</h2>
-
-      {/* --- Create SBT --- */}
-      <div>
-        <h3 className="font-semibold mb-2">Create New SBT Type</h3>
-        <input type="number" value={typeId.toString()} onChange={(e) => setTypeId(e.target.value ? BigInt(e.target.value) : 0n)} className="w-full mb-2 p-2 border rounded" placeholder="Type ID" />
-        <select value={title} onChange={(e) => setTitle(e.target.value)} className="w-full mb-2 p-2 border rounded">
-          <option value="">Select metadata template</option>
-          {availableTemplates.map((file, i) => <option key={i} value={file}>{formatDisplayName(file)}</option>)}
+        <select
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="w-full bg-zinc-800 border border-zinc-600 p-2 rounded text-white"
+        >
+          <option value="">Select metadata</option>
+          {availableTemplates.map((file, i) => (
+            <option key={i} value={file}>
+              {formatDisplayName(file)}
+            </option>
+          ))}
         </select>
-        <input type="number" value={maxSupply} onChange={(e) => setMaxSupply(e.target.value)} className="w-full mb-2 p-2 border rounded" placeholder="Max Supply" />
-        <label className="mb-2 block">
-          <input type="checkbox" checked={burnable} onChange={(e) => setBurnable(e.target.checked)} className="mr-2" /> Burnable
-        </label>
-        <p className="text-sm text-gray-500 mb-2 break-words">Metadata URI: <code>{buildUri(title)}</code></p>
-        <div className="flex gap-2 flex-wrap">
-          <button onClick={handleCreateType} disabled={loading} className={`px-4 py-2 rounded text-white ${loading ? 'bg-blue-300' : 'bg-blue-600'}`}>{loading ? 'Creating...' : 'Create SBT Type'}</button>
-          <button onClick={handleActivate} disabled={loading || !typeId} className={`px-4 py-2 rounded text-white ${loading ? 'bg-green-300' : 'bg-green-600'}`}>Activate</button>
-          <button onClick={handleDeactivate} disabled={loading || !typeId} className={`px-4 py-2 rounded text-white ${loading ? 'bg-yellow-300' : 'bg-yellow-600'}`}>Deactivate</button>
-          <button onClick={handlePreview} disabled={!title || loading} className="px-4 py-2 rounded text-white bg-gray-600">Preview</button>
-        </div>
 
-        {previewData && (
-          <div className="mt-4 p-4 border rounded bg-white shadow max-w-xl">
-            <h4 className="font-semibold text-lg">{previewData.name}</h4>
-            {previewData.image && <img src={previewData.image} alt={previewData.name} className="w-full max-w-xs h-48 object-cover rounded mb-2" />}
-            <p>{previewData.description}</p>
-          </div>
-        )}
+        <input
+          type="number"
+          value={maxSupply}
+          onChange={(e) => setMaxSupply(e.target.value)}
+          className="w-full bg-zinc-800 border border-zinc-600 p-2 rounded text-white"
+          placeholder="Max Supply"
+        />
+
+        <label className="flex items-center gap-2 text-sm text-zinc-300">
+          <input
+            type="checkbox"
+            checked={burnable}
+            onChange={(e) => setBurnable(e.target.checked)}
+          />
+          Burnable
+        </label>
+
+        <div className="flex flex-wrap gap-2">
+          <button onClick={handleCreateType} className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700">
+            Create
+          </button>
+          <button onClick={handleActivate} className="px-4 py-2 bg-green-600 rounded hover:bg-green-700">
+            Activate
+          </button>
+          <button onClick={handleDeactivate} className="px-4 py-2 bg-yellow-600 rounded hover:bg-yellow-700">
+            Deactivate
+          </button>
+          <button onClick={handlePreview} className="px-4 py-2 bg-zinc-700 rounded hover:bg-zinc-600">
+            Preview
+          </button>
+        </div>
       </div>
 
-      {/* --- SBT Dashboard --- */}
-      <SbtDashboard sbtTypesData={sbtTypesData} />
+      {/* PREVIEW */}
+      {previewData && (
+        <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl">
+          <h4 className="font-semibold text-lg">{previewData.name}</h4>
+          {previewData.image && (
+            <img src={previewData.image} className="w-full max-w-xs rounded mt-3" />
+          )}
+          <p className="text-zinc-300 mt-3">{previewData.description}</p>
+        </div>
+      )}
 
-  <div>
-   <h3 className="font-semibold mb-2">
-     Issue Membership
-  </h3>
+      {/* DASHBOARD */}
+      <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl">
+        <h3 className="text-lg font-semibold mb-4">SBT Dashboard</h3>
 
-   <input
-     type="text"
-     placeholder="Wallet Address"
-     value={mintAddress}
-     onChange={(e) => setMintAddress(e.target.value)}
-     className="w-full mb-2 p-2 border rounded"
-   />
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead className="text-zinc-400 border-b border-zinc-700">
+              <tr>
+                <th className="p-2 text-left">ID</th>
+                <th className="p-2 text-left">Title</th>
+                <th className="p-2 text-left">Max</th>
+                <th className="p-2 text-left">Minted</th>
+                <th className="p-2 text-left">Active</th>
+                <th className="p-2 text-left">Burnable</th>
+              </tr>
+            </thead>
 
-   <input
-     type="number"
-     placeholder="Membership Type ID"
-     value={mintTypeId}
-     onChange={(e) => setMintTypeId(e.target.value)}
-     className="w-full mb-2 p-2 border rounded"
-   />
+            <tbody>
+              {sbtTypesData.map((t) => (
+                <tr key={t.id} className="border-b border-zinc-800">
+                  <td className="p-2">{t.id}</td>
+                  <td className="p-2">{t.title || '-'}</td>
+                  <td className="p-2">{t.maxSupply}</td>
+                  <td className="p-2">{t.minted}</td>
+                  <td className="p-2">{t.active ? '✅' : '❌'}</td>
+                  <td className="p-2">{t.burnable ? '🔥' : '🚫'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-   <button
-     onClick={handleMintMembership}
-     disabled={loading}
-     className="px-4 py-2 rounded text-white bg-purple-600"
-   >
-     Issue Membership
-   </button>
-   </div>
+      {/* BURN */}
+      <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl">
+        <h3 className="font-semibold mb-3">Burn Token</h3>
 
-      {/* --- Burn Token --- */}
-      <BurnToken handleBurn={handleBurn} burnTokenId={burnTokenId} setBurnTokenId={setBurnTokenId} loading={loading} />
+        <input
+          type="text"
+          value={burnTokenId}
+          onChange={(e) => setBurnTokenId(e.target.value)}
+          className="w-full bg-zinc-800 border border-zinc-600 p-2 rounded text-white mb-3"
+          placeholder="Token ID"
+        />
+
+        <button onClick={handleBurn} className="px-4 py-2 bg-red-600 rounded hover:bg-red-700">
+          Burn
+        </button>
+      </div>
     </div>
-  )
+  </div>
+)
 }
-
-// ------------------ Subcomponents ------------------
-
-function SbtDashboard({ sbtTypesData }) {
-  return (
-    <div>
-      <h3 className="font-semibold mb-2">SBT Dashboard</h3>
-      <table className="w-full text-sm border text-left">
-        <thead className="bg-gray-100">
-      
-         <tr>
-           <th>ID</th>
-           <th>Title</th>
-           <th>Mode</th>
-           <th>Max</th>
-          <th>Minted</th>
-           <th>Active</th>
-           <th>Burnable</th>
-         </tr>
-
-
-        </thead>
-        <tbody>
-          {sbtTypesData.map(t => (
-      <tr key={t.id} className="border-t">
-  <td>{t.id}</td>
-  <td>{t.title || `Type ${t.id}`}</td>
-  <td>
-    {t.id <= 2000
-      ? '🌐 Public'
-      : '🔒 Private'}
-  </td>
-  <td>{t.maxSupply}</td>
-  <td>{t.minted}</td>
-  <td>{t.active ? '✅' : '❌'}</td>
-  <td>{t.burnable ? '🔥' : '🚫'}</td>
-</tr>
-
-          ))}
-        </tbody>
-      </table>
-    </div>
-  )
-}
-
-function BurnToken({ handleBurn, burnTokenId, setBurnTokenId, loading }) {
-  return (
-    <div>
-      <h3 className="font-semibold mb-2">Burn Token</h3>
-      <input type="text" placeholder="Token ID to burn" value={burnTokenId} onChange={(e) => setBurnTokenId(e.target.value)} className="w-full mb-2 p-2 border rounded" />
-      <button onClick={handleBurn} disabled={loading} className="px-4 py-2 rounded text-white bg-red-600">Burn Token</button>
-    </div>
-  )
-}
-
