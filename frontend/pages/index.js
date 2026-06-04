@@ -42,65 +42,46 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="max-w-6xl mx-auto px-6 py-8">
-        <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
+<section className="max-w-6xl mx-auto px-6 py-10">
 
-          <h2 className="text-xl font-semibold mb-4">
-            Membership & Participation Credentials
-          </h2>
+  <div className="grid md:grid-cols-4 gap-4 mb-8">
 
-          <div className="space-y-3 text-zinc-300 text-sm">
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 text-center">
+      <div className="text-lg font-semibold">Accelerators</div>
+    </div>
 
-            <p>
-              TEANET provides blockchain-based membership credentials
-              for accelerators, incubators, syndicates, angel groups,
-              alliances and investor communities.
-            </p>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 text-center">
+      <div className="text-lg font-semibold">Incubators</div>
+    </div>
 
-            <p>
-              Memberships are represented by non-transferable
-              digital credentials (Soulbound Tokens) linked
-              to a wallet address.
-            </p>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 text-center">
+      <div className="text-lg font-semibold">Syndicates</div>
+    </div>
 
-            <p>
-              Credentials may provide access to communities,
-              programmes, governance, participation rights,
-              voting rights or member-only opportunities.
-            </p>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-4 text-center">
+      <div className="text-lg font-semibold">Alliances</div>
+    </div>
 
-            <div className="pt-2">
-              <h3 className="font-semibold text-white mb-2">
-                Membership Models
-              </h3>
+  </div>
 
-              <ul className="list-disc ml-6 space-y-1">
-                <li>
-                  <strong>Self-Service Membership</strong> – members claim their own credential.
-                </li>
+  <div className="text-center">
 
-                <li>
-                  <strong>Administrator-Issued Membership</strong> – a programme manager or community secretary issues credentials directly to approved wallet addresses.
-                </li>
-              </ul>
-            </div>
+    <h2 className="text-3xl font-bold">
+      TEANET
+    </h2>
 
-            <div className="pt-2">
-              <h3 className="font-semibold text-white mb-2">
-                Wallet Connection
-              </h3>
+    <p className="mt-3 text-zinc-300">
+      Blockchain-based memberships for accelerators,
+      syndicates, angel groups and investor ecosystems.
+    </p>
 
-              <p>
-                Connect the wallet associated with your membership
-                to view credentials, participation rights and
-                community memberships.
-              </p>
-            </div>
+    <p className="mt-2 text-zinc-500 text-sm">
+      Part of the EDGE Alliance
+    </p>
 
-          </div>
-        </div>
-      </section>
+  </div>
 
+</section>
       <WebAccessSBT />
 
       {isConnected && isAdmin && (

@@ -1,3 +1,4 @@
+//frontend/components/WebAccessSBT.js
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
@@ -411,41 +412,34 @@ Available Memberships
 )}
 
       {/* HOW IT WORKS MODAL */}
-    <h2 className="text-2xl font-bold mb-4">
-  How Membership Credentials Work
+
+
+
+<h2 className="text-2xl font-bold mb-4">
+  How Memberships Work
 </h2>
 
-<div className="space-y-3 text-zinc-300 text-sm">
+<div className="space-y-4 text-zinc-300 text-sm">
 
   <p>
-    TEANET provides blockchain-based membership credentials for accelerators,
-    incubators, syndicates, angel groups and investment communities.
+    TEANET provides blockchain-based memberships for accelerators,
+    incubators, syndicates, alliances and investor communities.
   </p>
 
   <p>
-    Each membership is represented by a Soulbound Token (SBT) linked to a wallet address.
+    Members receive a non-transferable digital credential linked
+    to their wallet address.
   </p>
 
   <p>
-    Memberships may provide access rights, participation rights, voting rights,
-    governance rights and programme access.
+    Memberships can be claimed by members or issued directly
+    by programme administrators.
   </p>
 
   <p>
-    Communities can issue memberships in two ways:
+    Memberships may include community access, programme access,
+    voting rights and participation rights.
   </p>
-
-  <ul className="list-disc list-inside ml-2">
-    <li>Self-Service Membership (member claims membership)</li>
-    <li>Administrator-Issued Membership (membership sent directly to wallet)</li>
-  </ul>
-
-  <ol className="list-decimal list-inside space-y-2 mt-3">
-    <li>Create or connect a wallet.</li>
-    <li>Add the Polygon Amoy test network.</li>
-    <li>Receive approval from the community or claim membership.</li>
-    <li>Receive a blockchain-based membership credential.</li>
-  </ol>
 
 </div>
 
