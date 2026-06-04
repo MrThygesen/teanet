@@ -15,32 +15,17 @@ export default function Home() {
   return (
     <div className="bg-black text-white min-h-screen">
 
-      <header className="bg-zinc-900 border-b border-zinc-800">
-        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col items-center gap-4">
+  <header className="border-b border-zinc-800">
+  <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-          <h1 className="text-4xl font-bold text-blue-400">
-            TEANET
-          </h1>
+    <div className="text-lg font-semibold text-blue-400">
+      TEANET
+    </div>
 
-          <p className="text-xl text-center text-zinc-200">
-            Participation Infrastructure for Investment Communities
-          </p>
+    <ConnectButton />
 
-          <p className="text-sm text-center text-zinc-400 max-w-3xl">
-            Blockchain-based memberships for accelerators,
-            syndicates, angel groups and investor ecosystems.
-          </p>
-
-          <ConnectButton />
-
-          {isConnected && (
-            <p className="text-xs text-zinc-500 font-mono">
-              Connected Wallet: {address}
-            </p>
-          )}
-
-        </div>
-      </header>
+  </div>
+</header>
 
 <section className="max-w-6xl mx-auto px-6 py-10">
 

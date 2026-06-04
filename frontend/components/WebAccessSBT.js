@@ -284,7 +284,7 @@ Available Memberships
   onClick={() => setShowRWAInfo(true)}
   className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
 >
-  Membership and Particpation Concept
+  Membership Model
 </button>
 
 
@@ -411,38 +411,51 @@ Available Memberships
   </div>
 )}
 
-      {/* HOW IT WORKS MODAL */}
+ {/* HOW IT WORKS MODAL */}
+{showExplainer && (
+  <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
 
+    <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
 
+      <button
+        onClick={() => setShowExplainer(false)}
+        className="absolute top-3 right-3 text-zinc-400 hover:text-white"
+      >
+        ✕
+      </button>
 
-<h2 className="text-2xl font-bold mb-4">
-  How Memberships Work
-</h2>
+      <h2 className="text-2xl font-bold mb-4">
+        How Memberships Work
+      </h2>
 
-<div className="space-y-4 text-zinc-300 text-sm">
+      <div className="space-y-4 text-zinc-300 text-sm">
 
-  <p>
-    TEANET provides blockchain-based memberships for accelerators,
-    incubators, syndicates, alliances and investor communities.
-  </p>
+        <p>
+          TEANET provides blockchain-based memberships for accelerators,
+          incubators, syndicates, alliances and investor communities.
+        </p>
 
-  <p>
-    Members receive a non-transferable digital credential linked
-    to their wallet address.
-  </p>
+        <p>
+          Members receive a non-transferable digital credential linked
+          to their wallet address.
+        </p>
 
-  <p>
-    Memberships can be claimed by members or issued directly
-    by programme administrators.
-  </p>
+        <p>
+          Memberships can be claimed by members or issued directly
+          by programme administrators.
+        </p>
 
-  <p>
-    Memberships may include community access, programme access,
-    voting rights and participation rights.
-  </p>
+        <p>
+          Memberships may include community access,
+          programme access, voting rights and participation rights.
+        </p>
 
-</div>
+      </div>
 
+    </div>
+
+  </div>
+)}
 
 
 {/* RWA CONCEPT MODAL */}
@@ -458,22 +471,36 @@ Available Memberships
       </button>
 
       <h2 className="text-2xl font-bold mb-4">
-        Membership Demo.
+        Membership Model.
       </h2>
 
       <div className="space-y-4 text-zinc-300 text-sm leading-relaxed">
 
-        <p>
-This demo showcases blockchain-based proof of membership and wallet badge using Soulbound Tokens (SBTs). 
-Each SBT represents a non-transferable digital certificate linked to a real-world membership and participation right. 
-Once claimed, ownership or access rights are permanently recorded on-chain and can be withdrawn from the admin.
-        </p>
-
-<p className="text-zinc-400 text-sm mb-4">
-  Membership credentials are currently issued on Polygon Amoy.
-  Future versions may support Polygon Mainnet, Solana and TON.
+<p>
+  TEANET provides blockchain-based memberships for accelerators,
+  incubators, syndicates, alliances and investor communities.
 </p>
 
+<p>
+  Memberships are issued as non-transferable digital credentials
+  linked to a wallet address.
+</p>
+
+<p>
+  Communities may use self-service memberships where members claim
+  credentials themselves, or administrator-issued memberships where
+  credentials are sent directly to approved wallets.
+</p>
+
+<p>
+  Memberships can support programme access, governance, voting rights,
+  alliance participation and community engagement.
+</p>
+
+<p className="text-zinc-400">
+  Currently running on Polygon Amoy. Future versions may support
+  Polygon, Solana, TON and additional blockchain ecosystems.
+</p>
 
       </div>
     </div>
