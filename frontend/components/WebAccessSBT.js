@@ -238,8 +238,13 @@ export default function WebAccessSBT() {
       {/* HEADER */}
       <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 border-b border-zinc-700">
         <div className="max-w-6xl mx-auto px-6 py-10">
-          <h1 className="text-4xl font-bold">RWA DEMO</h1>
-          <p className="text-zinc-400 text-sm">(No real assets — demonstration only)</p>
+         <h1 className="text-4xl font-bold">
+  Membership Credentials
+</h1>
+
+<p className="text-zinc-400 text-sm">
+  Participation infrastructure for accelerators, syndicates, incubators and investor communities.
+</p>
 
 <div className="mt-6 flex flex-wrap gap-3">
 
@@ -252,7 +257,7 @@ export default function WebAccessSBT() {
         : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
     }`}
   >
-    Available Assets
+Available Memberships
   </button>
 
   <button
@@ -263,7 +268,7 @@ export default function WebAccessSBT() {
         : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
     }`}
   >
-    My Assets
+    My Memberships
   </button>
 
   {/* Info Buttons */}
@@ -278,7 +283,7 @@ export default function WebAccessSBT() {
   onClick={() => setShowRWAInfo(true)}
   className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
 >
-  RWA Concept
+  Membership and Particpation Concept
 </button>
 
 
@@ -302,7 +307,7 @@ export default function WebAccessSBT() {
       {/* AVAILABLE */}
       {activeTab === 'available' && (
         <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
-          {loading && <Spinner label="Loading assets from the Polygon Blockchain..." />}
+          {loading && <Spinner label="Loading memberships from Amoy blockchain..." />}
 
           {!loading && available.map((sbt) => (
             <div key={sbt.typeId} className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
@@ -362,7 +367,7 @@ export default function WebAccessSBT() {
 
     {!address && (
       <p className="text-zinc-400">
-        Connect your wallet to view your assets.
+        Connect your wallet to view your memberships.
       </p>
     )}
 
@@ -373,7 +378,7 @@ export default function WebAccessSBT() {
 
     {address && !loadingMySBTs && mySBTs.length === 0 && (
       <p className="text-zinc-500">
-        No SBTs owned yet.
+        No memberships found for this wallet.
       </p>
     )}
 
@@ -406,33 +411,44 @@ export default function WebAccessSBT() {
 )}
 
       {/* HOW IT WORKS MODAL */}
-      {showExplainer && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-          <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
-            <button onClick={() => setShowExplainer(false)} className="absolute top-3 right-3">✕</button>
+    <h2 className="text-2xl font-bold mb-4">
+  How Membership Credentials Work
+</h2>
 
-            <h2 className="text-2xl font-bold mb-4">How this RWA Demo Works</h2>
+<div className="space-y-3 text-zinc-300 text-sm">
 
-            <div className="space-y-3 text-zinc-300 text-sm">
-              <p>This demo lets you obtain blockchain-based proof of ownership.</p>
-              <p>Each SBT represents an already existing legal security:</p>
-              <ul className="list-disc list-inside ml-2">
-                <li>Access to a real life service</li>         
-                <li>Represents the legal ownership of the fractioned SBT  </li>
-        
-              </ul>
-              <p>Once claimed, ownership proof cannot be lost.</p>
+  <p>
+    TEANET provides blockchain-based membership credentials for accelerators,
+    incubators, syndicates, angel groups and investment communities.
+  </p>
 
-              <ol className="list-decimal list-inside space-y-2 mt-3">
-                <li>Download a wallet (MetaMask or Rabby).</li>
-                <li>Set up your wallet and add the Polygon Amoy Test Network.</li>
-                <li>Request free Amoy test coins from the founder via LinkedIn.</li>
-                <li>Click Claim on an asset to receive your on-chain proof of ownership.</li>
-              </ol>
-            </div>
-          </div>
-        </div>
-      )}
+  <p>
+    Each membership is represented by a Soulbound Token (SBT) linked to a wallet address.
+  </p>
+
+  <p>
+    Memberships may provide access rights, participation rights, voting rights,
+    governance rights and programme access.
+  </p>
+
+  <p>
+    Communities can issue memberships in two ways:
+  </p>
+
+  <ul className="list-disc list-inside ml-2">
+    <li>Self-Service Membership (member claims membership)</li>
+    <li>Administrator-Issued Membership (membership sent directly to wallet)</li>
+  </ul>
+
+  <ol className="list-decimal list-inside space-y-2 mt-3">
+    <li>Create or connect a wallet.</li>
+    <li>Add the Polygon Amoy test network.</li>
+    <li>Receive approval from the community or claim membership.</li>
+    <li>Receive a blockchain-based membership credential.</li>
+  </ol>
+
+</div>
+
 
 
 {/* RWA CONCEPT MODAL */}
@@ -448,32 +464,22 @@ export default function WebAccessSBT() {
       </button>
 
       <h2 className="text-2xl font-bold mb-4">
-        How this RWA Demo Works
+        Membership Demo.
       </h2>
 
       <div className="space-y-4 text-zinc-300 text-sm leading-relaxed">
 
         <p>
-This demo showcases blockchain-based proof of ownership using Soulbound Tokens (SBTs). 
-Each SBT represents a non-transferable digital certificate linked to a real-world asset model, membership, or participation right. 
-Once claimed, ownership or access rights are permanently recorded on-chain.
+This demo showcases blockchain-based proof of membership and wallet badge using Soulbound Tokens (SBTs). 
+Each SBT represents a non-transferable digital certificate linked to a real-world membership and participation right. 
+Once claimed, ownership or access rights are permanently recorded on-chain and can be withdrawn from the admin.
         </p>
 
-        <p>
-Some assets represent participation in a pooled structure. In a real product version, a Special Purpose Vehicle (SPV) would hold underlying assets or revenue contracts. Each SBT represents one participation unit in the pool — conceptually in the demo purchasing is limited to 1 investor = 1 share. Benefits or revenues would be distributed pro-rata to SBT holders.
-        </p>
+<p className="text-zinc-400 text-sm mb-4">
+  Membership credentials are currently issued on Polygon Amoy.
+  Future versions may support Polygon Mainnet, Solana and TON.
+</p>
 
-        <p>
-Some SBTs may additionally grant governance or voting participation in pool or community decisions.
-        </p>
-
-        <p>
-This demo does NOT create legal securities, regulated investments, or provide real SPVs. It illustrates the ownership based on fractional NFT / SBT technology, which can be combined with legal and investment related arrangements. The next version implements a community token with participatory rights.
-        </p>
-
-        <p>
-Pricing and payment logic are intentionally excluded. In production, investment amounts, compliance, and settlement would occur off-chain before minting ownership - and eventual transfer in stablecoin or FIAT.
-        </p>
 
       </div>
     </div>
@@ -494,7 +500,7 @@ Pricing and payment logic are intentionally excluded. In production, investment 
         ✕
       </button>
 
-      <h2 className="text-2xl font-bold mb-4">Get Wallet & Setup Network</h2>
+      <h2 className="text-2xl font-bold mb-4">Setup Wallet</h2>
 
       <div className="space-y-4 text-sm text-zinc-300">
 
@@ -629,9 +635,9 @@ Pricing and payment logic are intentionally excluded. In production, investment 
 
       {/* FOOTER */}
       <footer className="border-t border-zinc-800 py-6 text-center text-xs text-zinc-500">
-        © {new Date().getFullYear()} TEA Network — All rights reserved.
+© {new Date().getFullYear()} TEANET — Participation Infrastructure
       </footer>
     </div>
   )
 }
-
+ 
