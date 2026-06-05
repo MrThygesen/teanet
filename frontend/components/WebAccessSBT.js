@@ -240,7 +240,7 @@ export default function WebAccessSBT() {
       <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 border-b border-zinc-700">
         <div className="max-w-6xl mx-auto px-6 py-10">
          <h1 className="text-4xl font-bold">
-  Membership Credentials
+  Membership Infrastructure
 </h1>
 
 <p className="text-zinc-400 text-sm">
