@@ -637,7 +637,7 @@ The current pilot environment runs on Polygon Amoy. Future versions may support 
       </button>
 
       <h2 className="text-xl font-bold mb-3">
-        Contact
+        Request a Demo
       </h2>
 
       <p className="text-zinc-300 text-sm">
@@ -647,11 +647,15 @@ The current pilot environment runs on Polygon Amoy. Future versions may support 
         </span>
       </p>
 
-      <p className="mt-4 text-zinc-400 text-sm">
-        Connect on LinkedIn to request a demo,
-        discuss partnership opportunities or learn
-        more about EDGE Participate and EDGE Alliance.
-      </p>
+    <p className="mt-4 text-zinc-400 text-sm">
+  Connect on LinkedIn to request a demo,
+  <br />
+  discuss partnership opportunities,
+  <br />
+  or learn more about EDGE Participate
+  <br />
+  and EDGE Alliance.
+</p>
 
       <a
         href="https://www.linkedin.com/in/mortenthygesens/"
