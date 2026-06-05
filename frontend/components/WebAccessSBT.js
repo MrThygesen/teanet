@@ -431,23 +431,21 @@ Available Memberships
       <div className="space-y-4 text-zinc-300 text-sm">
 
         <p>
-          TEANET provides blockchain-based memberships for accelerators,
-          incubators, syndicates, alliances and investor communities.
+
+TEANET provides digital memberships for accelerators, incubators, syndicates, alliances and investment communities.
+
         </p>
 
         <p>
-          Members receive a non-transferable digital credential linked
-          to their wallet address.
+Members receive a non-transferable digital credential linked to their wallet address.
         </p>
 
         <p>
-          Memberships can be claimed by members or issued directly
-          by programme administrators.
+Memberships can be claimed directly by members or issued by programme administrators.
         </p>
 
         <p>
-          Memberships may include community access,
-          programme access, voting rights and participation rights.
+Memberships may provide access to communities, programmes, events, governance, voting rights and participation opportunities.
         </p>
 
       </div>
@@ -477,24 +475,22 @@ Available Memberships
       <div className="space-y-4 text-zinc-300 text-sm leading-relaxed">
 
 <p>
-  TEANET provides blockchain-based memberships for accelerators,
-  incubators, syndicates, alliances and investor communities.
+EDGE PARTICIPATION provides wallet-based membership infrastructure for accelerators, incubators, syndicates, alliances and investment communities.
 </p>
 
 <p>
-  Memberships are issued as non-transferable digital credentials
-  linked to a wallet address.
+ Memberships are issued as non-transferable digital credentials linked to a wallet address.
 </p>
 
 <p>
-  Communities may use self-service memberships where members claim
-  credentials themselves, or administrator-issued memberships where
-  credentials are sent directly to approved wallets.
+Communities may use self-service memberships, where members claim credentials themselves, or administrator-issued memberships, where credentials are sent directly to approved wallet addresses.
+
+
 </p>
 
 <p>
-  Memberships can support programme access, governance, voting rights,
-  alliance participation and community engagement.
+Memberships can support programme access, alliance participation, governance, voting rights, community engagement and future whitelisting of approved participants.
+The current pilot environment runs on Polygon Amoy. Future versions may support Polygon, Solana, TON and additional blockchain ecosystems.
 </p>
 
 <p className="text-zinc-400">
@@ -629,28 +625,45 @@ Available Memberships
 )}
 
 
-      {/* CONTACT MODAL */}
-      {showContact && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-          <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-md w-full p-6 relative">
-            <button onClick={() => setShowContact(false)} className="absolute top-3 right-3">✕</button>
-            <h2 className="text-xl font-bold mb-3">Contact</h2>
-            <p className="text-zinc-300 text-sm">
-              Founder: <span className="font-semibold">Morten Thygesen</span>
-            </p>
-            <a
-              href="https://www.linkedin.com/in/mortenthygesens/"
-              target="_blank"
-              className="block mt-3 text-blue-400 underline text-sm"
-            >
-              LinkedIn Profile
-            </a>
-            <p className="mt-4 text-zinc-400 text-xs">
-              Contact the founder on LinkedIn to request free Amoy test coins.
-            </p>
-          </div>
-        </div>
-      )}
+{/* CONTACT MODAL */}
+{showContact && (
+  <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+    <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-md w-full p-6 relative">
+      <button
+        onClick={() => setShowContact(false)}
+        className="absolute top-3 right-3 text-zinc-400 hover:text-white"
+      >
+        ✕
+      </button>
+
+      <h2 className="text-xl font-bold mb-3">
+        Contact
+      </h2>
+
+      <p className="text-zinc-300 text-sm">
+        Founder:
+        <span className="font-semibold ml-1">
+          Morten Thygesen
+        </span>
+      </p>
+
+      <p className="mt-4 text-zinc-400 text-sm">
+        Connect on LinkedIn to request a demo,
+        discuss partnership opportunities or learn
+        more about EDGE Participate and EDGE Alliance.
+      </p>
+
+      <a
+        href="https://www.linkedin.com/in/mortenthygesens/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-4 text-blue-400 hover:text-blue-300 underline text-sm"
+      >
+        LinkedIn Profile
+      </a>
+    </div>
+  </div>
+)}
 
 
 
