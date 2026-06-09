@@ -217,7 +217,7 @@ export default function WebAccessSBT() {
         args: [typeId],
       })
 
-      toast.success('SBT claimed')
+     toast.success('Membership joined')
 
       await fetchSBTs()
       await fetchMySBTs()
@@ -306,37 +306,7 @@ return (
   </div>
 
 
-  {/* ROADMAP PANEL */}
 
-  <div className="max-w-6xl mx-auto px-6 pt-8">
-
-    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
-
-      <h3 className="font-semibold mb-4">
-        TEANET Roadmap
-      </h3>
-
-      <div className="grid md:grid-cols-2 gap-8 text-sm text-zinc-400">
-
-        <div>
-          <div>✓ Identity</div>
-          <div>✓ Community Membership</div>
-          <div>✓ Open Credentials</div>
-          <div>✓ Admin Credentials</div>
-        </div>
-
-        <div>
-          <div>◌ Participation</div>
-          <div>◌ Community Voting</div>
-          <div>◌ Governance</div>
-          <div>◌ Sponsor Programs</div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
 
 
   {/* COMMUNITIES */}
@@ -417,7 +387,7 @@ return (
                 className="flex-1 px-3 py-2 text-sm rounded bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-700"
               >
                 {loadingTypeId === sbt.typeId
-                  ? 'Joining...'
+                  ? 'Join...'
                   : 'Join'}
               </button>
 
@@ -641,7 +611,7 @@ Current capabilities:
 ✓ Membership
 
 <br />
-✓ Open Claiming
+✓ Open Claim
 
 <br />
 ✓ Admin Issuance
@@ -656,6 +626,97 @@ Current capabilities:
 
 )}
 
+
+{/* WALLET SETUP */}
+
+{showWalletSetup && (
+
+<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+
+<div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
+
+<button
+onClick={() => setShowWalletSetup(false)}
+className="absolute top-3 right-3 text-zinc-400 hover:text-white"
+>
+✕
+</button>
+
+<h2 className="text-2xl font-bold mb-4">
+Wallet Setup
+</h2>
+
+<div className="space-y-5 text-sm text-zinc-300">
+
+<div>
+
+<p className="font-semibold">
+1. Download a Wallet
+</p>
+
+<a
+href="https://metamask.io/download/"
+target="_blank"
+className="text-blue-400 underline"
+>
+Download MetaMask
+</a>
+
+<p className="text-zinc-400 text-xs mt-1">
+Rabby Wallet also works.
+</p>
+
+</div>
+
+
+<div>
+
+<p className="font-semibold">
+2. Add Polygon Amoy Test Network
+</p>
+
+<button
+onClick={addAmoyNetwork}
+className="mt-2 px-3 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700 text-xs"
+>
+Add Network Automatically
+</button>
+
+<p className="text-zinc-400 text-xs mt-3">
+Manual settings:
+</p>
+
+<div className="bg-zinc-800 rounded p-3 mt-2 text-xs font-mono space-y-1">
+
+<div>Network: Polygon Amoy Testnet</div>
+<div>Chain ID: 80002</div>
+<div>Currency: POL</div>
+<div>Explorer: https://amoy.polygonscan.com/</div>
+
+</div>
+
+</div>
+
+
+<div>
+
+<p className="font-semibold">
+3. Get Test Coins
+</p>
+
+<p className="text-zinc-400 text-xs">
+Contact the founder on LinkedIn to receive free test coins.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+)}
 
 
 {/* CONTACT */}
@@ -673,36 +734,58 @@ className="absolute top-3 right-3 text-zinc-400 hover:text-white"
 ✕
 </button>
 
-<h2 className="text-xl font-bold mb-3">
-Request a Demo
+<h2 className="text-2xl font-bold mb-4">
+Explore TEANET
 </h2>
 
-<p className="text-zinc-300 text-sm">
+<div className="space-y-4 text-sm text-zinc-300">
 
-Founder:
+<p>
+TEANET supports:
+</p>
 
-<span className="font-semibold ml-1">
+<ul className="space-y-2 text-zinc-400">
+
+<li>• Investment Communities</li>
+
+<li>• Accelerators</li>
+
+<li>• Founder Networks</li>
+
+<li>• Partner Programs</li>
+
+<li>• EDGE Alliance Initiatives</li>
+
+</ul>
+
+<p className="pt-2">
+Interested in learning more or discussing partnership opportunities?
+</p>
+
+<div className="pt-4 border-t border-zinc-700">
+
+<p className="text-zinc-500 text-xs uppercase tracking-wide">
+Founder
+</p>
+
+<p className="font-semibold mt-2">
 Morten Thygesen
-</span>
-
 </p>
 
-<p className="mt-4 text-zinc-400 text-sm">
-
-Connect on LinkedIn to request a demo,
-discuss partnership opportunities,
-or learn more about TEANET and EDGE Alliance.
-
+<p className="text-zinc-400 text-sm">
+EDGE Alliance
 </p>
+
+</div>
 
 <a
 href="https://www.linkedin.com/in/mortenthygesens/"
 target="_blank"
 rel="noopener noreferrer"
-className="inline-block mt-4 text-blue-400 hover:text-blue-300 underline text-sm"
+className="inline-block mt-5 px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white text-sm"
 >
 
-LinkedIn Profile
+Connect on LinkedIn
 
 </a>
 
@@ -710,8 +793,9 @@ LinkedIn Profile
 
 </div>
 
-)}
+</div>
 
+)}
 
 
 {/* FOOTER */}
