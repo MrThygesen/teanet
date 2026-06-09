@@ -230,452 +230,508 @@ export default function WebAccessSBT() {
 
   if (!mounted) return null
 
-  // ---------------- Render ----------------
 
-  return (
+return (
 
-    <div className="min-h-screen bg-zinc-950 text-white">
+<div className="min-h-screen bg-zinc-950 text-white">
 
-      {/* HEADER */}
-      <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 border-b border-zinc-700">
-        <div className="max-w-6xl mx-auto px-6 py-10">
-         <h1 className="text-4xl font-bold">
-  Membership Infrastructure
-</h1>
+  {/* HEADER */}
+  <div className="bg-gradient-to-r from-zinc-900 to-zinc-800 border-b border-zinc-700">
 
-<p className="text-zinc-400 text-sm">
-  Participation infrastructure for accelerators, syndicates, incubators and investor communities.
-</p>
+    <div className="max-w-6xl mx-auto px-6 py-10">
 
-<div className="mt-6 flex flex-wrap gap-3">
+      <h1 className="text-4xl font-bold">
+        Community Participation
+      </h1>
 
-  {/* Tabs */}
-  <button
-    onClick={() => setActiveTab('available')}
-    className={`px-4 py-2 rounded ${
-      activeTab === 'available'
-        ? 'bg-blue-600 text-white'
-        : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
-    }`}
-  >
-Available Memberships
-  </button>
+      <p className="text-zinc-400 text-sm mt-2">
+        Identity and participation infrastructure for members,
+        partners and investment communities.
+      </p>
 
-  <button
-    onClick={() => setActiveTab('myassets')}
-    className={`px-4 py-2 rounded ${
-      activeTab === 'myassets'
-        ? 'bg-blue-600 text-white'
-        : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
-    }`}
-  >
-    My Memberships
-  </button>
+      <div className="mt-6 flex flex-wrap gap-3">
 
-  {/* Info Buttons */}
-  <button
-    onClick={() => setShowExplainer(true)}
-    className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-  >
-    How it works
-  </button>
+        <button
+          onClick={() => setActiveTab('available')}
+          className={`px-4 py-2 rounded ${
+            activeTab === 'available'
+              ? 'bg-blue-600 text-white'
+              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+          }`}
+        >
+          Communities
+        </button>
 
-<button
-  onClick={() => setShowRWAInfo(true)}
-  className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
->
-  Membership Model
-</button>
+        <button
+          onClick={() => setActiveTab('myassets')}
+          className={`px-4 py-2 rounded ${
+            activeTab === 'myassets'
+              ? 'bg-blue-600 text-white'
+              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+          }`}
+        >
+          My Credentials
+        </button>
+
+        <button
+          onClick={() => setShowExplainer(true)}
+          className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+        >
+          How It Works
+        </button>
+
+        <button
+          onClick={() => setShowRWAInfo(true)}
+          className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+        >
+          Future Roadmap
+        </button>
+
+        <button
+          onClick={() => setShowWalletSetup(true)}
+          className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+        >
+          Wallet Setup
+        </button>
+
+        <button
+          onClick={() => setShowContact(true)}
+          className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+        >
+          Contact
+        </button>
+
+      </div>
+    </div>
+  </div>
 
 
-  <button
-    onClick={() => setShowWalletSetup(true)}
-    className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-  >
-    Get Wallet / Coins
-  </button>
+  {/* ROADMAP PANEL */}
 
-  <button
-    onClick={() => setShowContact(true)}
-    className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-  >
-    Contact
-  </button>
+  <div className="max-w-6xl mx-auto px-6 pt-8">
 
-</div>
-        </div> 
-      </div>    
-      {/* AVAILABLE */}
-      {activeTab === 'available' && (
-        <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
-          {loading && <Spinner label="Loading memberships from Amoy blockchain..." />}
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6">
 
-          {!loading && available.map((sbt) => (
-            <div key={sbt.typeId} className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden">
-              {sbt.image && <img src={sbt.image} className="h-40 w-full object-cover" />}
+      <h3 className="font-semibold mb-4">
+        TEANET Roadmap
+      </h3>
 
-              <div className="p-4 space-y-3">
-                <span className={`text-xs px-3 py-1 rounded-full ${badgeColor(sbt.rwaType)}`}>
-                  {sbt.rwaType}
-                </span>
+      <div className="grid md:grid-cols-2 gap-8 text-sm text-zinc-400">
 
-                <h3 className="text-lg font-semibold">{sbt.name}</h3>
-                <p className="text-sm text-zinc-400">{shorten(sbt.description)}</p>
-
-                <p className="text-xs text-zinc-500">
-                  {sbt.minted} / {sbt.maxSupply} claimed
-                </p>
-
-                <label className="flex items-center gap-2 text-xs text-zinc-300">
-                  <input
-                    type="checkbox"
-                    checked={policyAccepted[sbt.typeId] || false}
-                    onChange={(e) =>
-                      setPolicyAccepted((prev) => ({
-                        ...prev,
-                        [sbt.typeId]: e.target.checked,
-                      }))
-                    }
-                  />
-                  I confirm I am a certified investor
-                </label>
-
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setPreview(sbt)}
-                    className="flex-1 px-3 py-2 text-sm rounded bg-zinc-700 hover:bg-zinc-600"
-                  >
-                    Preview
-                  </button>
-
-                  <button
-                    disabled={loadingTypeId === sbt.typeId || !address}
-                    onClick={() => handleClaim(sbt.typeId)}
-                    className="flex-1 px-3 py-2 text-sm rounded bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-700"
-                  >
-                    {loadingTypeId === sbt.typeId ? 'Claiming…' : 'Claim'}
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div>
+          <div>✓ Identity</div>
+          <div>✓ Community Membership</div>
+          <div>✓ Open Credentials</div>
+          <div>✓ Admin Credentials</div>
         </div>
+
+        <div>
+          <div>◌ Participation</div>
+          <div>◌ Community Voting</div>
+          <div>◌ Governance</div>
+          <div>◌ Sponsor Programs</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  {/* COMMUNITIES */}
+
+  {activeTab === 'available' && (
+
+    <div className="max-w-6xl mx-auto px-6 py-10 grid md:grid-cols-3 gap-6">
+
+      {loading && (
+        <Spinner label="Loading communities..." />
       )}
 
+      {!loading && available.map((sbt) => (
+
+        <div
+          key={sbt.typeId}
+          className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden"
+        >
+
+          {sbt.image && (
+            <img
+              src={sbt.image}
+              className="h-40 w-full object-cover"
+            />
+          )}
+
+          <div className="p-4 space-y-3">
+
+            <span
+              className={`text-xs px-3 py-1 rounded-full ${badgeColor(sbt.rwaType)}`}
+            >
+              {sbt.rwaType}
+            </span>
+
+            <h3 className="text-lg font-semibold">
+              {sbt.name}
+            </h3>
+
+            <p className="text-sm text-zinc-400">
+              {shorten(sbt.description)}
+            </p>
+
+            <p className="text-xs text-zinc-500">
+              {sbt.minted} / {sbt.maxSupply} claimed
+            </p>
+
+            <label className="flex items-center gap-2 text-xs text-zinc-300">
+
+              <input
+                type="checkbox"
+                checked={policyAccepted[sbt.typeId] || false}
+                onChange={(e) =>
+                  setPolicyAccepted((prev) => ({
+                    ...prev,
+                    [sbt.typeId]: e.target.checked,
+                  }))
+                }
+              />
+
+              I confirm that I meet the membership requirements.
+
+            </label>
+
+            <div className="flex gap-2">
+
+              <button
+                onClick={() => setPreview(sbt)}
+                className="flex-1 px-3 py-2 text-sm rounded bg-zinc-700 hover:bg-zinc-600"
+              >
+                Preview
+              </button>
+
+              <button
+                disabled={
+                  loadingTypeId === sbt.typeId || !address
+                }
+                onClick={() => handleClaim(sbt.typeId)}
+                className="flex-1 px-3 py-2 text-sm rounded bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-700"
+              >
+                {loadingTypeId === sbt.typeId
+                  ? 'Joining...'
+                  : 'Join'}
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      ))}
+
+    </div>
+
+  )}
+
+
 {/* MY ASSETS */}
+
+{/* MY CREDENTIALS */}
 {activeTab === 'myassets' && (
   <div className="max-w-6xl mx-auto px-6 py-10">
 
     {!address && (
       <p className="text-zinc-400">
-        Connect your wallet to view your memberships.
+        Connect your wallet to view your credentials.
       </p>
     )}
 
     {address && loadingMySBTs && (
-  <Spinner label="Loading your owned SBTs…" />
-)}
-
+      <Spinner label="Loading your credentials..." />
+    )}
 
     {address && !loadingMySBTs && mySBTs.length === 0 && (
       <p className="text-zinc-500">
-        No memberships found for this wallet.
+        No credentials found for this wallet.
       </p>
     )}
 
     {address && mySBTs.length > 0 && (
       <div className="grid md:grid-cols-3 gap-6">
+
         {mySBTs.map((sbt) => (
+
           <div
             key={sbt.tokenId}
             className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden"
           >
+
             {sbt.image && (
               <img
                 src={sbt.image}
                 className="h-40 w-full object-cover"
-                alt={sbt.name}
               />
             )}
+
             <div className="p-4">
-              <h3 className="font-semibold">{sbt.name}</h3>
-              <p className="text-xs text-zinc-500">
-                Token #{sbt.tokenId}
+
+              <h3 className="font-semibold">
+                {sbt.name}
+              </h3>
+
+              <p className="text-xs text-zinc-500 mt-1">
+                Credential #{sbt.tokenId}
               </p>
+
             </div>
+
           </div>
+
         ))}
+
       </div>
     )}
 
   </div>
 )}
 
- {/* HOW IT WORKS MODAL */}
+
+{/* HOW IT WORKS */}
+
 {showExplainer && (
-  <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
 
-    <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
+<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
 
-      <button
-        onClick={() => setShowExplainer(false)}
-        className="absolute top-3 right-3 text-zinc-400 hover:text-white"
-      >
-        ✕
-      </button>
+<div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
 
-      <h2 className="text-2xl font-bold mb-4">
-        How Memberships Work
-      </h2>
+<button
+onClick={() => setShowExplainer(false)}
+className="absolute top-3 right-3 text-zinc-400 hover:text-white"
+>
+✕
+</button>
 
-      <div className="space-y-4 text-zinc-300 text-sm">
+<h2 className="text-2xl font-bold mb-4">
+How Participation Works
+</h2>
 
-        <p>
+<div className="space-y-4 text-zinc-300 text-sm">
 
-TEANET provides digital memberships for accelerators, incubators, syndicates, alliances and investment communities.
+<p>
+TEANET provides portable credentials for members, partners and ecosystem participants.
+</p>
 
-        </p>
+<p>
+Communities may issue memberships directly or allow members to claim them themselves.
+</p>
 
-        <p>
-Members receive a non-transferable digital credential linked to their wallet address.
-        </p>
+<p>
+Credentials remain linked to the participant's wallet over time.
+</p>
 
-        <p>
-Memberships can be claimed directly by members or issued by programme administrators.
-        </p>
+<p>
+Communities may use credentials to support access, participation, collaboration and future governance.
+</p>
 
-        <p>
-Memberships may provide access to communities, programmes, events, governance, voting rights and participation opportunities.
-        </p>
+</div>
 
-      </div>
+</div>
 
-    </div>
+</div>
 
-  </div>
 )}
 
 
-{/* RWA CONCEPT MODAL */}
+
+{/* ROADMAP */}
+
 {showRWAInfo && (
-  <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-    <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
 
-      <button
-        onClick={() => setShowRWAInfo(false)}
-        className="absolute top-3 right-3 text-zinc-400 hover:text-white"
-      >
-        ✕
-      </button>
+<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
 
-      <h2 className="text-2xl font-bold mb-4">
-        Membership Model.
-      </h2>
+<div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
 
-      <div className="space-y-4 text-zinc-300 text-sm leading-relaxed">
+<button
+onClick={() => setShowRWAInfo(false)}
+className="absolute top-3 right-3 text-zinc-400 hover:text-white"
+>
+✕
+</button>
 
-<p>
-EDGE PARTICIPATION provides wallet-based membership infrastructure for accelerators, incubators, syndicates, alliances and investment communities.
-</p>
+<h2 className="text-2xl font-bold mb-4">
+TEANET Roadmap
+</h2>
 
-<p>
- Memberships are issued as non-transferable digital credentials linked to a wallet address.
-</p>
+<div className="space-y-5 text-zinc-300 text-sm leading-relaxed">
 
-<p>
-Communities may use self-service memberships, where members claim credentials themselves, or administrator-issued memberships, where credentials are sent directly to approved wallet addresses.
+<div>
 
-
-</p>
+<div className="font-semibold mb-1">
+Identity
+</div>
 
 <p>
-Memberships can support programme access, alliance participation, governance, voting rights, community engagement and future whitelisting of approved participants.
-The current pilot environment runs on Polygon Amoy. Future versions may support Polygon, Solana, TON and additional blockchain ecosystems.
+Wallet-based credentials for members and ecosystem participants.
 </p>
+
+</div>
+
+
+<div>
+
+<div className="font-semibold mb-1">
+Membership
+</div>
+
+<p>
+Communities can issue or approve memberships.
+</p>
+
+</div>
+
+
+<div>
+
+<div className="font-semibold mb-1">
+Participation
+</div>
+
+<p>
+Credentials may unlock events, access and collaboration.
+</p>
+
+</div>
+
+
+<div>
+
+<div className="font-semibold mb-1">
+Voting
+</div>
+
+<p>
+Future communities may introduce member approval and governance.
+</p>
+
+</div>
+
+
+<div>
+
+<div className="font-semibold mb-1">
+Sponsor Programs
+</div>
+
+<p>
+Communities may eventually coordinate grants and ecosystem initiatives.
+</p>
+
+</div>
+
+<hr className="border-zinc-700" />
 
 <p className="text-zinc-400">
-  Currently running on Polygon Amoy. Future versions may support
-  Polygon, Solana, TON and additional blockchain ecosystems.
+
+Current capabilities:
+
+<br />
+✓ Identity
+
+<br />
+✓ Membership
+
+<br />
+✓ Open Claiming
+
+<br />
+✓ Admin Issuance
+
 </p>
 
-      </div>
-    </div>
-  </div>
+</div>
+
+</div>
+
+</div>
+
 )}
 
 
 
-{/* WALLET SETUP MODAL */}
-{showWalletSetup && (
-  <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-    <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
+{/* CONTACT */}
 
-      <button
-        onClick={() => setShowWalletSetup(false)}
-        className="absolute top-3 right-3 text-zinc-400 hover:text-white"
-      >
-        ✕
-      </button>
-
-      <h2 className="text-2xl font-bold mb-4">Setup Wallet</h2>
-
-      <div className="space-y-4 text-sm text-zinc-300">
-
-        {/* Step 1 */}
-        <div>
-          <p className="font-semibold">1. Download a Wallet</p>
-          <a
-            href="https://metamask.io/download/"
-            target="_blank"
-            className="text-blue-400 underline"
-          >
-            Download MetaMask
-          </a>
-          <p className="text-zinc-400 text-xs mt-1">
-            (Rabby wallet also works)
-          </p>
-        </div>
-
-        {/* Step 2 */}
-        <div>
-          <p className="font-semibold">2. Add Polygon Amoy Test Network</p>
-
-          <button
-            onClick={addAmoyNetwork}
-            className="mt-2 px-3 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700 text-xs"
-          >
-            Add Amoy Network Automatically
-          </button>
-
-          <p className="text-zinc-400 text-xs mt-3">
-            Or add manually:
-          </p>
-
-          <div className="bg-zinc-800 rounded p-3 mt-2 text-xs font-mono space-y-1">
-            <div>Network Name: Polygon Amoy Testnet</div>
-            <div>RPC URL: https://rpc-amoy.polygon.technology/</div>
-            <div>Chain ID: 80002</div>
-            <div>Currency Symbol: POL</div>
-            <div>Block Explorer: https://amoy.polygonscan.com/</div>
-          </div>
-        </div>
-
-        {/* Step 3 */}
-        <div>
-          <p className="font-semibold">3. Get Test Coins</p>
-          <p className="text-zinc-400 text-xs">
-            Contact the founder on LinkedIn to receive free Amoy test coins.  
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-)}
-
-{/* PREVIEW MODAL */}
-{preview && (
-  <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-    <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
-
-      <button
-        onClick={() => setPreview(null)}
-        className="absolute top-3 right-3 text-zinc-400 hover:text-white"
-      >
-        ✕
-      </button>
-
-      {preview.image && (
-        <img
-          src={preview.image}
-          className="h-48 w-full object-cover rounded"
-          alt={preview.name}
-        />
-      )}
-
-      <h2 className="text-xl font-bold mt-4">{preview.name}</h2>
-
-      <p className="text-zinc-400 text-sm mt-2">
-        {preview.description}
-      </p>
-
-      {/* Attributes if present */}
-      {preview.metadata?.attributes && (
-        <div className="mt-4 space-y-1 text-sm">
-          {preview.metadata.attributes.map((a, idx) => (
-            <div key={idx} className="flex justify-between text-zinc-300">
-              <span>{a.trait_type}</span>
-              <span className="text-zinc-400">{a.value}</span>
-            </div>
-          ))}
-        </div>
-      )}
-
-      {preview.external_url && (
-        <a
-          href={preview.external_url}
-          target="_blank"
-          className="block mt-4 text-blue-400 text-sm underline"
-        >
-          External link
-        </a>
-      )}
-    </div>
-  </div>
-)}
-
-
-{/* CONTACT MODAL */}
 {showContact && (
-  <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-    <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-md w-full p-6 relative">
-      <button
-        onClick={() => setShowContact(false)}
-        className="absolute top-3 right-3 text-zinc-400 hover:text-white"
-      >
-        ✕
-      </button>
 
-      <h2 className="text-xl font-bold mb-3">
-        Request a Demo
-      </h2>
+<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
 
-      <p className="text-zinc-300 text-sm">
-        Founder:
-        <span className="font-semibold ml-1">
-          Morten Thygesen
-        </span>
-      </p>
+<div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-md w-full p-6 relative">
 
-    <p className="mt-4 text-zinc-400 text-sm">
-  Connect on LinkedIn to request a demo,
-  <br />
-  discuss partnership opportunities,
-  <br />
-  or learn more about EDGE Participate
-  <br />
-  and EDGE Alliance.
+<button
+onClick={() => setShowContact(false)}
+className="absolute top-3 right-3 text-zinc-400 hover:text-white"
+>
+✕
+</button>
+
+<h2 className="text-xl font-bold mb-3">
+Request a Demo
+</h2>
+
+<p className="text-zinc-300 text-sm">
+
+Founder:
+
+<span className="font-semibold ml-1">
+Morten Thygesen
+</span>
+
 </p>
 
-      <a
-        href="https://www.linkedin.com/in/mortenthygesens/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block mt-4 text-blue-400 hover:text-blue-300 underline text-sm"
-      >
-        LinkedIn Profile
-      </a>
-    </div>
-  </div>
+<p className="mt-4 text-zinc-400 text-sm">
+
+Connect on LinkedIn to request a demo,
+discuss partnership opportunities,
+or learn more about TEANET and EDGE Alliance.
+
+</p>
+
+<a
+href="https://www.linkedin.com/in/mortenthygesens/"
+target="_blank"
+rel="noopener noreferrer"
+className="inline-block mt-4 text-blue-400 hover:text-blue-300 underline text-sm"
+>
+
+LinkedIn Profile
+
+</a>
+
+</div>
+
+</div>
+
 )}
 
 
 
-      {/* FOOTER */}
-      <footer className="border-t border-zinc-800 py-6 text-center text-xs text-zinc-500">
-© {new Date().getFullYear()} TEANET — Participation Infrastructure
-      </footer>
-    </div>
-  )
+{/* FOOTER */}
+
+<footer className="border-t border-zinc-800 py-8 text-center text-xs text-zinc-500">
+
+<div>
+TEANET
+</div>
+
+<div className="mt-1">
+Trust & Identity Layer of EDGE Alliance
+</div>
+
+</footer>
+
+</div>
+
+)
 }
- 
+
+
+
