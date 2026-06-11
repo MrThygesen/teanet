@@ -13,6 +13,8 @@
     { "trait_type": "Jurisdiction", "value": "Global" },
     { "trait_type": "Transferable", "value": "No (Soulbound)" },
     { "trait_type": "Community Layer", "value": "Participation Infrastructure" },
-    { "trait_type": "Community Administrator", "value": "EDGE Alliance" }
+    { "trait_type": "Community Administrator", "value": "EDGE Alliance" },
+    { "trait_type": "Community Status",  "value": "Forming" },
+    { "trait_type": "Participation", "value": "Contact Founder"}
   ]
 }

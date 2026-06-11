@@ -345,6 +345,24 @@ return (
               {sbt.name}
             </h3>
 
+<div className="flex flex-wrap gap-2">
+
+  <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+    {getAttr(sbt.metadata, 'Membership Type')}
+  </span>
+
+  <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+    {getAttr(sbt.metadata, 'Community Status') || 'Forming'}
+  </span>
+
+  <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+    {getAttr(sbt.metadata, 'Participation') || 'Contact Founder'}
+  </span>
+
+</div>
+
+
+
             <p className="text-sm text-zinc-400">
               {shorten(sbt.description)}
             </p>
@@ -448,6 +466,25 @@ return (
               <h3 className="font-semibold">
                 {sbt.name}
               </h3>
+
+<div className="flex flex-wrap gap-2">
+
+  <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+    {getAttr(sbt.metadata, 'Membership Type')}
+  </span>
+
+  <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+    {getAttr(sbt.metadata, 'Community Status') || 'Forming'}
+  </span>
+
+  <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+    {getAttr(sbt.metadata, 'Participation') || 'Contact Founder'}
+  </span>
+
+</div>
+
+
+
 
               <p className="text-xs text-zinc-500 mt-1">
                 Credential #{sbt.tokenId}
@@ -797,6 +834,79 @@ Connect on LinkedIn
 
 )}
 
+
+
+{/* PREVIEW */}
+
+{preview && (
+
+<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+
+  <div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
+
+    <button
+      onClick={() => setPreview(null)}
+      className="absolute top-3 right-3 text-zinc-400 hover:text-white"
+    >
+      ✕
+    </button>
+
+    {preview.image && (
+      <img
+        src={preview.image}
+        className="rounded-xl mb-5 w-full h-56 object-cover"
+      />
+    )}
+
+    <h2 className="text-2xl font-bold mb-3">
+      {preview.name}
+    </h2>
+
+    <p className="text-zinc-400 text-sm mb-5">
+      {preview.description}
+    </p>
+
+    <div className="space-y-2 text-sm">
+
+      {preview.metadata?.attributes?.map((attr, index) => (
+
+        <div
+          key={index}
+          className="flex justify-between border-b border-zinc-800 pb-2"
+        >
+
+          <span className="text-zinc-500">
+            {attr.trait_type}
+          </span>
+
+          <span className="text-zinc-200">
+            {attr.value}
+          </span>
+
+        </div>
+
+      ))}
+
+    </div>
+
+    {preview.external_url && (
+
+      <a
+        href={preview.external_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mt-6 px-4 py-2 rounded bg-blue-600 hover:bg-blue-700"
+      >
+        View PDF
+      </a>
+
+    )}
+
+  </div>
+
+</div>
+
+)}
 
 {/* FOOTER */}
 
