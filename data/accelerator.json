@@ -1,8 +1,8 @@
 {
-"name": "ARC Accelerator Membership",
+"name": "Accelerator Membership",
 "description": "Membership credential providing access to accelerator programmes, founder resources and ecosystem participation.",
 "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/accelerator-membership.jpg",
-"external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/ARC-Accelerator-Membership.pdf",
+"external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/Accelerator-Membership.pdf",
 "attributes": [
 { "trait_type": "Membership Type", "value": "Accelerator" },
 { "trait_type": "Organisation", "value": "ARC Accelerator" },
@@ -13,7 +13,9 @@
 { "trait_type": "Jurisdiction", "value": "Global" },
 { "trait_type": "Transferable", "value": "No (Soulbound)" },
 { "trait_type": "Community Layer", "value": "Participation Infrastructure"},
-{ "trait_type": "Issuer", "value": "EDGE Expansion Toolkit"}
+{ "trait_type": "Issuer", "value": "EDGE Alliance"},
+{ "trait_type": "Community Layer", "value": "Participation Infrastructure" },
+{ "trait_type": "Community Administrator", "value": "EDGE Alliance" }
 ]
 }
 
