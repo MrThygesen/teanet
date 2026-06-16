@@ -279,9 +279,3 @@ export default function MembershipForm() {
 
   )
 }
-  'Founder',
-  'Investor',
-  'Partner',
-  'Mentor',
-  'Community Member'
-]
