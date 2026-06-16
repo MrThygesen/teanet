@@ -217,7 +217,7 @@ export default function WebAccessSBT() {
         args: [typeId],
       })
 
-     toast.success('Membership joined')
+     toast.success('Test Sandbox Memebership')
 
       await fetchSBTs()
       await fetchMySBTs()
@@ -241,12 +241,12 @@ return (
     <div className="max-w-6xl mx-auto px-6 py-10">
 
       <h1 className="text-4xl font-bold">
-        Community Participation
+        Wallet Sandbox (Voluntary)
       </h1>
 
       <p className="text-zinc-400 text-sm mt-2">
-        Identity and participation infrastructure for members,
-        partners and investment communities.
+         Test wallet connectivity and experimental credentials.
+         Verify that your wallet works with Polygon Amoy setup correctly.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -406,7 +406,7 @@ return (
               >
                 {loadingTypeId === sbt.typeId
                   ? 'Join...'
-                  : 'Join'}
+                  : 'Claim Test Membership'}
               </button>
 
             </div>

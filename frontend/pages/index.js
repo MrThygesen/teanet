@@ -4,6 +4,7 @@ import { useAccount } from 'wagmi'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import AdminSBTManager from '../components/AdminSBTManager'
 import WebAccessSBT from '../components/WebAccessSBT'
+import MembershipForm from '../components/MembershipForm'
 
 export default function Home() {
   const { isConnected, address } = useAccount()
@@ -109,18 +110,50 @@ export default function Home() {
             <Tag text="Mentors" />
             <Tag text="Partners" />
 
-          </div>
-
+         </div>
         </div>
+      </section>
+
+      {/* MEMBERSHIP */}
+
+     <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
+
+        <div className="max-w-3xl">
+
+          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+            Membership
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold">
+           Apply for Membership
+          </h2>
+
+         <p className="mt-6 text-zinc-400 leading-relaxed">
+         TEANET provides wallet-based memberships for founders,
+         investors, mentors, partners and community participants.
+         </p>
+          <div className="mt-6 text-sm text-zinc-500 space-y-2">
+            <div>
+              ✓ Wallet required
+            </div>
+            <div>
+             ✓ Credentials issued as SBTs
+            </div>
+            <div>
+             ✓ Current testing phase uses Polygon Amoy
+            </div>
+            <div>
+             ✓ No tokens or crypto investments required
+            </div>
+         </div>
+        </div>
+        <MembershipForm />
 
       </section>
 
-      {/* ===================================================== */}
-      {/* DASHBOARD */}
-      {/* ===================================================== */}
+      {/* WALLET SANDBOX */}
+
 
       <WebAccessSBT />
-
       {/* ===================================================== */}
       {/* ADMIN */}
       {/* ===================================================== */}
