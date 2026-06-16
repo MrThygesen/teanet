@@ -10,6 +10,7 @@ export default function MembershipForm() {
 
   const [form, setForm] = useState({
     full_name: '',
+    email: '',    
     company: '',
     project: '',
     wallet: '',
@@ -47,11 +48,13 @@ export default function MembershipForm() {
         throw new Error(data.error || 'Submission failed')
       }
 
+
       setSuccess(true)
 
       setForm({
         full_name: '',
-        company: '',
+        email: '',
+       company: '',
         project: '',
         wallet: '',
         reason: '',
@@ -124,19 +127,38 @@ export default function MembershipForm() {
 
           <div>
 
-            <label className="block text-sm text-zinc-400 mb-2">
-              Full Name
-            </label>
+<label className="block text-sm text-zinc-400 mb-2">
+  Full Name
+</label>
 
-            <input
-              type="text"
-              required
-              value={form.full_name}
-              onChange={(e) =>
-                updateField('full_name', e.target.value)
-              }
-              className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
-            />
+<input
+  type="text"
+  required
+  value={form.full_name}
+  onChange={(e) =>
+    updateField('full_name', e.target.value)
+  }
+  className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+/>
+
+</div>
+
+<div>
+
+<label className="block text-sm text-zinc-400 mb-2">
+  Email Address
+</label>
+
+<input
+  type="email"
+  required
+  value={form.email}
+  onChange={(e) =>
+    updateField('email', e.target.value)
+  }
+  className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+/>
+        
 
           </div>
 
