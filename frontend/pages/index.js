@@ -31,12 +31,37 @@ export default function Home() {
             </div>
 
             <div className="text-xs text-zinc-500">
-              Trust & Identity Layer of EDGE Alliance
-            </div>
+  Decentralized Communities • Part of EDGE Alliance
+</div>
 
           </div>
 
-          <ConnectButton />
+        <div className="flex items-center gap-8">
+
+  <a
+    href="#communities"
+    className="text-sm text-zinc-400 hover:text-white"
+  >
+    Communities
+  </a>
+
+  <a
+    href="#membership"
+    className="text-sm text-zinc-400 hover:text-white"
+  >
+    Membership
+  </a>
+
+  <a
+    href="#sandbox"
+    className="text-sm text-zinc-400 hover:text-white"
+  >
+    Sandbox
+  </a>
+
+  <ConnectButton />
+
+</div>
 
         </div>
 
@@ -55,14 +80,14 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-            Trust & Identity Infrastructure
+           Join the Club.
             <br />
-            for Investment Communities
+Engage in defining the technologies of 2026+
           </h1>
 
           <p className="mt-6 text-xl text-zinc-400 leading-relaxed">
-            Portable credentials and participation infrastructure for
-            members, partners and investment communities.
+            TEANET is a decentralized membership space for founders,
+developers, investors and ecosystem builders.
           </p>
 
         </div>
@@ -73,20 +98,20 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-5 mt-14">
 
-          <FeatureCard
-            title="Membership Credentials"
-            text="Issue credentials to members, partners and ecosystem participants."
-          />
+<FeatureCard
+  title="Founder Communities"
+  text="Connect with founders and early-stage builders exploring new ideas."
+/>
 
-          <FeatureCard
-            title="Community Creation"
-            text="Create curated or open communities with configurable membership models."
-          />
+<FeatureCard
+  title="Investor Networks"
+  text="Support collaboration between investors, mentors and ecosystem partners."
+/>
 
-          <FeatureCard
-            title="Participation Layer"
-            text="Support voting and future governance across trusted communities."
-          />
+<FeatureCard
+  title="Developer Communities"
+  text="Experiment with wallet-native identity and emerging technologies."
+/>
 
         </div>
 
@@ -94,7 +119,10 @@ export default function Home() {
         {/* COMMUNITIES */}
         {/* ===================================================== */}
 
-        <div className="mt-16 border-t border-zinc-800 pt-10">
+        <div
+  id="communities"
+  className="mt-16 border-t border-zinc-800 pt-10"
+>
 
           <div className="text-sm uppercase tracking-[0.2em] text-zinc-500 mb-5">
             Communities
@@ -102,22 +130,62 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-3">
 
-            <Tag text="Investor Communities" />
-            <Tag text="Angel Networks" />
-            <Tag text="Founder Clubs" />
-            <Tag text="Accelerators" />
-            <Tag text="Alumni Programs" />
-            <Tag text="Mentors" />
-            <Tag text="Partners" />
+       <Tag text="Founder Clubs" />
+<Tag text="Investor Networks" />
+<Tag text="Developer Communities" />
+<Tag text="Mentors" />
+<Tag text="Partners" />
+<Tag text="Accelerators" />
+<Tag text="Innovation Programs" />
+
 
          </div>
         </div>
       </section>
 
+<section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
+
+  <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+    How Membership Works
+  </div>
+
+  <h2 className="text-4xl font-bold mb-10">
+    Simple Participation
+  </h2>
+
+  <div className="grid md:grid-cols-4 gap-6">
+
+    <FeatureCard
+      title="1. Create Wallet"
+      text="Use MetaMask or another compatible wallet."
+    />
+
+    <FeatureCard
+      title="2. Apply"
+      text="Submit a membership request."
+    />
+
+    <FeatureCard
+      title="3. Review"
+      text="Applications are reviewed manually."
+    />
+
+    <FeatureCard
+      title="4. Receive Credential"
+      text="Approved members receive a wallet-based credential."
+    />
+
+  </div>
+
+</section>
+
+
       {/* MEMBERSHIP */}
 
-     <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
-
+     <section
+  id="membership"
+  className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800"
+>
         <div className="max-w-3xl">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
@@ -128,8 +196,8 @@ export default function Home() {
           </h2>
 
          <p className="mt-6 text-zinc-400 leading-relaxed">
-         TEANET provides wallet-based memberships for founders,
-         investors, mentors, partners and community participants.
+         Join communities exploring new technologies,
+investment ecosystems and future collaboration models.
          </p>
           <div className="mt-6 text-sm text-zinc-500 space-y-2">
             <div>
@@ -153,7 +221,11 @@ export default function Home() {
       {/* WALLET SANDBOX */}
 
 
-      <WebAccessSBT />
+<section id="sandbox">
+
+  <WebAccessSBT />
+
+</section>
       {/* ===================================================== */}
       {/* ADMIN */}
       {/* ===================================================== */}

@@ -917,7 +917,7 @@ TEANET
 </div>
 
 <div className="mt-1">
-Trust & Identity Layer of EDGE Alliance
+Wallet-Based Communities for Builders and Investors
 </div>
 
 </footer>
