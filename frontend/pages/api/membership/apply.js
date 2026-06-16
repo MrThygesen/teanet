@@ -1,5 +1,5 @@
-import { sql } from '../../lib/postgres'
-import SibApiV3Sdk from 'sib-api-v3-sdk'
+import { sql } from '../../lib/postgres' 
+import SibApiV3Sdk from 'sib-api-v3-sdk' 
 
 const defaultClient = SibApiV3Sdk.ApiClient.instance
 const apiKey = defaultClient.authentications['api-key']
