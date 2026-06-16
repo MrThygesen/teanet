@@ -54,8 +54,8 @@ export default async function handler(req, res) {
     await apiInstance.sendTransacEmail({
 
       sender: {
-        name: 'TEANET',
-        email: 'no-reply@teanet.xyz'
+        name: 'TNET MEMBERSHIP',
+        email: 'hello@teanet.xyz'
       },
 
       to: [
