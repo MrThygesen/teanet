@@ -145,38 +145,41 @@ developers, investors and ecosystem builders.
 
 <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
-  <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-    How Membership Works
-  </div>
+<div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+  How Membership Works
+</div>
 
-  <h2 className="text-4xl font-bold mb-10">
-    Simple Participation
-  </h2>
+<h2 className="text-4xl font-bold mb-4">
+  Get Started Here
+</h2>
 
-  <div className="grid md:grid-cols-4 gap-6">
+<p className="text-zinc-400 mb-10">
+  Membership works in four simple steps.
+</p>
 
-    <FeatureCard
-      title="1. Create Wallet"
-      text="Use MetaMask or another compatible wallet."
-    />
+<div className="grid md:grid-cols-4 gap-6">
 
-    <FeatureCard
-      title="2. Apply"
-      text="Submit a membership request."
-    />
+  <FeatureCard
+    title="1. Create Wallet"
+    text="Use MetaMask or another compatible wallet and add the Polygon Amoy test network."
+  />
 
-    <FeatureCard
-      title="3. Review"
-      text="Applications are reviewed manually."
-    />
+  <FeatureCard
+    title="2. Apply"
+    text="Choose the community you want to join and submit a membership request."
+  />
 
-    <FeatureCard
-      title="4. Receive Credential"
-      text="Approved members receive a wallet-based credential."
-    />
+  <FeatureCard
+    title="3. Review"
+    text="Applications are reviewed manually."
+  />
 
-  </div>
+  <FeatureCard
+    title="4. Receive Membership"
+    text="Approved members receive their membership card directly in their wallet."
+  />
 
+</div>
 </section>
 
 
