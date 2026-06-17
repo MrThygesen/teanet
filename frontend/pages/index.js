@@ -247,7 +247,7 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
     <div className="flex justify-center md:justify-end">
 
    <img
-  src="founders.jpg"
+  src="industry.jpg"
   alt="Membership Card"
   className="rounded-2xl shadow-2xl max-h-64 object-contain hover:scale-105 transition duration-300"
 />
