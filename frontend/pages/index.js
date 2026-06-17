@@ -75,19 +75,17 @@ export default function Home() {
 
         <div className="max-w-3xl">
 
-          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-            Part of EDGE Alliance
-          </div>
+<div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+  Part of EDGE Alliance
+</div>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-Build What's Next.
-            <br />
-EDGE Spaces helps founders, investors and builders coordinate around new ideas, projects and emerging technologies.
-          </h1>
+<h1 className="text-5xl md:text-6xl font-bold leading-tight">
+  Build What's Next.
+</h1>
 
-          <p className="mt-6 text-xl text-zinc-400 leading-relaxed">
-            TEANET helps founders, investors and developers coordinate around new ideas, projects and emerging technologies.
-          </p>
+<p className="mt-8 text-xl text-zinc-400 leading-relaxed max-w-2xl">
+  EDGE Spaces helps founders, investors and builders coordinate around new ideas, projects and emerging technologies.
+</p>
 
         </div>
 
@@ -98,12 +96,12 @@ EDGE Spaces helps founders, investors and builders coordinate around new ideas, 
         <div className="grid md:grid-cols-3 gap-5 mt-14">
 
 <FeatureCard
-  title="Founder Communities"
+  title="Founder Spaces"
   text="Build new ventures together, validate ideas and connect with other builders."
 />
 
 <FeatureCard
-  title="Investor Networks"
+  title="Investor Spaces"
   text="Discover projects earlier and support founders through collaboration and introductions."
 />
 
@@ -168,7 +166,7 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
 
 <FeatureCard title="Collaboration" text="Connect builders and supporters." />
 
-<FeatureCard title="ProjectSpace" text="Dedicated spaces for new ideas." />
+<FeatureCard title="Project Space" text="Dedicated spaces for new ideas." />
 
 <FeatureCard title="Governance" text="Optional member participation." />
 
@@ -219,45 +217,46 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
 
   <div className="bg-blue-600 rounded-3xl p-10">
 
-    <div className="text-sm uppercase mb-3">
-      Start Here
+  <div className="grid md:grid-cols-4 gap-8 items-center">
+
+    {/* LEFT */}
+    <div className="md:col-span-3">
+
+      <div className="text-sm uppercase mb-3 text-blue-100">
+        Start Here
+      </div>
+
+      <h3 className="text-4xl font-bold mb-4">
+        Apply for Membership
+      </h3>
+
+      <p className="text-blue-100 max-w-2xl mb-8 leading-relaxed">
+        Join founder, investor and builder spaces using email or an optional wallet.
+      </p>
+
+      <a
+        href="#membership"
+        className="inline-block px-6 py-3 bg-white text-black rounded-xl font-medium hover:bg-zinc-100 transition"
+      >
+        Open Application
+      </a>
+
     </div>
 
-    <h3 className="text-4xl font-bold mb-4">
-      Apply for Membership
-    </h3>
+    {/* RIGHT */}
+    <div className="flex justify-center md:justify-end">
 
-    <p className="text-blue-100 max-w-2xl mb-8">
-      Join founder, investor and builder spaces using email or an optional wallet.
-    </p>
+   <img
+  src="founders.jpg"
+  alt="Membership Card"
+  className="rounded-2xl shadow-2xl max-h-64 object-contain hover:scale-105 transition duration-300"
+/>
 
-    <a
-      href="#membership"
-      className="inline-block px-6 py-3 bg-white text-black rounded-xl"
-    >
-      Open Application
-    </a>
+    </div>
 
   </div>
 
-  <div className="mt-8 text-zinc-400">
-
-    <div className="font-semibold mb-2">
-      Optional Wallet Features
-    </div>
-
-    <div className="space-y-2 text-sm">
-
-      <div>• Digital credentials</div>
-      <div>• Future participation rights</div>
-      <div>• Wallet Sandbox testing</div>
-
-    </div>
-
-  </div>
-
-</div> 
-
+</div>
 
 </section>
 
