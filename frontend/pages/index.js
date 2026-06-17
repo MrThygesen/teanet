@@ -252,6 +252,50 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
   className="rounded-2xl shadow-2xl max-h-64 object-contain hover:scale-105 transition duration-300"
 />
 
+{/* RIGHT */}
+<div className="flex justify-center md:justify-end">
+
+  <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden max-w-xs">
+
+    <div className="p-4 space-y-3">
+
+      <span className="text-xs px-3 py-1 rounded-full bg-blue-600">
+        Utility
+      </span>
+
+      <h3 className="text-lg font-semibold">
+        Accelerator Membership
+      </h3>
+
+      <div className="flex flex-wrap gap-2">
+
+        <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+          Accelerator
+        </span>
+
+        <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+          Forming
+        </span>
+
+        <span className="px-2 py-1 text-xs rounded-full bg-zinc-800 text-zinc-300">
+          Contact Founder
+        </span>
+
+      </div>
+
+      <p className="text-sm text-zinc-400">
+        Membership credential providing access to accelerator programmes,
+        founder resources and ecosystem participation.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
     </div>
 
   </div>
