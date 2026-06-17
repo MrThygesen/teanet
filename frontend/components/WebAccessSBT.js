@@ -286,14 +286,7 @@ return (
         >
           Future Roadmap
         </button>
-
-        <button
-          onClick={() => setShowWalletSetup(true)}
-          className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-        >
-          Wallet Setup
-        </button>
-
+    
         <button
           onClick={() => setShowContact(true)}
           className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
