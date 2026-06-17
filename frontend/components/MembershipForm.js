@@ -83,7 +83,7 @@ export default function MembershipForm() {
         </h2>
 
         <p className="text-zinc-300">
-          Thank you for your interest in TEANET.
+          Thank you for your interest in EDGE Spaces.
         </p>
 
         <p className="text-zinc-400 mt-3">
@@ -112,8 +112,8 @@ export default function MembershipForm() {
           </h2>
 
           <p className="text-zinc-400 mt-4 leading-relaxed">
-            TEANET supports founders, investors, mentors,
-            ecosystem partners and community participants.
+      EDGE Spaces supports founders, investors, mentors,
+ecosystem partners and builders..
           </p>
 
         </div>
@@ -205,20 +205,22 @@ export default function MembershipForm() {
           <div>
 
             <label className="block text-sm text-zinc-400 mb-2">
-              Wallet Address
-            </label>
+  Wallet Address (Optional)
+</label>
 
-            <input
-              type="text"
-              required
-              placeholder="0x..."
-              value={form.wallet}
-              onChange={(e) =>
-                updateField('wallet', e.target.value)
-              }
-              className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
-            />
+<p className="text-xs text-zinc-500 mb-3">
+  Wallet membership enables digital credentials and future participation rights.
+</p>
 
+<input
+  type="text"
+  placeholder="0x... (optional)"
+  value={form.wallet}
+  onChange={(e) =>
+    updateField('wallet', e.target.value)
+  }
+  className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+/>
           </div>
 
           {/* Membership */}
@@ -241,7 +243,7 @@ export default function MembershipForm() {
               <option>Investor</option>
               <option>Partner</option>
               <option>Mentor</option>
-              <option>Community Member</option>
+              <option>Builder</option>
 
             </select>
 
@@ -280,8 +282,7 @@ export default function MembershipForm() {
             />
 
             <span>
-              I agree to receive updates and information from
-              TEANET and selected ecosystem partners.
+      I agree to receive updates from EDGE Spaces and related ecosystem initiatives.
             </span>
 
           </label>
