@@ -244,18 +244,16 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
     </div>
 
     {/* RIGHT */}
-    <div className="flex justify-center md:justify-end">
-
-   <img
-  src="industry.jpg"
-  alt="Membership Card"
-  className="rounded-2xl shadow-2xl max-h-64 object-contain hover:scale-105 transition duration-300"
-/>
-
 {/* RIGHT */}
 <div className="flex justify-center md:justify-end">
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden max-w-xs">
+  <div className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden max-w-xs shadow-2xl hover:scale-105 transition duration-300">
+
+    <img
+      src="/founders.jpg"
+      alt="Accelerator Membership"
+      className="h-40 w-full object-cover"
+    />
 
     <div className="p-4 space-y-3">
 
@@ -283,7 +281,7 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
 
       </div>
 
-      <p className="text-sm text-zinc-400">
+      <p className="text-sm text-zinc-400 leading-relaxed">
         Membership credential providing access to accelerator programmes,
         founder resources and ecosystem participation.
       </p>
@@ -293,7 +291,6 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
   </div>
 
 </div>
-
 
 
     </div>
