@@ -243,7 +243,6 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
 
     </div>
 
-    {/* RIGHT */}
 {/* RIGHT */}
 <div className="flex justify-center md:justify-end">
 
@@ -292,8 +291,6 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
 
 </div>
 
-
-    </div>
 
   </div>
 
