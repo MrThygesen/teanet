@@ -26,12 +26,12 @@ export default function Home() {
 
           <div>
 
-            <div className="text-lg font-semibold text-blue-400">
-              TEANET
-            </div>
+<div className="text-lg font-semibold text-blue-400">
+  EDGE SPACES
+</div>
 
-            <div className="text-xs text-zinc-500">
-  Decentralized Communities • Part of EDGE Alliance
+<div className="text-xs text-zinc-500">
+  Part of EDGE Alliance
 </div>
 
           </div>
@@ -80,9 +80,9 @@ export default function Home() {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-           Join the Club.
+Build What's Next.
             <br />
-Engage in defining the technologies of 2026+
+EDGE Spaces helps founders, investors and builders coordinate around new ideas, projects and emerging technologies.
           </h1>
 
           <p className="mt-6 text-xl text-zinc-400 leading-relaxed">
@@ -108,8 +108,8 @@ Engage in defining the technologies of 2026+
 />
 
 <FeatureCard
-  title="Developer Communities"
-  text="Experiment with AI, wallet identity and emerging technologies."
+title="Builder Spaces"
+text="Experiment with AI, software and emerging technologies."
 />
 
         </div>
@@ -155,7 +155,7 @@ From Ideas to Teams
 </h2>
 
 <p className="text-zinc-400 leading-relaxed">
-TEANET is evolving from identity and membership infrastructure toward collaboration spaces where founders, investors and developers can coordinate around new initiatives.
+EDGE Spaces is evolving from identity and membership infrastructure toward collaboration spaces where founders, investors and builders can coordinate around new initiatives.
 </p>
 
 </div>
@@ -168,9 +168,9 @@ TEANET is evolving from identity and membership infrastructure toward collaborat
 
 <FeatureCard title="Collaboration" text="Connect builders and supporters." />
 
-<FeatureCard title="Project Rooms" text="Dedicated spaces for new ideas." />
+<FeatureCard title="ProjectSpace" text="Dedicated spaces for new ideas." />
 
-<FeatureCard title="Governance" text="Future voting and approvals." />
+<FeatureCard title="Governance" text="Optional member participation." />
 
 </div>
 
@@ -195,7 +195,7 @@ TEANET is evolving from identity and membership infrastructure toward collaborat
 
  <FeatureCard
   title="1. Choose Access"
-  text="Join with a wallet for future voting rights or simply apply with email."
+  text="Apply with email and optionally add a wallet for digital credentials and future participation rights."
 />
 
 <FeatureCard
@@ -210,61 +210,55 @@ TEANET is evolving from identity and membership infrastructure toward collaborat
 
 <FeatureCard
   title="4. Join Community"
-  text="Approved members receive either an email confirmation or a wallet credential."
+  text="Approved members receive membership confirmation and may optionally receive a digital credential."
 />
 
-<div className="grid md:grid-cols-2 gap-6 mt-12">
+</div>
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+<div className="mt-12">
 
-    <div className="text-sm uppercase tracking-wide text-blue-400 mb-3">
-      Community Membership
+  <div className="bg-blue-600 rounded-3xl p-10">
+
+    <div className="text-sm uppercase mb-3">
+      Start Here
     </div>
 
-    <h3 className="text-2xl font-bold mb-4">
+    <h3 className="text-4xl font-bold mb-4">
       Apply for Membership
     </h3>
 
-    <p className="text-zinc-400 mb-6">
-      Join founder, investor and developer communities using either email or a wallet.
+    <p className="text-blue-100 max-w-2xl mb-8">
+      Join founder, investor and builder spaces using email or an optional wallet.
     </p>
 
     <a
       href="#membership"
-      className="inline-block px-5 py-3 rounded bg-blue-600 hover:bg-blue-700"
+      className="inline-block px-6 py-3 bg-white text-black rounded-xl"
     >
       Open Application
     </a>
 
   </div>
 
+  <div className="mt-8 text-zinc-400">
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
-
-    <div className="text-sm uppercase tracking-wide text-blue-400 mb-3">
-      Wallet Sandbox
+    <div className="font-semibold mb-2">
+      Optional Wallet Features
     </div>
 
-    <h3 className="text-2xl font-bold mb-4">
-      Test Wallet Connection
-    </h3>
+    <div className="space-y-2 text-sm">
 
-    <p className="text-zinc-400 mb-6">
-      Experiment with Polygon Amoy and test membership cards. Optional for wallet users.
-    </p>
+      <div>• Digital credentials</div>
+      <div>• Future participation rights</div>
+      <div>• Wallet Sandbox testing</div>
 
-    <a
-      href="#sandbox"
-      className="inline-block px-5 py-3 rounded bg-zinc-800 hover:bg-zinc-700"
-    >
-      Open Sandbox
-    </a>
+    </div>
 
   </div>
 
-</div>
+</div> 
 
-</div>
+
 </section>
 
 
@@ -289,13 +283,13 @@ investment ecosystems and future collaboration models.
          </p>
           <div className="mt-6 text-sm text-zinc-500 space-y-2">
             <div>
-              ✓ Wallet required
+              ✓ Email Membership Available
             </div>
             <div>
-             ✓ Credentials issued as SBTs
+             ✓  Wallet membership optional
             </div>
             <div>
-             ✓ Current testing phase uses Polygon Amoy
+             ✓  Future participation rights for wallet members
             </div>
             <div>
              ✓ No tokens or crypto investments required
