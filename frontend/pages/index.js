@@ -257,7 +257,7 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
     <div className="p-4 space-y-3">
 
       <span className="text-xs px-3 py-1 rounded-full bg-blue-600">
-        Utility
+        TEST EXAMPLE
       </span>
 
       <h3 className="text-lg font-semibold">
