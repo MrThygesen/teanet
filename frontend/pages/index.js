@@ -258,6 +258,8 @@ EDGE Spaces is evolving from identity and membership infrastructure toward colla
 
 </div>
 
+</div>
+
 </section>
 
 
