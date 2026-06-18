@@ -1,14 +1,59 @@
-// pages/wallet-setup.js
-
 'use client'
 
 import WebAccessSBT from '../components/WebAccessSBT'
 
 export default function WalletSetup() {
 
+  async function addAmoyNetwork() {
+
+    if (!window.ethereum) {
+      window.open('https://metamask.io/download/', '_blank')
+      return
+    }
+
+    try {
+
+      await window.ethereum.request({
+
+        method: 'wallet_addEthereumChain',
+
+        params: [{
+
+          chainId: '0x13882',
+
+          chainName: 'Polygon Amoy Testnet',
+
+          nativeCurrency: {
+            name: 'POL',
+            symbol: 'POL',
+            decimals: 18
+          },
+
+          rpcUrls: [
+            'https://rpc-amoy.polygon.technology/'
+          ],
+
+          blockExplorerUrls: [
+            'https://amoy.polygonscan.com/'
+          ]
+
+        }]
+
+      })
+
+    } catch (err) {
+
+      console.error(err)
+
+    }
+
+  }
+
   return (
 
     <div className="bg-black text-white min-h-screen">
+
+      {/* HERO */}
 
       <section className="max-w-6xl mx-auto px-6 py-20">
 
@@ -40,108 +85,158 @@ export default function WalletSetup() {
 
       </section>
 
-<section className="max-w-4xl mx-auto px-6 pb-16">
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+      {/* NETWORK */}
 
-    <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-      Network Configuration
-    </div>
+      <section className="max-w-4xl mx-auto px-6 pb-16">
 
-    <h2 className="text-3xl font-bold mb-6">
-      Polygon Amoy Testnet
-    </h2>
+        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
-    <div className="space-y-4 text-zinc-400">
+          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+            Network Configuration
+          </div>
 
-      <div>
-        <span className="text-white font-semibold">
-          Network Name:
-        </span>{' '}
-        Polygon Amoy Testnet
-      </div>
+          <h2 className="text-3xl font-bold mb-6">
+            Polygon Amoy Testnet
+          </h2>
 
-      <div>
-        <span className="text-white font-semibold">
-          Chain ID:
-        </span>{' '}
-        80002
-      </div>
+          <div className="space-y-4 text-zinc-400">
 
-      <div>
-        <span className="text-white font-semibold">
-          Currency Symbol:
-        </span>{' '}
-        POL
-      </div>
+            <div>
+              <span className="text-white font-semibold">
+                Network Name:
+              </span>{' '}
+              Polygon Amoy Testnet
+            </div>
 
-      <div>
-        <span className="text-white font-semibold">
-          Explorer:
-        </span>{' '}
-        amoy.polygonscan.com
-      </div>
+            <div>
+              <span className="text-white font-semibold">
+                Chain ID:
+              </span>{' '}
+              80002
+            </div>
 
-    </div>
+            <div>
+              <span className="text-white font-semibold">
+                Currency Symbol:
+              </span>{' '}
+              POL
+            </div>
 
-  </div>
-</section>
+            <div>
+              <span className="text-white font-semibold">
+                Explorer:
+              </span>{' '}
+              amoy.polygonscan.com
+            </div>
 
+          </div>
 
-{/* VERIFY CONNECTION */}
+          <button
+            onClick={addAmoyNetwork}
+            className="mt-8 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+          >
+            Add Polygon Amoy Automatically
+          </button>
 
-<section className="max-w-4xl mx-auto px-6 pb-16">
+        </div>
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-
-    <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-      Test Connection
-    </div>
-
-    <h2 className="text-3xl font-bold mb-6">
-      Verify Your Wallet
-    </h2>
-
-    <p className="text-zinc-400 leading-relaxed">
-
-      Once Polygon Amoy has been added, simply connect your wallet to this site.
-
-    </p>
-
-    <p className="text-zinc-400 mt-5 leading-relaxed">
-
-      Successful login confirms that your wallet is configured correctly and ready to receive future digital memberships.
-
-    </p>
-
-    <div className="mt-8 flex flex-wrap gap-4">
-
-      <a
-        href="/"
-        className="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700"
-      >
-        Return Home
-      </a>
-
-      <a
-        href="/community-card"
-        className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
-      >
-        Digital Membership →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
+      </section>
 
 
-<section className="border-t border-zinc-800">
+      {/* FAUCETS */}
 
-  <WebAccessSBT />
+      <section className="max-w-4xl mx-auto px-6 pb-16">
 
-</section>
+        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+            Test Coins
+          </div>
+
+          <h2 className="text-3xl font-bold mb-6">
+            Polygon Amoy Faucets
+          </h2>
+
+          <p className="text-zinc-400 leading-relaxed">
+
+            Public community cards require a small amount of POL for transactions.
+
+          </p>
+
+          <div className="mt-8 space-y-4">
+
+            <a
+              href="https://faucet.polygon.technology/"
+              target="_blank"
+              className="block text-blue-400 hover:text-blue-300"
+            >
+              Polygon Faucet →
+            </a>
+
+            <a
+              href="https://www.alchemy.com/faucets/polygon-amoy"
+              target="_blank"
+              className="block text-blue-400 hover:text-blue-300"
+            >
+              Alchemy Faucet →
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* VERIFY */}
+
+      <section className="max-w-4xl mx-auto px-6 pb-16">
+
+        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+            Verify Wallet
+          </div>
+
+          <h2 className="text-3xl font-bold mb-6">
+            Test Your Connection
+          </h2>
+
+          <p className="text-zinc-400">
+
+            Successful login confirms that your wallet is ready to receive future digital memberships.
+
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+
+            <a
+              href="/"
+              className="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700"
+            >
+              Return Home
+            </a>
+
+            <a
+              href="/community-card"
+              className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+            >
+              Digital Membership →
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section className="border-t border-zinc-800">
+
+        <WebAccessSBT />
+
+      </section>
 
     </div>
 

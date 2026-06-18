@@ -259,6 +259,14 @@ export default function CommunityCard() {
 
 </section>
 
+
+   <section className="border-t border-zinc-800">
+
+        <WebAccessSBT />
+
+      </section>
+
+
       {/* FOOTER */}
 
       <footer className="border-t border-zinc-800 py-12">
