@@ -2,9 +2,9 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
-import { useAccount, useWriteContract, usePublicClient } from 'wagmi'
+import { useAccount, usePublicClient } from 'wagmi'
 import { parseAbi } from 'viem'
-import { toast } from 'react-hot-toast'
+
 
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
@@ -50,8 +50,6 @@ function Spinner({ label }) {
 export default function WebAccessSBT() {
   const { address } = useAccount()
   const publicClient = usePublicClient()
-  const { writeContractAsync } = useWriteContract()
-
   const [mounted, setMounted] = useState(false)
 
   const [available, setAvailable] = useState([])
@@ -59,9 +57,7 @@ export default function WebAccessSBT() {
 
   const [loading, setLoading] = useState(true)
   const [loadingMySBTs, setLoadingMySBTs] = useState(false)
-  const [loadingTypeId, setLoadingTypeId] = useState(null)
-
-  const [policyAccepted, setPolicyAccepted] = useState({})
+  
   const [activeTab, setActiveTab] = useState('available')
 
   const [preview, setPreview] = useState(null)
@@ -197,35 +193,7 @@ export default function WebAccessSBT() {
     fetchMySBTs()
   }, [fetchSBTs, fetchMySBTs])
 
-  // ---------- Claim ----------
-  async function handleClaim(typeId) {
-    if (!address) return toast.error('Connect wallet')
-
-    if (!policyAccepted[typeId]) {
-      return toast.error('Confirm investor status')
-    }
-
-    try {
-      setLoadingTypeId(typeId)
-
-      await writeContractAsync({
-        address: CONTRACT_ADDRESS,
-        abi: parseAbi(['function claim(uint256)']),
-        functionName: 'claim',
-        args: [typeId],
-      })
-
-toast.success('Example card received successfully')
-
-      await fetchSBTs()
-      await fetchMySBTs()
-    } catch (err) {
-      toast.error(err.message || 'Claim failed')
-    } finally {
-      setLoadingTypeId(null)
-    }
-  }
-
+ 
   if (!mounted) return null
 
 
@@ -239,11 +207,11 @@ return (
     <div className="max-w-6xl mx-auto px-6 py-10">
 
      <h1 className="text-4xl font-bold">
-  Wallet Connection
+  Community Showcases
 </h1>
 
 <p className="text-zinc-400 text-sm mt-2">
-  Prepare your wallet for future digital memberships and optionally explore example cards.
+  Explore community examples and public showcases.
 </p>
 
       <div className="mt-6 flex flex-wrap gap-3">
@@ -256,7 +224,7 @@ return (
       : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
   }`}
 >
- Available Communities
+ Community Showcases
 </button>
 
 <button
@@ -351,49 +319,16 @@ return (
               {shorten(sbt.description)}
             </p>
 
-            <p className="text-xs text-zinc-500">
-              {sbt.minted} / {sbt.maxSupply} claimed
-            </p>
+              <div>
 
-            <label className="flex items-center gap-2 text-xs text-zinc-300">
+  <button
+    onClick={() => setPreview(sbt)}
+    className="w-full px-3 py-2 text-sm rounded bg-blue-600 hover:bg-blue-700"
+  >
+    Preview
+  </button>
 
-              <input
-                type="checkbox"
-                checked={policyAccepted[sbt.typeId] || false}
-                onChange={(e) =>
-                  setPolicyAccepted((prev) => ({
-                    ...prev,
-                    [sbt.typeId]: e.target.checked,
-                  }))
-                }
-              />
-
-              I confirm that I meet the membership requirements.
-
-            </label>
-
-            <div className="flex gap-2">
-
-              <button
-                onClick={() => setPreview(sbt)}
-                className="flex-1 px-3 py-2 text-sm rounded bg-zinc-700 hover:bg-zinc-600"
-              >
-                Preview
-              </button>
-
-              <button
-                disabled={
-                  loadingTypeId === sbt.typeId || !address
-                }
-                onClick={() => handleClaim(sbt.typeId)}
-                className="flex-1 px-3 py-2 text-sm rounded bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-700"
-              >
-                {loadingTypeId === sbt.typeId
-                  ? 'Join...'
-                  : 'Claim Open Membership'}
-              </button>
-
-            </div>
+</div>
 
           </div>
 
@@ -419,12 +354,12 @@ return (
     )}
 
     {address && loadingMySBTs && (
-      <Spinner label="Loading your credentials..." />
+     <Spinner label="Loading your membership cards..." />
     )}
 
     {address && !loadingMySBTs && mySBTs.length === 0 && (
       <p className="text-zinc-500">
-        No credentials found for this wallet.
+       No membership cards found for this wallet.
       </p>
     )}
 
@@ -509,15 +444,15 @@ How Membership Cards Work
 <div className="space-y-4 text-zinc-300 text-sm">
 
 <p>
-Example cards are public credentials used for wallet setup and experimentation.
+Community showcases illustrate the types of memberships and ecosystems supported by EDGE Spaces.
 </p>
 
 <p>
-Official memberships are issued separately by EDGE Spaces.
+Official membership cards are issued separately to approved members.
 </p>
 
 <p>
-Once your wallet is configured correctly, future digital memberships can be delivered directly to your wallet.
+Digital memberships may support participation, voting and future ecosystem benefits.
 </p>
 
 </div>
