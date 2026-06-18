@@ -390,7 +390,7 @@ return (
               >
                 {loadingTypeId === sbt.typeId
                   ? 'Join...'
-                  : 'Receive Example Membership Card'}
+                  : 'Claim Open Membership'}
               </button>
 
             </div>
