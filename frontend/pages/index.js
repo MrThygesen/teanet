@@ -256,7 +256,7 @@ export default function Home() {
             : 'border-zinc-800 opacity-60'
         }`}
       >
-
+  
         <img
           src={item.image}
           className="w-full h-28 object-cover"
