@@ -236,8 +236,7 @@ export default function Home() {
   >
     Apply for Membership
   </a>
-</div>
-</div>
+    </div>
         </div>
 
       </section>
