@@ -85,16 +85,63 @@ export default function WalletSetup() {
     </div>
 
   </div>
+</section>
+
+
+{/* VERIFY CONNECTION */}
+
+<section className="max-w-4xl mx-auto px-6 pb-16">
+
+  <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+    <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+      Test Connection
+    </div>
+
+    <h2 className="text-3xl font-bold mb-6">
+      Verify Your Wallet
+    </h2>
+
+    <p className="text-zinc-400 leading-relaxed">
+
+      Once Polygon Amoy has been added, simply connect your wallet to this site.
+
+    </p>
+
+    <p className="text-zinc-400 mt-5 leading-relaxed">
+
+      Successful login confirms that your wallet is configured correctly and ready to receive future digital memberships.
+
+    </p>
+
+    <div className="mt-8 flex flex-wrap gap-4">
+
+      <a
+        href="/"
+        className="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700"
+      >
+        Return Home
+      </a>
+
+      <a
+        href="/community-card"
+        className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+      >
+        Digital Membership →
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
 
+<section className="border-t border-zinc-800">
 
-      <section className="border-t border-zinc-800">
+  <WebAccessSBT />
 
-        <WebAccessSBT />
-
-      </section>
+</section>
 
     </div>
 

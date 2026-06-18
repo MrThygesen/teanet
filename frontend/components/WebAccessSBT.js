@@ -66,9 +66,7 @@ export default function WebAccessSBT() {
 
   const [preview, setPreview] = useState(null)
   const [showExplainer, setShowExplainer] = useState(false)
-  const [showContact, setShowContact] = useState(false)
   const [showWalletSetup, setShowWalletSetup] = useState(false)
-  const [showRWAInfo, setShowRWAInfo] = useState(false)
 
 
   useEffect(() => setMounted(true), [])
@@ -217,7 +215,7 @@ export default function WebAccessSBT() {
         args: [typeId],
       })
 
-     toast.success('Test Sandbox Memebership')
+toast.success('Example card received successfully')
 
       await fetchSBTs()
       await fetchMySBTs()
@@ -240,59 +238,52 @@ return (
 
     <div className="max-w-6xl mx-auto px-6 py-10">
 
-      <h1 className="text-4xl font-bold">
-        Wallet Sandbox (Voluntary)
-      </h1>
+     <h1 className="text-4xl font-bold">
+  Wallet Connection
+</h1>
 
-      <p className="text-zinc-400 text-sm mt-2">
-         Test wallet connectivity and experimental credentials.
-         Verify that your wallet works with Polygon Amoy setup correctly.
-      </p>
+<p className="text-zinc-400 text-sm mt-2">
+  Prepare your wallet for future digital memberships and optionally explore example cards.
+</p>
 
       <div className="mt-6 flex flex-wrap gap-3">
 
-        <button
-          onClick={() => setActiveTab('available')}
-          className={`px-4 py-2 rounded ${
-            activeTab === 'available'
-              ? 'bg-blue-600 text-white'
-              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
-          }`}
-        >
-          Communities
-        </button>
+<button
+  onClick={() => setActiveTab('available')}
+  className={`px-4 py-2 rounded ${
+    activeTab === 'available'
+      ? 'bg-blue-600 text-white'
+      : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+  }`}
+>
+ Available Communities
+</button>
 
-        <button
-          onClick={() => setActiveTab('myassets')}
-          className={`px-4 py-2 rounded ${
-            activeTab === 'myassets'
-              ? 'bg-blue-600 text-white'
-              : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
-          }`}
-        >
-          My Credentials
-        </button>
+<button
+  onClick={() => setActiveTab('myassets')}
+  className={`px-4 py-2 rounded ${
+    activeTab === 'myassets'
+      ? 'bg-blue-600 text-white'
+      : 'bg-zinc-800 text-zinc-300 hover:bg-zinc-700'
+  }`}
+>
+  My Cards
+</button>
 
-        <button
-          onClick={() => setShowExplainer(true)}
-          className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-        >
-          How It Works
-        </button>
+<button
+  onClick={() => setShowExplainer(true)}
+  className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+>
+  How Membership Works
+</button>
 
-        <button
-          onClick={() => setShowRWAInfo(true)}
-          className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-        >
-          Future Roadmap
-        </button>
-    
-        <button
-          onClick={() => setShowContact(true)}
-          className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
-        >
-          Contact
-        </button>
+<button
+  onClick={() => setShowWalletSetup(true)}
+  className="px-4 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700"
+>
+  Wallet Setup
+</button>
+
 
       </div>
     </div>
@@ -399,7 +390,7 @@ return (
               >
                 {loadingTypeId === sbt.typeId
                   ? 'Join...'
-                  : 'Claim Test Membership'}
+                  : 'Receive Example Membership Card'}
               </button>
 
             </div>
@@ -423,7 +414,7 @@ return (
 
     {!address && (
       <p className="text-zinc-400">
-        Connect your wallet to view your credentials.
+        Connect your wallet to view your cards.
       </p>
     )}
 
@@ -512,25 +503,21 @@ className="absolute top-3 right-3 text-zinc-400 hover:text-white"
 </button>
 
 <h2 className="text-2xl font-bold mb-4">
-How Participation Works
+How Membership Cards Work
 </h2>
 
 <div className="space-y-4 text-zinc-300 text-sm">
 
 <p>
-TEANET provides portable credentials for members, partners and ecosystem participants.
+Example cards are public credentials used for wallet setup and experimentation.
 </p>
 
 <p>
-Communities may issue memberships directly or allow members to claim them themselves.
+Official memberships are issued separately by EDGE Spaces.
 </p>
 
 <p>
-Credentials remain linked to the participant's wallet over time.
-</p>
-
-<p>
-Communities may use credentials to support access, participation, collaboration and future governance.
+Once your wallet is configured correctly, future digital memberships can be delivered directly to your wallet.
 </p>
 
 </div>
@@ -542,119 +529,6 @@ Communities may use credentials to support access, participation, collaboration 
 )}
 
 
-
-{/* ROADMAP */}
-
-{showRWAInfo && (
-
-<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-
-<div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-xl w-full p-6 relative">
-
-<button
-onClick={() => setShowRWAInfo(false)}
-className="absolute top-3 right-3 text-zinc-400 hover:text-white"
->
-✕
-</button>
-
-<h2 className="text-2xl font-bold mb-4">
-TEANET Roadmap
-</h2>
-
-<div className="space-y-5 text-zinc-300 text-sm leading-relaxed">
-
-<div>
-
-<div className="font-semibold mb-1">
-Identity
-</div>
-
-<p>
-Wallet-based credentials for members and ecosystem participants.
-</p>
-
-</div>
-
-
-<div>
-
-<div className="font-semibold mb-1">
-Membership
-</div>
-
-<p>
-Communities can issue or approve memberships.
-</p>
-
-</div>
-
-
-<div>
-
-<div className="font-semibold mb-1">
-Participation
-</div>
-
-<p>
-Credentials may unlock events, access and collaboration.
-</p>
-
-</div>
-
-
-<div>
-
-<div className="font-semibold mb-1">
-Voting
-</div>
-
-<p>
-Future communities may introduce member approval and governance.
-</p>
-
-</div>
-
-
-<div>
-
-<div className="font-semibold mb-1">
-Sponsor Programs
-</div>
-
-<p>
-Communities may eventually coordinate grants and ecosystem initiatives.
-</p>
-
-</div>
-
-<hr className="border-zinc-700" />
-
-<p className="text-zinc-400">
-
-Current capabilities:
-
-<br />
-✓ Identity
-
-<br />
-✓ Membership
-
-<br />
-✓ Open Claim
-
-<br />
-✓ Admin Issuance
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-)}
 
 
 {/* WALLET SETUP */}
@@ -731,7 +605,7 @@ Manual settings:
 <div>
 
 <p className="font-semibold">
-3. Get Test Coins
+3. Get Coins to claim cards.
 </p>
 
 <p className="text-zinc-400 text-xs">
@@ -749,83 +623,6 @@ Contact the founder on LinkedIn to receive free test coins.
 )}
 
 
-{/* CONTACT */}
-
-{showContact && (
-
-<div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
-
-<div className="bg-zinc-900 border border-zinc-700 rounded-xl max-w-md w-full p-6 relative">
-
-<button
-onClick={() => setShowContact(false)}
-className="absolute top-3 right-3 text-zinc-400 hover:text-white"
->
-✕
-</button>
-
-<h2 className="text-2xl font-bold mb-4">
-Explore EDGE Spaces
-</h2>
-
-<div className="space-y-4 text-sm text-zinc-300">
-
-<p>
-EDGE Spaces supports:
-</p>
-
-<ul className="space-y-2 text-zinc-400">
-
-<li>• Investment Communities</li>
-
-<li>• Accelerators</li>
-
-<li>• Founder Networks</li>
-
-<li>• Partner Programs</li>
-
-<li>• EDGE Alliance Initiatives</li>
-
-</ul>
-
-<p className="pt-2">
-Interested in learning more or discussing partnership opportunities?
-</p>
-
-<div className="pt-4 border-t border-zinc-700">
-
-<p className="text-zinc-500 text-xs uppercase tracking-wide">
-Founder
-</p>
-
-<p className="font-semibold mt-2">
-Morten Thygesen
-</p>
-
-<p className="text-zinc-400 text-sm">
-EDGE Alliance
-</p>
-
-</div>
-
-<a
-href="https://www.linkedin.com/in/mortenthygesens/"
-target="_blank"
-rel="noopener noreferrer"
-className="inline-block mt-5 px-4 py-2 rounded bg-blue-600 hover:bg-blue-700 text-white text-sm"
->
-
-Connect on LinkedIn
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-)}
 
 
 
@@ -910,7 +707,7 @@ EDGE Spaces
 </div>
 
 <div className="mt-1">
-Communities for Builders, Founders and Investors
+Digital memberships for founders, builders and investors.
 </div>
 
 </footer>
