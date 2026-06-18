@@ -765,13 +765,13 @@ className="absolute top-3 right-3 text-zinc-400 hover:text-white"
 </button>
 
 <h2 className="text-2xl font-bold mb-4">
-Explore TEANET
+Explore EDGE Spaces
 </h2>
 
 <div className="space-y-4 text-sm text-zinc-300">
 
 <p>
-TEANET supports:
+EDGE Spaces supports:
 </p>
 
 <ul className="space-y-2 text-zinc-400">
@@ -906,11 +906,11 @@ Connect on LinkedIn
 <footer className="border-t border-zinc-800 py-8 text-center text-xs text-zinc-500">
 
 <div>
-TEANET
+EDGE Spaces
 </div>
 
 <div className="mt-1">
-Wallet-Based Communities for Builders and Investors
+Communities for Builders, Founders and Investors
 </div>
 
 </footer>
