@@ -204,8 +204,9 @@ export default function Home() {
           partners organise around emerging technologies and new initiatives.
         </p>
 
-        {/* SPOTLIGHT CARD */}
+{/* SPOTLIGHT CARD */}
 
+<div className="max-w-3xl">
 <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 transition-all duration-500 max-w-2xl">
 
   {spotlight.image && (
@@ -235,7 +236,7 @@ export default function Home() {
   >
     Apply for Membership
   </a>
-
+</div>
 </div>
         </div>
 

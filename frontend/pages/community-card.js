@@ -244,12 +244,20 @@ export default function CommunityCard() {
 
       {/* WEB3 */}
 
-      <section className="border-t border-zinc-800">
+<section className="border-t border-zinc-800">
 
-        <WebAccessSBT />
+  <div className="max-w-4xl mx-auto px-6 py-16 text-center">
 
-      </section>
+    <a
+      href="/wallet-setup"
+      className="inline-block px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+    >
+      Open Wallet Setup →
+    </a>
 
+  </div>
+
+</section>
 
       {/* FOOTER */}
 
