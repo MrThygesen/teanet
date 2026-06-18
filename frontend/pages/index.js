@@ -207,40 +207,67 @@ export default function Home() {
 {/* SPOTLIGHT CARD */}
 
 <div className="max-w-3xl">
-<div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 transition-all duration-500 max-w-2xl">
 
-  {spotlight.image && (
+  <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 transition-all duration-500">
 
-    <img
-      src={spotlight.image}
-      className="rounded-2xl mb-6 w-full h-72 object-cover"
-    />
+    {spotlight.image && (
 
-  )}
+      <img
+        src={spotlight.image}
+        className="rounded-2xl mb-6 w-full h-72 object-cover"
+      />
 
-  <div className="text-xs uppercase tracking-wider text-blue-400 mb-2">
-    {spotlight.subtitle}
+    )}
+
+    <div className="text-xs uppercase tracking-wider text-blue-400 mb-2">
+      {spotlight.subtitle}
+    </div>
+
+    <h3 className="text-3xl font-bold mb-5">
+      {spotlight.title}
+    </h3>
+
+    <p className="text-zinc-400 leading-relaxed mb-8">
+      {spotlight.description}
+    </p>
+
+    <a
+      href="#membership"
+      className="inline-block px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+    >
+      Apply for Membership
+    </a>
+
   </div>
 
-  <h3 className="text-3xl font-bold mb-5">
-    {spotlight.title}
-  </h3>
 
-  <p className="text-zinc-400 leading-relaxed mb-8">
-    {spotlight.description}
-  </p>
+  {/* CARD PREVIEW ROW */}
 
-  <a
-    href="#membership"
-    className="inline-block px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
-  >
-    Apply for Membership
-  </a>
-    </div>
-        </div>
+  <div className="grid grid-cols-4 gap-4 mt-6">
 
-      </section>
+    {spotlightItems.map((item, index) => (
 
+      <div
+        key={index}
+        className={`rounded-xl overflow-hidden border transition-all duration-300
+        ${
+          activeSpotlight === index
+            ? 'border-blue-500 scale-105'
+            : 'border-zinc-800 opacity-60'
+        }`}
+      >
+
+        <img
+          src={item.image}
+          className="w-full h-28 object-cover"
+        />
+
+      </div>
+
+    ))}
+
+  </div>
+</div>
 
       {/* INSIGHTS */}
 
