@@ -241,33 +241,35 @@ export default function Home() {
   </div>
 
 
-  {/* CARD PREVIEW ROW */}
+{/* CARD PREVIEW ROW */}
 
-  <div className="grid grid-cols-4 gap-4 mt-6">
+<div className="grid grid-cols-4 gap-4 mt-6">
 
-    {spotlightItems.map((item, index) => (
+  {spotlightItems.map((item, index) => (
 
-      <div
-        key={index}
-        className={`rounded-xl overflow-hidden border transition-all duration-300
-        ${
-          activeSpotlight === index
-            ? 'border-blue-500 scale-105'
-            : 'border-zinc-800 opacity-60'
-        }`}
-      >
-  
-        <img
-          src={item.image}
-          className="w-full h-28 object-cover"
-        />
+    <div
+      key={index}
+      onClick={() => setActiveSpotlight(index)}
+      className={`cursor-pointer rounded-xl overflow-hidden border transition-all duration-300 ${
+        activeSpotlight === index
+          ? 'border-blue-500 scale-105'
+          : 'border-zinc-800 opacity-60'
+      }`}
+    >
 
-      </div>
+      <img
+        src={item.image}
+        alt={item.title}
+        className="w-full h-28 object-cover"
+      />
 
-    ))}
+    </div>
 
-  </div>
+  ))}
+
 </div>
+
+</section>
 
       {/* INSIGHTS */}
 
