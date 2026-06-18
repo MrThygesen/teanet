@@ -8,33 +8,43 @@ import AdminSBTManager from '../components/AdminSBTManager'
 import MembershipForm from '../components/MembershipForm'
 
 const spotlightItems = [
+
   {
-    tag: 'Accelerator',
-    title: 'Accelerator Program',
+    title: 'Accelerator Membership',
+    subtitle: 'ARC Accelerator',
     description:
-      'Early-stage founders, mentors and ecosystem partners.'
+      'Founder resources, cohorts and ecosystem participation.',
+    image:
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/accelerator-membership.jpg'
   },
 
   {
-    tag: 'Builders',
-    title: 'Builder Club',
+    title: 'AI & Automation Club',
+    subtitle: 'EDGE Alliance',
     description:
-      'AI, software and emerging technologies.'
+      'AI discussions, builders and ecosystem activities.',
+    image:
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/automate.jpg'
   },
 
   {
-    tag: 'Investors',
-    title: 'Investor Network',
+    title: 'Web3 Infrastructure Club',
+    subtitle: 'EDGE Alliance',
     description:
-      'Sector-focused angels and early-stage investors.'
+      'Infrastructure discussions and investor networking.',
+    image:
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/web3.jpg'
   },
 
   {
-    tag: 'Workspace',
-    title: 'Shared Office Partners',
+    title: 'HealthTech Alliance',
+    subtitle: 'Alliance Membership',
     description:
-      'Benefits and local communities.'
+      'Working groups and ecosystem collaboration.',
+    image:
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/alliance-membership.jpg'
   }
+
 ]
 
 export default function Home() {
@@ -196,31 +206,37 @@ export default function Home() {
 
         {/* SPOTLIGHT CARD */}
 
-        <div className="max-w-3xl">
+<div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 transition-all duration-500 max-w-2xl">
 
-          <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 transition-all duration-500">
+  {spotlight.image && (
 
-            <div className="text-xs uppercase tracking-wider text-blue-400 mb-4">
-              {spotlight.tag}
-            </div>
+    <img
+      src={spotlight.image}
+      className="rounded-2xl mb-6 w-full h-72 object-cover"
+    />
 
-            <h3 className="text-3xl font-bold mb-5">
-              {spotlight.title}
-            </h3>
+  )}
 
-            <p className="text-zinc-400 leading-relaxed mb-8">
-              {spotlight.description}
-            </p>
+  <div className="text-xs uppercase tracking-wider text-blue-400 mb-2">
+    {spotlight.subtitle}
+  </div>
 
-            <a
-              href="#membership"
-              className="inline-block px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
-            >
-              Join Community
-            </a>
+  <h3 className="text-3xl font-bold mb-5">
+    {spotlight.title}
+  </h3>
 
-          </div>
+  <p className="text-zinc-400 leading-relaxed mb-8">
+    {spotlight.description}
+  </p>
 
+  <a
+    href="#membership"
+    className="inline-block px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+  >
+    Apply for Membership
+  </a>
+
+</div>
         </div>
 
       </section>
