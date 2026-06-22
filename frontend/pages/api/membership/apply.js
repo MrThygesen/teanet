@@ -22,10 +22,6 @@ export default async function handler(req, res) {
       full_name,
       email,
       linkedin_url,
-      company,
-      project,
-      wallet,
-      reason,
       membership_type,
       newsletter
     } = req.body
@@ -36,10 +32,6 @@ export default async function handler(req, res) {
         full_name,
         email,       
         linkedin_url,    
-        company,
-        project,
-        wallet,
-        reason,
         membership_type,
         newsletter
       )
@@ -48,10 +40,6 @@ export default async function handler(req, res) {
         ${full_name},
         ${email},
         ${linkedin_url},
-        ${company},
-        ${project},
-        ${wallet},
-        ${reason},
         ${membership_type},
         ${newsletter}
       )
@@ -78,9 +66,6 @@ export default async function handler(req, res) {
       <p><strong>Name:</strong> ${full_name}</p> 
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>LinkedIn:</strong> ${linkedin_url}</p>
-      <p><strong>Company:</strong> ${company}</p>
-      <p><strong>Project:</strong> ${project}</p>
-      <p><strong>Wallet:</strong> ${wallet}</p>
       <p><strong>Membership:</strong> ${membership_type}</p>
       <p><strong>Newsletter:</strong> ${newsletter}</p>
 
@@ -95,7 +80,7 @@ export default async function handler(req, res) {
 await apiInstance.sendTransacEmail({
 sender: {
   name: 'EDGE Spaces',
-  email: 'hello@edgealliance.xyz'
+  email: 'hello@edgespaces.xyz'
 },
   to: [
     {

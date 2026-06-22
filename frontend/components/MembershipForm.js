@@ -12,10 +12,6 @@ export default function MembershipForm() {
     full_name: '',
     email: '',    
     linkedin_url: '',    
-    company: '',
-    project: '',
-    wallet: '',
-    reason: '',
     membership_type: 'Founder',
     newsletter: false
   })
@@ -56,10 +52,6 @@ export default function MembershipForm() {
         full_name: '',
         email: '',
         linkedin_url: '',
-        company: '',
-        project: '',
-        wallet: '',
-        reason: '',
         membership_type: 'Founder',
         newsletter: false
       })
@@ -114,8 +106,7 @@ export default function MembershipForm() {
           </h2>
 
           <p className="text-zinc-400 mt-4 leading-relaxed">
-      EDGE Spaces supports founders, investors, mentors,
-ecosystem partners and builders..
+      Join founders, builders and ecosystem participants exploring new opportunities together.
           </p>
 
         </div>
@@ -177,73 +168,13 @@ ecosystem partners and builders..
    className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
    />
   </div>
-          {/* Company */}
-
-          <div>
-
-            <label className="block text-sm text-zinc-400 mb-2">
-              Company / Startup
-            </label>
-
-            <input
-              type="text"
-              value={form.company}
-              onChange={(e) =>
-                updateField('company', e.target.value)
-              }
-              className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
-            />
-
-          </div>
-
-          {/* Project */}
-
-          <div>
-
-            <label className="block text-sm text-zinc-400 mb-2">
-              Project
-            </label>
-
-            <input
-              type="text"
-              value={form.project}
-              onChange={(e) =>
-                updateField('project', e.target.value)
-              }
-              className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
-            />
-
-          </div>
-
-          {/* Wallet */}
-
-          <div>
-
-            <label className="block text-sm text-zinc-400 mb-2">
-  Wallet Address (Optional)
-</label>
-
-<p className="text-xs text-zinc-500 mb-3">
-  Wallet membership enables digital credentials and future participation rights.
-</p>
-
-<input
-  type="text"
-  placeholder="0x... (optional)"
-  value={form.wallet}
-  onChange={(e) =>
-    updateField('wallet', e.target.value)
-  }
-  className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
-/>
-          </div>
 
           {/* Membership */}
 
           <div>
 
             <label className="block text-sm text-zinc-400 mb-2">
-              Membership Type
+              Primary Role
             </label>
 
             <select
@@ -254,11 +185,11 @@ ecosystem partners and builders..
               className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
             >
 
-              <option>Founder</option>
-              <option>Investor</option>
-              <option>Partner</option>
-              <option>Mentor</option>
-              <option>Builder</option>
+            <option>Founder</option>
+            <option>Builder</option>
+            <option>Developer</option>
+            <option>Manager</option>
+            <option>Investor</option>
 
             </select>
 
@@ -306,7 +237,7 @@ ecosystem partners and builders..
             disabled={loading}
             className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-700"
           >
-            {loading ? 'Submitting...' : 'Submit Application'}
+            {loading ? 'Submitting...' : 'Request Access'}
           </button>
 
         </form>
