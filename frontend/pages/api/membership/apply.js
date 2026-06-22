@@ -68,11 +68,6 @@ export default async function handler(req, res) {
       <p><strong>LinkedIn:</strong> ${linkedin_url}</p>
       <p><strong>Membership:</strong> ${membership_type}</p>
       <p><strong>Newsletter:</strong> ${newsletter}</p>
-
-      <p>
-      <strong>Reason:</strong><br/>
-      ${reason}
-      </p>
       `
     })
 

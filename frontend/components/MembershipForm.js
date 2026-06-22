@@ -195,25 +195,6 @@ export default function MembershipForm() {
 
           </div>
 
-          {/* Reason */}
-
-          <div>
-
-            <label className="block text-sm text-zinc-400 mb-2">
-              Reason for Joining
-            </label>
-
-            <textarea
-              rows={6}
-              value={form.reason}
-              onChange={(e) =>
-                updateField('reason', e.target.value)
-              }
-              className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
-            />
-
-          </div>
-
           {/* Newsletter */}
 
           <label className="flex items-start gap-3 text-sm text-zinc-400">
