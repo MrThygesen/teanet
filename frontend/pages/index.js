@@ -271,6 +271,30 @@ export default function Home() {
 </div>
 </section>
 
+
+ <div className="mt-10 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+
+   <div className="text-xl font-semibold mb-4">
+    Community Access
+   </div>
+
+   <p className="text-zinc-400 leading-relaxed mb-6">
+     Approved members receive access to the EDGE Spaces Telegram community.
+   </p>
+
+   <div className="space-y-3 text-zinc-400">
+
+     <div>✓ Community discussions</div>
+     <div>✓ Founder and builder introductions</div>
+     <div>✓ Accelerator opportunities</div>
+     <div>✓ Grants and ecosystem updates</div>
+     <div>✓ Future events and collaborations</div>
+
+   </div>
+
+ </div>
+
+
       {/* INSIGHTS */}
 
       <section

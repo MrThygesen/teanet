@@ -11,6 +11,7 @@ export default function MembershipForm() {
   const [form, setForm] = useState({
     full_name: '',
     email: '',    
+    linkedin_url: '',    
     company: '',
     project: '',
     wallet: '',
@@ -54,7 +55,8 @@ export default function MembershipForm() {
       setForm({
         full_name: '',
         email: '',
-       company: '',
+        linkedin_url: '',
+        company: '',
         project: '',
         wallet: '',
         reason: '',
@@ -158,10 +160,23 @@ ecosystem partners and builders..
   }
   className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
 />
-        
+        </div>
 
-          </div>
 
+ <div>
+ <label className="block text-sm text-zinc-400 mb-2">
+  LinkedIn Profile (Optional)
+ </label>
+ <input
+   type="text"
+   placeholder="https://linkedin.com/in/..."
+   value={form.linkedin_url}
+   onChange={(e) =>
+   updateField('linkedin_url', e.target.value)
+   }
+   className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+   />
+  </div>
           {/* Company */}
 
           <div>

@@ -21,6 +21,7 @@ export default async function handler(req, res) {
     const {
       full_name,
       email,
+      linkedin_url,
       company,
       project,
       wallet,
@@ -34,6 +35,7 @@ export default async function handler(req, res) {
       (
         full_name,
         email,       
+        linkedin_url,    
         company,
         project,
         wallet,
@@ -45,6 +47,7 @@ export default async function handler(req, res) {
       (
         ${full_name},
         ${email},
+        ${linkedin_url},
         ${company},
         ${project},
         ${wallet},
@@ -57,8 +60,8 @@ export default async function handler(req, res) {
     await apiInstance.sendTransacEmail({
 
       sender: {
-        name: 'TNET MEMBERSHIP',
-        email: 'hello@teanet.xyz'
+        name: 'EDGE Spaces',
+        email: 'hello@edgespaces.xyz'
       },
 
       to: [
@@ -67,13 +70,14 @@ export default async function handler(req, res) {
         }
       ],
 
-      subject: `New TEANET Membership Request`,
+      subject: `New EDGE Spaces Membership Request`,
 
       htmlContent: `
       <h2>New Membership Request</h2>
 
       <p><strong>Name:</strong> ${full_name}</p> 
       <p><strong>Email:</strong> ${email}</p>
+      <p><strong>LinkedIn:</strong> ${linkedin_url}</p>
       <p><strong>Company:</strong> ${company}</p>
       <p><strong>Project:</strong> ${project}</p>
       <p><strong>Wallet:</strong> ${wallet}</p>
@@ -89,18 +93,17 @@ export default async function handler(req, res) {
 
  
 await apiInstance.sendTransacEmail({
-  sender: {
-    name: 'TNET Membership',
-    email: 'hello@teanet.xyz'
-  },
-
+sender: {
+  name: 'EDGE Spaces',
+  email: 'hello@edgealliance.xyz'
+},
   to: [
     {
       email: email
     }
   ],
 
-  subject: 'TEANET Membership Request Received',
+  subject: 'EDGE Spaces Membership Request Received',
 
   htmlContent: `
     <h2>Thank you for your application</h2>
@@ -108,16 +111,29 @@ await apiInstance.sendTransacEmail({
     <p>Hello ${full_name},</p>
 
     <p>
-    Your TEANET membership request has been received successfully.
+    Your EDGE Spaces membership request has been received successfully.
     </p>
 
-    <p>
-     A confirmation email has been sent to your email address, and we will get back to you as soon as possible with a membership delievered to your wallets NFT section.
-    </p>
+<p>
+Membership requests are reviewed manually.
+</p>
+
+<p>
+Approved members will receive updates and access to the EDGE Spaces community.
+</p>
+
+<p>
+Wallet membership is optional and can be added later.
+</p>
+
+<p>
+Join the Telegram community:<br>
+https://t.me/edgespaces
+</p>
 
     <p>
     Regards,<br>
-    TEANET Membership
+    EDGE SPACES
     </p>
   `
 })
