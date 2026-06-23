@@ -146,7 +146,7 @@ export default function Home() {
 
       <section className="max-w-6xl mx-auto px-6 py-16">
 
-        <div className="max-w-3xl">
+        <div className="max-w-5xl">
 
          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
   Explore EDGE Spaces
@@ -222,7 +222,7 @@ export default function Home() {
 
       <img
         src={spotlight.image}
-        className="rounded-2xl mb-6 w-full aspect-[16/9] object-cover"
+        className="rounded-2xl mb-6 w-full object-cover"
       />
 
     )}
