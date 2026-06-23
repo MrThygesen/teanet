@@ -13,9 +13,9 @@ const spotlightItems = [
     title: 'Founders',
     subtitle: 'Who Shapes The Future',
     description:
-      'For founders and startup teams building the next generation of companies.',
+      'Founders and startup teams building the next generation of companies.',
     image:
-      '/founders.jpg'
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/founders.jpg'
   },
 
   {
@@ -24,7 +24,7 @@ const spotlightItems = [
     description:
       'Developers, makers and product people turning ideas into reality.',
     image:
-      '/builders.jpg'
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/builders.jpg'
   },
 
   {
@@ -33,7 +33,7 @@ const spotlightItems = [
     description:
       'Experienced operators and investors supporting founders through relationships and mentorship.',
     image:
-      '/business-angels.jpg'
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/business-angels.jpg'
   },
 
   {
@@ -42,7 +42,7 @@ const spotlightItems = [
     description:
       'Accelerators, venture builders and ecosystem organizations supporting innovation.',
     image:
-      '/ecosystem-partners.jpg'
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/ecosystem-partners.jpg'
   },
 
   {
@@ -51,10 +51,9 @@ const spotlightItems = [
     description:
       'Advisors, lawyers and specialists helping founders and builders grow.',
     image:
-      '/ecosystem-supporters.jpg'
+      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/ecosystem-supporters.jpg'
   }
 
-]
 ]
 
 export default function Home() {
@@ -149,14 +148,13 @@ export default function Home() {
 
         <div className="max-w-3xl">
 
-          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-            Part of EDGE Alliance
-          </div>
+         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+  Explore EDGE Spaces
+</div>
 
-          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-            Build What's Next.
-          </h1>
-
+<h2 className="text-4xl font-bold mb-6">
+  Who Shapes The Future
+</h2>
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed max-w-2xl">
 
             EDGE Spaces helps founders, builders, investors and ecosystem
@@ -170,25 +168,25 @@ export default function Home() {
 
         <div className="grid md:grid-cols-4 gap-5 mt-14">
 
-          <FeatureCard
-            title="Founder Spaces"
-            text="Build ventures and find collaborators."
-          />
+<FeatureCard
+  title="Founders"
+  text="Entrepreneurs building startups and new ventures."
+/>
 
-          <FeatureCard
-            title="Builder Spaces"
-            text="Join projects and explore technologies."
-          />
+<FeatureCard
+  title="Builders"
+  text="Developers, technical minds and product people."
+/>
 
-          <FeatureCard
-            title="Investor Networks"
-            text="Support ecosystems and discover opportunities."
-          />
+<FeatureCard
+  title="Business Angels"
+  text="Supporting founders through relationships and experience."
+/>
 
-          <FeatureCard
-            title="Ecosystem Partners"
-            text="Accelerators, offices and innovation programs."
-          />
+<FeatureCard
+  title="Ecosystem Partners"
+  text="Accelerators, venture builders and innovation organizations."
+/>
 
         </div>
 
@@ -224,7 +222,7 @@ export default function Home() {
 
       <img
         src={spotlight.image}
-        className="rounded-2xl mb-6 w-full h-72 object-cover"
+        className="rounded-2xl mb-6 w-full aspect-[16/9] object-cover"
       />
 
     )}
@@ -366,9 +364,10 @@ export default function Home() {
           Join the Network
         </h2>
 
-        <p className="text-zinc-400 max-w-3xl mb-12">
-          Start with email membership. Add a wallet later if you want a digital member card and future community benefits.
-        </p>
+    <p className="text-zinc-400 max-w-3xl mb-12">
+  EDGE Spaces brings together founders, builders, business angels,
+  ecosystem partners and specialists building what's next.
+</p>
 
         <div className="grid md:grid-cols-2 gap-8">
 
@@ -462,8 +461,13 @@ export default function Home() {
           </div>
 
           <div className="text-zinc-600 text-sm mt-6">
-            Founders • Builders • Investors • Ecosystem Partners
+            Founders • Builders • Business Angels • Ecosystem Partners
           </div>
+
+<div className="text-zinc-600 text-sm mt-2">
+  AI • Web3 • Emerging Technologies
+</div>
+
 
         </div>
 
