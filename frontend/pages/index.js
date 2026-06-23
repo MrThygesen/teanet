@@ -229,13 +229,31 @@ export default function Home() {
 
     {/* content */}
 
-    <div className="absolute bottom-0 left-0 p-10 md:p-14 max-w-2xl">
+   <div className="absolute bottom-0 left-0 p-10 md:p-14 max-w-2xl">
 
-  </div>
+  <a
+    href="#membership"
+    className="
+      inline-block
+      px-12
+      py-5
+      rounded-3xl
+      bg-blue-600
+      hover:bg-blue-700
+      text-xl
+      font-bold
+      shadow-xl
+    "
+  >
+    Request Access
+  </a>
 
+</div>
+
+</div>
 {/* CARD PREVIEW ROW */}
 
-<div className="grid grid-cols-4 gap-4 mt-6">
+<div className="grid grid-cols-5 gap-4 mt-6">
 
   {spotlightItems.map((item, index) => (
 
