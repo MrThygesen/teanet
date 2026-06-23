@@ -31,7 +31,7 @@ const spotlightItems = [
     title: 'Business Angels',
     subtitle: 'Support The Ecosystem',
     description:
-      'Experienced operators and investors supporting founders through relationships and mentorship.',
+'Business angels and experienced operators supporting founders through relationships, mentorship and opportunities.',
     image:
       'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/business-angels.jpg'
   },
@@ -39,8 +39,8 @@ const spotlightItems = [
   {
     title: 'Ecosystem Partners',
     subtitle: 'Organizations',
-    description:
-      'Accelerators, venture builders and ecosystem organizations supporting innovation.',
+  description:
+'Accelerators, venture builders and organizations helping founders and builders grow.',
     image:
       'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/ecosystem-partners.jpg'
   },
@@ -49,7 +49,7 @@ const spotlightItems = [
     title: 'Ecosystem Specialists',
     subtitle: 'Experts & Advisors',
     description:
-      'Advisors, lawyers and specialists helping founders and builders grow.',
+    'Experts, advisors and specialists supporting emerging teams and innovation.',
     image:
       'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/ecosystem-supporters.jpg'
   }
