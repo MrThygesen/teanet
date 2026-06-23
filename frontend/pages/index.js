@@ -131,7 +131,7 @@ export default function Home() {
               href="#membership"
               className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm"
             >
-              Apply Now
+              Request Access
             </a>
 
             <ConnectButton />
@@ -230,27 +230,6 @@ export default function Home() {
     {/* content */}
 
     <div className="absolute bottom-0 left-0 p-10 md:p-14 max-w-2xl">
-
-      <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-        {spotlight.subtitle}
-      </div>
-
-      <h3 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-        {spotlight.title}
-      </h3>
-
-      <p className="text-zinc-200 text-lg leading-relaxed mb-10">
-        {spotlight.description}
-      </p>
-
-      <a
-        href="#membership"
-        className="inline-block px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-lg font-medium"
-      >
-        Apply Now
-      </a>
-
-    </div>
 
   </div>
 
