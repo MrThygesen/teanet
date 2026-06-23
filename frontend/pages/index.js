@@ -10,41 +10,51 @@ import MembershipForm from '../components/MembershipForm'
 const spotlightItems = [
 
   {
-    title: 'Accelerator Membership',
-    subtitle: 'ARC Accelerator',
+    title: 'Founders',
+    subtitle: 'Who Shapes The Future',
     description:
-      'Founder resources, cohorts and ecosystem participation.',
+      'For founders and startup teams building the next generation of companies.',
     image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/accelerator-membership.jpg'
+      '/founders.jpg'
   },
 
   {
-    title: 'AI & Automation Club',
-    subtitle: 'EDGE Alliance',
+    title: 'Builders',
+    subtitle: 'Technical Minds',
     description:
-      'AI discussions, builders and ecosystem activities.',
+      'Developers, makers and product people turning ideas into reality.',
     image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/automate.jpg'
+      '/builders.jpg'
   },
 
   {
-    title: 'Web3 Infrastructure Club',
-    subtitle: 'EDGE Alliance',
+    title: 'Business Angels',
+    subtitle: 'Support The Ecosystem',
     description:
-      'Infrastructure discussions and investor networking.',
+      'Experienced operators and investors supporting founders through relationships and mentorship.',
     image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/web3.jpg'
+      '/business-angels.jpg'
   },
 
   {
-    title: 'HealthTech Alliance',
-    subtitle: 'Alliance Membership',
+    title: 'Ecosystem Partners',
+    subtitle: 'Organizations',
     description:
-      'Working groups and ecosystem collaboration.',
+      'Accelerators, venture builders and ecosystem organizations supporting innovation.',
     image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/alliance-membership.jpg'
+      '/ecosystem-partners.jpg'
+  },
+
+  {
+    title: 'Ecosystem Supporters',
+    subtitle: 'Experts & Specialists',
+    description:
+      'Advisors, lawyers and specialists helping founders and builders grow.',
+    image:
+      '/ecosystem-supporters.jpg'
   }
 
+]
 ]
 
 export default function Home() {
@@ -191,18 +201,18 @@ export default function Home() {
         className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800"
       >
 
-        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Featured Communities
-        </div>
+   <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+  Explore EDGE Spaces
+</div>
 
-        <h2 className="text-4xl font-bold mb-6">
-          Communities Form Around Ideas
-        </h2>
+<h2 className="text-4xl font-bold mb-6">
+  Who Shapes The Future
+</h2>
+      <p className="text-zinc-400 max-w-3xl mb-12">
+  EDGE Spaces brings together founders, builders, business angels,
+  ecosystem partners and specialists building what's next.
+</p>
 
-        <p className="text-zinc-400 max-w-3xl mb-12">
-          EDGE Spaces helps accelerators, builders, investors and ecosystem
-          partners organise around emerging technologies and new initiatives.
-        </p>
 
 {/* SPOTLIGHT CARD */}
 
