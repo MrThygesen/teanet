@@ -46,8 +46,8 @@ const spotlightItems = [
   },
 
   {
-    title: 'Ecosystem Supporters',
-    subtitle: 'Experts & Specialists',
+    title: 'Ecosystem Specialists',
+    subtitle: 'Experts & Advisors',
     description:
       'Advisors, lawyers and specialists helping founders and builders grow.',
     image:
@@ -214,40 +214,45 @@ export default function Home() {
 
 {/* SPOTLIGHT CARD */}
 
-<div className="max-w-3xl">
+<div className="max-w-5xl">
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 transition-all duration-500">
+  <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-500">
 
-    {spotlight.image && (
+    <img
+      src={spotlight.image}
+      className="w-full object-cover"
+    />
 
-      <img
-        src={spotlight.image}
-        className="rounded-2xl mb-6 w-full object-cover"
-      />
+    {/* overlay */}
 
-    )}
+    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
 
-    <div className="text-xs uppercase tracking-wider text-blue-400 mb-2">
-      {spotlight.subtitle}
+    {/* content */}
+
+    <div className="absolute bottom-0 left-0 p-10 md:p-14 max-w-2xl">
+
+      <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+        {spotlight.subtitle}
+      </div>
+
+      <h3 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+        {spotlight.title}
+      </h3>
+
+      <p className="text-zinc-200 text-lg leading-relaxed mb-10">
+        {spotlight.description}
+      </p>
+
+      <a
+        href="#membership"
+        className="inline-block px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-700 text-lg font-medium"
+      >
+        Apply Now
+      </a>
+
     </div>
 
-    <h3 className="text-3xl font-bold mb-5">
-      {spotlight.title}
-    </h3>
-
-    <p className="text-zinc-400 leading-relaxed mb-8">
-      {spotlight.description}
-    </p>
-
-    <a
-      href="#membership"
-      className="inline-block px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
-    >
-      Apply for Membership
-    </a>
-
   </div>
-
 
 {/* CARD PREVIEW ROW */}
 
