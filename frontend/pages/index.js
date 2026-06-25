@@ -144,7 +144,7 @@ export default function Home() {
 
       {/* HERO */}
 
-      <section className="max-w-6xl mx-auto px-6 py-16">
+      <section className="max-w-6xl mx-auto px-6 py-10 md:py-16">
 
         <div className="max-w-5xl">
 
@@ -152,10 +152,10 @@ export default function Home() {
   Explore EDGE Spaces
 </div>
 
-<h2 className="text-4xl font-bold mb-6">
+<h2 className="text-3xl md:text-4xl font-bold mb-6">
   Who Shapes The Future
 </h2>
-          <p className="mt-8 text-xl text-zinc-400 leading-relaxed max-w-2xl">
+          <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-2xl">
 
            EDGE Spaces brings together founders, builders, business angels and ecosystem partners around AI, Web3 and emerging technologies.
 
@@ -195,14 +195,14 @@ export default function Home() {
 
       <section
         id="communities"
-        className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800"
+        className="max-w-6xl mx-auto px-6 py-10 md:py-16 border-t border-zinc-800"
       >
 
    <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
   Explore EDGE Spaces
 </div>
 
-<h2 className="text-4xl font-bold mb-6">
+<h2 className="text-3xl md:text-4xl font-bold mb-6">
   Who Shapes The Future
 </h2>
       <p className="text-zinc-400 max-w-3xl mb-12">
@@ -218,9 +218,11 @@ export default function Home() {
   <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-500">
 
     <img
-      src={spotlight.image}
-      className="w-full object-cover"
-    />
+  src={spotlight.image}
+  className="w-full aspect-square md:aspect-[16/9] object-cover"
+  alt={spotlight.title}
+/>
+
 
     {/* overlay */}
 
@@ -256,7 +258,7 @@ export default function Home() {
 </div>
 {/* CARD PREVIEW ROW */}
 
-<div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
+<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
 
   {spotlightItems.map((item, index) => (
 
@@ -287,7 +289,7 @@ export default function Home() {
 
  <div className="mt-10 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
 
-   <div className="text-xl font-semibold mb-4">
+   <div className="text-lg md:text-xl font-semibold mb-4">
     After You're Approved
    </div>
 
@@ -328,14 +330,14 @@ export default function Home() {
 
       <section
         id="insights"
-        className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800"
+        className="max-w-6xl mx-auto px-6 py-10 md:py-16 border-t border-zinc-800"
       >
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
           Insights & Opportunities
         </div>
 
-        <h2 className="text-4xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
           What's Happening
         </h2>
 
@@ -374,14 +376,14 @@ export default function Home() {
 
       <section
         id="membership"
-        className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800"
+        className="max-w-6xl mx-auto px-6 py-10 md:py-16 border-t border-zinc-800"
       >
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
           Membership
         </div>
 
-        <h2 className="text-4xl font-bold mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
           Join the Network
         </h2>
 
@@ -394,7 +396,7 @@ export default function Home() {
 
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
 
-            <div className="text-xl font-semibold mb-6">
+            <div className="text-lg md:text-xl font-semibold mb-6">
               Email Membership
             </div>
 
@@ -415,7 +417,7 @@ export default function Home() {
 
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
 
-            <div className="text-xl font-semibold mb-6">
+            <div className="text-lg md:text-xl font-semibold mb-6">
               Optional Wallet Membership
             </div>
 
