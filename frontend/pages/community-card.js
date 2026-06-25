@@ -1,7 +1,5 @@
 'use client'
 
-import WebAccessSBT from '../components/WebAccessSBT'
-
 export default function CommunityCard() {
   return (
     <div className="bg-black text-white min-h-dvh">
@@ -13,7 +11,7 @@ export default function CommunityCard() {
         <div className="max-w-3xl">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-            Optional Wallet Membership
+            Optional Digital Membership
           </div>
 
           <h1 className="text-5xl font-bold leading-tight">
@@ -22,17 +20,54 @@ export default function CommunityCard() {
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
 
-            Digital membership is an optional feature available to approved
-            EDGE Spaces members.
+            Every approved EDGE Spaces member can optionally receive a
+            blockchain-based Digital Membership Card.
 
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
 
-            Join the community first. You can add a wallet address during
-            your application or at any time afterwards.
+            Joining the community does not require a wallet.
+            You can connect one during your application or at any time later.
 
           </p>
+
+        </div>
+
+      </section>
+
+
+      {/* EXAMPLE CARD */}
+
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
+
+        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+          Example
+        </div>
+
+        <h2 className="text-4xl font-bold mb-8">
+          Example Membership Card
+        </h2>
+
+        <p className="text-zinc-400 max-w-3xl mb-12">
+
+          This is an example of the EDGE Spaces Digital Membership Card.
+
+          <br /><br />
+
+          Every approved member receives a personalized digital card.
+          Additional community-specific cards may be introduced as the
+          ecosystem grows.
+
+        </p>
+
+        <div className="flex justify-center">
+
+          <img
+            src="/data/example-membership-card.jpg"
+            alt="Example EDGE Spaces Digital Membership Card"
+            className="w-full max-w-lg rounded-3xl border border-zinc-800"
+          />
 
         </div>
 
@@ -44,33 +79,28 @@ export default function CommunityCard() {
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Why Add A Wallet?
+          Benefits
         </div>
 
         <h2 className="text-4xl font-bold mb-10">
-          Optional Member Benefits
+          Why Have A Digital Membership Card?
         </h2>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-3 gap-6">
 
           <Card
-            title="Digital Member Card"
-            text="Receive a blockchain-based EDGE Spaces membership card."
-          />
-
-          <Card
-            title="Future Governance"
-            text="Participate in future voting and community initiatives."
+            title="Digital Identity"
+            text="A blockchain-based proof of your EDGE Spaces membership."
           />
 
           <Card
             title="Partner Benefits"
-            text="Access future offers and benefits from ecosystem partners."
+            text="Future access to partner offers and ecosystem initiatives."
           />
 
           <Card
-            title="Future Features"
-            text="Unlock new member functionality as the ecosystem evolves."
+            title="Future Governance"
+            text="Participate in future community voting and governance."
           />
 
         </div>
@@ -94,15 +124,20 @@ export default function CommunityCard() {
 
           <p className="text-zinc-400 leading-relaxed">
 
-            Wallet membership is completely optional. If you decide to
-            receive a digital membership card, simply connect a wallet.
+            Wallet setup is completely optional.
+
+            <br /><br />
+
+            If you'd like a Digital Membership Card,
+            simply connect a compatible wallet.
 
           </p>
 
-          <p className="text-zinc-500 mt-5 leading-relaxed">
+          <p className="text-zinc-500 mt-6 leading-relaxed">
 
-            A demo card can be issued first to verify your wallet before
-            your official membership card is delivered.
+            A demo card can be issued first to verify that your wallet
+            is configured correctly before your official membership card
+            is delivered.
 
           </p>
 
@@ -114,15 +149,6 @@ export default function CommunityCard() {
           </a>
 
         </div>
-
-      </section>
-
-
-      {/* WEB3 COMPONENT */}
-
-      <section className="border-t border-zinc-800">
-
-        <WebAccessSBT />
 
       </section>
 
