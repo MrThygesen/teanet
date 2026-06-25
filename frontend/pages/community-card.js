@@ -42,22 +42,21 @@ export default function CommunityCard() {
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Example
+      Test
         </div>
 
         <h2 className="text-4xl font-bold mb-8">
-          Example Membership Card
+          Digital Membership Card
         </h2>
 
         <p className="text-zinc-400 max-w-3xl mb-12">
 
-          This is an example of the EDGE Spaces Digital Membership Card.
+         This is the EDGE Spaces Membership Card.
 
           <br /><br />
 
-          Every approved member receives a personalized digital card.
-          Additional community-specific cards may be introduced as the
-          ecosystem grows.
+         Every approved EDGE Spaces member can optionally receive a Digital Membership Card.
+         The card proves your membership and will evolve with future partner benefits and community governance.
 
         </p>
   
