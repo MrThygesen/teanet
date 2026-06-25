@@ -157,8 +157,7 @@ export default function Home() {
 </h2>
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed max-w-2xl">
 
-            EDGE Spaces helps founders, builders, investors and ecosystem
-            partners organise around new ideas, projects and emerging technologies.
+           EDGE Spaces brings together founders, builders, business angels and ecosystem partners around AI, Web3 and emerging technologies.
 
           </p>
 
@@ -233,17 +232,21 @@ export default function Home() {
 
   <a
     href="#membership"
-    className="
-      inline-block
-      px-12
-      py-5
-      rounded-3xl
-      bg-blue-600
-      hover:bg-blue-700
-      text-xl
-      font-bold
-      shadow-xl
-    "
+ className="
+  inline-flex
+  items-center
+  justify-center
+  px-8
+  py-3
+  rounded-xl
+  bg-black/50
+  backdrop-blur-md
+  border border-zinc-600
+  text-white
+  font-medium
+  hover:bg-blue-600
+  transition
+  "
   >
     Request Access
   </a>
@@ -253,7 +256,7 @@ export default function Home() {
 </div>
 {/* CARD PREVIEW ROW */}
 
-<div className="grid grid-cols-5 gap-4 mt-6">
+<div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
 
   {spotlightItems.map((item, index) => (
 
@@ -285,22 +288,38 @@ export default function Home() {
  <div className="mt-10 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
 
    <div className="text-xl font-semibold mb-4">
-    Community Access
+    After You're Approved
    </div>
 
-   <p className="text-zinc-400 leading-relaxed mb-6">
-     Approved members receive access to the EDGE Spaces Telegram community.
-   </p>
+<p className="text-zinc-400 leading-relaxed mb-8">
+  EDGE Spaces is hosted in a private Telegram community where founders,
+  builders and ecosystem members collaborate. Applications are reviewed
+  manually to maintain a high-quality community.
+</p>
 
-   <div className="space-y-3 text-zinc-400">
+<div className="space-y-4 text-zinc-300">
 
-     <div>✓ Community discussions</div>
-     <div>✓ Founder and builder introductions</div>
-     <div>✓ Accelerator opportunities</div>
-     <div>✓ Grants and ecosystem updates</div>
-     <div>✓ Future events and collaborations</div>
+  <div>
+    ✓ Invitation to the private EDGE Spaces Telegram community
+  </div>
 
-   </div>
+  <div>
+    ✓ If you don't already use Telegram, creating an account takes about one minute.
+  </div>
+
+  <div>
+    ✓ Connect with founders, builders, business angels and ecosystem specialists.
+  </div>
+
+  <div>
+    ✓ Opportunities, introductions and ecosystem updates.
+  </div>
+
+  <div>
+    ✓ Wallet membership is completely optional and can be added later.
+  </div>
+
+</div>
 
  </div>
 
