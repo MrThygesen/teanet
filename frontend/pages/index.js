@@ -287,11 +287,17 @@ export default function Home() {
 </section>
 
 
- <div className="mt-10 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+<section className="max-w-6xl mx-auto px-6 pb-10">
 
-   <div className="text-lg md:text-xl font-semibold mb-4">
-    After You're Approved
-   </div>
+  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 md:p-8">
+
+<div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+  Community Access
+</div>
+
+<h3 className="text-2xl md:text-3xl font-bold mb-5">
+  After You're Approved
+</h3>
 
 <p className="text-zinc-400 leading-relaxed mb-8">
   EDGE Spaces is hosted in a private Telegram community where founders,
@@ -323,7 +329,9 @@ export default function Home() {
 
 </div>
 
- </div>
+  </div>
+
+</section>
 
 
       {/* INSIGHTS */}
