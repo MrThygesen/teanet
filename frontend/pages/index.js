@@ -202,43 +202,56 @@ export default function Home() {
 
 {/* SPOTLIGHT CARD */}
 
+{/* SPOTLIGHT CARD */}
+
 <div className="w-full max-w-5xl">
 
-  <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-500">
-
-<img
-  src={spotlight.image}
-  alt={spotlight.title}
-  className="block w-full aspect-square object-contain bg-zinc-900"
- />
-
-
-<div className="flex justify-center mt-10 mb-8">
   <a
-  href="#membership"
-  className="
-  inline-flex
-  items-center
-  justify-center
-  px-8
-  py-3
-  md:px-16
-  md:py-6
-  rounded-2xl
-  bg-blue-600
-  hover:bg-blue-700
-  text-base
-  md:text-2xl
-  font-semibold
-  transition-all
-  shadow-xl
-"
+    href="#membership"
+    className="block group cursor-pointer"
   >
-    Request Access
+
+    <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-300 group-hover:border-blue-500 group-hover:shadow-2xl group-hover:shadow-blue-500/20">
+
+      <img
+        src={spotlight.image}
+        alt={spotlight.title}
+        className="block w-full aspect-square object-contain bg-zinc-900 transition-transform duration-300 group-hover:scale-[1.01]"
+      />
+
+    </div>
+
   </a>
 
-</div>
+  {/* CARD PREVIEW ROW */}
 
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
+
+    {spotlightItems.map((item, index) => (
+
+      <div
+        key={index}
+        onClick={() => setActiveSpotlight(index)}
+        className={`cursor-pointer rounded-xl overflow-hidden border transition-all duration-300 ${
+          activeSpotlight === index
+            ? 'border-blue-500 ring-2 ring-blue-500'
+            : 'border-zinc-800 opacity-60 hover:opacity-100'
+        }`}
+      >
+
+        <img
+          src={item.image}
+          alt={item.title}
+          className="block w-full h-28 object-cover"
+        />
+
+      </div>
+
+    ))}
+
+  </div>
+
+</div>
 {/* CARD PREVIEW ROW */}
 
 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
