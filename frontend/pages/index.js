@@ -132,7 +132,7 @@ export default function Home() {
               Request Access
             </a>
 
-            <ConnectButton />
+//            <ConnectButton />
 
           </div>
 
