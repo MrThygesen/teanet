@@ -125,14 +125,6 @@ export default function Home() {
               Digital Membership
             </a>
 
-            <a
-              href="#membership"
-              className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-sm"
-            >
-              Request Access
-            </a>
-
-
           </div>
 
         </div>
