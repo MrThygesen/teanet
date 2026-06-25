@@ -4,33 +4,33 @@ import WebAccessSBT from '../components/WebAccessSBT'
 
 export default function CommunityCard() {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-dvh">
 
       {/* HERO */}
 
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-5xl mx-auto px-6 py-20">
 
         <div className="max-w-3xl">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-            Optional Digital Membership
+            Optional Wallet Membership
           </div>
 
           <h1 className="text-5xl font-bold leading-tight">
-            Digital Membership Cards
+            Digital Membership Card
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
 
-            Approved members who provide a wallet address may receive a
-            digital membership card issued by EDGE Spaces.
+            Digital membership is an optional feature available to approved
+            EDGE Spaces members.
 
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
 
-            Members can optionally verify their wallet setup beforehand
-            using a demo card.
+            Join the community first. You can add a wallet address during
+            your application or at any time afterwards.
 
           </p>
 
@@ -44,163 +44,33 @@ export default function CommunityCard() {
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Benefits
+          Why Add A Wallet?
         </div>
 
         <h2 className="text-4xl font-bold mb-10">
-          Why Add a Wallet?
+          Optional Member Benefits
         </h2>
 
         <div className="grid md:grid-cols-4 gap-6">
 
           <Card
-            title="Digital Identity"
-            text="Receive a portable community member card."
+            title="Digital Member Card"
+            text="Receive a blockchain-based EDGE Spaces membership card."
           />
 
           <Card
-            title="Future Voting"
-            text="Participate in future governance initiatives."
+            title="Future Governance"
+            text="Participate in future voting and community initiatives."
           />
 
           <Card
             title="Partner Benefits"
-            text="Access opportunities from ecosystem partners."
+            text="Access future offers and benefits from ecosystem partners."
           />
 
           <Card
-            title="Workspace Access"
-            text="Potential benefits from shared office communities."
-          />
-
-        </div>
-
-      </section>
-
-
-      {/* MEMBERSHIP PROCESS */}
-
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
-
-        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Membership Process
-        </div>
-
-        <h2 className="text-4xl font-bold mb-10">
-          How It Works
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-6">
-
-          <Card
-            title="1. Apply"
-            text="Submit your membership request."
-          />
-
-          <Card
-            title="2. Optional Wallet"
-            text="Provide a wallet address if you want a digital membership card."
-          />
-
-          <Card
-            title="3. Verify Wallet"
-            text="Optionally receive a demo card to confirm your setup works."
-          />
-
-          <Card
-            title="4. Receive Membership"
-            text="EDGE Spaces issues your approved membership card."
-          />
-
-        </div>
-
-      </section>
-
-
-      {/* MEMBERSHIP TYPES */}
-
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
-
-        <div className="grid md:grid-cols-2 gap-8">
-
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
-
-            <div className="text-2xl font-semibold mb-6">
-              Email Membership
-            </div>
-
-            <div className="space-y-4 text-zinc-400">
-
-              <div>✓ Community updates</div>
-
-              <div>✓ Matchmaking support</div>
-
-              <div>✓ Opportunities</div>
-
-              <div>✓ Introductions</div>
-
-            </div>
-
-          </div>
-
-
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
-
-            <div className="text-2xl font-semibold mb-6">
-              Wallet Membership
-            </div>
-
-            <div className="space-y-4 text-zinc-400">
-
-              <div>✓ Everything above</div>
-
-              <div>✓ Digital membership card</div>
-
-              <div>✓ Future voting access</div>
-
-              <div>✓ Partner benefits</div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* COMMUNITY BENEFITS */}
-
-      <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
-
-        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Community Benefits
-        </div>
-
-        <h2 className="text-4xl font-bold mb-10">
-          Future Ecosystem Opportunities
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-6">
-
-          <Card
-            title="Accelerators"
-            text="Founder cohorts and member programs."
-          />
-
-          <Card
-            title="Investor Networks"
-            text="Sector-focused communities."
-          />
-
-          <Card
-            title="Builder Clubs"
-            text="Collaboration around projects."
-          />
-
-          <Card
-            title="Partner Spaces"
-            text="Benefits from local communities."
+            title="Future Features"
+            text="Unlock new member functionality as the ecosystem evolves."
           />
 
         </div>
@@ -219,48 +89,38 @@ export default function CommunityCard() {
           </div>
 
           <h2 className="text-3xl font-bold mb-5">
-            Verify Your Wallet
+            Connect Whenever You're Ready
           </h2>
 
           <p className="text-zinc-400 leading-relaxed">
 
-            Members can optionally receive a demo card before receiving
-            their official membership card.
+            Wallet membership is completely optional. If you decide to
+            receive a digital membership card, simply connect a wallet.
 
           </p>
 
           <p className="text-zinc-500 mt-5 leading-relaxed">
 
-            Receiving a demo card confirms that wallet setup is working
-            correctly and that future membership cards can be delivered
-            successfully.
+            A demo card can be issued first to verify your wallet before
+            your official membership card is delivered.
 
           </p>
+
+          <a
+            href="/wallet-setup"
+            className="inline-block mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+          >
+            Open Wallet Setup →
+          </a>
 
         </div>
 
       </section>
 
 
-      {/* WEB3 */}
+      {/* WEB3 COMPONENT */}
 
-<section className="border-t border-zinc-800">
-
-  <div className="max-w-4xl mx-auto px-6 py-16 text-center">
-
-    <a
-      href="/wallet-setup"
-      className="inline-block px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
-    >
-      Open Wallet Setup →
-    </a>
-
-  </div>
-
-</section>
-
-
-   <section className="border-t border-zinc-800">
+      <section className="border-t border-zinc-800">
 
         <WebAccessSBT />
 
@@ -291,7 +151,9 @@ export default function CommunityCard() {
 
 
 function Card({ title, text }) {
+
   return (
+
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
 
       <div className="text-lg font-semibold">
@@ -303,5 +165,7 @@ function Card({ title, text }) {
       </div>
 
     </div>
+
   )
+
 }
