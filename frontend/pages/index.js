@@ -102,7 +102,7 @@ export default function Home() {
 
           </div>
 
-          <div className="flex items-center gap-8">
+         <div className="hidden md:flex items-center gap-8">
 
             <a
               href="#communities"
@@ -202,49 +202,41 @@ export default function Home() {
 
 {/* SPOTLIGHT CARD */}
 
-<div className="max-w-5xl">
+<div className="w-full max-w-5xl">
 
   <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-500">
 
     <img
   src={spotlight.image}
-  className="w-full aspect-square md:aspect-[16/9] object-cover"
+className="block w-full aspect-square md:aspect-[16/9] object-cover"
   alt={spotlight.title}
 />
 
 
-    {/* overlay */}
-
-    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-
-    {/* content */}
-
-   <div className="absolute bottom-0 left-0 p-10 md:p-14 max-w-2xl">
+<div className="flex justify-center mt-8">
 
   <a
     href="#membership"
- className="
-  inline-flex
-  items-center
-  justify-center
-  px-8
-  py-3
-  rounded-xl
-  bg-black/50
-  backdrop-blur-md
-  border border-zinc-600
-  text-white
-  font-medium
-  hover:bg-blue-600
-  transition
-  "
+    className="
+      inline-flex
+      items-center
+      justify-center
+      px-10
+      py-4
+      rounded-2xl
+      bg-blue-600
+      hover:bg-blue-700
+      text-lg
+      font-semibold
+      transition
+      shadow-lg
+    "
   >
     Request Access
   </a>
 
 </div>
 
-</div>
 {/* CARD PREVIEW ROW */}
 
 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
@@ -256,7 +248,7 @@ export default function Home() {
       onClick={() => setActiveSpotlight(index)}
       className={`cursor-pointer rounded-xl overflow-hidden border transition-all duration-300 ${
         activeSpotlight === index
-          ? 'border-blue-500 scale-105'
+          ? 'border-blue-500 ring-2 ring-blue-500'
           : 'border-zinc-800 opacity-60'
       }`}
     >
