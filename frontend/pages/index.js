@@ -206,31 +206,33 @@ export default function Home() {
 
   <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-500">
 
-    <img
+<img
   src={spotlight.image}
-className="block w-full aspect-square md:aspect-[16/9] object-cover"
   alt={spotlight.title}
-/>
+  className="block w-full aspect-square object-contain bg-zinc-900"
+ />
 
 
-<div className="flex justify-center mt-8">
-
+<div className="flex justify-center mt-10 mb-8">
   <a
-    href="#membership"
-    className="
-      inline-flex
-      items-center
-      justify-center
-      px-10
-      py-4
-      rounded-2xl
-      bg-blue-600
-      hover:bg-blue-700
-      text-lg
-      font-semibold
-      transition
-      shadow-lg
-    "
+  href="#membership"
+  className="
+  inline-flex
+  items-center
+  justify-center
+  px-8
+  py-3
+  md:px-16
+  md:py-6
+  rounded-2xl
+  bg-blue-600
+  hover:bg-blue-700
+  text-base
+  md:text-2xl
+  font-semibold
+  transition-all
+  shadow-xl
+"
   >
     Request Access
   </a>
