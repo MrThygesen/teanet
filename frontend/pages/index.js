@@ -83,9 +83,7 @@ export default function Home() {
   const spotlight = spotlightItems[activeSpotlight]
 
   return (
-
-    <div className="bg-black text-white min-h-screen">
-
+<div className="bg-black text-white min-h-dvh">
       {/* HEADER */}
 
       <header className="border-b border-zinc-800">
