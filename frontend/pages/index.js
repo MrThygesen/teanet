@@ -122,7 +122,7 @@ export default function Home() {
               href="/community-card"
               className="text-sm text-zinc-400 hover:text-white"
             >
-              Digital Membership
+              Membership Card
             </a>
 
           </div>
@@ -367,57 +367,54 @@ export default function Home() {
   ecosystem partners and specialists building what's next.
 </p>
 
-        <div className="grid md:grid-cols-2 gap-8">
-
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
-
-            <div className="text-lg md:text-xl font-semibold mb-6">
-              Email Membership
-            </div>
-
-            <div className="space-y-3 text-zinc-400">
-
-              <div>✓ Introductions</div>
-
-              <div>✓ Community updates</div>
-
-              <div>✓ Opportunities</div>
-
-              <div>✓ Matchmaking support</div>
-
-            </div>
-
-          </div>
 
 
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+<div className="max-w-4xl">
 
-            <div className="text-lg md:text-xl font-semibold mb-6">
-              Optional Wallet Membership
-            </div>
+  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
 
-            <div className="space-y-3 text-zinc-400">
+    <div className="text-xl md:text-2xl font-semibold mb-6">
+      EDGE Spaces Membership
+    </div>
 
-              <div>✓ Digital member card</div>
+    <p className="text-zinc-400 leading-relaxed mb-8">
 
-              <div>✓ Future voting access</div>
+      Membership gives you access to the private EDGE Spaces Telegram
+      community where founders, builders, business angels and ecosystem
+      partners collaborate.
 
-              <div>✓ Partner benefits</div>
+      <br /><br />
 
-              <div>✓ Shared office perks</div>
+      A blockchain-based Membership Card Card is completely optional
+      and can be added now or later without affecting your membership.
 
-            </div>
+    </p>
 
-            <a
-              href="/community-card"
-              className="inline-block mt-8 text-blue-400 hover:text-blue-300"
-            >
-              Learn more →
-            </a>
+    <div className="space-y-4 text-zinc-300">
 
-          </div>
+      <div>✓ Private Telegram community</div>
 
-        </div>
+      <div>✓ Founder, builder and investor introductions</div>
+
+      <div>✓ Community opportunities and updates</div>
+
+      <div>✓ Matchmaking and ecosystem support</div>
+
+      <div>✓ Optional Membership Card Card with future partner benefits and governance features</div>
+
+    </div>
+
+    <a
+      href="/community-card"
+      className="inline-block mt-8 text-blue-400 hover:text-blue-300"
+    >
+      Learn about Membership Card →
+    </a>
+
+  </div>
+
+</div>
+
 
       </section>
 
