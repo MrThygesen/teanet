@@ -11,25 +11,21 @@ export default function CommunityCard() {
         <div className="max-w-3xl">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-            Optional Digital Membership
+            Digital Membership
           </div>
 
           <h1 className="text-5xl font-bold leading-tight">
-            Digital Membership Card
+            Optional Digital Membership Card
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-
             Every approved EDGE Spaces member can optionally receive a
             blockchain-based Digital Membership Card.
-
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-
-            Joining the community does not require a wallet.
-            You can connect one during your application or at any time later.
-
+            Membership does not require a wallet. You can connect one during
+            your application or at any time afterwards.
           </p>
 
         </div>
@@ -37,36 +33,28 @@ export default function CommunityCard() {
       </section>
 
 
-      {/* EXAMPLE CARD */}
+      {/* MEMBERSHIP CARD */}
 
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
 
-        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-      Test
-        </div>
-
-        <h2 className="text-4xl font-bold mb-8">
-          Digital Membership Card
-        </h2>
-
-        <p className="text-zinc-400 max-w-3xl mb-12">
-
-         This is the EDGE Spaces Membership Card.
-
-          <br /><br />
-
-         Every approved EDGE Spaces member can optionally receive a Digital Membership Card.
-         The card proves your membership and will evolve with future partner benefits and community governance.
-
-        </p>
-  
         <div className="flex justify-center">
 
           <img
             src="/data/example-membership-card.jpg"
-            alt="Example EDGE Spaces Digital Membership Card"
+            alt="EDGE Spaces Digital Membership Card"
             className="w-full max-w-lg rounded-3xl border border-zinc-800"
           />
+
+        </div>
+
+        <div className="max-w-3xl mx-auto text-center mt-10">
+
+          <p className="text-lg text-zinc-400 leading-relaxed">
+
+            Your Digital Membership Card serves as blockchain-based proof of
+            your EDGE Spaces membership.
+
+          </p>
 
         </div>
 
@@ -78,28 +66,28 @@ export default function CommunityCard() {
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Benefits
+          Future Benefits
         </div>
 
         <h2 className="text-4xl font-bold mb-10">
-          Why Have A Digital Membership Card?
+          More Than A Membership Card
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
 
-          <Card
+          <BenefitCard
             title="Digital Identity"
-            text="A blockchain-based proof of your EDGE Spaces membership."
+            text="A permanent blockchain-based proof of your EDGE Spaces membership."
           />
 
-          <Card
+          <BenefitCard
             title="Partner Benefits"
-            text="Future access to partner offers and ecosystem initiatives."
+            text="Future offers, events and ecosystem initiatives from approved partners."
           />
 
-          <Card
-            title="Future Governance"
-            text="Participate in future community voting and governance."
+          <BenefitCard
+            title="Community Governance"
+            text="Future participation in voting and community-led initiatives."
           />
 
         </div>
@@ -107,7 +95,7 @@ export default function CommunityCard() {
       </section>
 
 
-      {/* WALLET SETUP */}
+      {/* WALLET */}
 
       <section className="max-w-4xl mx-auto px-6 py-16 border-t border-zinc-800">
 
@@ -118,31 +106,32 @@ export default function CommunityCard() {
           </div>
 
           <h2 className="text-3xl font-bold mb-5">
-            Connect Whenever You're Ready
+            Connect A Wallet Whenever You're Ready
           </h2>
 
           <p className="text-zinc-400 leading-relaxed">
 
-            Wallet setup is completely optional.
+            Connecting a wallet is completely optional.
 
             <br /><br />
 
-            If you'd like a Digital Membership Card,
-            simply connect a compatible wallet.
+            If you'd like a Digital Membership Card, simply connect a
+            compatible wallet during your application or afterwards.
 
           </p>
 
-          <p className="text-zinc-500 mt-6 leading-relaxed">
+          <div className="mt-8 space-y-3 text-zinc-300">
 
-            A demo card can be issued first to verify that your wallet
-            is configured correctly before your official membership card
-            is delivered.
+            <div>✓ Wallet is optional</div>
+            <div>✓ Compatible with common EVM wallets</div>
+            <div>✓ Demo card available for testing</div>
+            <div>✓ Official membership card issued after verification</div>
 
-          </p>
+          </div>
 
           <a
             href="/wallet-setup"
-            className="inline-block mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+            className="inline-flex items-center justify-center mt-10 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 transition font-semibold"
           >
             Open Wallet Setup →
           </a>
@@ -175,22 +164,18 @@ export default function CommunityCard() {
 }
 
 
-function Card({ title, text }) {
-
+function BenefitCard({ title, text }) {
   return (
-
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
 
-      <div className="text-lg font-semibold">
+      <h3 className="text-xl font-semibold">
         {title}
-      </div>
+      </h3>
 
-      <div className="mt-3 text-sm text-zinc-500 leading-relaxed">
+      <p className="mt-4 text-zinc-500 leading-relaxed">
         {text}
-      </div>
+      </p>
 
     </div>
-
   )
-
 }
