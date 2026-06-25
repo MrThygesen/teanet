@@ -60,7 +60,7 @@ export default function CommunityCard() {
           ecosystem grows.
 
         </p>
-
+  
         <div className="flex justify-center">
 
           <img
