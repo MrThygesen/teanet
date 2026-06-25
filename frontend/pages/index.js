@@ -250,35 +250,9 @@ export default function Home() {
     ))}
 
   </div>
-
 </div>
-{/* CARD PREVIEW ROW */}
 
-<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
 
-  {spotlightItems.map((item, index) => (
-
-    <div
-      key={index}
-      onClick={() => setActiveSpotlight(index)}
-      className={`cursor-pointer rounded-xl overflow-hidden border transition-all duration-300 ${
-        activeSpotlight === index
-          ? 'border-blue-500 ring-2 ring-blue-500'
-          : 'border-zinc-800 opacity-60'
-      }`}
-    >
-
-      <img
-        src={item.image}
-        alt={item.title}
-        className="w-full h-28 object-cover"
-      />
-
-    </div>
-
-  ))}
-</div>
-</div>
 </div>
 </section>
 
