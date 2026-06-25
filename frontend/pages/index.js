@@ -262,7 +262,7 @@ className="block w-full aspect-square md:aspect-[16/9] object-cover"
     </div>
 
   ))}
-
+</div>
 </div>
 </div>
 </section>
