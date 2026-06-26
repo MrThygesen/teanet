@@ -340,7 +340,7 @@ during your application or at any time afterwards.
 <div> ✓ Manual application review </div>
 <div> ✓ Telegram account required (free) </div>
 <div> ✓ Founder, builder and investor introductions </div>
-<div✓ ✓ Hackathons and ecosystem events </div>
+<div> ✓ Hackathons and ecosystem events </div>
 <div> ✓ Optional Digital Membership Card with future benefits </div>
 
     </div>
