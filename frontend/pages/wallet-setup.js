@@ -1,7 +1,5 @@
 'use client'
 
-import WebAccessSBT from '../components/WebAccessSBT'
-
 export default function WalletSetup() {
 
   async function addAmoyNetwork() {
@@ -55,7 +53,7 @@ export default function WalletSetup() {
 
       {/* HERO */}
 
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-5xl mx-auto px-6 py-20">
 
         <div className="max-w-3xl">
 
@@ -64,27 +62,25 @@ export default function WalletSetup() {
           </div>
 
           <h1 className="text-5xl font-bold leading-tight">
-            Prepare Your Wallet
+            Connect Your Wallet
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
 
-            Digital memberships require Polygon Amoy to be configured
-            in your wallet.
+            Connecting a wallet is completely optional.
 
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
 
-            Once setup is complete, EDGE Spaces can issue membership
-            cards directly to your wallet.
+            If you'd like to receive a Digital Membership Card,
+            simply connect a compatible wallet.
 
           </p>
 
         </div>
 
       </section>
-
 
       {/* NETWORK */}
 
@@ -93,38 +89,50 @@ export default function WalletSetup() {
         <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Network Configuration
+            Polygon Amoy
           </div>
 
           <h2 className="text-3xl font-bold mb-6">
-            Polygon Amoy Testnet
+            Install The Network
           </h2>
 
-          <div className="space-y-4 text-zinc-400">
+          <p className="text-zinc-400 leading-relaxed">
+
+            EDGE Spaces currently issues Digital Membership Cards on the
+            Polygon Amoy Testnet.
+
+            <br /><br />
+
+            If you don't already have the network installed,
+            you can add it automatically below.
+
+          </p>
+
+          <div className="mt-8 space-y-3 text-zinc-300">
 
             <div>
-              <span className="text-white font-semibold">
-                Network Name:
+              <span className="font-semibold text-white">
+                Network:
               </span>{' '}
               Polygon Amoy Testnet
             </div>
 
             <div>
-              <span className="text-white font-semibold">
+              <span className="font-semibold text-white">
                 Chain ID:
               </span>{' '}
               80002
             </div>
 
             <div>
-              <span className="text-white font-semibold">
-                Currency Symbol:
+              <span className="font-semibold text-white">
+                Currency:
               </span>{' '}
               POL
             </div>
 
             <div>
-              <span className="text-white font-semibold">
+              <span className="font-semibold text-white">
                 Explorer:
               </span>{' '}
               amoy.polygonscan.com
@@ -134,9 +142,9 @@ export default function WalletSetup() {
 
           <button
             onClick={addAmoyNetwork}
-            className="mt-8 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+            className="mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition"
           >
-            Add Polygon Amoy Automatically
+            Add Polygon Amoy
           </button>
 
         </div>
@@ -144,97 +152,72 @@ export default function WalletSetup() {
       </section>
 
 
-      {/* FAUCETS */}
+      {/* WHAT HAPPENS NEXT */}
 
-      <section className="max-w-4xl mx-auto px-6 pb-16">
+      <section className="max-w-4xl mx-auto px-6 pb-20">
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Test Coins
+            What's Next?
           </div>
 
           <h2 className="text-3xl font-bold mb-6">
-            Polygon Amoy Faucets
+            Receive Your Digital Membership Card
           </h2>
 
           <p className="text-zinc-400 leading-relaxed">
 
-            Public community cards require a small amount of POL for transactions.
+            Once your EDGE Spaces membership has been approved,
+            you can add your wallet address during your application
+            or at any time afterwards.
+
+            <br /><br />
+
+            Your Digital Membership Card will then be issued
+            directly to your wallet.
 
           </p>
 
-          <div className="mt-8 space-y-4">
+          <div className="mt-8 space-y-4 text-zinc-300">
 
-            <a
-              href="https://faucet.polygon.technology/"
-              target="_blank"
-              className="block text-blue-400 hover:text-blue-300"
-            >
-              Polygon Faucet →
-            </a>
+            <div>
+              ✓ Membership application approved
+            </div>
 
-            <a
-              href="https://www.alchemy.com/faucets/polygon-amoy"
-              target="_blank"
-              className="block text-blue-400 hover:text-blue-300"
-            >
-              Alchemy Faucet →
-            </a>
+            <div>
+              ✓ Add your wallet address
+            </div>
+
+            <div>
+              ✓ Receive your Digital Membership Card
+            </div>
+
+            <div>
+              ✓ Access future partner benefits and governance features
+            </div>
 
           </div>
 
-        </div>
-
-      </section>
-
-
-      {/* VERIFY */}
-
-      <section className="max-w-4xl mx-auto px-6 pb-16">
-
-        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
-
-          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Verify Wallet
-          </div>
-
-          <h2 className="text-3xl font-bold mb-6">
-            Test Your Connection
-          </h2>
-
-          <p className="text-zinc-400">
-
-            Successful login confirms that your wallet is ready to receive future digital memberships.
-
-          </p>
-
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap gap-4">
 
             <a
               href="/"
-              className="px-5 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700"
+              className="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition"
             >
               Return Home
             </a>
 
             <a
               href="/community-card"
-              className="px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700"
+              className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition"
             >
-              Digital Membership →
+              Learn About Digital Membership →
             </a>
 
           </div>
 
         </div>
-
-      </section>
-
-
-      <section className="border-t border-zinc-800">
-
-        <WebAccessSBT />
 
       </section>
 
