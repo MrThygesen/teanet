@@ -122,7 +122,7 @@ export default function Home() {
               href="/community-card"
               className="text-sm text-zinc-400 hover:text-white"
             >
-              Your Digital Membership Card
+              Digital Membership Card
             </a>
 
           </div>
@@ -336,11 +336,12 @@ during your application or at any time afterwards.
 
     <div className="space-y-4 text-zinc-300">
 
-<div>✓ Private Telegram community </div>
-<div>✓ Manual application review </div>
-<div>✓ Telegram account required (free) </div>
-<div>✓ Founder, builder and investor introductions </div>
-<div>✓ Optional Digital Membership Card </div>
+<div> ✓ Private Telegram community </div>
+<div> ✓ Manual application review </div>
+<div> ✓ Telegram account required (free) </div>
+<div> ✓ Founder, builder and investor introductions </div>
+<div✓ ✓ Hackathons and ecosystem events </div>
+<div> ✓ Optional Digital Membership Card with future benefits </div>
 
     </div>
 
