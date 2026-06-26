@@ -1,8 +1,15 @@
+
 'use client'
+
+import Header from '../components/Header'
+
 
 export default function CommunityCard() {
   return (
     <div className="bg-black text-white min-h-dvh">
+
+ <Header />
+
 
       {/* HERO */}
 
@@ -15,7 +22,7 @@ export default function CommunityCard() {
           </div>
 
           <h1 className="text-5xl font-bold leading-tight">
-            Optional Digital Membership Card
+            Digital Membership Card
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
