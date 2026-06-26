@@ -187,18 +187,9 @@ export default function Home() {
         className="max-w-6xl mx-auto px-6 py-10 md:py-16 border-t border-zinc-800"
       >
 
-   <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-  Meet The Community
+<div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-8">
+  Community Preview
 </div>
-
-<h2 className="text-3xl md:text-4xl font-bold mb-6">
-EDGE Spaces  
-</h2>
-      <p className="text-zinc-400 max-w-3xl mb-12">
-  EDGE Spaces brings together founders, builders, business angels,
-  ecosystem partners and specialists.
-</p>
-
 
 {/* SPOTLIGHT CARD */}
 
@@ -250,54 +241,6 @@ EDGE Spaces
   </div>
 </div>
 </section>
-
-
-<section className="max-w-6xl mx-auto px-6 pb-10">
-
-  <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 md:p-8">
-
-<div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-  Community Access
-</div>
-
-<h3 className="text-2xl md:text-3xl font-bold mb-5">
-  After You're Approved
-</h3>
-
-<p className="text-zinc-400 leading-relaxed mb-8">
-  EDGE Spaces is hosted in a private Telegram community where founders,
-  builders and ecosystem members collaborate. Applications are reviewed
-  manually to maintain a high-quality community.
-</p>
-
-<div className="space-y-4 text-zinc-300">
-
-  <div>
-    ✓ Invitation to the private EDGE Spaces Telegram community
-  </div>
-
-  <div>
-    ✓ If you don't already use Telegram, creating an account takes about one minute.
-  </div>
-
-  <div>
-    ✓ Connect with founders, builders, business angels and ecosystem specialists.
-  </div>
-
-  <div>
-    ✓ Opportunities, introductions and ecosystem updates.
-  </div>
-
-  <div>
-    ✓ Wallet membership is completely optional and can be added later.
-  </div>
-
-</div>
-
-  </div>
-
-</section>
-
 
       {/* INSIGHTS */}
 
@@ -360,18 +303,14 @@ EDGE Spaces
           Become a member
         </h2>
 
-    <p className="text-zinc-400 max-w-3xl mb-12">
-  Membership gives you access to the private
-Telegram community.
+  <p className="text-zinc-400 max-w-3xl mb-12">
 
-Applications are reviewed manually.
+Join the private EDGE Spaces community.
 
-Membership is free.
-
-Digital Membership Card optional.
+Applications are reviewed manually to maintain
+a high-quality network.
 
 </p>
-
 
 
 <div className="max-w-4xl">
@@ -384,28 +323,24 @@ Digital Membership Card optional.
 
     <p className="text-zinc-400 leading-relaxed mb-8">
 
-      Membership gives you access to the private EDGE Spaces Telegram
-      community where founders, builders, business angels and ecosystem
-      partners collaborate.
+   Membership includes access to the private EDGE Spaces Telegram community.
 
-      <br /><br />
+Telegram is free to use and creating an account takes about one minute.
 
-      A blockchain-based Membership Card Card is completely optional
-      and can be added now or later without affecting your membership.
+<br /><br />
+
+A Digital Membership Card is completely optional and can be added
+during your application or at any time afterwards.
 
     </p>
 
     <div className="space-y-4 text-zinc-300">
 
-      <div>✓ Private Telegram community</div>
-
-      <div>✓ Founder, builder and investor introductions</div>
-
-      <div>✓ Community opportunities and updates</div>
-
-      <div>✓ Matchmaking and ecosystem support</div>
-
-      <div>✓ Optional Membership Card Card with future partner benefits and governance features</div>
+<div>✓ Private Telegram community </div>
+<div>✓ Manual application review </div>
+<div>✓ Telegram account required (free) </div>
+<div>✓ Founder, builder and investor introductions </div>
+<div>✓ Optional Digital Membership Card </div>
 
     </div>
 
