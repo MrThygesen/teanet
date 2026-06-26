@@ -146,7 +146,7 @@ export default function Home() {
 </h2>
           <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-2xl">
 
-           EDGE Spaces brings together founders, builders, business angels and ecosystem partners around AI, Web3 and emerging technologies.
+   EDGE Spaces connects founders, builders,business angels and ecosystem partners and specialists.
 
           </p>
 
@@ -188,20 +188,7 @@ export default function Home() {
       >
 
    <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-  Explore EDGE Spaces
-</div>
-
-<h2 className="text-3xl md:text-4xl font-bold mb-6">
-  Who Shapes The Future
-</h2>
-      <p className="text-zinc-400 max-w-3xl mb-12">
-  EDGE Spaces brings together founders, builders, business angels,
-  ecosystem partners and specialists building what's next.
-</p>
-
-
-{/* SPOTLIGHT CARD */}
-
+  Meet the community
 {/* SPOTLIGHT CARD */}
 
 <div className="w-full max-w-5xl">
