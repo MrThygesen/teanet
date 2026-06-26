@@ -172,19 +172,23 @@ export default function MembershipForm() {
   </div>
 
 
-     <label className="block text-sm font-medium mt-4">
-       Wallet
-      </label>
-      <input
-       type="text"
-       name="wallet"
-       value={form.wallet}
-       onChange={handleChange}
-       placeholder="Wallet for Membership Card (optional)"
-       className="..."
-      />
+<div>
 
+  <label className="block text-sm text-zinc-400 mb-2">
+    Wallet (Optional)
+  </label>
 
+  <input
+    type="text"
+    placeholder="Wallet for Membership Card"
+    value={form.wallet}
+    onChange={(e) =>
+      updateField('wallet', e.target.value)
+    }
+    className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+  />
+
+</div>
 
           {/* Membership */}
 
