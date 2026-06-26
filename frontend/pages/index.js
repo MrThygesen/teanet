@@ -188,7 +188,7 @@ export default function Home() {
       >
 
    <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-  Join the strong network
+  Meet The Community
 </div>
 
 <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -196,7 +196,7 @@ EDGE Spaces
 </h2>
       <p className="text-zinc-400 max-w-3xl mb-12">
   EDGE Spaces brings together founders, builders, business angels,
-  ecosystem partners and specialists building what's next.
+  ecosystem partners and specialists.
 </p>
 
 
@@ -357,12 +357,19 @@ EDGE Spaces
         </div>
 
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Join the Network
+          Become a member
         </h2>
 
     <p className="text-zinc-400 max-w-3xl mb-12">
-  EDGE Spaces brings together founders, builders, business angels,
-  ecosystem partners and specialists building what's next.
+  Membership gives you access to the private
+Telegram community.
+
+Applications are reviewed manually.
+
+Membership is free.
+
+Digital Membership Card optional.
+
 </p>
 
 
