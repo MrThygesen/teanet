@@ -148,9 +148,7 @@ export default function WalletSetup() {
           </button>
 
         </div>
-
       </section>
-
 
       {/* WHAT HAPPENS NEXT */}
 
@@ -224,5 +222,5 @@ export default function WalletSetup() {
     </div>
 
   )
-
 }
+
