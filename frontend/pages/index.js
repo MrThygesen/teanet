@@ -6,6 +6,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 import AdminSBTManager from '../components/AdminSBTManager'
 import MembershipForm from '../components/MembershipForm'
+import Header from '../components/Header'
 
 const spotlightItems = [
 
@@ -84,53 +85,9 @@ export default function Home() {
 
   return (
 <div className="bg-black text-white min-h-dvh">
-      {/* HEADER */}
 
-      <header className="border-b border-zinc-800">
-
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
-          <div>
-
-            <div className="text-lg font-semibold text-blue-400">
-              EDGE SPACES
-            </div>
-
-            <div className="text-xs text-zinc-500">
-              Part of EDGE Alliance
-            </div>
-
-          </div>
-
-         <div className="hidden md:flex items-center gap-8">
-
-            <a
-              href="#communities"
-              className="text-sm text-zinc-400 hover:text-white"
-            >
-              Communities
-            </a>
-
-            <a
-              href="#insights"
-              className="text-sm text-zinc-400 hover:text-white"
-            >
-              Insights
-            </a>
-
-            <a
-              href="/community-card"
-              className="text-sm text-zinc-400 hover:text-white"
-            >
-              Digital Membership Card
-            </a>
-
-          </div>
-
-        </div>
-
-      </header>
-
+<Header />
+   
       {/* HERO */}
 
       <section className="max-w-6xl mx-auto px-6 py-10 md:py-16">
