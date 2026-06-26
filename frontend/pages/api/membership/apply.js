@@ -87,6 +87,9 @@ sender: {
     }
   ],
 
+
+
+
   subject: 'EDGE Spaces Membership Request Received',
 
   htmlContent: `
@@ -107,13 +110,9 @@ Approved members will receive updates and access to the EDGE Spaces community.
 </p>
 
 <p>
-Wallet membership is optional and can be added later.
+Its optional to receive and apply the digital membership card.
 </p>
 
-<p>
-Join the Telegram community:<br>
-https://t.me/edgespaces
-</p>
 
     <p>
     Regards,<br>
