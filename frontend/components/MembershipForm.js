@@ -12,6 +12,7 @@ export default function MembershipForm() {
     full_name: '',
     email: '',    
     linkedin_url: '',    
+    wallet: '',    
     membership_type: 'Founder',
     newsletter: false
   })
@@ -52,6 +53,7 @@ export default function MembershipForm() {
         full_name: '',
         email: '',
         linkedin_url: '',
+        wallet: '',
         membership_type: 'Founder',
         newsletter: false
       })
@@ -169,6 +171,21 @@ export default function MembershipForm() {
    />
   </div>
 
+
+     <label className="block text-sm font-medium mt-4">
+       Wallet
+      </label>
+      <input
+       type="text"
+       name="wallet"
+       value={form.wallet}
+       onChange={handleChange}
+       placeholder="Wallet for Membership Card (optional)"
+       className="..."
+      />
+
+
+
           {/* Membership */}
 
           <div>
@@ -207,6 +224,7 @@ export default function MembershipForm() {
               }
               className="mt-1"
             />
+
 
             <span>
       I agree to receive updates from EDGE Spaces and related ecosystem initiatives.

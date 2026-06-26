@@ -22,6 +22,7 @@ export default async function handler(req, res) {
       full_name,
       email,
       linkedin_url,
+      wallet,
       membership_type,
       newsletter
     } = req.body
@@ -32,6 +33,7 @@ export default async function handler(req, res) {
         full_name,
         email,       
         linkedin_url,    
+        wallet,      
         membership_type,
         newsletter
       )
@@ -40,6 +42,7 @@ export default async function handler(req, res) {
         ${full_name},
         ${email},
         ${linkedin_url},
+        ${wallet},
         ${membership_type},
         ${newsletter}
       )
@@ -66,6 +69,7 @@ export default async function handler(req, res) {
       <p><strong>Name:</strong> ${full_name}</p> 
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>LinkedIn:</strong> ${linkedin_url}</p>
+      <p><strong>Wallet:</strong> ${wallet}</p>
       <p><strong>Membership:</strong> ${membership_type}</p>
       <p><strong>Newsletter:</strong> ${newsletter}</p>
       `
