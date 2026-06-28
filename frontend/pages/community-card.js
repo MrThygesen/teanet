@@ -27,12 +27,11 @@ export default function CommunityCard() {
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
             Every approved EDGE Spaces member can optionally receive a
-            Digital Membership Card in their wallet (metamask or similar).
+            Digital Membership Card in their wallet (Metamask or similar).
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            You can connect one during
-            your application or at any time afterwards. This is not mandatory, and is a feature mainly for web3 users that want governance access- and future benefits. 
+            You can always update your wallet at any time or send info to admin. This is ofcuorse not mandatory for all users, and pure optional for wallet users looking for govenance voting rights and the future benefits of havin a digital membership. 
           </p>
 
         </div>
