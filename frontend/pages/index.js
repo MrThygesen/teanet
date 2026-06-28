@@ -284,10 +284,7 @@ a high-quality network.
 
 Telegram is free to use and creating an account takes about one minute.
 
-<br /><br />
-
-A Digital Membership Card is completely optional and can be added
-during your application or at any time afterwards.
+<br />
 
     </p>
 
