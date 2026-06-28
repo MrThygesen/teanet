@@ -31,7 +31,7 @@ export default function CommunityCard() {
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            You can always update your wallet at any time or send info to admin. This is ofcuorse not mandatory for all users, and pure optional for wallet users looking for govenance voting rights and the future benefits of havin a digital membership. 
+            You can always update your wallet address or send info to admin. This is mainly for users that like to be part of a governance process and interested in future benefits of having the card. 
           </p>
 
         </div>
