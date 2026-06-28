@@ -22,9 +22,10 @@ export default async function handler(req, res) {
       full_name,
       email,
       linkedin_url,
+telegram_username,
+join_reason,
       wallet,
-      membership_type,
-      newsletter
+      membership_type
     } = req.body
 
     await sql`
@@ -33,18 +34,20 @@ export default async function handler(req, res) {
         full_name,
         email,       
         linkedin_url,    
+telegram_username,
+join_reason,
         wallet,      
-        membership_type,
-        newsletter
+        membership_type
       )
       VALUES
       (
         ${full_name},
         ${email},
         ${linkedin_url},
+        ${telegram_username},
+        ${join_reason},
         ${wallet},
-        ${membership_type},
-        ${newsletter}
+        ${membership_type}
       )
     `
 
@@ -64,15 +67,23 @@ export default async function handler(req, res) {
       subject: `New EDGE Spaces Membership Request`,
 
       htmlContent: `
-      <h2>New Membership Request</h2>
+<h2>New Membership Request</h2>
 
-      <p><strong>Name:</strong> ${full_name}</p> 
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>LinkedIn:</strong> ${linkedin_url}</p>
-      <p><strong>Wallet:</strong> ${wallet}</p>
-      <p><strong>Membership:</strong> ${membership_type}</p>
-      <p><strong>Newsletter:</strong> ${newsletter}</p>
-      `
+<p><strong>Name:</strong> ${full_name}</p>
+
+<p><strong>Email:</strong> ${email}</p>
+
+<p><strong>Primary Role:</strong> ${membership_type}</p>
+
+<p><strong>Professional Profile:</strong> ${linkedin_url || '-'}</p>
+
+<p><strong>Telegram:</strong> ${telegram_username || '-'}</p>
+
+<p><strong>Wallet:</strong> ${wallet || '-'}</p>
+
+<p><strong>Reason for joining:</strong></p>
+
+<p>${join_reason}</p>  `
     })
 
  

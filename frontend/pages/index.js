@@ -303,7 +303,7 @@ Telegram is free to use and creating an account takes about one minute.
       href="/community-card"
       className="inline-block mt-8 text-blue-400 hover:text-blue-300"
     >
-      Learn about Membership Card →
+      Learn about Digital Membership Card →
     </a>
 
   </div>

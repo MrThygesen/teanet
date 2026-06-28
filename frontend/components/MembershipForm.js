@@ -12,9 +12,10 @@ export default function MembershipForm() {
     full_name: '',
     email: '',    
     linkedin_url: '',    
+    telegram_username: '',
+    join_reason: '',    
     wallet: '',    
-    membership_type: 'Founder',
-    newsletter: false
+    membership_type: 'Founder'
   })
 
   function updateField(name, value) {
@@ -53,9 +54,10 @@ export default function MembershipForm() {
         full_name: '',
         email: '',
         linkedin_url: '',
-        wallet: '',
+telegram_username: '',
+join_reason: '',      
+wallet: '',
         membership_type: 'Founder',
-        newsletter: false
       })
 
     } catch (err) {
@@ -158,7 +160,7 @@ export default function MembershipForm() {
 
  <div>
  <label className="block text-sm text-zinc-400 mb-2">
-  LinkedIn Profile (Optional)
+  Professional Profile (Optional)
  </label>
  <input
    type="text"
@@ -171,6 +173,23 @@ export default function MembershipForm() {
    />
   </div>
 
+<div>
+
+<label className="block text-sm text-zinc-400 mb-2">
+Telegram Username (Optional)
+</label>
+
+<input
+type="text"
+placeholder="@username"
+value={form.telegram_username}
+onChange={(e)=>
+updateField('telegram_username', e.target.value)
+}
+className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+/>
+
+</div>
 
 <div>
 
@@ -206,35 +225,42 @@ export default function MembershipForm() {
               className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
             >
 
-            <option>Founder</option>
-            <option>Builder</option>
-            <option>Developer</option>
-            <option>Manager</option>
-            <option>Investor</option>
+        <option>Founder</option>
+        <option>Builder</option>
+-<option>Developer</option>
+-<option>Manager</option>
+<option>Investor</option>
++<option>Business Angel</option>
++<option>Specialist</option>
++<option>Ecosystem Partner</option>
++<option>Student</option>
++<option>Other</option>
 
             </select>
 
           </div>
 
-          {/* Newsletter */}
-
-          <label className="flex items-start gap-3 text-sm text-zinc-400">
-
-            <input
-              type="checkbox"
-              checked={form.newsletter}
-              onChange={(e) =>
-                updateField('newsletter', e.target.checked)
-              }
-              className="mt-1"
-            />
 
 
-            <span>
-      I agree to receive updates from EDGE Spaces and related ecosystem initiatives.
-            </span>
+<div>
 
-          </label>
+<label className="block text-sm text-zinc-400 mb-2">
+Why would you like to join EDGE Spaces?
+</label>
+
+<textarea
+rows={4}
+required
+placeholder="Tell us a little about yourself, what you're building or what you hope to contribute."
+value={form.join_reason}
+onChange={(e)=>
+updateField('join_reason', e.target.value)
+}
+className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+/>
+
+</div>
+
 
           <button
             disabled={loading}
