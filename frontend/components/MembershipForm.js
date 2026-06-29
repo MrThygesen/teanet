@@ -160,7 +160,7 @@ wallet: '',
 
  <div>
  <label className="block text-sm text-zinc-400 mb-2">
-  Professional Profile (Optional)
+  Professional Profile (linkedin or github etc)
  </label>
  <input
    type="text"
