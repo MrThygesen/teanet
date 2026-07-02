@@ -14,11 +14,19 @@ const GITHUB_REPO = 'MrThygesen/teanet'
 const GITHUB_BRANCH = 'main'
 const DATA_PATH = 'data'
 
-const buildUri = (filename) =>
-  `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${DATA_PATH}/${filename}`
 
-const TEMPLATE_LIST_URL =
-  `https://api.github.com/repos/${GITHUB_REPO}/contents/${DATA_PATH}`
+ const buildUri = (filename) =>
+   `https://raw.githubusercontent.com/${GITHUB_REPO}/${GITHUB_BRANCH}/${DATA_PATH}/${filename}`
+
+const TEMPLATE_LIST = [
+  'community.json',
+  'advisor.json',
+  'accelerator.json',
+  'launchpad.json',
+  'hackathon.json',
+  'hackathon_winner.json',
+]
+
 
 export default function AdminSBTManager() {
 
@@ -51,23 +59,11 @@ export default function AdminSBTManager() {
   }, [])
 
   // ---------------- LOAD TEMPLATE LIST ----------------
-  useEffect(() => {
-    async function fetchTemplates() {
-      try {
-        const res = await fetch(TEMPLATE_LIST_URL)
-        const data = await res.json()
 
-        const jsonFiles = Array.isArray(data)
-          ? data.filter((f) => f.name?.endsWith('.json')).map((f) => f.name)
-          : []
+useEffect(() => {
+  setAvailableTemplates(TEMPLATE_LIST)
+}, [])
 
-        setAvailableTemplates(jsonFiles)
-      } catch (err) {
-        console.error('❌ Failed to fetch templates:', err)
-      }
-    }
-    fetchTemplates()
-  }, [])
 
   // ---------------- LOAD ONCHAIN TYPES ----------------
   useEffect(() => {
