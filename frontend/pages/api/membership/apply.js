@@ -21,6 +21,7 @@ export default async function handler(req, res) {
     const {
       full_name,
       email,
+      company,
       linkedin_url,
 telegram_username,
 join_reason,
@@ -32,7 +33,8 @@ join_reason,
       INSERT INTO membership_requests
       (
         full_name,
-        email,       
+        email,
+        company,       
         linkedin_url,    
 telegram_username,
 join_reason,
@@ -44,6 +46,7 @@ join_reason,
         ${full_name},
         ${email},
         ${linkedin_url},
+        ${company},
         ${telegram_username},
         ${join_reason},
         ${wallet},
@@ -72,6 +75,8 @@ join_reason,
 <p><strong>Name:</strong> ${full_name}</p>
 
 <p><strong>Email:</strong> ${email}</p>
+
++<p><strong>Company / Organization:</strong> ${company}</p>
 
 <p><strong>Primary Role:</strong> ${membership_type}</p>
 

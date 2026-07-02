@@ -11,7 +11,8 @@ export default function MembershipForm() {
   const [form, setForm] = useState({
     full_name: '',
     email: '',    
-    linkedin_url: '',    
+    linkedin_url: '',
+    company: '',    
     telegram_username: '',
     join_reason: '',    
     wallet: '',    
@@ -54,6 +55,7 @@ export default function MembershipForm() {
         full_name: '',
         email: '',
         linkedin_url: '',
+company: '',
 telegram_username: '',
 join_reason: '',      
 wallet: '',
@@ -156,6 +158,25 @@ wallet: '',
   className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
 />
         </div>
+
+<div>
+
+<label className="block text-sm text-zinc-400 mb-2">
+Organization / Company
+</label>
+
+<input
+  type="text"
+  required
+  placeholder="Antler, Startup XYZ, University..."
+  value={form.company}
+  onChange={(e) =>
+    updateField('company', e.target.value)
+  }
+  className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+/>
+
+</div>
 
 
  <div>
