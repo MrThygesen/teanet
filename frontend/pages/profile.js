@@ -167,7 +167,6 @@ export default function Profile() {
       </p>
       </div>
 
-</>
 
       <div className="space-y-8">
 
