@@ -1,7 +1,7 @@
 {
   "name": "EDGE Spaces Community",
   "description": "Digital credential issued by EDGE Spaces.",
-  "image": "https://edgespaces.xyz/data/community.jpg",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/community.jpg",
   "external_url": "https://edgespaces.xyz",
 
   "attributes": [
