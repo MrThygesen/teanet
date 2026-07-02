@@ -166,6 +166,9 @@ export default function Profile() {
       Your wallet has been verified and contains the following digital credentials.
       </p>
       </div>
+
+</>
+
       <div className="space-y-8">
 
 
