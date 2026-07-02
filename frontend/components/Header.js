@@ -39,24 +39,24 @@ export default function Header() {
           </a>
 
           <a
-            href="/#insights"
+            href="/membership"
             className="text-sm text-zinc-400 hover:text-white transition"
           >
-            Insights
+            Apply
           </a>
 
           <a
             href="/community-card"
             className="text-sm text-zinc-400 hover:text-white transition"
           >
-            Membership
+            Digital Card
           </a>
 
           <a
             href="/profile"
             className="text-sm text-zinc-400 hover:text-white transition"
           >
-            My Membership
+            Profile
           </a>
 
         </nav>
