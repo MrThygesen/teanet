@@ -52,6 +52,14 @@ export default function Header() {
             Digital Membership
           </a>
 
+         <a
+          href="/profile"
+          className="text-sm text-zinc-400 hover:text-white transition"
+         >
+          My Profile
+         </a>
+
+
           <a
             href="/wallet-setup"
             className="text-sm text-zinc-400 hover:text-white transition"
