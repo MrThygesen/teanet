@@ -49,22 +49,14 @@ export default function Header() {
             href="/community-card"
             className="text-sm text-zinc-400 hover:text-white transition"
           >
-            Digital Membership
+            Membership
           </a>
 
-         <a
-          href="/profile"
-          className="text-sm text-zinc-400 hover:text-white transition"
-         >
-          My Profile
-         </a>
-
-
           <a
-            href="/wallet-setup"
+            href="/profile"
             className="text-sm text-zinc-400 hover:text-white transition"
           >
-            Wallet Setup
+            My Membership
           </a>
 
         </nav>
