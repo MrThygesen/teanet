@@ -168,7 +168,7 @@ Organization / Company
 <input
   type="text"
   required
-  placeholder="Antler, Startup XYZ, University..."
+  placeholder=""
   value={form.company}
   onChange={(e) =>
     updateField('company', e.target.value)
@@ -181,7 +181,7 @@ Organization / Company
 
  <div>
  <label className="block text-sm text-zinc-400 mb-2">
-  Professional Profile (linkedin or github etc)
+  Professional Profile (linkedin / github)
  </label>
  <input
    type="text"
@@ -220,7 +220,7 @@ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
 
   <input
     type="text"
-    placeholder="Wallet for Membership Card"
+    placeholder="For Membership Card"
     value={form.wallet}
     onChange={(e) =>
       updateField('wallet', e.target.value)
