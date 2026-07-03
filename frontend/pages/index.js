@@ -366,8 +366,6 @@ Telegram is free to use and creating an account takes about one minute.
 
     </div>
 
-  </div>
-
 </div>
 
       <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
