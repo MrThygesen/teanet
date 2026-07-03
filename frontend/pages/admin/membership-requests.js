@@ -3,16 +3,81 @@ import { useEffect, useState } from 'react'
 export default function MembershipRequests() {
 
   const [requests, setRequests] = useState([])
+  const [loadingId, setLoadingId] = useState(null)
 
   async function load() {
-    const res = await fetch('/api/admin/membership-requests')
-    const data = await res.json()
-    setRequests(data)
+    try {
+      const res = await fetch('/api/admin/membership-requests')
+      const data = await res.json()
+      setRequests(data)
+    } catch (err) {
+      console.error(err)
+    }
   }
 
   useEffect(() => {
     load()
   }, [])
+
+  async function approve(id) {
+
+    setLoadingId(id)
+
+    try {
+
+      const res = await fetch('/api/admin/membership-approve', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id })
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Approval failed')
+      }
+
+      await load()
+
+    } catch (err) {
+      alert(err.message)
+      console.error(err)
+    }
+
+    setLoadingId(null)
+  }
+
+  async function reject(id) {
+
+    setLoadingId(id)
+
+    try {
+
+      const res = await fetch('/api/admin/membership-reject', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id })
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Reject failed')
+      }
+
+      await load()
+
+    } catch (err) {
+      alert(err.message)
+      console.error(err)
+    }
+
+    setLoadingId(null)
+  }
 
   return (
 
@@ -20,9 +85,28 @@ export default function MembershipRequests() {
 
       <div className="max-w-6xl mx-auto p-8">
 
-        <h1 className="text-3xl font-bold mb-8">
-          Membership Requests
-        </h1>
+        <div className="flex justify-between items-center mb-8">
+
+          <h1 className="text-3xl font-bold">
+            Membership Requests
+          </h1>
+
+          <a
+            href="/admin/sbt-manager"
+            className="px-4 py-2 rounded bg-zinc-800 hover:bg-zinc-700"
+          >
+            SBT Management
+          </a>
+
+        </div>
+
+        {requests.length === 0 && (
+
+          <div className="text-zinc-500 text-center py-20">
+            No membership requests found.
+          </div>
+
+        )}
 
         <div className="space-y-6">
 
@@ -33,7 +117,7 @@ export default function MembershipRequests() {
               className="rounded-xl border border-zinc-800 bg-zinc-900 p-6"
             >
 
-              <div className="flex justify-between">
+              <div className="flex justify-between items-start">
 
                 <div>
 
@@ -42,18 +126,36 @@ export default function MembershipRequests() {
                   </h2>
 
                   <div className="text-zinc-400">
-                    {r.company}
+                    {r.company || '-'}
                   </div>
 
                 </div>
 
-                <div className="text-yellow-400">
-                  {r.status}
+                <div>
+
+                  {r.status === 'pending' && (
+                    <span className="text-yellow-400 font-medium">
+                      Pending
+                    </span>
+                  )}
+
+                  {r.status === 'approved' && (
+                    <span className="text-green-400 font-medium">
+                      Approved
+                    </span>
+                  )} 
+
+                  {r.status === 'rejected' && (
+                    <span className="text-red-400 font-medium">
+                      Rejected
+                    </span>
+                  )}
+
                 </div>
 
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4 mt-6 text-sm">
+              <div className="grid md:grid-cols-2 gap-5 mt-6 text-sm">
 
                 <div>
                   <strong>Email</strong><br />
@@ -87,27 +189,29 @@ export default function MembershipRequests() {
 
               </div>
 
-              <div className="flex gap-3 mt-8">
+              {r.status === 'pending' && (
 
-                <button
-                  className="bg-green-600 px-4 py-2 rounded"
-                >
-                  Approve
-                </button>
+                <div className="flex gap-3 mt-8">
 
-                <button
-                  className="bg-red-600 px-4 py-2 rounded"
-                >
-                  Reject
-                </button>
+                  <button
+                    onClick={() => approve(r.id)}
+                    disabled={loadingId === r.id}
+                    className="bg-green-600 hover:bg-green-700 px-4 py-2 rounded"
+                  >
+                    {loadingId === r.id ? 'Approving...' : 'Approve'}
+                  </button>
 
-                <button
-                  className="bg-blue-600 px-4 py-2 rounded"
-                >
-                  Send Welcome Email
-                </button>
+                  <button
+                    onClick={() => reject(r.id)}
+                    disabled={loadingId === r.id}
+                    className="bg-red-600 hover:bg-red-700 px-4 py-2 rounded"
+                  >
+                    Reject
+                  </button>
 
-              </div>
+                </div>
+
+              )}
 
             </div>
 
