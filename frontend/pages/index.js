@@ -248,7 +248,7 @@ export default function Home() {
       {/* MEMBERSHIP */}
 
       <section
-        id="membership"
+        id="apply"
         className="max-w-6xl mx-auto px-6 py-10 md:py-16 border-t border-zinc-800"
       >
 
@@ -378,16 +378,12 @@ Telegram is free to use and creating an account takes about one minute.
           Community
         </a>
 
-        <a href="/terms" className="text-zinc-400 hover:text-white">
+        <a href="/privacy" className="text-zinc-400 hover:text-white">
           Terms
         </a>
 
         <a href="/membership" className="text-zinc-400 hover:text-white">
           Apply
-        </a>
-
-        <a href="mailto:contact@edgespaces.xyz" className="text-zinc-400 hover:text-white">
-          Contact
         </a>
 
         <a href="/community-card" className="text-zinc-400 hover:text-white">

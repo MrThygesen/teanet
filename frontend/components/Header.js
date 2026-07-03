@@ -39,7 +39,7 @@ export default function Header() {
           </a>
 
           <a
-            href="/membership"
+            href="/#apply"
             className="text-zinc-400 hover:text-white transition whitespace-nowrap"
           >
             Apply
