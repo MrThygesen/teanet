@@ -340,33 +340,35 @@ Telegram is free to use and creating an account takes about one minute.
 
 <footer className="border-t border-zinc-800 py-12 mt-20">
 
-  <div className="max-w-6xl mx-auto px-6">
+<div>
 
-    <div className="flex flex-col md:flex-row md:justify-between gap-10">
+  <div className="rounded-2xl border border-blue-500/30 bg-zinc-900 shadow-[0_0_30px_rgba(59,130,246,0.15)] px-6 py-6 max-w-md">
 
-      <div>
+    <div className="text-blue-400 font-semibold text-lg">
+      EDGE SPACES
+    </div>
 
-        <div className="text-blue-400 font-semibold">
-          EDGE SPACES
-        </div>
+    <div className="text-zinc-500 text-sm mt-1">
+      Part of EDGE Alliance
+    </div>
 
-        <div className="text-zinc-500 mt-2 text-sm">
-          Part of EDGE Alliance
-        </div>
+    <div className="border-t border-zinc-800 my-5"></div>
 
-        <div className="mt-6 inline-block rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-4">
+    <div className="text-zinc-200 leading-relaxed">
+      Connecting founders, builders, business angels and startup ecosystems.
+    </div>
 
-          <div className="text-zinc-200 text-sm leading-relaxed max-w-sm">
-            Connecting founders, builders, business angels and startup ecosystems.
-          </div>
+    <div className="mt-5 inline-block rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2">
 
-        </div>
+      <span className="text-blue-300 text-sm">
+        AI • Web3 • Emerging Technologies
+      </span>
 
-        <div className="text-zinc-600 text-sm mt-4">
-          AI • Web3 • Emerging Technologies
-        </div>
+    </div>
 
-      </div>
+  </div>
+
+</div>
 
       <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
 
