@@ -338,35 +338,47 @@ Telegram is free to use and creating an account takes about one minute.
 
 {/* FOOTER */}
 
+{/* FOOTER */}
+
 <footer className="border-t border-zinc-800 py-12 mt-20">
 
-<div>
+  <div className="max-w-6xl mx-auto px-6">
 
-  <div className="rounded-2xl border border-blue-500/30 bg-zinc-900 shadow-[0_0_30px_rgba(59,130,246,0.15)] px-6 py-6 max-w-md">
+    <div className="flex flex-col md:flex-row md:justify-between gap-10">
 
-    <div className="text-blue-400 font-semibold text-lg">
-      EDGE SPACES
-    </div>
+      {/* Left */}
 
-    <div className="text-zinc-500 text-sm mt-1">
-      Part of EDGE Alliance
-    </div>
+      <div>
 
-    <div className="border-t border-zinc-800 my-5"></div>
+        <div className="rounded-2xl border border-blue-500/30 bg-zinc-900 shadow-[0_0_30px_rgba(59,130,246,0.15)] px-6 py-6 max-w-md">
 
-    <div className="text-zinc-200 leading-relaxed">
-      Connecting founders, builders, business angels and startup ecosystems.
-    </div>
+          <div className="text-blue-400 font-semibold text-lg">
+            EDGE SPACES
+          </div>
 
-    <div className="mt-5 inline-block rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2">
+          <div className="text-zinc-500 text-sm mt-1">
+            Part of EDGE Alliance
+          </div>
 
-      <span className="text-blue-300 text-sm">
-        AI • Web3 • Emerging Technologies
-      </span>
+          <div className="border-t border-zinc-800 my-5"></div>
 
-    </div>
+          <div className="text-zinc-200 leading-relaxed">
+            Connecting founders, builders, business angels and startup ecosystems.
+          </div>
 
-</div>
+          <div className="mt-5 inline-block rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2">
+
+            <span className="text-blue-300 text-sm">
+              AI • Web3 • Emerging Technologies
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Right */}
 
       <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
 
@@ -399,14 +411,13 @@ Telegram is free to use and creating an account takes about one minute.
     </div>
 
     <div className="border-t border-zinc-800 mt-10 pt-6 text-xs text-zinc-600">
-
       © 2026 EDGE Spaces. All rights reserved.
-
     </div>
 
   </div>
 
 </footer>
+
     </div>
 
   )
