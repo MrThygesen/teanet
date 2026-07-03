@@ -378,11 +378,7 @@ Telegram is free to use and creating an account takes about one minute.
           Community
         </a>
 
-        <a href="/privacy" className="text-zinc-400 hover:text-white">
-          Terms
-        </a>
-
-        <a href="/membership" className="text-zinc-400 hover:text-white">
+        <a href="/#apply" className="text-zinc-400 hover:text-white">
           Apply
         </a>
 
