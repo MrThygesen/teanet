@@ -153,7 +153,7 @@ export default function Home() {
 <div className="w-full max-w-5xl">
 
   <a
-    href="#membership"
+    href="#apply"
     className="block group cursor-pointer"
   >
 
@@ -348,35 +348,25 @@ Telegram is free to use and creating an account takes about one minute.
 
       {/* Left */}
 
-      <div>
+<div className="rounded-2xl bg-zinc-900 px-6 py-6 max-w-md border border-zinc-800 shadow-[0_0_30px_rgba(59,130,246,0.12)]">
 
-        <div className="rounded-2xl border border-blue-500/30 bg-zinc-900 shadow-[0_0_30px_rgba(59,130,246,0.15)] px-6 py-6 max-w-md">
+  <div className="text-blue-400 font-semibold text-lg">
+    EDGE SPACES
+  </div>
 
-          <div className="text-blue-400 font-semibold text-lg">
-            EDGE SPACES
-          </div>
+  <div className="text-zinc-500 text-sm mt-1">
+    Part of EDGE Alliance
+  </div>
 
-          <div className="text-zinc-500 text-sm mt-1">
-            Part of EDGE Alliance
-          </div>
+  <div className="mt-6 text-zinc-200 leading-relaxed">
+    Connecting founders, builders, business angels and startup ecosystems.
+  </div>
 
-          <div className="border-t border-zinc-800 my-5"></div>
+  <div className="mt-6 text-sm font-semibold tracking-wider uppercase text-blue-300">
+    AI • Web3 • Emerging Technologies
+  </div>
 
-          <div className="text-zinc-200 leading-relaxed">
-            Connecting founders, builders, business angels and startup ecosystems.
-          </div>
-
-          <div className="mt-5 inline-block rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2">
-
-            <span className="text-blue-300 text-sm">
-              AI • Web3 • Emerging Technologies
-            </span>
-
-          </div>
-
-        </div>
-
-      </div>
+</div>
 
       {/* Right */}
 
