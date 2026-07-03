@@ -1,12 +1,11 @@
 export default function Header() {
-
   return (
-
     <header className="border-b border-zinc-800">
 
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-6xl mx-auto px-6 py-4">
 
-        <div>
+        {/* Logo */}
+        <div className="mb-4 md:mb-0">
 
           <a href="/" className="block">
 
@@ -22,39 +21,40 @@ export default function Header() {
 
         </div>
 
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Navigation */}
+        <nav className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
 
           <a
             href="/"
-            className="text-sm text-zinc-400 hover:text-white transition"
+            className="text-zinc-400 hover:text-white transition whitespace-nowrap"
           >
             Home
           </a>
 
           <a
             href="/#communities"
-            className="text-sm text-zinc-400 hover:text-white transition"
+            className="text-zinc-400 hover:text-white transition whitespace-nowrap"
           >
             Community
           </a>
 
           <a
             href="/membership"
-            className="text-sm text-zinc-400 hover:text-white transition"
+            className="text-zinc-400 hover:text-white transition whitespace-nowrap"
           >
             Apply
           </a>
 
           <a
             href="/community-card"
-            className="text-sm text-zinc-400 hover:text-white transition"
+            className="text-zinc-400 hover:text-white transition whitespace-nowrap"
           >
             Digital Card
           </a>
 
           <a
             href="/profile"
-            className="text-sm text-zinc-400 hover:text-white transition"
+            className="text-zinc-400 hover:text-white transition whitespace-nowrap"
           >
             Profile
           </a>
@@ -64,7 +64,5 @@ export default function Header() {
       </div>
 
     </header>
-
   )
-
 }
