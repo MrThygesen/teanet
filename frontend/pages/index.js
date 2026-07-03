@@ -336,33 +336,81 @@ Telegram is free to use and creating an account takes about one minute.
       )}
 
 
-      {/* FOOTER */}
+{/* FOOTER */}
 
-      <footer className="border-t border-zinc-800 py-12 mt-20">
+<footer className="border-t border-zinc-800 py-12 mt-20">
 
-        <div className="max-w-6xl mx-auto px-6">
+  <div className="max-w-6xl mx-auto px-6">
 
-          <div className="text-blue-400 font-semibold">
-            EDGE SPACES
-          </div>
+    <div className="flex flex-col md:flex-row md:justify-between gap-10">
 
-          <div className="text-zinc-500 mt-2 text-sm">
-            Part of EDGE Alliance
-          </div>
+      <div>
 
-          <div className="text-zinc-600 text-sm mt-6">
-            Founders • Builders • Business Angels • Ecosystem Partners
-          </div>
-
-<div className="text-zinc-600 text-sm mt-2">
-  AI • Web3 • Emerging Technologies
-</div>
-
-
+        <div className="text-blue-400 font-semibold">
+          EDGE SPACES
         </div>
 
-      </footer>
+        <div className="text-zinc-500 mt-2 text-sm">
+          Part of EDGE Alliance
+        </div>
 
+        <div className="text-zinc-600 text-sm mt-6">
+          Founders • Builders • Business Angels • Ecosystem Partners
+        </div>
+
+        <div className="text-zinc-600 text-sm mt-2">
+          AI • Web3 • Emerging Technologies
+        </div>
+
+      </div>
+
+      <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
+
+        <a href="/" className="text-zinc-400 hover:text-white">
+          Home
+        </a>
+
+        <a href="/privacy" className="text-zinc-400 hover:text-white">
+          Privacy
+        </a>
+
+        <a href="/#communities" className="text-zinc-400 hover:text-white">
+          Community
+        </a>
+
+        <a href="/terms" className="text-zinc-400 hover:text-white">
+          Terms
+        </a>
+
+        <a href="/membership" className="text-zinc-400 hover:text-white">
+          Apply
+        </a>
+
+        <a href="mailto:contact@edgespaces.xyz" className="text-zinc-400 hover:text-white">
+          Contact
+        </a>
+
+        <a href="/community-card" className="text-zinc-400 hover:text-white">
+          Digital Card
+        </a>
+
+        <a href="/profile" className="text-zinc-400 hover:text-white">
+          Profile
+        </a>
+
+      </div>
+
+    </div>
+
+    <div className="border-t border-zinc-800 mt-10 pt-6 text-xs text-zinc-600">
+
+      © 2026 EDGE Spaces. All rights reserved.
+
+    </div>
+
+  </div>
+
+</footer>
     </div>
 
   )
