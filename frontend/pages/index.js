@@ -351,18 +351,19 @@ Telegram is free to use and creating an account takes about one minute.
         </div>
 
         <div className="text-zinc-500 mt-2 text-sm">
-          Part of EDGE Alliance
+        Part of EDGE Alliance
         </div>
 
-        <div className="text-zinc-600 text-sm mt-6">
-          Founders • Builders • Business Angels • Ecosystem Partners
-        </div>
+<div className="text-zinc-600 text-sm mt-6">
+Connecting founders, builders, business angels and startup ecosystems.
+</div>
 
-        <div className="text-zinc-600 text-sm mt-2">
-          AI • Web3 • Emerging Technologies
-        </div>
+<div className="text-zinc-600 text-sm mt-2">
+AI • Web3 • Emerging Technologies
+</div>
 
       </div>
+
 
       <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
 
