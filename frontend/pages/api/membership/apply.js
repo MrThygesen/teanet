@@ -76,7 +76,7 @@ join_reason,
 
 <p><strong>Email:</strong> ${email}</p>
 
-+<p><strong>Company / Organization:</strong> ${company}</p>
+<p><strong>Company / Organization:</strong> ${company}</p>
 
 <p><strong>Primary Role:</strong> ${membership_type}</p>
 
