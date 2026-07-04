@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useCallback } from 'react'
 import { useAccount, usePublicClient } from 'wagmi'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { parseAbi } from 'viem'
 
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
@@ -87,22 +88,25 @@ export default function Profile() {
           Official EDGE Spaces digital credentials.
         </p>
 
-        {!address && (
+{!address && (
 
-          <div className="mt-20 bg-zinc-900 border border-zinc-800 rounded-xl p-10 text-center">
+  <div className="mt-20 bg-zinc-900 border border-zinc-800 rounded-xl p-10 text-center">
 
-            <h2 className="text-2xl font-semibold mb-4">
-              Connect Wallet
-            </h2>
+    <h2 className="text-2xl font-semibold mb-4">
+      Connect Wallet
+    </h2>
 
-            <p className="text-zinc-400">
-              Connect your wallet to view your EDGE Spaces credentials.
-            </p>
+    <p className="text-zinc-400 mb-8">
+      Connect your wallet to view your EDGE Spaces credentials.
+    </p>
 
-          </div>
+    <div className="flex justify-center">
+      <ConnectButton />
+    </div>
 
-        )}
+  </div>
 
+)}
         {address && (
 
           <>
