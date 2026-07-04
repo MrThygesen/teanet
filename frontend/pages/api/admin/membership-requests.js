@@ -10,15 +10,17 @@ export default async function handler(req, res) {
 
   try {
 
-    const requests = await sql`
+const requests = await sql`
 
-      SELECT *
+  SELECT *
 
-      FROM membership_requests
+  FROM membership_requests
 
-      ORDER BY created_at DESC
+  WHERE status = 'pending'
 
-    `
+  ORDER BY created_at ASC
+
+`
 
     res.status(200).json(requests)
 
