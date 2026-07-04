@@ -89,9 +89,9 @@ We're excited to welcome you to the EDGE Spaces community.
 
 <p>
 
-<a href="https://t.me/YOUR_GROUP_LINK">
+<a href="https://t.me/+OUveBWfawQlhNDE1">
 
-https://t.me/YOUR_GROUP_LINK
+https://t.me/+OUveBWfawQlhNDE1
 
 </a>
 
