@@ -88,13 +88,9 @@ We're excited to welcome you to the EDGE Spaces community.
 </p>
 
 <p>
-
 <a href="https://t.me/+OUveBWfawQlhNDE1">
-
-https://t.me/+OUveBWfawQlhNDE1
-
+👉 Join EDGE Spaces on Telegram
 </a>
-
 </p>
 
 <p>
