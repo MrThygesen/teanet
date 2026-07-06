@@ -2,77 +2,66 @@ import { sql } from '../../../lib/postgres'
 
 export default async function handler(req, res) {
 
-    const { wallet } = req.query
+  const { wallet } = req.query
 
-    if (!wallet) {
+  if (!wallet) {
+    return res.status(400).json({
+      status: 'none'
+    })
+  }
 
-        return res.status(400).json({
+  try {
 
-            status: 'none'
+    const result = await sql`
 
-        })
+      SELECT
+        status,
+        claimed
+      FROM membership_requests
+      WHERE LOWER(wallet) = LOWER(${wallet})
+      ORDER BY created_at DESC
+      LIMIT 1
 
+    `
+
+    if (!result.length) {
+      return res.json({
+        status: 'none'
+      })
     }
 
-    const result = await pool.query(
-
-        `
-        SELECT
-            status,
-            claimed,
-            membership_type
-        FROM membership_requests
-        WHERE LOWER(wallet)=LOWER($1)
-        ORDER BY id DESC
-        LIMIT 1
-        `,
-        [wallet]
-    )
-
-    if (result.rows.length === 0) {
-
-        return res.json({
-
-            status: 'none'
-
-        })
-
-    }
-
-    const row = result.rows[0]
+    const row = result[0]
 
     if (row.claimed) {
-
-        return res.json({
-
-            status: 'claimed',
-
-            membershipType: row.membership_type
-
-        })
-
+      return res.json({
+        status: 'claimed'
+      })
     }
 
     if (row.status === 'approved') {
-    "status":"approved"
-})
-
+      return res.json({
+        status: 'approved'
+      })
     }
 
     if (row.status === 'pending') {
-
-        return res.json({
-
-            status: 'pending'
-
-        })
-
+      return res.json({
+        status: 'pending'
+      })
     }
 
     return res.json({
-
-        status: 'none'
-
+      status: 'none'
     })
+
+  } catch (err) {
+
+    console.error(err)
+
+    return res.status(500).json({
+      status: 'none'
+    })
+
+  }
 
 }
