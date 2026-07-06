@@ -1,242 +1,364 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
-import { useAccount, usePublicClient } from 'wagmi'
+import { useAccount, usePublicClient, useWriteContract } from 'wagmi'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { parseAbi } from 'viem'
 
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
+// Community Membership SBT
+const COMMUNITY_MEMBER_TYPE = 1
+
 function shortenAddress(address) {
   if (!address) return ''
-  return `${address.slice(0, 6)}...${address.slice(-4)}`
+  return `${address.slice(0,6)}...${address.slice(-4)}`
 }
 
 export default function Profile() {
+
   const { address } = useAccount()
   const publicClient = usePublicClient()
+  const { writeContractAsync } = useWriteContract()
 
-  const [loading, setLoading] = useState(false)
-  const [cards, setCards] = useState([])
+  const [cards,setCards] = useState([])
+  const [membership,setMembership] = useState(null)
 
-  const fetchCards = useCallback(async () => {
-    if (!address || !publicClient) {
-      setCards([])
-      return
-    }
+  const [loading,setLoading] = useState(true)
+  const [claiming,setClaiming] = useState(false)
 
-    setLoading(true)
+  const fetchData = useCallback(async()=>{
 
-    try {
-      const abi = parseAbi([
-        'function tokensOfOwner(address) view returns (uint256[])',
-        'function tokenURI(uint256) view returns (string)',
-      ])
+      if(!address || !publicClient){
 
-      const tokenIds = await publicClient.readContract({
-        address: CONTRACT_ADDRESS,
-        abi,
-        functionName: 'tokensOfOwner',
-        args: [address],
-      })
+          setCards([])
+          setMembership(null)
+          setLoading(false)
 
-      const owned = []
+          return
 
-      for (const tokenId of tokenIds) {
-        try {
-          const uri = await publicClient.readContract({
-            address: CONTRACT_ADDRESS,
-            abi,
-            functionName: 'tokenURI',
-            args: [tokenId],
-          })
-
-          const res = await fetch(uri)
-          const metadata = await res.json()
-
-          owned.push({
-            tokenId: Number(tokenId),
-            metadata,
-          })
-        } catch (err) {
-          console.error(err)
-        }
       }
 
-      setCards(owned)
-    } catch (err) {
-      console.error(err)
-    }
+      setLoading(true)
 
-    setLoading(false)
-  }, [address, publicClient])
+      //------------------------------------
+      // Read credentials from Polygon
+      //------------------------------------
 
-  useEffect(() => {
-    fetchCards()
-  }, [fetchCards])
+      try{
 
-  return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+          const abi=parseAbi([
+              'function tokensOfOwner(address) view returns(uint256[])',
+              'function tokenURI(uint256) view returns(string)'
+          ])
 
-      <div className="max-w-4xl mx-auto px-6 py-16">
+          const tokenIds=await publicClient.readContract({
 
-        <h1 className="text-4xl font-bold">
-          My Credentials
-        </h1>
+              address:CONTRACT_ADDRESS,
+              abi,
+              functionName:'tokensOfOwner',
+              args:[address]
 
-        <p className="text-zinc-400 mt-2">
-          Official EDGE Spaces digital credentials.
-        </p>
+          })
+
+          const owned=[]
+
+          for(const tokenId of tokenIds){
+
+              try{
+
+                  const uri=await publicClient.readContract({
+
+                      address:CONTRACT_ADDRESS,
+                      abi,
+                      functionName:'tokenURI',
+                      args:[tokenId]
+
+                  })
+
+                  const res=await fetch(uri)
+
+                  const metadata=await res.json()
+
+                  owned.push({
+
+                      tokenId:Number(tokenId),
+                      metadata
+
+                  })
+
+              }catch(err){
+
+                  console.error(err)
+
+              }
+
+          }
+
+          setCards(owned)
+
+      }catch(err){
+
+          console.error(err)
+
+      }
+
+      //------------------------------------
+      // Membership approval status
+      //------------------------------------
+
+      try{
+
+          const res=await fetch(
+
+              `/api/membership/status?wallet=${address}`
+
+          )
+
+          const json=await res.json()
+
+          setMembership(json)
+
+      }
+
+      catch(err){
+
+          console.error(err)
+
+      }
+
+      setLoading(false)
+
+  },[address,publicClient])
+
+  useEffect(()=>{
+
+      fetchData()
+
+  },[fetchData])
+
+  //------------------------------------
+  // Claim Community Membership
+  //------------------------------------
+
+  async function handleClaim(){
+
+      try{
+
+          setClaiming(true)
+
+          await writeContractAsync({
+
+              address:CONTRACT_ADDRESS,
+
+              abi:parseAbi([
+
+                  'function claim(uint256)'
+
+              ]),
+
+              functionName:'claim',
+
+              args:[COMMUNITY_MEMBER_TYPE]
+
+          })
+
+          await fetch('/api/membership/claimed',{
+
+              method:'POST',
+
+              headers:{
+
+                  'Content-Type':'application/json'
+
+              },
+
+              body:JSON.stringify({
+
+                  wallet:address
+
+              })
+
+          })
+
+          await fetchData()
+
+      }
+
+      catch(err){
+
+          console.error(err)
+
+      }
+
+      finally{
+
+          setClaiming(false)
+
+      }
+
+  }
+
+  return(
+
+<div className="min-h-screen bg-zinc-950 text-white">
+
+<div className="max-w-4xl mx-auto px-6 py-16">
+
+<h1 className="text-4xl font-bold">
+
+My Credentials
+
+</h1>
+
+<p className="text-zinc-400 mt-2">
+
+Official EDGE Spaces digital credentials.
+
+</p>
 
 {!address && (
 
-  <div className="mt-20 bg-zinc-900 border border-zinc-800 rounded-xl p-10 text-center">
+<div className="mt-20 bg-zinc-900 border border-zinc-800 rounded-xl p-10 text-center">
 
-    <h2 className="text-2xl font-semibold mb-4">
-      Connect Wallet
-    </h2>
+<h2 className="text-2xl font-semibold mb-4">
 
-    <p className="text-zinc-400 mb-8">
-      Connect your wallet to view your EDGE Spaces credentials.
-    </p>
+Connect Wallet
 
-    <div className="flex justify-center">
-      <ConnectButton />
-    </div>
+</h2>
 
-  </div>
+<p className="text-zinc-400 mb-8">
+
+Connect your Polygon wallet to access your EDGE Spaces credentials.
+
+</p>
+
+<div className="flex justify-center">
+
+<ConnectButton />
+
+</div>
+
+</div>
 
 )}
-        {address && (
 
-          <>
+{address && (
 
-            <div className="mt-10 mb-10 bg-zinc-900 border border-zinc-800 rounded-xl p-6">
+<>
 
-              <div className="text-xl font-semibold">
-                Welcome Back 👋
-              </div>
+<div className="mt-10 mb-10 bg-zinc-900 border border-zinc-800 rounded-xl p-6">
 
-              <div className="text-zinc-400 mt-2">
-                Verified wallet
-              </div>
+<div className="text-xl font-semibold">
 
-              <div className="font-mono text-sm mt-1 break-all">
-                {shortenAddress(address)}
-              </div>
+Connected Wallet
 
-            </div>
+</div>
 
-            {loading && (
+<div className="text-zinc-400 mt-2">
 
-              <div className="text-center py-16 text-zinc-400">
-                Loading credentials...
-              </div>
+Verified wallet
 
-            )}
+</div>
 
-            {!loading && cards.length === 0 && (
+<div className="font-mono text-sm mt-1 break-all">
 
-              <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-10 text-center">
+{shortenAddress(address)}
 
-               <h2 className="text-xl font-semibold">
-  No Membership Found
+</div>
+
+</div>
+
+{loading && (
+
+<div className="text-center py-16 text-zinc-400">
+
+Checking your community membership...
+
+</div>
+
+)}
+
+{!loading && cards.length > 0 && (
+
+<>
+
+<div className="mb-8">
+
+<h2 className="text-2xl font-semibold">
+
+Your Credentials
+
+</h2>
+
+<p className="text-zinc-400 mt-2">
+
+This wallet owns the following verified EDGE Spaces credentials.
+
+</p>
+
+</div>
+
+<div className="space-y-8">
+
+{cards.map(card => (
+
+<div
+key={card.tokenId}
+className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden"
+>
+
+{card.metadata.image && (
+
+<img
+src={card.metadata.image}
+alt={card.metadata.name}
+className="w-full"
+/>
+
+)}
+
+<div className="p-8">
+
+<h2 className="text-2xl font-semibold">
+
+{card.metadata.name}
+
 </h2>
 
 <p className="text-zinc-400 mt-3">
-  This wallet is not yet associated with an EDGE Spaces membership.
+
+{card.metadata.description}
+
 </p>
 
-<a
-  href="/membership"
-  className="inline-block mt-6 px-5 py-3 rounded-lg bg-blue-600 hover:bg-blue-700"
+<div className="mt-8 space-y-4">
+
+{card.metadata.attributes?.map((attr,index)=>(
+
+<div
+key={index}
+className="flex justify-between border-b border-zinc-800 pb-3"
 >
-  Apply for Membership
-</a>
 
-              </div>
+<span className="text-zinc-500">
 
-            )}
+{attr.trait_type}
 
-            {!loading && cards.length > 0 && (
-            <>
-            <div className="mb-8">
+</span>
 
-      <h2 className="text-2xl font-semibold">
-      Your EDGE Spaces Credentials
-      </h2>
+<span className="font-medium text-right">
 
-      <p className="text-zinc-400 mt-2">
-      Your wallet has been verified and contains the following digital credentials.
-      </p>
-      </div>
+{attr.value}
 
+</span>
 
-      <div className="space-y-8">
+</div>
 
+))}
 
-                {cards.map((card) => (
+</div>
 
-                  <div
-                    key={card.tokenId}
-                    className="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden"
-                  >
-
-                    {card.metadata.image && (
-
-                      <img
-                        src={card.metadata.image}
-                        alt={card.metadata.name}
-                        className="w-full"
-                      />
-
-                    )}
-
-                    <div className="p-8">
-
-                      <h2 className="text-2xl font-semibold">
-                        {card.metadata.name}
-                      </h2>
-
-                      <p className="text-zinc-400 mt-3">
-                        {card.metadata.description}
-                      </p>
-
-                      <div className="mt-8 space-y-4">
-
-                        {card.metadata.attributes?.map((attr, index) => (
-
-                          <div
-                            key={index}
-                            className="flex justify-between border-b border-zinc-800 pb-3"
-                          >
-
-                            <span className="text-zinc-500">
-                              {attr.trait_type}
-                            </span>
-
-                            <span className="font-medium text-right">
-                              {attr.value}
-                            </span>
-
-                          </div>
-
-                        ))}
-
-                      </div>
-
-                      {card.metadata.external_url && (
-
-                        <a
-                          href={card.metadata.external_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block mt-8 px-5 py-3 rounded-lg bg-blue-600 hover:bg-blue-700"
-                        >
-                          Visit EDGE Spaces
-                        </a>
-
-                      )}
 
                     </div>
 
@@ -250,12 +372,143 @@ export default function Profile() {
 
           )}
 
-          </>
+          {/* Approved - Ready to Claim */}
 
-        )}
+          {!loading &&
+            cards.length === 0 &&
+            membership?.status === 'approved' && (
 
-      </div>
+              <div className="bg-zinc-900 border border-green-700 rounded-xl p-10">
+
+                <h2 className="text-2xl font-semibold">
+
+                  Community Membership Approved
+
+                </h2>
+
+                <p className="text-zinc-400 mt-4">
+
+                  Your membership application has been approved.
+
+                </p>
+
+                <p className="text-zinc-400 mt-2">
+
+                  Click below to mint your official EDGE Spaces
+                  Community Membership credential to this wallet.
+
+                </p>
+
+                <button
+
+                  onClick={handleClaim}
+
+                  disabled={claiming}
+
+                  className="mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 disabled:opacity-50"
+
+                >
+
+                  {claiming
+                    ? 'Claiming Membership...'
+                    : 'Claim Community Membership'}
+
+                </button>
+
+              </div>
+
+          )}
+
+          {/* Pending Approval */}
+
+          {!loading &&
+            cards.length === 0 &&
+            membership?.status === 'pending' && (
+
+              <div className="bg-zinc-900 border border-yellow-700 rounded-xl p-10">
+
+                <h2 className="text-2xl font-semibold">
+
+                  Membership Application Received
+
+                </h2>
+
+                <p className="text-zinc-400 mt-4">
+
+                  Thank you for applying to join EDGE Spaces.
+
+                </p>
+
+                <p className="text-zinc-400 mt-2">
+
+                  Your application is currently under review.
+
+                </p>
+
+                <p className="text-zinc-400 mt-2">
+
+                  Once approved, the Community Membership claim
+                  button will automatically appear on this page.
+
+                </p>
+
+              </div>
+
+          )}
+
+          {/* No Application */}
+
+          {!loading &&
+            cards.length === 0 &&
+            membership?.status === 'none' && (
+
+              <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-10">
+
+                <h2 className="text-2xl font-semibold">
+
+                  Join EDGE Spaces
+
+                </h2>
+
+                <p className="text-zinc-400 mt-4">
+
+                  This wallet is not associated with a membership
+                  application.
+
+                </p>
+
+                <p className="text-zinc-400 mt-2">
+
+                  To become a community member, submit the membership
+                  application from the homepage.
+
+                </p>
+
+                <a
+
+                  href="/#membership"
+
+                  className="inline-block mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700"
+
+                >
+
+                  Apply for Membership
+
+                </a>
+
+              </div>
+
+          )}
+
+        </>
+
+      )}
 
     </div>
+
+</div>
+
   )
-} 
+
+}
+
