@@ -265,8 +265,19 @@ const handleMintMembership = async () => {
   // ---------------- RENDER ----------------
 return (
   <div className="bg-black text-white min-h-screen py-10">
-    <div className="p-4 max-w-6xl mx-auto space-y-8">
 
+<div className="flex gap-3 mb-8">
+
+  <a
+    href="/admin/membership-requests"
+    className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700"
+  >
+    Membership Requests
+  </a>
+
+</div>
+
+    <div className="p-4 max-w-6xl mx-auto space-y-8">
       <h2 className="text-3xl font-bold">
         Admin — Manage SBT Types
       </h2>
@@ -381,21 +392,21 @@ return (
     Issue Membership
   </h3>
 
-  <input
-    type="text"
-    placeholder="Wallet Address"
-    value={mintAddress}
-    onChange={(e) => setMintAddress(e.target.value)}
-    className="w-full border rounded p-2 mb-2"
-  />
+<input
+  type="text"
+  placeholder="Wallet Address"
+  value={mintAddress}
+  onChange={(e) => setMintAddress(e.target.value)}
+  className="w-full rounded border border-zinc-600 bg-zinc-800 text-white font-mono text-sm p-2 mb-2 placeholder:text-zinc-500"
+/>
 
-  <input
-    type="number"
-    placeholder="Membership Type ID"
-    value={mintTypeId}
-    onChange={(e) => setMintTypeId(e.target.value)}
-    className="w-full border rounded p-2 mb-3"
-  />
+<input
+  type="number"
+  placeholder="Membership Type ID"
+  value={mintTypeId}
+  onChange={(e) => setMintTypeId(e.target.value)}
+  className="w-full rounded border border-zinc-600 bg-zinc-800 text-white font-medium placeholder:text-zinc-500 p-2 mb-3"
+/>
 
   <button
     onClick={handleMintMembership}
