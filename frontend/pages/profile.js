@@ -10,12 +10,14 @@ const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 // Community Membership SBT
 const COMMUNITY_MEMBER_TYPE = 1
 
+
 function shortenAddress(address) {
   if (!address) return ''
   return `${address.slice(0,6)}...${address.slice(-4)}`
 }
 
 export default function Profile() {
+
 
   const { address } = useAccount()
   const publicClient = usePublicClient()
@@ -26,6 +28,10 @@ export default function Profile() {
 
   const [loading,setLoading] = useState(true)
   const [claiming,setClaiming] = useState(false)
+   
+  const [email, setEmail] = useState('')
+  const [updatingWallet, setUpdatingWallet] = useState(false)
+
 
   const fetchData = useCallback(async()=>{
 
@@ -137,9 +143,69 @@ export default function Profile() {
 
   },[fetchData])
 
+
+
+async function handleWalletUpdate() {
+
+    if (!email) {
+
+        alert('Please enter your email.')
+
+        return
+
+    }
+
+    try {
+
+        setUpdatingWallet(true)
+
+        const res = await fetch('/api/membership/update-wallet', {
+
+            method: 'POST',
+
+            headers: {
+
+                'Content-Type': 'application/json'
+
+            },
+
+            body: JSON.stringify({
+
+                email,
+                wallet: address
+
+            })
+
+        })
+
+        const json = await res.json()
+
+        if (!res.ok) {
+
+            alert(json.error || 'Unable to update wallet.')
+
+            return
+
+        }
+
+     alert('Your wallet has been linked to your approved membership. You can now claim your Community Membership.')
+
+        await fetchData()
+
+    }
+
+    finally {
+
+        setUpdatingWallet(false)
+
+    }
+
+}
+
   //------------------------------------
   // Claim Community Membership
   //------------------------------------
+
 
   async function handleClaim(){
 
@@ -456,50 +522,76 @@ className="flex justify-between border-b border-zinc-800 pb-3"
 
           )}
 
-          {/* No Application */}
+{/* No Application */}
 
-          {!loading &&
-            cards.length === 0 &&
-            membership?.status === 'none' && (
+{!loading &&
+  cards.length === 0 &&
+  membership?.status === 'none' && (
 
-              <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-10">
+<div className="bg-zinc-900 border border-zinc-800 rounded-xl p-10">
 
-                <h2 className="text-2xl font-semibold">
+<h2 className="text-2xl font-semibold">
 
-                  Join EDGE Spaces
+Join EDGE Spaces
 
-                </h2>
+</h2>
 
-                <p className="text-zinc-400 mt-4">
+<p className="text-zinc-400 mt-4">
 
-                  This wallet is not associated with a membership
-                  application.
+This wallet is not currently associated with a membership application.
 
-                </p>
+</p>
 
-                <p className="text-zinc-400 mt-2">
+<a
+    href="/#membership"
+    className="inline-block mt-6 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700"
+>
 
-                  To become a community member, submit the membership
-                  application from the homepage.
+Apply for Membership
 
-                </p>
+</a>
 
-                <a
+<div className="mt-10 border-t border-zinc-800 pt-8">
 
-                  href="/#membership"
+<h3 className="text-xl font-semibold">
 
-                  className="inline-block mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700"
+Already an approved member?
 
-                >
+</h3>
 
-                  Apply for Membership
+<p className="text-zinc-400 mt-2">
 
-                </a>
+If you previously joined without providing a wallet, enter your membership email below.
 
-              </div>
+If your email matches an approved membership, this wallet will be linked to your account so you can claim your Community Membership credential.
 
-          )}
+</p>
 
+<input
+    type="email"
+    placeholder="Email address"
+    value={email}
+    onChange={(e)=>setEmail(e.target.value)}
+    className="mt-4 w-full rounded border border-zinc-700 bg-zinc-800 p-3 text-white"
+/>
+
+<button
+    onClick={handleWalletUpdate}
+    disabled={updatingWallet}
+    className="mt-4 px-6 py-3 rounded-lg bg-green-600 hover:bg-green-700 disabled:opacity-50"
+>
+
+{updatingWallet
+    ? 'Updating Wallet...'
+    : 'Register This Wallet'}
+
+</button>
+
+</div>
+
+</div>
+
+)}
         </>
 
       )}
