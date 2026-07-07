@@ -320,7 +320,7 @@ If you have not yet applied for membership, please submit your membership applic
 </p>
 
 <a
-    href="/#membership"
+    href="/#apply"
     className="inline-block mt-4 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700"
 >
 
