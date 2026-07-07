@@ -289,24 +289,64 @@ Official EDGE Spaces digital credentials.
 
 <h2 className="text-2xl font-semibold mb-4">
 
-Connect Wallet
+Connect Your Wallet
 
 </h2>
 
-<p className="text-zinc-400 mb-8">
+<p className="text-zinc-400 mb-4">
 
-Connect your Polygon wallet to access your EDGE Spaces credentials.
+Connect your Polygon-compatible wallet to access your EDGE Spaces credentials.
 
 </p>
 
-<div className="flex justify-center">
+<div className="flex justify-center mb-8">
 
 <ConnectButton />
 
 </div>
 
+<div className="border-t border-zinc-800 pt-8">
+
+<h3 className="text-xl font-semibold">
+
+New to EDGE Spaces?
+
+</h3>
+
+<p className="text-zinc-400 mt-2">
+
+If you have not yet applied for membership, please submit your membership application first.
+
+</p>
+
+<a
+    href="/#membership"
+    className="inline-block mt-4 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700"
+>
+
+Apply for Membership
+
+</a>
+
 </div>
 
+<div className="border-t border-zinc-800 pt-8 mt-8">
+
+<h3 className="text-xl font-semibold">
+
+Already an approved member?
+
+</h3>
+
+<p className="text-zinc-400 mt-2">
+
+If you joined without providing a wallet, connect your Polygon-compatible wallet above. You will then be able to link your wallet to your approved membership and claim your Community Membership credential.
+
+</p>
+
+</div>
+
+</div>
 )}
 
 {address && (
