@@ -44,21 +44,24 @@ export default async function handler(req, res) {
 
     // Only approved members may register a wallet
 
-    const updated = await sql`
+   const updated = await sql`
 
-      UPDATE membership_requests
+  UPDATE membership_requests
 
-      SET wallet = ${wallet}
+  SET wallet = ${wallet}
 
-      WHERE LOWER(email) = LOWER(${email})
+  WHERE LOWER(email) = LOWER(${email})
 
-      AND status = 'approved'
+  AND status = 'approved'
 
-      AND wallet IS NULL
+  AND (
+      wallet IS NULL
+      OR TRIM(wallet) = ''
+  )
 
-      RETURNING id
+  RETURNING id
 
-    `
+`
 
     if (!updated.length) {
 
