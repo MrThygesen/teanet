@@ -14,19 +14,24 @@ module.exports = {
       },
     },
   },
+
   networks: {
-    amoy: {
-      url: process.env.POLYGON_AMOY_RPC,
+    polygon: {
+      url: process.env.POLYGON_RPC,
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
-      // Use EIP-1559 style gas fees instead of gasPrice:
-      maxFeePerGas: 50_000_000_000,       // 50 gwei
-      maxPriorityFeePerGas: 2_000_000_000 // 2 gwei
+      gasPrice: 35000000000, // 35 Gwei
     },
   },
+
+  etherscan: {
+    apiKey: {
+      polygon: process.env.POLYGONSCAN_API_KEY,
+    },
+  },
+
   contractSizer: {
     alphaSort: true,
     runOnCompile: true,
     disambiguatePaths: false,
   },
 }
-

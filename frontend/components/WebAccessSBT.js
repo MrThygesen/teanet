@@ -67,8 +67,8 @@ export default function WebAccessSBT() {
 
   useEffect(() => setMounted(true), [])
 
-  // ---------- Add Amoy Network ----------
-  async function addAmoyNetwork() {
+  // ---------- Add Polygon Network ----------
+  async function addPolygonNetwork() {
     if (!window.ethereum) {
       window.open('https://metamask.io/download/', '_blank')
       return
@@ -78,15 +78,15 @@ export default function WebAccessSBT() {
       await window.ethereum.request({
         method: 'wallet_addEthereumChain',
         params: [{
-          chainId: '0x13882', // 80002
-          chainName: 'Polygon Amoy Testnet',
-          nativeCurrency: {
-            name: 'POL',
-            symbol: 'POL',
-            decimals: 18,
-          },
-          rpcUrls: ['https://rpc-amoy.polygon.technology/'],
-          blockExplorerUrls: ['https://amoy.polygonscan.com/'],
+    chainId: '0x89',
+chainName: 'Polygon Mainnet',
+nativeCurrency: {
+  name: 'POL',
+  symbol: 'POL',
+  decimals: 18,
+},
+rpcUrls: [process.env.NEXT_PUBLIC_RPC_URL],
+blockExplorerUrls: ['https://polygonscan.com/'],
         }],
       })
     } catch (err) {
@@ -172,12 +172,13 @@ export default function WebAccessSBT() {
         const res = await fetch(uri)
         const metadata = await res.json()
 
-        owned.push({
-          tokenId: Number(tokenId),
-          name: metadata.name,
-          image: metadata.image,
-          description: metadata.description,
-        })
+   owned.push({
+  tokenId: Number(tokenId),
+  name: metadata.name,
+  image: metadata.image,
+  description: metadata.description,
+  metadata,
+})
       }
 
       setMySBTs(owned)
@@ -511,11 +512,11 @@ Rabby Wallet also works.
 <div>
 
 <p className="font-semibold">
-2. Add Polygon Amoy Test Network
+2. Add Polygon Network
 </p>
 
 <button
-onClick={addAmoyNetwork}
+onClick={addPolygonNetwork}
 className="mt-2 px-3 py-2 rounded bg-zinc-800 text-zinc-300 hover:bg-zinc-700 text-xs"
 >
 Add Network Automatically
@@ -527,10 +528,10 @@ Manual settings:
 
 <div className="bg-zinc-800 rounded p-3 mt-2 text-xs font-mono space-y-1">
 
-<div>Network: Polygon Amoy Testnet</div>
-<div>Chain ID: 80002</div>
+<div>Network: Polygon Mainnet</div>
+<div>Chain ID: 137</div>
 <div>Currency: POL</div>
-<div>Explorer: https://amoy.polygonscan.com/</div>
+<div>Explorer: Explorer: https://polygonscan.com/</div>
 
 </div>
 
@@ -544,7 +545,7 @@ Manual settings:
 </p>
 
 <p className="text-zinc-400 text-xs">
-Contact the founder on LinkedIn to receive free test coins.
+Ensure your wallet contains a small amount of POL for transaction fees.
 </p>
 
 </div>
