@@ -2,7 +2,7 @@
 
 export default function WalletSetup() {
 
-  async function addAmoyNetwork() {
+  async function addPolygonNetwork() {
 
     if (!window.ethereum) {
       window.open('https://metamask.io/download/', '_blank')
@@ -17,9 +17,9 @@ export default function WalletSetup() {
 
         params: [{
 
-          chainId: '0x13882',
+          chainId: '0x89',
 
-          chainName: 'Polygon Amoy Testnet',
+          chainName: 'Polygon Mainnet',
 
           nativeCurrency: {
             name: 'POL',
@@ -28,11 +28,11 @@ export default function WalletSetup() {
           },
 
           rpcUrls: [
-            'https://rpc-amoy.polygon.technology/'
+            'https://polygon-rpc.com'
           ],
 
           blockExplorerUrls: [
-            'https://amoy.polygonscan.com/'
+            'https://polygonscan.com/'
           ]
 
         }]
@@ -67,14 +67,15 @@ export default function WalletSetup() {
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
 
-            Connecting a wallet is completely optional.
+            A crypto wallet is completely optional.
 
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
 
-            If you'd like to receive a Digital Membership Card,
-            simply connect a compatible wallet.
+            Once your membership has been approved, simply connect a
+            Polygon-compatible wallet and claim your Digital Membership
+            credential directly from your profile.
 
           </p>
 
@@ -82,14 +83,14 @@ export default function WalletSetup() {
 
       </section>
 
-      {/* NETWORK */}
+      {/* POLYGON */}
 
       <section className="max-w-4xl mx-auto px-6 pb-16">
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Polygon Amoy
+            Polygon Mainnet
           </div>
 
           <h2 className="text-3xl font-bold mb-6">
@@ -98,13 +99,13 @@ export default function WalletSetup() {
 
           <p className="text-zinc-400 leading-relaxed">
 
-            EDGE Spaces currently issues Digital Membership Cards on the
-            Polygon Amoy Testnet.
+            EDGE Spaces issues Digital Membership credentials on
+            Polygon Mainnet.
 
             <br /><br />
 
-            If you don't already have the network installed,
-            you can add it automatically below.
+            Most modern wallets already support Polygon.
+            If your wallet doesn't, you can add it automatically below.
 
           </p>
 
@@ -114,14 +115,14 @@ export default function WalletSetup() {
               <span className="font-semibold text-white">
                 Network:
               </span>{' '}
-              Polygon Amoy Testnet
+              Polygon Mainnet
             </div>
 
             <div>
               <span className="font-semibold text-white">
                 Chain ID:
               </span>{' '}
-              80002
+              137
             </div>
 
             <div>
@@ -135,82 +136,121 @@ export default function WalletSetup() {
               <span className="font-semibold text-white">
                 Explorer:
               </span>{' '}
-              amoy.polygonscan.com
+              polygonscan.com
             </div>
 
           </div>
 
           <button
-            onClick={addAmoyNetwork}
+            onClick={addPolygonNetwork}
             className="mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition"
           >
-            Add Polygon Amoy
+            Add Polygon Network
           </button>
 
         </div>
+
       </section>
 
-      {/* WHAT HAPPENS NEXT */}
+      {/* CLAIM */}
+
+      <section className="max-w-4xl mx-auto px-6 pb-16">
+
+        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+            Claim Your Credential
+          </div>
+
+          <h2 className="text-3xl font-bold mb-6">
+            One Click After Approval
+          </h2>
+
+          <p className="text-zinc-400 leading-relaxed">
+
+            After your membership has been approved, simply visit your
+            Profile page, connect your wallet and click
+            <strong> Claim Community Membership</strong>.
+
+            <br /><br />
+
+            Your blockchain credential will be issued directly to your wallet.
+
+            <br /><br />
+
+            Polygon transaction fees are extremely low, making the minting
+            process almost costless.
+
+          </p>
+
+          <div className="mt-8 space-y-4 text-zinc-300">
+
+            <div>✓ Membership approved</div>
+
+            <div>✓ Connect your Polygon wallet</div>
+
+            <div>✓ Claim with one click</div>
+
+            <div>✓ Credential issued directly to your wallet</div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* METAMASK */}
 
       <section className="max-w-4xl mx-auto px-6 pb-20">
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            What's Next?
+            MetaMask Users
           </div>
 
           <h2 className="text-3xl font-bold mb-6">
-            Receive Your Digital Membership Card
+            Viewing Your Credential
           </h2>
 
           <p className="text-zinc-400 leading-relaxed">
 
-            Once your EDGE Spaces membership has been approved,
-            you can add your wallet address during your application
-            or at any time afterwards.
+            Your credential is issued immediately on Polygon Mainnet.
 
             <br /><br />
 
-            Your Digital Membership Card will then be issued
-            directly to your wallet.
+            Some wallets automatically detect NFTs.
+
+            MetaMask Mobile and the browser extension may require you to
+            import the NFT once using the contract address and your token ID.
+
+            <br /><br />
+
+            After importing, the credential image, title and description
+            will appear in your wallet.
+
+            <br /><br />
+
+            The complete credential details, including membership
+            attributes, are always available on the EDGE Spaces website
+            and are also recognised by NFT marketplaces such as OpenSea.
 
           </p>
-
-          <div className="mt-8 space-y-4 text-zinc-300">
-
-            <div>
-              ✓ Membership application approved
-            </div>
-
-            <div>
-              ✓ Add your wallet address
-            </div>
-
-            <div>
-              ✓ Receive your Digital Membership Card
-            </div>
-
-            <div>
-              ✓ Access future partner benefits and governance features
-            </div>
-
-          </div>
 
           <div className="mt-10 flex flex-wrap gap-4">
 
             <a
-              href="/"
-              className="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition"
+              href="/profile"
+              className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition"
             >
-              Return Home
+              Open My Profile
             </a>
 
             <a
               href="/community-card"
-              className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition"
+              className="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition"
             >
-              Learn About Digital Membership →
+              Learn About Digital Membership
             </a>
 
           </div>
@@ -223,4 +263,3 @@ export default function WalletSetup() {
 
   )
 }
-

@@ -1,15 +1,12 @@
-
 'use client'
 
 import Header from '../components/Header'
-
 
 export default function CommunityCard() {
   return (
     <div className="bg-black text-white min-h-dvh">
 
- <Header />
-
+      <Header />
 
       {/* HERO */}
 
@@ -22,16 +19,18 @@ export default function CommunityCard() {
           </div>
 
           <h1 className="text-5xl font-bold leading-tight">
-            Digital Membership Card
+            EDGE Spaces Digital Membership
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-            Every approved EDGE Spaces member can optionally receive a
-            Digital Membership Card in their wallet (Metamask or similar).
+            Every approved EDGE Spaces member can claim an official blockchain
+            membership credential on Polygon Mainnet.
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            You can always update your wallet address or send info to admin. This is mainly for users that like to be part of a governance process and interested in future benefits of having the card. 
+            A wallet is completely optional when joining the community.
+            Members can always connect a Polygon-compatible wallet later and
+            claim their credential directly from their profile with a single click.
           </p>
 
         </div>
@@ -47,7 +46,7 @@ export default function CommunityCard() {
 
           <img
             src="/data/example-membership-card.jpg"
-            alt="EDGE Spaces Digital Membership Card"
+            alt="EDGE Spaces Digital Membership"
             className="w-full max-w-lg rounded-3xl border border-zinc-800"
           />
 
@@ -57,8 +56,8 @@ export default function CommunityCard() {
 
           <p className="text-lg text-zinc-400 leading-relaxed">
 
-            Your Digital Membership Card serves as blockchain-based proof of
-            your EDGE Spaces membership.
+            Your Digital Membership is a permanent blockchain credential that
+            proves your verified membership within the EDGE Spaces ecosystem.
 
           </p>
 
@@ -72,28 +71,28 @@ export default function CommunityCard() {
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Future Benefits
+          Benefits
         </div>
 
         <h2 className="text-4xl font-bold mb-10">
-          More Than A Membership Card
+          More Than An NFT
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
 
           <BenefitCard
-            title="Digital Identity"
-            text="A permanent blockchain-based proof of your EDGE Spaces membership."
+            title="Verified Digital Identity"
+            text="A permanent blockchain credential proving your verified EDGE Spaces membership."
           />
 
           <BenefitCard
-            title="Partner Benefits"
-            text="Future offers, events and ecosystem initiatives from approved partners."
+            title="Partner Ecosystem"
+            text="Access future partner benefits, ecosystem initiatives, events and exclusive opportunities."
           />
 
           <BenefitCard
-            title="Community Governance"
-            text="Future participation in voting and community-led initiatives."
+            title="Governance Ready"
+            text="Prepared for future governance participation, voting rights and community initiatives."
           />
 
         </div>
@@ -101,37 +100,41 @@ export default function CommunityCard() {
       </section>
 
 
-      {/* WALLET */}
+      {/* CLAIM */}
 
       <section className="max-w-4xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Wallet Setup
+            Claim Your Credential
           </div>
 
           <h2 className="text-3xl font-bold mb-5">
-            Connect A Wallet Whenever You're Ready
+            Simple, Fast & Low Cost
           </h2>
 
           <p className="text-zinc-400 leading-relaxed">
 
-            Connecting a wallet is completely optional.
+            Once your membership has been approved, simply connect a
+            Polygon-compatible wallet and claim your Digital Membership directly
+            from your profile.
 
             <br /><br />
 
-            If you'd like a Digital Membership Card, simply connect a
-            compatible wallet during your application or afterwards.
+            Credentials are issued on Polygon Mainnet, making the minting
+            transaction extremely inexpensive while providing permanent
+            blockchain verification.
 
           </p>
 
           <div className="mt-8 space-y-3 text-zinc-300">
 
             <div>✓ Wallet is optional</div>
-            <div>✓ Compatible with common EVM wallets</div>
-            <div>✓ Demo card available for testing</div>
-            <div>✓ Official membership card issued after verification</div>
+            <div>✓ One-click claim after approval</div>
+            <div>✓ Polygon Mainnet credential</div>
+            <div>✓ Compatible with MetaMask, Rainbow, Rabby and other EVM wallets</div>
+            <div>✓ Future governance and partner benefits</div>
 
           </div>
 
@@ -139,7 +142,7 @@ export default function CommunityCard() {
             href="/wallet-setup"
             className="inline-flex items-center justify-center mt-10 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 transition font-semibold"
           >
-            Open Wallet Setup →
+            Wallet Setup →
           </a>
 
         </div>
@@ -168,7 +171,6 @@ export default function CommunityCard() {
     </div>
   )
 }
-
 
 function BenefitCard({ title, text }) {
   return (

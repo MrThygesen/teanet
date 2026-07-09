@@ -498,29 +498,46 @@ className="flex justify-between border-b border-zinc-800 pb-3"
 
                 </p>
 
-                <p className="text-zinc-400 mt-2">
+<p className="text-zinc-400 mt-2">
 
-                  Click below to mint your official EDGE Spaces
-                  Community Membership credential to this wallet.
+  Click below to mint your official EDGE Spaces
+  Community Membership credential to this wallet.
 
-                </p>
+</p>
 
-                <button
+<div className="mt-8 flex justify-center">
 
-                  onClick={handleClaim}
+  <img
+    src="/data/example-membership-card.jpg"
+    alt="EDGE Spaces Community Membership"
+    className="w-full max-w-sm rounded-2xl border border-zinc-800 shadow-lg"
+  />
 
-                  disabled={claiming}
+</div>
 
-                  className="mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 disabled:opacity-50"
+<p className="text-center text-zinc-500 mt-6 max-w-lg mx-auto">
 
-                >
+  Your Digital Membership is a permanent blockchain credential issued on
+  Polygon Mainnet. After claiming, it will appear on your Profile and can
+  also be viewed in compatible wallets and NFT marketplaces.
 
-                  {claiming
-                    ? 'Claiming Membership...'
-                    : 'Claim Community Membership'}
+</p>
 
-                </button>
+<button
 
+  onClick={handleClaim}
+
+  disabled={claiming}
+
+  className="mt-8 w-full px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-lg font-semibold"
+
+>
+
+  {claiming
+    ? 'Claiming Membership...'
+    : 'Claim Community Membership'}
+
+</button>
               </div>
 
           )}
