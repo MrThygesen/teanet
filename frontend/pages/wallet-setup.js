@@ -215,14 +215,11 @@ export default function WalletSetup() {
 
           <p className="text-zinc-400 leading-relaxed">
 
-            Your credential is issued immediately on Polygon Mainnet.
+            Your credential is issued immediately on Polygon Mainnet and shown in the profile section.
 
             <br /><br />
 
-            Some wallets automatically detect NFTs.
-
-            MetaMask Mobile and the browser extension may require you to
-            import the NFT once using the contract address and your token ID.
+ Some wallet such as Metamask Browser Extention shows the membership card in the NFT section automatically, while the Metamask Mobile App requires that you import NFT and provides the contract and token number.
 
             <br /><br />
 
