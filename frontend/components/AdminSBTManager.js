@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useAccount, useWriteContract, usePublicClient } from 'wagmi'
 import WebAccessSBTV33_ABI from '../abis/WebAccessSBTV33_ABI.json'
 import { toast } from 'react-hot-toast'
+import AdminMembershipRequests from './AdminMembershipRequests'
 
 const CONTRACT_ADDRESS =
   process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
@@ -266,21 +267,12 @@ const handleMintMembership = async () => {
 return (
   <div className="bg-black text-white min-h-screen py-10">
 
-<div className="flex gap-3 mb-8">
-
-  <a
-    href="/admin/membership-requests"
-    className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700"
-  >
-    Membership Requests
-  </a>
-
-</div>
-
     <div className="p-4 max-w-6xl mx-auto space-y-8">
       <h2 className="text-3xl font-bold">
         Admin — Manage SBT Types
       </h2>
+
+<AdminMembershipRequests />
 
       {/* CREATE */}
       <div className="p-6 bg-zinc-900 border border-zinc-700 rounded-xl shadow space-y-4">
