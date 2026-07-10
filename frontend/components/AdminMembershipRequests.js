@@ -13,7 +13,7 @@ export default function AdminMembershipRequests() {
 
     try {
 
-      const res = await fetch('/api/membership-requests')
+      const res = await fetch('/api/admin/membership-requests')
       const json = await res.json()
 
       setRequests(json)
@@ -36,7 +36,7 @@ export default function AdminMembershipRequests() {
 
   async function approve(id) {
 
-    await fetch('/api/membership-approve', {
+    await fetch('/api/admin/membership-approve', {
 
       method: 'POST',
 
@@ -54,7 +54,7 @@ export default function AdminMembershipRequests() {
 
   async function reject(id) {
 
-    await fetch('/api/membership-reject', {
+    await fetch('/api/admin/membership-reject', {
 
       method: 'POST',
 
