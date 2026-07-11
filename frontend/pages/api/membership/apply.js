@@ -29,6 +29,46 @@ join_reason,
       membership_type
     } = req.body
 
+
+// Email already exists
+
+const existingEmail = await sql`
+    SELECT id
+    FROM membership_requests
+    WHERE LOWER(email)=LOWER(${email})
+    LIMIT 1
+`
+
+if (existingEmail.length) {
+
+    return res.status(409).json({
+        error: 'This email has already submitted a membership request.'
+    })
+
+}
+
+// Wallet already exists
+
+if (wallet?.trim()) {
+
+    const existingWallet = await sql`
+        SELECT id
+        FROM membership_requests
+        WHERE LOWER(wallet)=LOWER(${wallet})
+        LIMIT 1
+    `
+
+    if (existingWallet.length) {
+
+        return res.status(409).json({
+            error: 'This wallet is already registered.'
+        })
+
+    }
+
+}
+
+
     await sql`
       INSERT INTO membership_requests
       (
