@@ -7,6 +7,7 @@ export default function MembershipForm() {
 
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [error, setError] = useState('')
   const [privacyAccepted, setPrivacyAccepted] = useState(false)
 
   const [form, setForm] = useState({
@@ -32,7 +33,7 @@ export default function MembershipForm() {
     e.preventDefault()
 
     setLoading(true)
-
+   setError('')
     try {
 
       const res = await fetch('/api/membership/apply', {
@@ -65,12 +66,14 @@ wallet: '',
 
 setPrivacyAccepted(false)
 
-    } catch (err) {
-
-      console.error(err)
-      alert(err.message)
-
     }
+
+catch (err) {
+
+  console.error(err)
+  setError(err.message)
+
+}
 
     setLoading(false)
   }
@@ -118,12 +121,31 @@ setPrivacyAccepted(false)
       Join founders, builders and ecosystem participants exploring new opportunities together.
           </p>
 
-        </div>
+         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="space-y-6"
-        >
+        {error && (
+          <div className="bg-zinc-900 border border-red-700 rounded-2xl p-8 mb-8">
+
+           <h2 className="text-2xl font-bold text-red-400 mb-4">
+            Unable to Submit Request
+           </h2>
+
+            <p className="text-zinc-300">
+            {error}
+            </p>
+
+<p className="text-zinc-400 mt-3">
+  If you believe this is an error, please contact us.
+</p>
+
+
+          </div>
+        )}
+
+         <form
+           onSubmit={handleSubmit}
+           className="space-y-6"
+         >
 
           {/* Name */}
 
@@ -251,14 +273,14 @@ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
 
         <option>Founder</option>
         <option>Builder</option>
--<option>Developer</option>
--<option>Manager</option>
+<option>Developer</option>
+<option>Manager</option>
 <option>Investor</option>
-+<option>Business Angel</option>
-+<option>Specialist</option>
-+<option>Ecosystem Partner</option>
-+<option>Student</option>
-+<option>Other</option>
+<option>Business Angel</option>
+<option>Specialist</option>
+<option>Ecosystem Partner</option>
+<option>Student</option>
+<option>Other</option>
 
             </select>
 
