@@ -285,12 +285,6 @@ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
 
 </div>
 
-
-          <button
-            disabled={loading}
-            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-700"
-          >
-
 <div className="flex items-start gap-3">
 
   <input
@@ -318,9 +312,13 @@ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
   </label>
 
 </div>
-            {loading ? 'Submitting...' : 'Request Access'}
-          </button>
 
+<button
+  disabled={loading}
+  className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-700 text-white disabled:text-zinc-300 font-medium"
+>
+  {loading ? 'Submitting...' : 'Request Access'}
+</button>
         </form>
 
       </div>
