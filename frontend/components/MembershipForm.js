@@ -7,6 +7,7 @@ export default function MembershipForm() {
 
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [privacyAccepted, setPrivacyAccepted] = useState(false)
 
   const [form, setForm] = useState({
     full_name: '',
@@ -61,6 +62,8 @@ join_reason: '',
 wallet: '',
         membership_type: 'Founder',
       })
+
+setPrivacyAccepted(false)
 
     } catch (err) {
 
@@ -287,6 +290,34 @@ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
             disabled={loading}
             className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-700"
           >
+
+<div className="flex items-start gap-3">
+
+  <input
+    id="privacy"
+    type="checkbox"
+    required
+    checked={privacyAccepted}
+    onChange={(e) => setPrivacyAccepted(e.target.checked)}
+    className="mt-1 h-4 w-4 rounded border-zinc-700 bg-zinc-950"
+  />
+
+  <label
+    htmlFor="privacy"
+    className="text-sm text-zinc-400 leading-relaxed"
+  >
+    I have read and agree to the{" "}
+    <a
+      href="/privacy"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-400 hover:text-blue-300 underline"
+    >
+      Privacy Policy
+    </a>.
+  </label>
+
+</div>
             {loading ? 'Submitting...' : 'Request Access'}
           </button>
 
