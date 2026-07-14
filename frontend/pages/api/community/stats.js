@@ -40,7 +40,7 @@ export default async function handler(req, res) {
           /
           NULLIF(
             COUNT(*) FILTER (
-              WHERE status IN ('approved','declined')
+              WHERE status IN ('approved','rejected')
             ),
             0
           ),
