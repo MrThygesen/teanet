@@ -136,9 +136,7 @@ useEffect(() => {
   Who Shapes The Future
 </h2>
           <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-2xl">
-
-           EDGE Spaces brings together founders, builders, business angels and ecosystem partners and specialists.
-
+ Join the EDGE Spaces community and connect with founders, builders, business angels and ecosystem specialists shaping the next generation of startups.
           </p>
 
         </div>
@@ -223,8 +221,9 @@ useEffect(() => {
       <img
         src={spotlight.image}
         alt={spotlight.title}
-        className="block w-full aspect-square object-contain bg-zinc-900 transition-transform duration-300 group-hover:scale-[1.01]"
+        className="block w-full aspect-[4/5] md:aspect-square object-contain bg-zinc-900 transition-transform duration-300 group-hover:scale-[1.01]"
       />
+
 
     </div>
 
@@ -232,8 +231,7 @@ useEffect(() => {
 
   {/* CARD PREVIEW ROW */}
 
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 mt-6">
-
+<div className="hidden md:grid md:grid-cols-5 gap-4 mt-6">
     {spotlightItems.map((item, index) => (
 
       <div
@@ -257,6 +255,38 @@ useEffect(() => {
     ))}
 
   </div>
+
+{/* MOBILE CONTROLS */}
+
+ <div className="flex md:hidden items-center justify-center gap-6 mt-6">
+
+   <button
+     onClick={() =>
+       setActiveSpotlight(
+         activeSpotlight === 0
+           ? spotlightItems.length - 1
+           : activeSpotlight - 1
+       )
+     }
+     className="px-4 py-2 rounded-lg border border-zinc-700 hover:border-blue-500"
+   >
+     ←  ● ● 
+   </button>
+
+   <button
+     onClick={() =>
+       setActiveSpotlight(
+         (activeSpotlight + 1) % spotlightItems.length
+       )
+     }
+     className="px-4 py-2 rounded-lg border border-zinc-700 hover:border-blue-500"
+   >
+     ● ● →
+   </button>
+
+ </div>
+
+
 </div>
 </section>
 
