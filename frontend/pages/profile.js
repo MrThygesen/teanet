@@ -355,23 +355,94 @@ If you joined without providing a wallet, connect your Polygon-compatible wallet
 
 <div className="mt-10 mb-10 bg-zinc-900 border border-zinc-800 rounded-xl p-6">
 
-<div className="text-xl font-semibold">
+  <div className="text-xl font-semibold">
+    Connected Wallet
+  </div>
 
-Connected Wallet
-
-</div>
-
-<div className="text-zinc-400 mt-2">
-
-Verified wallet
+  <div className="font-mono text-sm mt-1 break-all">
+    {shortenAddress(address)}
+  </div>
 
 </div>
 
-<div className="font-mono text-sm mt-1 break-all">
+<div className="mb-10 bg-zinc-900 border border-zinc-800 rounded-xl p-6">
 
-{shortenAddress(address)}
+  <h2 className="text-xl font-semibold mb-6">
+    Membership Information
+  </h2>
 
-</div>
+  {membership?.status === 'none' ? (
+
+    <p className="text-zinc-500">
+      No membership found.
+    </p>
+
+  ) : (
+
+    <div className="space-y-4">
+
+      <ProfileRow
+        label="Status"
+value={
+  membership.claimed
+    ? 'Claimed'
+    : membership.status
+      ? membership.status.charAt(0).toUpperCase() +
+        membership.status.slice(1)
+      : '-'
+}
+      />
+
+      <ProfileRow
+        label="Name"
+        value={membership.full_name}
+      />
+
+      <ProfileRow
+        label="Company"
+        value={membership.company}
+      />
+
+      <ProfileRow
+        label="Membership"
+        value={membership.membership_type}
+      />
+
+      <ProfileRow
+        label="Telegram"
+        value={membership.telegram_username}
+      />
+
+      <ProfileRow
+        label="LinkedIn"
+        value={membership.linkedin_url}
+      />
+
+      <ProfileRow
+        label="Approved"
+        value={
+          membership.approved_at
+            ? new Date(
+                membership.approved_at
+              ).toLocaleDateString()
+            : '-'
+        }
+      />
+
+      <ProfileRow
+        label="Claimed"
+        value={
+          membership.claimed_at
+            ? new Date(
+                membership.claimed_at
+              ).toLocaleDateString()
+            : '-'
+        }
+      />
+
+    </div>
+
+  )}
 
 </div>
 
@@ -482,7 +553,8 @@ className="flex justify-between border-b border-zinc-800 pb-3"
 
           {!loading &&
             cards.length === 0 &&
-            membership?.status === 'approved' && (
+membership?.status === 'approved' &&
+!membership?.claimed && (
 
               <div className="bg-zinc-900 border border-green-700 rounded-xl p-10">
 
@@ -541,6 +613,55 @@ className="flex justify-between border-b border-zinc-800 pb-3"
               </div>
 
           )}
+
+{/* Already Claimed */}
+
+{!loading &&
+  cards.length === 0 &&
+  membership?.claimed && (
+
+<div className="bg-zinc-900 border border-blue-700 rounded-xl p-10">
+
+<h2 className="text-2xl font-semibold">
+
+Community Membership Claimed
+
+</h2>
+
+<p className="text-zinc-400 mt-4">
+
+Your Community Membership has already been claimed.
+
+</p>
+
+<p className="text-zinc-400 mt-2">
+
+Community Membership Claimed
+
+Your Community Membership has already been claimed.
+
+We're synchronizing your blockchain credentials.
+
+If your credential doesn't appear after refreshing the page, please try again in a few moments.
+
+</p>
+
+<button
+
+  onClick={fetchData}
+
+  className="mt-8 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700"
+
+>
+
+Refresh Credentials
+
+</button>
+
+</div>
+
+)}
+
 
           {/* Pending Approval */}
 
@@ -660,4 +781,26 @@ If your email matches an approved membership, this wallet will be linked to your
   )
 
 }
+
+
+function ProfileRow({ label, value }) {
+
+  return (
+
+    <div className="flex justify-between items-center border-b border-zinc-800 pb-3">
+
+      <span className="text-zinc-500">
+        {label}
+      </span>
+
+      <span className="text-right font-medium break-all">
+        {value || '-'}
+      </span>
+
+    </div>
+
+  )
+
+}
+
 
