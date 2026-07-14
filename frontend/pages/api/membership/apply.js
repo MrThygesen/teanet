@@ -24,6 +24,7 @@ export default async function handler(req, res) {
       company,
       linkedin_url,
 telegram_username,
+reason,
 join_reason,
       wallet,
       membership_type
@@ -77,6 +78,7 @@ if (wallet?.trim()) {
         company,       
         linkedin_url,    
 telegram_username,
+reason,
 join_reason,
         wallet,      
         membership_type
@@ -88,6 +90,7 @@ join_reason,
         ${company},
         ${linkedin_url},
         ${telegram_username},
+        ${reason},       
         ${join_reason},
         ${wallet},
         ${membership_type}

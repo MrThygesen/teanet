@@ -16,6 +16,7 @@ export default function MembershipForm() {
     linkedin_url: '',
     company: '',    
     telegram_username: '',
+    reason: '',    
     join_reason: '',    
     wallet: '',    
     membership_type: 'Founder'
@@ -59,6 +60,7 @@ export default function MembershipForm() {
         linkedin_url: '',
 company: '',
 telegram_username: '',
+reason,
 join_reason: '',      
 wallet: '',
         membership_type: 'Founder',
@@ -290,20 +292,43 @@ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
 
 <div>
 
-<label className="block text-sm text-zinc-400 mb-2">
-Why would you like to join EDGE Spaces?
-</label>
+ <label className="block text-sm text-zinc-400 mb-2">
+ Primary Purpose of Joining
+ </label>
 
-<textarea
-rows={4}
-required
-placeholder="Tell us a little about yourself, what you're building or what you hope to contribute."
-value={form.join_reason}
-onChange={(e)=>
-updateField('join_reason', e.target.value)
-}
-className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
-/>
+ <select
+ required
+ value={form.reason}
+ onChange={(e)=>
+ updateField('reason', e.target.value)
+ }
+ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+ >
+   <option value="">Select...</option>
+   <option>Build Startups</option>
+  <option>Find Co-founders</option>
+   <option>Join Startup Teams</option>
+   <option>Angel Investing</option>
+   <option>Mentor Founders</option>
+   <option>Share Expertise</option>
+   <option>Expand Professional Network</option>
+   <option>Explore EDGE Spaces</option>
+   <option>Other</option>
+ </select>
+
+ <label className="block text-sm text-zinc-400 mb-2 mt-6">
+ Tell us a little about yourself
+ </label>
+
+ <textarea
+ rows={4}
+ required
+ value={form.join_reason}
+ onChange={(e)=>
+ updateField('join_reason', e.target.value)
+ }
+ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
+ />
 
 </div>
 

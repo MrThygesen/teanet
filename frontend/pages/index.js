@@ -59,27 +59,61 @@ const spotlightItems = [
 
 export default function Home() {
 
-  const { isConnected, address } = useAccount()
+const { isConnected, address } = useAccount()
 
-  const isAdmin =
-    address?.toLowerCase() ===
-    process.env.NEXT_PUBLIC_ADMIN?.toLowerCase()
+const isAdmin =
+  address?.toLowerCase() ===
+  process.env.NEXT_PUBLIC_ADMIN?.toLowerCase()
 
-  const [activeSpotlight, setActiveSpotlight] = useState(0)
+const [activeSpotlight, setActiveSpotlight] = useState(0)
 
-  useEffect(() => {
+const [communityStats, setCommunityStats] = useState({
+  members: 0,
+  founders: 0,
+  builders: 0,
+  angels: 0,
+  partners: 0,
+  approvalRate: 0
+})
+  
+useEffect(() => {
 
-    const interval = setInterval(() => {
+  async function loadStats() {
 
-      setActiveSpotlight(prev =>
-        (prev + 1) % spotlightItems.length
-      )
+    try {
 
-    }, 5000)
+      const res = await fetch('/api/community/stats')
 
-    return () => clearInterval(interval)
+      const data = await res.json()
 
-  }, [])
+      setCommunityStats(data)
+
+    } catch (err) {
+
+      console.error(err)
+
+    }
+
+  }
+
+  loadStats()
+
+}, [])
+
+
+useEffect(() => {
+
+  const interval = setInterval(() => {
+
+    setActiveSpotlight(prev =>
+      (prev + 1) % spotlightItems.length
+    )
+
+  }, 5000)
+
+  return () => clearInterval(interval)
+
+}, [])
 
   const spotlight = spotlightItems[activeSpotlight]
 
@@ -114,26 +148,53 @@ export default function Home() {
         <div className="grid md:grid-cols-4 gap-5 mt-14">
 
 <FeatureCard
+ count={communityStats.founders}
   title="Founders"
   text="Entrepreneurs building startups and new ventures."
 />
 
 <FeatureCard
+ count={communityStats.builders}
   title="Builders"
   text="Developers, technical minds and product people."
 />
 
 <FeatureCard
+ count={communityStats.angels}
   title="Business Angels"
   text="Supporting founders through relationships and experience."
 />
 
 <FeatureCard
+ count={communityStats.partners}
   title="Ecosystem Partners"
   text="Accelerators, venture builders and innovation organizations."
 />
-
         </div>
+
+<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+
+  <StatCard
+    value={communityStats.members}
+    label="Members"
+  />
+
+  <StatCard
+    value={`${communityStats.approvalRate}%`}
+    label="Approval Rate"
+  />
+
+  <StatCard
+    value="Manual"
+    label="Application Review"
+  />
+
+  <StatCard
+    value="Private"
+    label="Telegram Community"
+  />
+
+</div>
 
       </section>
 
@@ -290,8 +351,8 @@ Telegram is free to use and creating an account takes about one minute.
 
     <div className="space-y-4 text-zinc-300">
 
-<div> ✓ Private Telegram community </div>
-<div> ✓ Manual application review </div>
+<div> ✓ Private Community </div>
+<div> ✓ Invitation & Review </div>
 <div> ✓ Telegram account required (free) </div>
 <div> ✓ Founder, builder and investor introductions </div>
 <div> ✓ Hackathons and ecosystem events </div>
@@ -418,11 +479,17 @@ Telegram is free to use and creating an account takes about one minute.
 /* COMPONENTS */
 /* ===================================================== */
 
-function FeatureCard({ title, text }) {
+function FeatureCard({ title, text, count }) {
 
   return (
 
     <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+
+{count > 0 && (
+  <div className="text-3xl font-bold text-blue-400 mb-3">
+    {count}
+  </div>
+)}
 
       <div className="text-lg font-semibold">
         {title}
@@ -438,3 +505,22 @@ function FeatureCard({ title, text }) {
 
 }
 
+function StatCard({ value, label }) {
+
+  return (
+
+    <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 text-center">
+
+      <div className="text-3xl font-bold text-blue-400">
+        {value}
+      </div>
+
+      <div className="mt-2 text-sm uppercase tracking-wide text-zinc-500">
+        {label}
+      </div>
+
+    </div>
+
+  )
+
+}
