@@ -24,14 +24,12 @@ export default function Profile() {
   const { writeContractAsync } = useWriteContract()
 
   const [cards,setCards] = useState([])
-  const [membership,setMembership] = useState(null)
-
   const [loading,setLoading] = useState(true)
   const [claiming,setClaiming] = useState(false)
    
   const [email, setEmail] = useState('')
   const [updatingWallet, setUpdatingWallet] = useState(false)
-
+  const [membership, setMembership] = useState(null)
 
   const fetchData = useCallback(async()=>{
 
@@ -371,11 +369,17 @@ If you joined without providing a wallet, connect your Polygon-compatible wallet
     Membership Information
   </h2>
 
-  {membership?.status === 'none' ? (
+  {loading ? (
 
-    <p className="text-zinc-500">
-      No membership found.
-    </p>
+  <p className="text-zinc-500">
+    Loading membership...
+  </p>
+
+) : membership?.status === 'none' ? (
+
+  <p className="text-zinc-500">
+    No membership found.
+  </p>
 
   ) : (
 
@@ -395,33 +399,34 @@ value={
 
       <ProfileRow
         label="Name"
-        value={membership.full_name}
+value={membership?.full_name}
       />
+
+
 
       <ProfileRow
         label="Company"
-        value={membership.company}
-      />
+value={membership?.company}      />
 
       <ProfileRow
         label="Membership"
-        value={membership.membership_type}
+        value={membership?.membership_type}
       />
 
       <ProfileRow
         label="Telegram"
-        value={membership.telegram_username}
+        value={membership?.telegram_username}
       />
 
       <ProfileRow
         label="LinkedIn"
-        value={membership.linkedin_url}
+        value={membership?.linkedin_url}
       />
 
       <ProfileRow
         label="Approved"
         value={
-          membership.approved_at
+          membership?.approved_at
             ? new Date(
                 membership.approved_at
               ).toLocaleDateString()
@@ -429,19 +434,15 @@ value={
         }
       />
 
-      <ProfileRow
-        label="Claimed"
-       value={
-  membership?.claimed
-    ? 'Claimed'
-    : membership?.status
-      ? membership?.status.charAt(0).toUpperCase() +
-        membership?.status.slice(1)
-      : '-'
-}
-      />
-
-    </div>
+<ProfileRow
+    label="Claimed"
+    value={
+        membership?.claimed_at
+            ? new Date(membership.claimed_at).toLocaleDateString()
+            : '-'
+    }
+/>
+     </div>
 
   )}
 
@@ -588,13 +589,15 @@ membership?.status === 'approved' &&
 
 </div>
 
-<p className="text-center text-zinc-500 mt-6 max-w-lg mx-auto">
+<p className="text-zinc-400 mt-2">
 
-  Your Digital Membership is a permanent blockchain credential issued on
-  Polygon Mainnet. After claiming, it will appear on your Profile and can
-  also be viewed in compatible wallets and NFT marketplaces.
+We're synchronizing your blockchain credentials.
+
+If your credential doesn't appear after refreshing the page,
+please try again in a few moments.
 
 </p>
+
 
 <button
 
