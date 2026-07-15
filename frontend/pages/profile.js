@@ -384,11 +384,11 @@ If you joined without providing a wallet, connect your Polygon-compatible wallet
       <ProfileRow
         label="Status"
 value={
-  membership.claimed
+  membership?.claimed
     ? 'Claimed'
-    : membership.status
-      ? membership.status.charAt(0).toUpperCase() +
-        membership.status.slice(1)
+    : membership?.status
+      ? membership?.status.charAt(0).toUpperCase() +
+        membership?.status.slice(1)
       : '-'
 }
       />
@@ -431,13 +431,14 @@ value={
 
       <ProfileRow
         label="Claimed"
-        value={
-          membership.claimed_at
-            ? new Date(
-                membership.claimed_at
-              ).toLocaleDateString()
-            : '-'
-        }
+       value={
+  membership?.claimed
+    ? 'Claimed'
+    : membership?.status
+      ? membership?.status.charAt(0).toUpperCase() +
+        membership?.status.slice(1)
+      : '-'
+}
       />
 
     </div>
