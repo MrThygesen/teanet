@@ -56,19 +56,19 @@ export default function Profile() {
               'function tokenURI(uint256) view returns(string)'
           ])
 
-          const tokenIds=await publicClient.readContract({
-
 console.log("Wallet:", address)
 console.log("Contract:", CONTRACT_ADDRESS)
+
+const tokenIds = await publicClient.readContract({
+
+    address: CONTRACT_ADDRESS,
+    abi,
+    functionName: 'tokensOfOwner',
+    args: [address]
+
+})
+
 console.log("Token IDs:", tokenIds)
-
-              address:CONTRACT_ADDRESS,
-              abi,
-              functionName:'tokensOfOwner',
-              args:[address]
-
-          })
-
           const owned=[]
 
           for(const tokenId of tokenIds){
@@ -86,13 +86,12 @@ console.log("Token IDs:", tokenIds)
 
                   const res=await fetch(uri)
 
-                  const metadata=await res.json()
+               const metadata = await res.json()
 
 console.log("URI:", uri)
 console.log("Metadata:", metadata)
 
-                  owned.push({
-
+owned.push({
                       tokenId:Number(tokenId),
                       metadata
 
@@ -106,13 +105,14 @@ console.log("Metadata:", metadata)
 
           }
 
+console.log("Owned:", owned)
           setCards(owned)
 
       }catch(err){
 
           console.error(err)
 
-console.log("Owned:", owned)
+
 
       }
 
