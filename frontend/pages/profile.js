@@ -58,6 +58,10 @@ export default function Profile() {
 
           const tokenIds=await publicClient.readContract({
 
+console.log("Wallet:", address)
+console.log("Contract:", CONTRACT_ADDRESS)
+console.log("Token IDs:", tokenIds)
+
               address:CONTRACT_ADDRESS,
               abi,
               functionName:'tokensOfOwner',
@@ -84,6 +88,9 @@ export default function Profile() {
 
                   const metadata=await res.json()
 
+console.log("URI:", uri)
+console.log("Metadata:", metadata)
+
                   owned.push({
 
                       tokenId:Number(tokenId),
@@ -104,6 +111,8 @@ export default function Profile() {
       }catch(err){
 
           console.error(err)
+
+console.log("Owned:", owned)
 
       }
 
