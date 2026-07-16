@@ -1,9 +1,11 @@
 {
   "name": "EDGE Spaces Membership",
-  "description": "Professional digital credentials issued by EDGE Spaces.",
+  "description": "Digital credentials for founders, builders, advisors and investors participating in the EDGE Spaces ecosystem.",
   "image": "https://edgespaces.xyz/images/community.jpg",
   "banner_image": "https://edgespaces.xyz/images/banner.jpg",
-  "external_link": "https://edgespaces.xyz",
-  "seller_fee_basis_points": 0,
-  "fee_recipient": "0x0000000000000000000000000000000000000000"
+  "featured_image": "https://edgespaces.xyz/images/banner.jpg",
+  "external_link": "https://edgespaces.xyz"
 }
+
+
+
