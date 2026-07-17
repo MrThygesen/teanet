@@ -137,7 +137,7 @@ useEffect(() => {
 </h2>
 
 <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
-The innovation ecosystem for founders, builders, advisors, investors and ecosystem partners. Connect with the people, knowledge and opportunities that transform ideas into companies.
+The innovation ecosystem for founders, builders, advisors, investors and ecosystem partners. Connect with the people, knowledge and opportunities that accelerate innovation from idea to execution.
 </p>
         </div>
 
