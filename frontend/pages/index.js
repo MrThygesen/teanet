@@ -15,8 +15,8 @@ const spotlightItems = [
     subtitle: 'Who Shapes The Future',
     description:
       'Founders and startup teams building the next generation of companies.',
-    image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/founders.jpg'
+    image: 
+      '/images/founders.jpg'
   },
 
   {
@@ -25,7 +25,7 @@ const spotlightItems = [
     description:
       'Developers, makers and product people turning ideas into reality.',
     image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/builders.jpg'
+      '/images/builders.jpg'
   },
 
   {
@@ -34,7 +34,7 @@ subtitle: 'Fuel Innovation',
 description:
 'Angel investors, venture investors and experienced operators supporting founders through capital, mentorship and strategic relationships.',
     image:
-     'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/business-angels.jpg'
+     '/images/investors.jpg'
   },
 
   {
@@ -43,7 +43,7 @@ description:
   description:
 'Accelerators, venture builders and organizations helping founders and builders grow.',
     image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/ecosystem-partners.jpg'
+      '/images/ecosystem-partners.jpg'
   },
 
   {
@@ -52,7 +52,7 @@ description:
     description:
     'Experts, advisors and specialists supporting emerging teams and innovation.',
     image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/ecosystem-supporters.jpg'
+      '/images/ecosystem-supporters.jpg'
   }
 
 ]
@@ -353,7 +353,7 @@ Meet the Ecosystem
 
   <p className="text-zinc-400 max-w-3xl mb-12">
 
-Get Access to EDGE Spaces commnunity and innovation ecosystem.
+Join the EDGE Spaces innovation ecosystem.
 
 Applications are reviewed manually to build a trusted network of founders, builders, advisors, investors and ecosystem partners.
 
@@ -370,7 +370,7 @@ Applications are reviewed manually to build a trusted network of founders, build
 
     <p className="text-zinc-400 leading-relaxed mb-8">
 
-   Membership includes access to the private EDGE Spaces Telegram community.
+   Membership includes access to the private EDGE Spaces member community on Telegram.
 
 Telegram is free to use and creating an account takes about one minute.
 
