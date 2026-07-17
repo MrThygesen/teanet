@@ -278,7 +278,9 @@ className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
 <option>Developer</option>
 <option>Manager</option>
 <option>Investor</option>
-<option>Business Angel</option>
+<option>Angel Investor</option>
+<option>VC Investor</option>
+<option>Family Office</option>
 <option>Specialist</option>
 <option>Ecosystem Partner</option>
 <option>Student</option>

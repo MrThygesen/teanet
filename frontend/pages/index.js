@@ -29,12 +29,12 @@ const spotlightItems = [
   },
 
   {
-    title: 'Business Angels',
-    subtitle: 'Support The Ecosystem',
-    description:
-'Business angels and experienced operators supporting founders through relationships, mentorship and opportunities.',
+title: 'Investors',
+subtitle: 'Fuel Innovation',
+description:
+'Angel investors, venture investors and experienced operators supporting founders through capital, mentorship and strategic relationships.',
     image:
-      'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/business-angels.jpg'
+     'https://raw.githubusercontent.com/MrThygesen/teanet/main/data/business-angels.jpg'
   },
 
   {
@@ -133,12 +133,12 @@ useEffect(() => {
 </div>
 
 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-  Who Shapes The Future
+  The Innovation Ecosystem
 </h2>
-          <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-2xl">
- Join the EDGE Spaces community and connect with founders, builders, business angels and ecosystem specialists shaping the next generation of startups.
-          </p>
 
+<p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
+The innovation ecosystem for founders, builders, advisors, investors and ecosystem partners. Connect with the people, knowledge and opportunities that transform ideas into companies.
+</p>
         </div>
 
         {/* WHO WE SUPPORT */}
@@ -159,8 +159,8 @@ useEffect(() => {
 
 <FeatureCard
  count={communityStats.angels}
-  title="Business Angels"
-  text="Supporting founders through relationships and experience."
+  title="Investors"
+text="Supporting founders through capital, experience and strategic relationships."
 />
 
 <FeatureCard
@@ -204,7 +204,7 @@ useEffect(() => {
       >
 
 <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-8">
-  Community Preview
+Meet the Ecosystem
 </div>
 
 {/* SPOTLIGHT CARD */}
@@ -353,10 +353,9 @@ useEffect(() => {
 
   <p className="text-zinc-400 max-w-3xl mb-12">
 
-Join the private EDGE Spaces community.
+Get Access to EDGE Spaces commnunity and innovation ecosystem.
 
-Applications are reviewed manually to maintain
-a high-quality network.
+Applications are reviewed manually to build a trusted network of founders, builders, advisors, investors and ecosystem partners.
 
 </p>
 
@@ -381,13 +380,12 @@ Telegram is free to use and creating an account takes about one minute.
 
     <div className="space-y-4 text-zinc-300">
 
-<div> ✓ Private Community </div>
-<div> ✓ Invitation & Review </div>
-<div> ✓ Telegram account required (free) </div>
-<div> ✓ Founder, builder and investor introductions </div>
-<div> ✓ Hackathons and ecosystem events </div>
-<div> ✓ Optional Digital Membership Card with future benefits </div>
-
+✓ Access to the EDGE Spaces innovation ecosystem
+✓ Membership by application
+✓ Private Telegram collaboration
+✓ Founder, builder and investor connections
+✓ Ecosystem events and opportunities
+✓ Optional Digital Membership with future ecosystem benefits
     </div>
 
     <a
@@ -429,8 +427,6 @@ Telegram is free to use and creating an account takes about one minute.
 
 {/* FOOTER */}
 
-{/* FOOTER */}
-
 <footer className="border-t border-zinc-800 py-12 mt-20">
 
   <div className="max-w-6xl mx-auto px-6">
@@ -450,7 +446,7 @@ Telegram is free to use and creating an account takes about one minute.
   </div>
 
   <div className="mt-6 text-zinc-200 leading-relaxed">
-    Connecting founders, builders, business angels and startup ecosystems.
+The innovation ecosystem connecting founders, builders, advisors, investors and ecosystem partners.
   </div>
 
   <div className="mt-6 text-sm font-semibold tracking-wider uppercase text-blue-300">

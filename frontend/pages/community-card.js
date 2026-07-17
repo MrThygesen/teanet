@@ -56,8 +56,7 @@ export default function CommunityCard() {
 
           <p className="text-lg text-zinc-400 leading-relaxed">
 
-            Your Digital Membership is a permanent blockchain credential that
-            proves your verified membership within the EDGE Spaces ecosystem.
+           Your Digital Membership is a permanent blockchain credential proving your verified membership within the EDGE Spaces innovation ecosystem.
 
           </p>
 

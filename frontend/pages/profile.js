@@ -286,7 +286,7 @@ My Credentials
 
 <p className="text-zinc-400 mt-2">
 
-Official EDGE Spaces digital credentials.
+Official digital credentials for members of the EDGE Spaces innovation ecosystem.
 
 </p>
 
@@ -577,7 +577,8 @@ membership?.status === 'approved' &&
 
                 <p className="text-zinc-400 mt-4">
 
-                  Your membership application has been approved.
+                  Welcome to the EDGE Spaces innovation ecosystem.
+Your membership application has been approved.
 
                 </p>
 
