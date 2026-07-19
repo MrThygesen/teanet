@@ -27,16 +27,55 @@ Digital Membership
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-            By claiming the membership card, you get a digital proof and access to future advanced services, Digital Collections and voting for changes in EDGE Spaces.
+            We apply Polygon Blockchain to enable your membership card for very low costs.  
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            We apply Polygon Blockchain to enable your membership card, so you need to apply a wallet such as Metamask, Rainbow ot similar to claim with a minimal fee. 
+            You need to apply a wallet such as Metamask, Rainbow ot similar to claim the Membership Card with a minimal fee. The process is super simple and requires 
           </p>
 
         </div>
 
       </section>
+
+      {/* ===================================================== */}
+      {/* DIGITAL MEMBERSHIP */}
+      {/* ===================================================== */}
+
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
+
+        <div className="flex justify-center">
+
+          <img
+            src="/data/example-membership-card.jpg"
+            alt="EDGE Spaces Digital Membership"
+            className="w-full max-w-lg rounded-3xl border border-zinc-800"
+          />
+
+        </div>
+
+        <div className="max-w-3xl mx-auto text-center mt-10">
+
+          <h2 className="text-3xl font-bold mb-6">
+           Your Community Membership
+          </h2>
+          <p className="text-lg text-zinc-400 leading-relaxed">
+Your Digital Membership is issued by EDGE Spaces on the Polygon Blockchain.   
+          </p>
+
+          <p className="mt-6 text-zinc-500 leading-relaxed">
+            Unlike traditional memberships, your credential belongs to you and you have it as a permanent membership card written to your wallet.         
+        </p>
+
+          <p className="mt-6 text-zinc-500 leading-relaxed">
+Today it represents your membership, while we keep an open mind to develop services that make sense to the community.  
+
+          </p>
+
+        </div>
+
+      </section>
+
 
       {/* ===================================================== */}
       {/* YOUR DIGITAL Membership */}
@@ -51,13 +90,6 @@ Digital Membership
         <h2 className="text-4xl font-bold mb-6">
           More Than Membership
         </h2>
-
-        <p className="text-zinc-400 max-w-3xl mb-12 leading-relaxed">
-          Your Digital Membership is only the beginning.
-          As EDGE Spaces evolves, your membership credential can
-          unlock new experiences, partner initiatives, digital
-          collections and community participation.
-        </p>
 
         <div className="grid md:grid-cols-3 gap-6">
 
@@ -95,8 +127,10 @@ Digital Membership
 
       </section>
 
+   
+
       {/* ===================================================== */}
-      {/* WHY BLOCKCHAIN */}
+      {/* FUTURE ECOSYSTEM */}
       {/* ===================================================== */}
 
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
@@ -110,11 +144,11 @@ Digital Membership
         </h2>
 
         <p className="text-zinc-400 leading-relaxed max-w-3xl">
-          As the EDGE Spaces innovation network grows,
-we plan to introduce additional benefits built
-around your Digital Membership, including partner
-initiatives, digital collections, community
-recognition and future participation features.
+    As the EDGE Spaces innovation network grows,
+    we plan to introduce additional benefits built
+    around your Digital Membership, including partner
+    initiatives, digital collections, community
+    recognition and future participation features.
 
 
         </p>
