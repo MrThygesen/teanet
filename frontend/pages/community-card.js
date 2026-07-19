@@ -17,21 +17,22 @@ export default function CommunityCard() {
         <div className="max-w-3xl">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-Digital Membership
+            Digital Membership
           </div>
 
-
-
           <h1 className="text-5xl font-bold leading-tight">
-           Digital Membership in EDGE Spaces
+            Digital Membership in EDGE Spaces
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-            The Digital Membership serves as a proof that you are part of the community.   
+            Your Digital Membership confirms that you are part of the
+            EDGE Spaces innovation network.
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-With the Membership you get 
+            It is the foundation for future member services,
+            collaborations, digital collections and community
+            participation.
           </p>
 
         </div>
@@ -56,92 +57,75 @@ With the Membership you get
 
         <div className="max-w-3xl mx-auto text-center mt-10">
 
-
-
-
-
           <h2 className="text-3xl font-bold mb-6">
-           Your Community Membership
+            Your Community Membership
           </h2>
-          <p className="text-lg text-zinc-400 leading-relaxed">
 
-We apply Polygon Blockchain to enable your membership card for very low costs.
-# Your Digital Membership is issued by EDGE Spaces on the Polygon Blockchain.   
+          <p className="text-lg text-zinc-400 leading-relaxed">
+            Your Digital Membership is issued by EDGE Spaces and belongs to you.
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            Unlike traditional memberships, your credential belongs to you and you have it as a permanent membership card written to your wallet.
-# You need to apply a wallet such as Metamask, Rainbow ot similar to claim the Membership Card with a minimal fee. The process is super simple and requires
-
-         
-        </p>
-
-          <p className="mt-6 text-zinc-500 leading-relaxed">
-You need to apply a wallet such as Metamask, Rainbow ot similar to claim the Membership Card. You would need to pay a very small fee for the card transaction. The process is super simple and requires a wallet. 
- 
-Today it represents your membership, while we keep an open mind to develop services that make sense to the community.  
-
+            To claim your membership you'll need a compatible wallet.
+            The process takes only a few minutes and the network fee is very small.
           </p>
 
         </div>
 
       </section>
 
-
       {/* ===================================================== */}
-      {/* YOUR DIGITAL Membership */}
+      {/* BEYOND MEMBERSHIP */}
       {/* ===================================================== */}
 
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
-     <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-  Beyond Membership
-</div>
+        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+          Beyond Membership
+        </div>
 
-        <h2 className="text-4xl font-bold mb-6">
+        <h2 className="text-4xl font-bold mb-10">
           More Than Membership
         </h2>
 
         <div className="grid md:grid-cols-3 gap-6">
 
           <BenefitCard
-           title="Community Membership"
-           text="A blockchain membership credential issued by EDGE Spaces."
+            title="Community Membership"
+            text="Your permanent membership in EDGE Spaces."
           />
 
           <BenefitCard
             title="Partner Benefits"
-            text="Access future partner initiatives, ecosystem opportunities and exclusive member experiences."
+            text="Exclusive opportunities from ecosystem partners."
           />
 
           <BenefitCard
             title="EDGE Collection"
-            text="Mint curated digital editions sponsored by companies and ecosystem partners while supporting artists and the community."
+            text="Exclusive digital collections for members."
           />
 
           <BenefitCard
             title="Event Collectibles"
-            text="Collect limited digital editions from conferences, demo days, hackathons and community events."
+            text="Digital keepsakes from community events."
           />
 
           <BenefitCard
             title="Community Recognition"
-            text="Receive digital achievements recognising mentoring, collaboration and meaningful ecosystem contributions."
+            text="Recognition for contributions to the community."
           />
 
           <BenefitCard
-            title="Governance Ready"
-            text="Prepared for future community participation, voting and ecosystem governance."
+            title="Future Ready"
+            text="Built for future community participation."
           />
 
         </div>
 
       </section>
 
-   
-
       {/* ===================================================== */}
-      {/* FUTURE ECOSYSTEM */}
+      {/* FUTURE */}
       {/* ===================================================== */}
 
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
@@ -154,29 +138,23 @@ Today it represents your membership, while we keep an open mind to develop servi
           Growing With The Community
         </h2>
 
-        <p className="text-zinc-400 leading-relaxed max-w-3xl">
-    As the EDGE Spaces innovation network grows,
-    we plan to introduce additional benefits built
-    around your Digital Membership, including partner
-    initiatives, digital collections, community
-    recognition and future participation features.
-
-
+        <p className="text-zinc-400 max-w-3xl leading-relaxed">
+          As EDGE Spaces evolves, your Digital Membership can unlock
+          partner initiatives, community recognition,
+          exclusive digital collections and future member services.
         </p>
 
-        <div className="mt-10 space-y-4 text-zinc-300">
+        <div className="mt-10 space-y-3 text-zinc-300">
 
-          <div>✓ Sponsored digital collections</div>
+          <div>✓ Partner initiatives</div>
 
-          <div>✓ EDGE Collection member editions</div>
+          <div>✓ EDGE Collection</div>
 
-          <div>✓ Partner campaigns and rewards</div>
+          <div>✓ Event collectibles</div>
 
-          <div>✓ Founder and contributor recognition</div>
+          <div>✓ Community recognition</div>
 
-          <div>✓ Community achievements</div>
-
-          <div>✓ Future governance participation</div>
+          <div>✓ Future participation</div>
 
         </div>
 
@@ -192,16 +170,17 @@ Today it represents your membership, while we keep an open mind to develop servi
         <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 text-center">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Join the Innovation Network
+            Join EDGE Spaces
           </div>
 
           <h2 className="text-4xl font-bold mb-6">
-            Start Your Digital Membership
+            Become Part of the Community
           </h2>
 
           <p className="max-w-3xl mx-auto text-zinc-400 leading-relaxed">
-     Whether you're joining EDGE Spaces for the first time or you're already an approved member,
-your Digital Membership gives you access to future participation across the EDGE Spaces innovation network.
+            Join the EDGE Spaces innovation network or claim your Digital
+            Membership to access future member initiatives, digital collections
+            and community opportunities.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-12 text-left">
@@ -213,8 +192,8 @@ your Digital Membership gives you access to future participation across the EDGE
               </div>
 
               <p className="text-zinc-400 leading-relaxed">
-                Apply to join our curated innovation network and connect with
-                founders, builders, investors, advisors and ecosystem partners.
+                Apply to join our curated innovation network for founders,
+                builders, investors, advisors and ecosystem partners.
               </p>
 
               <a
@@ -233,24 +212,19 @@ your Digital Membership gives you access to future participation across the EDGE
               </div>
 
               <p className="text-zinc-400 leading-relaxed">
-                Connect your Polygon-compatible wallet and claim your Digital
-                Membership from your profile. Your wallet remains optional until
-                you're ready.
+                Connect your wallet and claim your Digital Membership.
+                It only takes a few minutes.
               </p>
 
               <a
                 href="/wallet-setup"
                 className="inline-flex mt-8 px-6 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition font-semibold"
               >
-                Claim Digital Membership
+                Claim Membership
               </a>
 
             </div>
 
-          </div>
-
-          <div className="mt-12 text-zinc-500 text-sm">
-            Digital Membership • EDGE Collection • Partner Benefits • Community Recognition
           </div>
 
         </div>
@@ -300,5 +274,3 @@ function BenefitCard({ title, text }) {
     </div>
   )
 }
-
-
