@@ -45,7 +45,8 @@ export default function CommunityCard() {
 
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
 
-        <div className="flex justify-center">
+
+         <div className="max-w-3xl">
 
           <img
             src="/data/example-membership-card.jpg"
