@@ -27,11 +27,11 @@ Digital Membership
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-            We apply Polygon Blockchain to enable your membership card for very low costs.  
+            The Digital Membership serves as a proof that you are part of the community.   
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            You need to apply a wallet such as Metamask, Rainbow ot similar to claim the Membership Card with a minimal fee. The process is super simple and requires 
+With the Membership you get 
           </p>
 
         </div>
@@ -56,18 +56,29 @@ Digital Membership
 
         <div className="max-w-3xl mx-auto text-center mt-10">
 
+
+
+
+
           <h2 className="text-3xl font-bold mb-6">
            Your Community Membership
           </h2>
           <p className="text-lg text-zinc-400 leading-relaxed">
-Your Digital Membership is issued by EDGE Spaces on the Polygon Blockchain.   
+
+We apply Polygon Blockchain to enable your membership card for very low costs.
+# Your Digital Membership is issued by EDGE Spaces on the Polygon Blockchain.   
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            Unlike traditional memberships, your credential belongs to you and you have it as a permanent membership card written to your wallet.         
+            Unlike traditional memberships, your credential belongs to you and you have it as a permanent membership card written to your wallet.
+# You need to apply a wallet such as Metamask, Rainbow ot similar to claim the Membership Card with a minimal fee. The process is super simple and requires
+
+         
         </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
+You need to apply a wallet such as Metamask, Rainbow ot similar to claim the Membership Card. You would need to pay a very small fee for the card transaction. The process is super simple and requires a wallet. 
+ 
 Today it represents your membership, while we keep an open mind to develop services that make sense to the community.  
 
           </p>
