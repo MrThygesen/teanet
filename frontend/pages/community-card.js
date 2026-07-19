@@ -55,7 +55,7 @@ export default function CommunityCard() {
 
         </div>
 
-        <div className="max-w-3xl mx-auto text-center mt-10">
+       <div className="max-w-3xl mx-auto mt-10">
 
           <h2 className="text-3xl font-bold mb-6">
             Your Community Membership
@@ -66,7 +66,7 @@ export default function CommunityCard() {
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            To claim your membership you'll need a compatible wallet.
+            To claim your membership you'll need a Polygon compatible wallet.
             The process takes only a few minutes and the network fee is very small.
           </p>
 
