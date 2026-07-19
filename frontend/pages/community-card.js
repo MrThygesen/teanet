@@ -23,78 +23,20 @@ Digital Membership
 
 
           <h1 className="text-5xl font-bold leading-tight">
-           Your Digital Membership in EDGE Spaces
+           Digital Membership in EDGE Spaces
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-            Your Digital Membership is your membership credential within the
-            EDGE Spaces innovation network.
+            By claiming the membership card, you get a digital proof and access to future advanced services, Digital Collections and voting for changes in EDGE Spaces.
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            It confirms your membership today while becoming the foundation
-            for future ecosystem initiatives, partner collaborations,
-            digital collections and community participation.
-          </p>
-
-          <p className="mt-6 text-zinc-500 leading-relaxed">
-            A blockchain wallet is completely optional.
-            Members can connect a Polygon-compatible wallet at any time
-            and claim their Digital Membership directly from their profile
-            after approval.
+            We apply Polygon Blockchain to enable your membership card, so you need to apply a wallet such as Metamask, Rainbow ot similar to claim with a minimal fee. 
           </p>
 
         </div>
 
       </section>
-
-      {/* ===================================================== */}
-      {/* DIGITAL MEMBERSHIP */}
-      {/* ===================================================== */}
-
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
-
-        <div className="flex justify-center">
-
-          <img
-            src="/data/example-membership-card.jpg"
-            alt="EDGE Spaces Digital Membership"
-            className="w-full max-w-lg rounded-3xl border border-zinc-800"
-          />
-
-        </div>
-
-        <div className="max-w-3xl mx-auto text-center mt-10">
-
-          <h2 className="text-3xl font-bold mb-6">
-           Your Community Membership
-          </h2>
-          <p className="text-lg text-zinc-400 leading-relaxed">
-           Your Digital Membership is a blockchain membership credential
-issued by EDGE Spaces.
-
-It confirms that this wallet has been issued a valid
-EDGE Spaces membership.
-          </p>
-
-          <p className="mt-6 text-zinc-500 leading-relaxed">
-            Unlike traditional memberships, your credential belongs to you.
-            It remains in your own wallet while still being recognised by
-            the EDGE Spaces platform and compatible Polygon wallets.
-          </p>
-
-          <p className="mt-6 text-zinc-500 leading-relaxed">
-Today it represents your membership.
-Over time it can become the foundation for additional
-community participation, digital collections and
-ecosystem experiences.
-
-          </p>
-
-        </div>
-
-      </section>
-
 
       {/* ===================================================== */}
       {/* YOUR DIGITAL Membership */}
@@ -155,36 +97,6 @@ ecosystem experiences.
 
       {/* ===================================================== */}
       {/* WHY BLOCKCHAIN */}
-      {/* ===================================================== */}
-
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
-
-        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Why Blockchain?
-        </div>
-
-        <h2 className="text-4xl font-bold mb-6">
-          Real Ownership
-        </h2>
-
-        <p className="text-zinc-400 leading-relaxed">
-          Traditional communities store memberships inside their own
-          systems.
-        </p>
-
-        <p className="mt-6 text-zinc-400 leading-relaxed">
-          EDGE Spaces allows members to own their membership
-          credential.....
-        </p>
-
-        <p className="mt-6 text-zinc-500 leading-relaxed">
-          We believe the card can be applied for future services and   
-        </p>
-
-      </section>
-
-      {/* ===================================================== */}
-      {/* FUTURE ECOSYSTEM */}
       {/* ===================================================== */}
 
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
