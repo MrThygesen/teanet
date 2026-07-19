@@ -43,37 +43,37 @@ export default function CommunityCard() {
       {/* DIGITAL MEMBERSHIP */}
       {/* ===================================================== */}
 
-      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
+<section className="max-w-5xl mx-auto px-6 py-20 border-t border-zinc-800">
 
+  {/* Centered image */}
+  <div className="flex justify-center">
+    <img
+      src="/data/example-membership-card.jpg"
+      alt="EDGE Spaces Digital Membership"
+      className="w-full max-w-lg rounded-3xl border border-zinc-800"
+    />
+  </div>
 
-         <div className="max-w-3xl">
+  {/* Text aligned with hero */}
+  <div className="max-w-3xl mt-10">
 
-          <img
-            src="/data/example-membership-card.jpg"
-            alt="EDGE Spaces Digital Membership"
-            className="w-full max-w-lg rounded-3xl border border-zinc-800"
-          />
+    <h2 className="text-3xl font-bold mb-6">
+      Your Community Membership
+    </h2>
 
-        </div>
+    <p className="text-lg text-zinc-400 leading-relaxed">
+      Your Digital Membership is issued by EDGE Spaces and belongs to you.
+    </p>
 
-       <div className="max-w-3xl mx-auto mt-10">
+    <p className="mt-6 text-zinc-500 leading-relaxed">
+      To claim your membership you'll need a Polygon-compatible wallet.
+      The process takes only a few minutes and the network fee is very small.
+    </p>
 
-          <h2 className="text-3xl font-bold mb-6">
-            Your Community Membership
-          </h2>
+  </div>
 
-          <p className="text-lg text-zinc-400 leading-relaxed">
-            Your Digital Membership is issued by EDGE Spaces and belongs to you.
-          </p>
+</section>
 
-          <p className="mt-6 text-zinc-500 leading-relaxed">
-            To claim your membership you'll need a Polygon compatible wallet.
-            The process takes only a few minutes and the network fee is very small.
-          </p>
-
-        </div>
-
-      </section>
 
       {/* ===================================================== */}
       {/* BEYOND MEMBERSHIP */}
