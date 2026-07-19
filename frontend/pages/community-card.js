@@ -8,7 +8,9 @@ export default function CommunityCard() {
 
       <Header />
 
+      {/* ===================================================== */}
       {/* HERO */}
+      {/* ===================================================== */}
 
       <section className="max-w-5xl mx-auto px-6 py-20">
 
@@ -19,26 +21,34 @@ export default function CommunityCard() {
           </div>
 
           <h1 className="text-5xl font-bold leading-tight">
-            EDGE Spaces Digital Membership
+            Your Digital Identity in EDGE Spaces
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-            Every approved EDGE Spaces member can claim an official blockchain
-            membership credential on Polygon Mainnet.
+            Your Digital Membership is your verified identity within the
+            EDGE Spaces innovation network.
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            A wallet is completely optional when joining the community.
-            Members can always connect a Polygon-compatible wallet later and
-            claim their credential directly from their profile with a single click.
+            It confirms your membership today while becoming the foundation
+            for future ecosystem initiatives, partner collaborations,
+            digital collections and community participation.
+          </p>
+
+          <p className="mt-6 text-zinc-500 leading-relaxed">
+            A blockchain wallet is completely optional.
+            Members can connect a Polygon-compatible wallet at any time
+            and claim their Digital Membership directly from their profile
+            after approval.
           </p>
 
         </div>
 
       </section>
 
-
-      {/* MEMBERSHIP CARD */}
+      {/* ===================================================== */}
+      {/* DIGITAL MEMBERSHIP */}
+      {/* ===================================================== */}
 
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
 
@@ -54,10 +64,25 @@ export default function CommunityCard() {
 
         <div className="max-w-3xl mx-auto text-center mt-10">
 
+          <h2 className="text-3xl font-bold mb-6">
+            A Verified Community Credential
+          </h2>
+
           <p className="text-lg text-zinc-400 leading-relaxed">
+            Your Digital Membership is a permanent blockchain credential
+            confirming that you are a verified member of the
+            EDGE Spaces innovation network.
+          </p>
 
-           Your Digital Membership is a permanent blockchain credential proving your verified membership within the EDGE Spaces innovation ecosystem.
+          <p className="mt-6 text-zinc-500 leading-relaxed">
+            Unlike traditional memberships, your credential belongs to you.
+            It remains in your own wallet while still being recognised by
+            the EDGE Spaces platform and compatible Polygon wallets.
+          </p>
 
+          <p className="mt-6 text-zinc-500 leading-relaxed">
+            This is the beginning of your digital identity within
+            EDGE Spaces—not simply another NFT.
           </p>
 
         </div>
@@ -65,97 +90,218 @@ export default function CommunityCard() {
       </section>
 
 
-      {/* BENEFITS */}
+      {/* ===================================================== */}
+      {/* YOUR DIGITAL IDENTITY */}
+      {/* ===================================================== */}
 
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Benefits
+          Your Digital Identity
         </div>
 
-        <h2 className="text-4xl font-bold mb-10">
-          More Than An NFT
+        <h2 className="text-4xl font-bold mb-6">
+          More Than Membership
         </h2>
+
+        <p className="text-zinc-400 max-w-3xl mb-12 leading-relaxed">
+          Your Digital Membership is only the beginning.
+          As EDGE Spaces grows, your wallet can become your verified identity
+          across the innovation network while unlocking new experiences,
+          collaborations and ecosystem initiatives.
+        </p>
 
         <div className="grid md:grid-cols-3 gap-6">
 
           <BenefitCard
-            title="Verified Digital Identity"
-            text="A permanent blockchain credential proving your verified EDGE Spaces membership."
+            title="Verified Membership"
+            text="Permanent proof of your verified EDGE Spaces membership."
           />
 
           <BenefitCard
-            title="Partner Ecosystem"
-            text="Access future partner benefits, ecosystem initiatives, events and exclusive opportunities."
+            title="Partner Benefits"
+            text="Access future partner initiatives, ecosystem opportunities and exclusive member experiences."
+          />
+
+          <BenefitCard
+            title="EDGE Collection"
+            text="Mint curated digital editions sponsored by companies and ecosystem partners while supporting artists and the community."
+          />
+
+          <BenefitCard
+            title="Event Collectibles"
+            text="Collect limited digital editions from conferences, demo days, hackathons and community events."
+          />
+
+          <BenefitCard
+            title="Community Recognition"
+            text="Receive digital achievements recognising mentoring, collaboration and meaningful ecosystem contributions."
           />
 
           <BenefitCard
             title="Governance Ready"
-            text="Prepared for future governance participation, voting rights and community initiatives."
+            text="Prepared for future community participation, voting and ecosystem governance."
           />
 
         </div>
 
       </section>
 
+      {/* ===================================================== */}
+      {/* WHY BLOCKCHAIN */}
+      {/* ===================================================== */}
 
-      {/* CLAIM */}
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
 
-      <section className="max-w-4xl mx-auto px-6 py-16 border-t border-zinc-800">
+        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+          Why Blockchain?
+        </div>
 
-        <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
+        <h2 className="text-4xl font-bold mb-6">
+          Real Ownership
+        </h2>
 
-          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Claim Your Credential
-          </div>
+        <p className="text-zinc-400 leading-relaxed">
+          Traditional communities store memberships inside their own
+          systems.
+        </p>
 
-          <h2 className="text-3xl font-bold mb-5">
-            Simple, Fast & Low Cost
-          </h2>
+        <p className="mt-6 text-zinc-400 leading-relaxed">
+          EDGE Spaces allows members to own their digital credentials
+          themselves while remaining verifiable by the platform.
+        </p>
 
-          <p className="text-zinc-400 leading-relaxed">
+        <p className="mt-6 text-zinc-500 leading-relaxed">
+          Blockchain isn't the product.
+          It simply provides a secure, transparent and permanent foundation
+          for your digital identity.
+        </p>
 
-            Once your membership has been approved, simply connect a
-            Polygon-compatible wallet and claim your Digital Membership directly
-            from your profile.
+      </section>
 
-            <br /><br />
+      {/* ===================================================== */}
+      {/* FUTURE ECOSYSTEM */}
+      {/* ===================================================== */}
 
-            Credentials are issued on Polygon Mainnet, making the minting
-            transaction extremely inexpensive while providing permanent
-            blockchain verification.
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
 
-          </p>
+        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+          Future Ecosystem
+        </div>
 
-          <div className="mt-8 space-y-3 text-zinc-300">
+        <h2 className="text-4xl font-bold mb-6">
+          Growing With The Community
+        </h2>
 
-            <div>✓ Wallet is optional</div>
-            <div>✓ One-click claim after approval</div>
-            <div>✓ Polygon Mainnet credential</div>
-            <div>✓ Compatible with MetaMask, Rainbow, Rabby and other EVM wallets</div>
-            <div>✓ Future governance and partner benefits</div>
+        <p className="text-zinc-400 leading-relaxed max-w-3xl">
+          As the EDGE Spaces innovation network expands, your Digital
+          Membership becomes the foundation for new ecosystem experiences.
+          Every future initiative builds upon the same verified identity.
+        </p>
 
-          </div>
+        <div className="mt-10 space-y-4 text-zinc-300">
 
-          <a
-            href="/wallet-setup"
-            className="inline-flex items-center justify-center mt-10 px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 transition font-semibold"
-          >
-            Wallet Setup →
-          </a>
+          <div>✓ Sponsored digital collections</div>
+
+          <div>✓ EDGE Collection member editions</div>
+
+          <div>✓ Partner campaigns and rewards</div>
+
+          <div>✓ Founder and contributor recognition</div>
+
+          <div>✓ Community achievements</div>
+
+          <div>✓ Future governance participation</div>
 
         </div>
 
       </section>
 
 
+      {/* ===================================================== */}
+      {/* TAKE THE NEXT STEP */}
+      {/* ===================================================== */}
+
+      <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
+
+        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 text-center">
+
+          <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+            Join the Innovation Network
+          </div>
+
+          <h2 className="text-4xl font-bold mb-6">
+            Start Your Digital Identity
+          </h2>
+
+          <p className="max-w-3xl mx-auto text-zinc-400 leading-relaxed">
+            Whether you're joining EDGE Spaces for the first time or you're
+            already an approved member, your Digital Membership becomes your
+            verified identity across the innovation network.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-12 text-left">
+
+            <div className="bg-black border border-zinc-800 rounded-2xl p-8">
+
+              <div className="text-xl font-semibold mb-4">
+                New to EDGE Spaces?
+              </div>
+
+              <p className="text-zinc-400 leading-relaxed">
+                Apply to join our curated innovation network and connect with
+                founders, builders, investors, advisors and ecosystem partners.
+              </p>
+
+              <a
+                href="/membership"
+                className="inline-flex mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition font-semibold"
+              >
+                Apply for Membership
+              </a>
+
+            </div>
+
+            <div className="bg-black border border-zinc-800 rounded-2xl p-8">
+
+              <div className="text-xl font-semibold mb-4">
+                Already a Member?
+              </div>
+
+              <p className="text-zinc-400 leading-relaxed">
+                Connect your Polygon-compatible wallet and claim your Digital
+                Membership from your profile. Your wallet remains optional until
+                you're ready.
+              </p>
+
+              <a
+                href="/wallet-setup"
+                className="inline-flex mt-8 px-6 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition font-semibold"
+              >
+                Claim Digital Membership
+              </a>
+
+            </div>
+
+          </div>
+
+          <div className="mt-12 text-zinc-500 text-sm">
+            Digital Membership • EDGE Collection • Partner Benefits • Community Recognition
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ===================================================== */}
       {/* FOOTER */}
+      {/* ===================================================== */}
 
       <footer className="border-t border-zinc-800 py-12">
 
         <div className="max-w-6xl mx-auto px-6">
 
-          <div className="text-blue-400 font-semibold">
+          <div className="text-blue-400 font-semibold text-lg">
             EDGE SPACES
           </div>
 
@@ -170,6 +316,10 @@ export default function CommunityCard() {
     </div>
   )
 }
+
+/* ===================================================== */
+/* BENEFIT CARD */
+/* ===================================================== */
 
 function BenefitCard({ title, text }) {
   return (
@@ -186,3 +336,5 @@ function BenefitCard({ title, text }) {
     </div>
   )
 }
+
+
