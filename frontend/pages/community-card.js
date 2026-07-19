@@ -17,15 +17,17 @@ export default function CommunityCard() {
         <div className="max-w-3xl">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-            Digital Membership
+Digital Membership
           </div>
 
+
+
           <h1 className="text-5xl font-bold leading-tight">
-            Your Digital Identity in EDGE Spaces
+           Your Digital Membership in EDGE Spaces
           </h1>
 
           <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-            Your Digital Membership is your verified identity within the
+            Your Digital Membership is your membership credential within the
             EDGE Spaces innovation network.
           </p>
 
@@ -65,13 +67,14 @@ export default function CommunityCard() {
         <div className="max-w-3xl mx-auto text-center mt-10">
 
           <h2 className="text-3xl font-bold mb-6">
-            A Verified Community Credential
+           Your Community Membership
           </h2>
-
           <p className="text-lg text-zinc-400 leading-relaxed">
-            Your Digital Membership is a permanent blockchain credential
-            confirming that you are a verified member of the
-            EDGE Spaces innovation network.
+           Your Digital Membership is a blockchain membership credential
+issued by EDGE Spaces.
+
+It confirms that this wallet has been issued a valid
+EDGE Spaces membership.
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
@@ -81,8 +84,11 @@ export default function CommunityCard() {
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            This is the beginning of your digital identity within
-            EDGE Spaces—not simply another NFT.
+Today it represents your membership.
+Over time it can become the foundation for additional
+community participation, digital collections and
+ecosystem experiences.
+
           </p>
 
         </div>
@@ -91,14 +97,14 @@ export default function CommunityCard() {
 
 
       {/* ===================================================== */}
-      {/* YOUR DIGITAL IDENTITY */}
+      {/* YOUR DIGITAL Membership */}
       {/* ===================================================== */}
 
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
-        <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Your Digital Identity
-        </div>
+     <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+  Beyond Membership
+</div>
 
         <h2 className="text-4xl font-bold mb-6">
           More Than Membership
@@ -106,16 +112,16 @@ export default function CommunityCard() {
 
         <p className="text-zinc-400 max-w-3xl mb-12 leading-relaxed">
           Your Digital Membership is only the beginning.
-          As EDGE Spaces grows, your wallet can become your verified identity
-          across the innovation network while unlocking new experiences,
-          collaborations and ecosystem initiatives.
+          As EDGE Spaces evolves, your membership credential can
+          unlock new experiences, partner initiatives, digital
+          collections and community participation.
         </p>
 
         <div className="grid md:grid-cols-3 gap-6">
 
           <BenefitCard
-            title="Verified Membership"
-            text="Permanent proof of your verified EDGE Spaces membership."
+           title="Community Membership"
+           text="A blockchain membership credential issued by EDGE Spaces."
           />
 
           <BenefitCard
@@ -167,14 +173,12 @@ export default function CommunityCard() {
         </p>
 
         <p className="mt-6 text-zinc-400 leading-relaxed">
-          EDGE Spaces allows members to own their digital credentials
-          themselves while remaining verifiable by the platform.
+          EDGE Spaces allows members to own their membership
+          credential.....
         </p>
 
         <p className="mt-6 text-zinc-500 leading-relaxed">
-          Blockchain isn't the product.
-          It simply provides a secure, transparent and permanent foundation
-          for your digital identity.
+          We believe the card can be applied for future services and   
         </p>
 
       </section>
@@ -194,9 +198,13 @@ export default function CommunityCard() {
         </h2>
 
         <p className="text-zinc-400 leading-relaxed max-w-3xl">
-          As the EDGE Spaces innovation network expands, your Digital
-          Membership becomes the foundation for new ecosystem experiences.
-          Every future initiative builds upon the same verified identity.
+          As the EDGE Spaces innovation network grows,
+we plan to introduce additional benefits built
+around your Digital Membership, including partner
+initiatives, digital collections, community
+recognition and future participation features.
+
+
         </p>
 
         <div className="mt-10 space-y-4 text-zinc-300">
@@ -231,13 +239,12 @@ export default function CommunityCard() {
           </div>
 
           <h2 className="text-4xl font-bold mb-6">
-            Start Your Digital Identity
+            Start Your Digital Membership
           </h2>
 
           <p className="max-w-3xl mx-auto text-zinc-400 leading-relaxed">
-            Whether you're joining EDGE Spaces for the first time or you're
-            already an approved member, your Digital Membership becomes your
-            verified identity across the innovation network.
+     Whether you're joining EDGE Spaces for the first time or you're already an approved member,
+your Digital Membership gives you access to future participation across the EDGE Spaces innovation network.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-12 text-left">
