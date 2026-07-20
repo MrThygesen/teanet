@@ -341,13 +341,13 @@ Apply for Membership
 
 <h3 className="text-xl font-semibold">
 
-Already an approved member?
+Update Your Wallet Information
 
 </h3>
 
 <p className="text-zinc-400 mt-2">
 
-If you joined without providing a wallet, connect your Polygon-compatible wallet above. You will then be able to link your wallet to your approved membership and claim your Digital Membership.
+ If you applied without providing a wallet, enter the email address you used for your membership application below. Your connected wallet must be Polygon-compatible. We'll link it to your approved membership so you can claim your Digital Membership.
 
 </p>
 
