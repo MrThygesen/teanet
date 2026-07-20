@@ -298,7 +298,7 @@ Explore the Network
         </h2>
 
         <p className="text-zinc-400 max-w-3xl mb-12">
-          Community updates, partner opportunities and emerging initiatives.
+Community updates, member opportunities and emerging initiatives.
         </p>
 
         <div className="grid md:grid-cols-4 gap-6">
@@ -320,7 +320,7 @@ Explore the Network
 
           <FeatureCard
             title="Workspace Opportunities (future)"
-            text="Shared offices, local communities and partner benefits."
+            text="Shared offices, local communities and exclusive benefits."
           />
 
         </div>
