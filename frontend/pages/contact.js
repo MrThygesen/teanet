@@ -65,10 +65,10 @@ export default function Contact() {
     setLoading(false)
   }
 
-  return (
+return (
     <>
+      <div className="bg-black text-white min-h-dvh">
       <Header />
-
       <div className="max-w-4xl mx-auto px-6 py-14">
 
         {success ? (
@@ -275,8 +275,8 @@ export default function Contact() {
 
         )}
 
-      </div>
-
+   </div>
+   </div>
     </>
   )
 }
