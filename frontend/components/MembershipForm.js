@@ -15,7 +15,6 @@ export default function MembershipForm() {
     email: '',    
     linkedin_url: '',
     company: '',    
-    telegram_username: '',
     reason: '',    
     join_reason: '',    
     wallet: '',    
@@ -59,7 +58,6 @@ export default function MembershipForm() {
         email: '',
         linkedin_url: '',
 company: '',
-telegram_username: '',
 reason,
 join_reason: '',      
 wallet: '',
@@ -120,7 +118,7 @@ catch (err) {
           </h2>
 
           <p className="text-zinc-400 mt-4 leading-relaxed">
-      Join founders, builders and ecosystem participants exploring new opportunities together.
+      Join a trusted community of founders, builders, advisors and investors exploring new opportunities together.
           </p>
 
          </div>
@@ -220,24 +218,6 @@ Organization / Company
    className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
    />
   </div>
-
-<div>
-
-<label className="block text-sm text-zinc-400 mb-2">
-Telegram Username (Optional)
-</label>
-
-<input
-type="text"
-placeholder="@username"
-value={form.telegram_username}
-onChange={(e)=>
-updateField('telegram_username', e.target.value)
-}
-className="w-full bg-zinc-950 border border-zinc-700 rounded-lg p-3 text-white"
-/>
-
-</div>
 
 <div>
 
