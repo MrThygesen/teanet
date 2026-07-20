@@ -43,7 +43,7 @@ description:
     description:
     'Experts, advisors and specialists supporting emerging teams and innovation.',
     image:
-      '/images/ecosystem-supporters.jpg'
+      '/images/specialists.jpg'
   }
 
 
