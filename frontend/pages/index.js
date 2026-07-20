@@ -514,7 +514,7 @@ Telegram is free to use and creating an account takes about one minute.
       Navigation
     </div>
 
-    <div className="space-y-2">
+    <div className="flex flex-col gap-2">
       <a href="/" className="text-zinc-400 hover:text-white transition">Home</a>
       <a href="/#communities" className="text-zinc-400 hover:text-white transition">Community</a>
       <a href="/#apply" className="text-zinc-400 hover:text-white transition">Apply</a>
@@ -528,12 +528,11 @@ Telegram is free to use and creating an account takes about one minute.
       Resources
     </div>
 
-    <div className="space-y-2">
+    <div className="flex flex-col gap-2">
       <a href="/contact" className="text-zinc-400 hover:text-white transition">Contact</a>
       <a href="/privacy" className="text-zinc-400 hover:text-white transition">Privacy</a>
-      </div>
+    </div>
   </div>
-  </div> 
 </div>
 
     <div className="border-t border-zinc-800 mt-10 pt-6 text-xs text-zinc-600">
