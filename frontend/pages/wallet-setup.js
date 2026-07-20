@@ -74,8 +74,7 @@ export default function WalletSetup() {
           <p className="mt-6 text-zinc-500 leading-relaxed">
 
             Once your membership has been approved, simply connect a
-            Polygon-compatible wallet and claim your Digital Membership
-            credential directly from your profile.
+            Polygon-compatible wallet and claim your Digital Membership directly from your profile.
 
           </p>
 
@@ -99,8 +98,7 @@ export default function WalletSetup() {
 
           <p className="text-zinc-400 leading-relaxed">
 
-            EDGE Spaces issues Digital Membership credentials on
-            Polygon Mainnet.
+          Digital Memberships are issued on Polygon Mainnet.
 
             <br /><br />
 
@@ -159,7 +157,7 @@ export default function WalletSetup() {
         <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Claim Your Credential
+            Claim Your Digital Membership
           </div>
 
           <h2 className="text-3xl font-bold mb-6">
@@ -174,7 +172,7 @@ export default function WalletSetup() {
 
             <br /><br />
 
-            Your blockchain credential will be issued directly to your wallet.
+            Your Digital Membership will be issued directly to your wallet.
 
             <br /><br />
 
@@ -191,7 +189,7 @@ export default function WalletSetup() {
 
             <div>✓ Claim with one click</div>
 
-            <div>✓ Credential issued directly to your wallet</div>
+            <div>✓ Membership issued directly to your wallet</div>
 
           </div>
 
@@ -210,26 +208,25 @@ export default function WalletSetup() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6">
-            Viewing Your Credential
+            Viewing Your Membership
           </h2>
 
           <p className="text-zinc-400 leading-relaxed">
 
-            Your credential is issued immediately on Polygon Mainnet and shown in the profile section.
+             Your Digital Membership is issued immediately on Polygon Mainnet...
 
             <br /><br />
 
- Some wallet such as Metamask Browser Extention shows the membership card in the NFT section automatically, while the Metamask Mobile App requires that you import NFT and provides the contract and token number.
+ Some wallets such as Metamask Browser Extension shows the membership card in the NFT section automatically, while the Metamask Mobile App requires that you import NFT and provides the contract and token number.
 
             <br /><br />
 
-            After importing, the credential image, title and description
-            will appear in your wallet.
+           After importing, your Digital Membership will appear in your wallet with its image, title and description.
 
             <br /><br />
 
-            The complete credential details, including membership
-            attributes, are always available on the EDGE Spaces website
+            The complete membership details, including membership
+            details are always available on the EDGE Spaces website,
             and are also recognised by NFT marketplaces such as OpenSea.
 
           </p>

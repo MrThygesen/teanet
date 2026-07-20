@@ -280,13 +280,13 @@ async function handleWalletUpdate() {
 
 <h1 className="text-4xl font-bold">
 
-My Credentials
+My Membership
 
 </h1>
 
 <p className="text-zinc-400 mt-2">
 
-Official digital credentials for members of the EDGE Spaces innovation ecosystem.
+Your Digital Membership and community information.
 
 </p>
 
@@ -302,7 +302,7 @@ Connect Your Wallet
 
 <p className="text-zinc-400 mb-4">
 
-Connect your Polygon-compatible wallet to access your EDGE Spaces credentials.
+Connect your Polygon-compatible wallet to access your Digital Membership.
 
 </p>
 
@@ -347,7 +347,7 @@ Already an approved member?
 
 <p className="text-zinc-400 mt-2">
 
-If you joined without providing a wallet, connect your Polygon-compatible wallet above. You will then be able to link your wallet to your approved membership and claim your Community Membership credential.
+If you joined without providing a wallet, connect your Polygon-compatible wallet above. You will then be able to link your wallet to your approved membership and claim your Digital Membership.
 
 </p>
 
@@ -475,13 +475,13 @@ Checking your community membership...
 
 <h2 className="text-2xl font-semibold">
 
-Your Credentials
+Your Digital Membership
 
 </h2>
 
 <p className="text-zinc-400 mt-2">
 
-This wallet owns the following verified EDGE Spaces credentials.
+This wallet contains your Digital Membership and any future member collections.
 
 </p>
 
@@ -577,15 +577,15 @@ membership?.status === 'approved' &&
 
                 <p className="text-zinc-400 mt-4">
 
-                  Welcome to the EDGE Spaces innovation ecosystem.
+                  Welcome to the EDGE Spaces Community.
 Your membership application has been approved.
 
                 </p>
 
 <p className="text-zinc-400 mt-2">
 
-  Click below to mint your official EDGE Spaces
-  Community Membership credential to this wallet.
+Click below to issue your official EDGE Spaces
+Digital Membership to this wallet.
 
 </p>
 
@@ -601,9 +601,9 @@ Your membership application has been approved.
 
 <p className="text-zinc-400 mt-2">
 
-We're synchronizing your blockchain credentials.
+We're synchronizing your Digital Membership.
 
-If your credential doesn't appear after refreshing the page,
+If your Digital Membership doesn't appear after refreshing the page,
 please try again in a few moments.
 
 </p>
@@ -654,9 +654,9 @@ Community Membership Claimed
 
 Your Community Membership has already been claimed.
 
-We're synchronizing your blockchain credentials.
+We're synchronizing your Digital Membership.
 
-If your credential doesn't appear after refreshing the page, please try again in a few moments.
+ If your Digital Membership doesn't appear after refreshing the page, please try again in a few moments.
 
 </p>
 

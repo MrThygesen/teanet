@@ -41,20 +41,18 @@ export default function Privacy() {
             <ul className="list-disc ml-6 text-zinc-400 space-y-2">
               <li>Review membership applications.</li>
               <li>Communicate with applicants and members.</li>
-              <li>Issue digital membership cards.</li>
+              <li>Issue digital membership.</li>
               <li>Operate and improve the EDGE Spaces community.</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold mb-3">
-              Digital Membership Cards
+              Digital Membership
             </h2>
 
             <p className="text-zinc-400">
-              Wallet addresses are used only for issuing optional digital
-              membership cards. Membership cards are community credentials
-              and do not represent financial assets or investment products.
+          Wallet addresses are used only for issuing optional Digital Membership credentials.
             </p>
           </section>
 

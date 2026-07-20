@@ -98,7 +98,7 @@ export default function CommunityCard() {
 
           <BenefitCard
             title="Partner Benefits"
-            text="Exclusive opportunities from ecosystem partners."
+            text="Exclusive opportunities from our future partner organizations."
           />
 
           <BenefitCard
@@ -132,7 +132,7 @@ export default function CommunityCard() {
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Future Ecosystem
+          Growing the Network
         </div>
 
         <h2 className="text-4xl font-bold mb-6">
@@ -141,25 +141,24 @@ export default function CommunityCard() {
 
         <p className="text-zinc-400 max-w-3xl leading-relaxed">
           As EDGE Spaces evolves, your Digital Membership can unlock
-          partner initiatives, community recognition,
-          exclusive digital collections and future member services.
+          exclusive digital collections and new future member services depending on interest.
         </p>
 
         <div className="mt-10 space-y-3 text-zinc-300">
 
-          <div>✓ Partner initiatives</div>
+          <div>✓ New collaboration opportunities</div>
 
-          <div>✓ EDGE Collection</div>
+          <div>✓ Community recognition </div>
 
-          <div>✓ Event collectibles</div>
-
-          <div>✓ Community recognition</div>
+          <div>✓ EDGE Collections</div>
 
           <div>✓ Future participation</div>
 
         </div>
 
       </section>
+
+
 
 
       {/* ===================================================== */}
@@ -194,7 +193,7 @@ export default function CommunityCard() {
 
               <p className="text-zinc-400 leading-relaxed">
                 Apply to join our curated innovation network for founders,
-                builders, investors, advisors and ecosystem partners.
+                builders, investors, advisors and partner organizations.
               </p>
 
               <a

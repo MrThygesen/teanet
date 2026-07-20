@@ -38,22 +38,14 @@ description:
   },
 
   {
-    title: 'Ecosystem Partners',
-    subtitle: 'Organizations',
-  description:
-'Accelerators, venture builders and organizations helping founders and builders grow.',
-    image:
-      '/images/ecosystem-partners.jpg'
-  },
-
-  {
-    title: 'Ecosystem Specialists',
+    title: 'Specialists',
     subtitle: 'Experts & Advisors',
     description:
     'Experts, advisors and specialists supporting emerging teams and innovation.',
     image:
       '/images/ecosystem-supporters.jpg'
   }
+
 
 ]
 
@@ -133,11 +125,11 @@ useEffect(() => {
 </div>
 
 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-  The Innovation Ecosystem
+  The Innovation Network
 </h2>
 
 <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
-The innovation ecosystem for founders, builders, advisors, investors and ecosystem partners. Connect with the people, knowledge and opportunities that accelerate innovation from idea to execution.
+The innovation network for founders, builders, advisors and investors. Connect with the people, knowledge and opportunities that accelerate innovation from idea to execution.
 </p>
         </div>
 
@@ -163,11 +155,11 @@ The innovation ecosystem for founders, builders, advisors, investors and ecosyst
 text="Supporting founders through capital, experience and strategic relationships."
 />
 
-<FeatureCard
- count={communityStats.partners}
-  title="Ecosystem Partners"
-  text="Accelerators, venture builders and innovation organizations."
-/>
+ <FeatureCard
+   count={communityStats.specialists}
+   title="Specialists"
+  text="Experienced advisors, domain experts and operators helping founders and builders succeed."
+ />
         </div>
 
 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
@@ -204,7 +196,7 @@ text="Supporting founders through capital, experience and strategic relationship
       >
 
 <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-8">
-Meet the Ecosystem
+Explore the Network
 </div>
 
 {/* SPOTLIGHT CARD */}
@@ -317,8 +309,8 @@ Meet the Ecosystem
           />
 
           <FeatureCard
-            title="Accelerator Applications"
-            text="Partner programs and upcoming cohorts."
+            title="Startup Programs"
+            text="Discover accelerator cohorts, venture builder programmes and founder initiatives."
           />
 
           <FeatureCard
@@ -327,7 +319,7 @@ Meet the Ecosystem
           />
 
           <FeatureCard
-            title="Workspace Opportunities"
+            title="Workspace Opportunities (future)"
             text="Shared offices, local communities and partner benefits."
           />
 
@@ -353,10 +345,9 @@ Meet the Ecosystem
 
   <p className="text-zinc-400 max-w-3xl mb-12">
 
-Join the EDGE Spaces innovation ecosystem.
+Join the EDGE Spaces community.
 
-Applications are reviewed manually to build a trusted network of founders, builders, advisors, investors and ecosystem partners.
-
+Applications are reviewed manually to build a trusted community where founders, builders, advisors and investors connect, collaborate and create new opportunities.
 </p>
 
 
@@ -380,12 +371,12 @@ Telegram is free to use and creating an account takes about one minute.
 
     <div className="space-y-4 text-zinc-300">
 
-✓ Access to the EDGE Spaces innovation ecosystem
+✓ Access to the EDGE Spaces community
 ✓ Membership by application
 ✓ Private Telegram collaboration
 ✓ Founder, builder and investor connections
-✓ Ecosystem events and opportunities
-✓ Optional Digital Membership with future ecosystem benefits
+✓ Curated introductions and collaboration opportunities
+✓ Optional Digital Membership with future member benefits
     </div>
 
     <a
@@ -446,7 +437,7 @@ Telegram is free to use and creating an account takes about one minute.
   </div>
 
   <div className="mt-6 text-zinc-200 leading-relaxed">
-The innovation ecosystem connecting founders, builders, advisors, investors and ecosystem partners.
+A trusted community connecting founders, builders, advisors, investors and partner organizations.
   </div>
 
   <div className="mt-6 text-sm font-semibold tracking-wider uppercase text-blue-300">
