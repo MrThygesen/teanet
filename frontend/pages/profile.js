@@ -305,15 +305,29 @@ Connect Your Wallet
 Connect your Polygon-compatible wallet to access your Digital Membership.
 
 </p>
-
 <div className="flex justify-center mb-8">
 
-<ConnectButton />
+    <ConnectButton />
+
+</div>
+
+<div className="text-center mb-8">
+
+    <p className="text-zinc-500 text-sm">
+        Using iPhone or Android? If your wallet doesn't connect automatically,
+        open EDGE Spaces inside your wallet's browser.
+    </p>
+
+    <a
+        href="/wallet-setup"
+        className="inline-block mt-2 text-blue-400 hover:text-blue-300"
+    >
+        Having trouble connecting? Learn how →
+    </a>
 
 </div>
 
 <div className="border-t border-zinc-800 pt-8">
-
 <h3 className="text-xl font-semibold">
 
 New to EDGE Spaces?

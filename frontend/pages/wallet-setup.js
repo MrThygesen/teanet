@@ -82,6 +82,57 @@ export default function WalletSetup() {
 
       </section>
 
+
+{/* RECOMMENDED WALLETS */}
+
+<section className="max-w-4xl mx-auto px-6 pb-16">
+
+  <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+    <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+      Recommended Wallets
+    </div>
+
+    <h2 className="text-3xl font-bold mb-6">
+      Best Wallet Experience
+    </h2>
+
+    <p className="text-zinc-400 leading-relaxed">
+
+      Desktop
+
+      <br /><br />
+
+      ✓ MetaMask Browser Extension
+
+      <br /><br />
+
+      Mobile
+
+      <br /><br />
+
+      ✓ Rainbow Wallet (recommended)
+
+      <br />
+      ✓ MetaMask Mobile
+      <br />
+      ✓ Coinbase Wallet
+      <br />
+      ✓ Trust Wallet
+
+      <br /><br />
+
+      On iPhone and Android, the best experience is to open
+      EDGE Spaces from inside your wallet's built-in browser.
+      Standard browsers such as Safari or Chrome may not connect
+      to your wallet automatically.
+
+    </p>
+
+  </div>
+
+</section>
+
       {/* POLYGON */}
 
       <section className="max-w-4xl mx-auto px-6 pb-16">
