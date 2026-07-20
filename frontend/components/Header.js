@@ -59,7 +59,14 @@ export default function Header() {
             Digital Card
           </a>
 
-          <a
+         <a
+             href="/contact"
+            className="text-zinc-400 hover:text-white transition"
+         >
+             Contact
+         </a>        
+
+  <a
             href="/profile"
             className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition text-white font-medium"
           >

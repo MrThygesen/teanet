@@ -437,8 +437,9 @@ Telegram is free to use and creating an account takes about one minute.
   </div>
 
   <div className="mt-6 text-zinc-200 leading-relaxed">
-A trusted community connecting founders, builders, advisors, investors and partner organizations.
+    A trusted innovation community connecting founders, builders, advisors and investors.
   </div>
+
 
   <div className="mt-6 text-sm font-semibold tracking-wider uppercase text-blue-300">
     AI • Web3 • Emerging Technologies
@@ -448,35 +449,35 @@ A trusted community connecting founders, builders, advisors, investors and partn
 
       {/* Right */}
 
-      <div className="grid grid-cols-2 gap-x-12 gap-y-2 text-sm">
+<div className="grid md:grid-cols-2 gap-10 text-sm">
 
-        <a href="/" className="text-zinc-400 hover:text-white">
-          Home
-        </a>
-
-        <a href="/privacy" className="text-zinc-400 hover:text-white">
-          Privacy
-        </a>
-
-        <a href="/#communities" className="text-zinc-400 hover:text-white">
-          Community
-        </a>
-
-        <a href="/#apply" className="text-zinc-400 hover:text-white">
-          Apply
-        </a>
-
-        <a href="/community-card" className="text-zinc-400 hover:text-white">
-          Digital Card
-        </a>
-
-        <a href="/profile" className="text-zinc-400 hover:text-white">
-          Profile
-        </a>
-
-      </div>
-
+  <div>
+    <div className="text-white font-semibold mb-4">
+      Navigation
     </div>
+
+    <div className="space-y-2">
+      <a href="/" className="text-zinc-400 hover:text-white transition">Home</a>
+      <a href="/#communities" className="text-zinc-400 hover:text-white transition">Community</a>
+      <a href="/#apply" className="text-zinc-400 hover:text-white transition">Apply</a>
+      <a href="/community-card" className="text-zinc-400 hover:text-white transition">Digital Card</a>
+      <a href="/profile" className="text-zinc-400 hover:text-white transition">Profile</a>
+    </div>
+  </div>
+
+  <div>
+    <div className="text-white font-semibold mb-4">
+      Resources
+    </div>
+
+    <div className="space-y-2">
+      <a href="/contact" className="text-zinc-400 hover:text-white transition">Contact</a>
+      <a href="/privacy" className="text-zinc-400 hover:text-white transition">Privacy</a>
+      <!-- Add FAQ later -->
+    </div>
+  </div>
+
+</div>
 
     <div className="border-t border-zinc-800 mt-10 pt-6 text-xs text-zinc-600">
       © 2026 EDGE Spaces. All rights reserved.
