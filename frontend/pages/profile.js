@@ -226,7 +226,10 @@ async function handleWalletUpdate() {
 
         setClaiming(true)
 
-console.log("⏳ Calling writeContractAsync...")
+console.log("About to call writeContractAsync")
+alert("About to call writeContractAsync")
+console.log("Returned from writeContractAsync", hash)
+alert("Returned from writeContractAsync")
 
 const hash = await writeContractAsync({
 
