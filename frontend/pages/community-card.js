@@ -70,6 +70,16 @@ export default function CommunityCard() {
       The process takes only a few minutes and the network fee is very small.
     </p>
 
+<div className="mt-8">
+  <a
+    href="/wallet-setup"
+    className="inline-flex items-center px-6 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition font-semibold"
+  >
+    Wallet Setup and Recommended Wallets →
+  </a>
+</div>
+
+
   </div>
 
 </section>
