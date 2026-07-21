@@ -218,11 +218,17 @@ async function handleWalletUpdate() {
 
   async function handleClaim(){
 
+      console.log("🚀 Claim button clicked")
+      console.log("Wallet:", address)
+      console.log("Contract:", CONTRACT_ADDRESS)
+
       try{
 
-          setClaiming(true)
+        setClaiming(true)
 
-await writeContractAsync({
+console.log("⏳ Calling writeContractAsync...")
+
+const hash = await writeContractAsync({
 
     chainId: polygon.id,
 
@@ -236,7 +242,9 @@ await writeContractAsync({
 
     args:[COMMUNITY_MEMBER_TYPE]
 
-})
+}) 
+
+console.log("✅ Transaction submitted:", hash)
 
           await fetch('/api/membership/claimed',{
 
@@ -260,11 +268,16 @@ await writeContractAsync({
 
       }
 
-      catch(err){
+catch(err){
 
-          console.error(err)
+    console.error("❌ Claim failed")
+    console.error(err)
+    console.error("message:", err?.message)
+    console.error("shortMessage:", err?.shortMessage)
+    console.error("cause:", err?.cause)
+    console.error("full:", JSON.stringify(err, null, 2))
 
-      }
+}
 
       finally{
 
