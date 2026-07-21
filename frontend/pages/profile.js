@@ -644,7 +644,7 @@ please try again in a few moments.
 
 <button
 
-  onClick={handleClaim}
+onMouseDown={handleClaim}
 
   disabled={claiming}
 
