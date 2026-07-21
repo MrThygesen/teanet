@@ -1,13 +1,7 @@
 'use client' 
 
 import { useEffect, useState, useCallback } from 'react'
-import {
-  useAccount,
-  usePublicClient,
-  useWriteContract,
-  useChainId,
-  useSwitchChain
-} from 'wagmi'
+import { useAccount, usePublicClient, useWriteContract } from 'wagmi'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { parseAbi } from 'viem'
 import { polygon } from 'wagmi/chains'
@@ -30,9 +24,6 @@ export default function Profile() {
   const { address } = useAccount()
   const publicClient = usePublicClient()
   const { writeContractAsync } = useWriteContract()
-
-const chainId = useChainId()
-const { switchChainAsync } = useSwitchChain()
 
   const [cards,setCards] = useState([])
   const [loading,setLoading] = useState(true)
@@ -225,86 +216,64 @@ async function handleWalletUpdate() {
   //------------------------------------
 
 
-async function handleClaim() {
+  async function handleClaim(){
 
-    console.log("🚀 Claim button clicked")
-    console.log("Wallet:", address)
-    console.log("Contract:", CONTRACT_ADDRESS)
+      try{
 
-    try {
+          setClaiming(true)
 
-        setClaiming(true)
+await writeContractAsync({
 
-if (chainId !== polygon.id) {
+    chainId: polygon.id,
 
-    alert(`Switching from chain ${chainId} to Polygon...`)
+    address: CONTRACT_ADDRESS,
 
-    await switchChainAsync({
-        chainId: polygon.id,
-    })
+    abi: parseAbi([
+        'function claim(uint256)'
+    ]),
 
-    alert("Switched to Polygon")
-}
+    functionName:'claim',
 
-console.log("wagmi chain:", chainId)
-alert("wagmi chain: " + chainId)
-console.log("About to call writeContractAsync")
-alert("About to call writeContractAsync")
+    args:[COMMUNITY_MEMBER_TYPE]
 
-alert(JSON.stringify({
-    chainId,
-    contract: CONTRACT_ADDRESS
-}, null, 2))
-
-
-const walletChain = await window.ethereum.request({
-  method: 'eth_chainId',
 })
 
-alert("Injected provider chain: " + walletChain)
+          await fetch('/api/membership/claimed',{
 
-        const hash = await writeContractAsync({
-            address: CONTRACT_ADDRESS,
-            abi: parseAbi([
-                'function claim(uint256)'
-            ]),
-            functionName: 'claim',
-            args: [COMMUNITY_MEMBER_TYPE]
-        })
+              method:'POST',
 
-        console.log("Returned hash:", hash)
-        alert("Hash:\n" + String(hash))
+              headers:{
 
-        await fetch('/api/membership/claimed', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                wallet: address
-            })
-        })
+                  'Content-Type':'application/json'
 
-        await fetchData()
+              },
 
-    } catch (err) {
+              body:JSON.stringify({
 
-        console.error("❌ Claim failed")
-        console.error(err)
+                  wallet:address
 
-        alert(
-            "ERROR:\n\n" +
-            (err?.shortMessage ||
-             err?.message ||
-             JSON.stringify(err))
-        )
+              })
 
-    } finally {
+          })
 
-        setClaiming(false)
+          await fetchData()
 
-    }
-}
+      }
+
+      catch(err){
+
+          console.error(err)
+
+      }
+
+      finally{
+
+          setClaiming(false)
+
+      }
+
+  }
+
   return(
 
 <div className="min-h-screen bg-zinc-950 text-white">
@@ -661,33 +630,14 @@ please try again in a few moments.
 
 
 <button
-onClick={async () => {
 
-    alert("BUTTON CLICK")
-    console.log("BUTTON CLICK")
-
-    console.log("Before handleClaim")
-
-    await handleClaim()
-
-    console.log("After handleClaim")
-
-    alert("HANDLE FINISHED")
-}}
+  onClick={handleClaim}
 
   disabled={claiming}
 
-  style={{
-    position: "relative",
-    zIndex: 9999
-  }}
-
   className="mt-8 w-full px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-lg font-semibold"
+
 >
-
-
-
-
 
   {claiming
     ? 'Claiming Membership...'
