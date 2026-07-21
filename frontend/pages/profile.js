@@ -216,80 +216,62 @@ async function handleWalletUpdate() {
   //------------------------------------
 
 
-  async function handleClaim(){
+async function handleClaim() {
 
-      console.log("🚀 Claim button clicked")
-      console.log("Wallet:", address)
-      console.log("Contract:", CONTRACT_ADDRESS)
+    console.log("🚀 Claim button clicked")
+    console.log("Wallet:", address)
+    console.log("Contract:", CONTRACT_ADDRESS)
 
-      try{
+    try {
 
         setClaiming(true)
 
-console.log("About to call writeContractAsync")
-alert("About to call writeContractAsync")
-console.log("Returned from writeContractAsync", hash)
-alert("Returned from writeContractAsync")
+        console.log("About to call writeContractAsync")
+        alert("About to call writeContractAsync")
 
-const hash = await writeContractAsync({
+        const hash = await writeContractAsync({
+            chainId: polygon.id,
+            address: CONTRACT_ADDRESS,
+            abi: parseAbi([
+                'function claim(uint256)'
+            ]),
+            functionName: 'claim',
+            args: [COMMUNITY_MEMBER_TYPE]
+        })
 
-    chainId: polygon.id,
+        console.log("Returned hash:", hash)
+        alert("Hash:\n" + String(hash))
 
-    address: CONTRACT_ADDRESS,
+        await fetch('/api/membership/claimed', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                wallet: address
+            })
+        })
 
-    abi: parseAbi([
-        'function claim(uint256)'
-    ]),
+        await fetchData()
 
-    functionName:'claim',
+    } catch (err) {
 
-    args:[COMMUNITY_MEMBER_TYPE]
+        console.error("❌ Claim failed")
+        console.error(err)
 
-}) 
+        alert(
+            "ERROR:\n\n" +
+            (err?.shortMessage ||
+             err?.message ||
+             JSON.stringify(err))
+        )
 
-console.log("✅ Transaction submitted:", hash)
+    } finally {
 
-          await fetch('/api/membership/claimed',{
+        setClaiming(false)
 
-              method:'POST',
-
-              headers:{
-
-                  'Content-Type':'application/json'
-
-              },
-
-              body:JSON.stringify({
-
-                  wallet:address
-
-              })
-
-          })
-
-          await fetchData()
-
-      }
-
-catch(err){
-
-    console.error("❌ Claim failed")
-    console.error(err)
-    console.error("message:", err?.message)
-    console.error("shortMessage:", err?.shortMessage)
-    console.error("cause:", err?.cause)
-    console.error("full:", JSON.stringify(err, null, 2))
-
+    }
 }
-
-      finally{
-
-          setClaiming(false)
-
-      }
-
-  }
-
   return(
 
 <div className="min-h-screen bg-zinc-950 text-white">
