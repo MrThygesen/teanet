@@ -369,15 +369,21 @@ Telegram is free to use and creating an account takes about one minute.
 
     </p>
 
-    <div className="space-y-4 text-zinc-300">
+<div className="space-y-3 text-zinc-300">
 
-✓ Access to the EDGE Spaces community
-✓ Membership by application
-✓ Private Telegram collaboration
-✓ Founder, builder and investor connections
-✓ Curated introductions and collaboration opportunities
-✓ Optional Digital Membership with future member benefits
-    </div>
+  <div>✓ Access to the EDGE Spaces community</div>
+
+  <div>✓ Membership by application</div>
+
+  <div>✓ Private Telegram collaboration</div>
+
+  <div>✓ Founder, builder and investor connections</div>
+
+  <div>✓ Curated introductions and collaboration opportunities</div>
+
+  <div>✓ Optional Digital Membership with future member benefits</div>
+
+</div>
 
     <a
       href="/community-card"
