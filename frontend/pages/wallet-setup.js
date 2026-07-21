@@ -85,54 +85,73 @@ export default function WalletSetup() {
 
 {/* RECOMMENDED WALLETS */}
 
-<section className="max-w-4xl mx-auto px-6 pb-16">
+<div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
-  <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+  <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
+    Recommended Wallets
+  </div>
 
-    <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-      Recommended Wallets
+  <h2 className="text-3xl font-bold mb-6">
+    Wallet Recommendations
+  </h2>
+
+  <div className="space-y-8 text-zinc-300 leading-relaxed">
+
+    <div>
+      <div className="font-semibold text-white text-lg">
+        ⭐⭐⭐⭐⭐ MetaMask Browser Extension (Desktop)
+      </div>
+      <p className="mt-2 text-zinc-400">
+        Our recommended desktop wallet. Fast, reliable and fully compatible
+        with EDGE Spaces. NFT viewing works well and wallet interactions are
+        smooth. Polygon is preistalled.]
+      </p>
     </div>
 
-    <h2 className="text-3xl font-bold mb-6">
-      Best Wallet Experience
-    </h2>
+    <div>
+      <div className="font-semibold text-white text-lg">
+        ⭐⭐⭐⭐☆ Rainbow Mobile App (Mobile)
+      </div>
+      <p className="mt-2 text-zinc-400">
+        Our recommended mobile wallet. Excellent NFT presentation and an
+        intuitive user experience. For the best experience, open EDGE Spaces
+        from inside Rainbow's built-in browser. Just ensure to switch network into Polygon in the Dapp Browser (click your wallet icon).
+      </p>
+    </div>
 
-    <p className="text-zinc-400 leading-relaxed">
+    <div>
+      <div className="font-semibold text-white text-lg">
+        ⭐⭐⭐⭐☆ Rainbow Browser Extension
+      </div>
+      <p className="mt-2 text-zinc-400">
+        Reliable wallet for desktop connections. At the time of testing it
+        does not display NFTs inside the extension and does not provide a
+        direct OpenSea link for the NFT / Collection.
+      </p>
+    </div>
 
-      Desktop
-
-      <br /><br />
-
-      ✓ MetaMask Browser Extension
-
-      <br /><br />
-
-      Mobile
-
-      <br /><br />
-
-      ✓ Rainbow Wallet (recommended)
-
-      <br />
-      ✓ MetaMask Mobile
-      <br />
-      ✓ Coinbase Wallet
-      <br />
-      ✓ Trust Wallet
-
-      <br /><br />
-
-      On iPhone and Android, the best experience is to open
-      EDGE Spaces from inside your wallet's built-in browser.
-      Standard browsers such as Safari or Chrome may not connect
-      to your wallet automatically.
-
-    </p>
+    <div>
+      <div className="font-semibold text-white text-lg">
+        ⭐⭐⭐☆☆ MetaMask Mobile App
+      </div>
+      <p className="mt-2 text-zinc-400">
+ In times of testing Metamask Mobile App seemed slow, and could not any Dapp browser. It could however import the NFT manually, and it also has the link for OpenSea. 
+      </p>
+    </div>
 
   </div>
 
-</section>
+  <div className="mt-8 rounded-xl border border-blue-700 bg-blue-950/30 p-5 text-zinc-300">
+    <div className="font-semibold text-white mb-2">
+      Testing Notes
+    </div>
 
+    Ratings are based on hands-on testing with EDGE Spaces on Polygon
+    Mainnet and reflect our current experience. Wallet features and user
+    interfaces may change over time.
+  </div>
+
+</div>
       {/* POLYGON */}
 
       <section className="max-w-4xl mx-auto px-6 pb-16">
