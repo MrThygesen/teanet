@@ -252,7 +252,6 @@ console.log("About to call writeContractAsync")
 alert("About to call writeContractAsync")
 
         const hash = await writeContractAsync({
-            chainId: polygon.id,
             address: CONTRACT_ADDRESS,
             abi: parseAbi([
                 'function claim(uint256)'
