@@ -4,6 +4,8 @@ import { useEffect, useState, useCallback } from 'react'
 import { useAccount, usePublicClient, useWriteContract } from 'wagmi'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { parseAbi } from 'viem'
+import { polygon } from 'wagmi/chains'
+
 
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
@@ -220,21 +222,21 @@ async function handleWalletUpdate() {
 
           setClaiming(true)
 
-          await writeContractAsync({
+await writeContractAsync({
 
-              address:CONTRACT_ADDRESS,
+    chainId: polygon.id,
 
-              abi:parseAbi([
+    address: CONTRACT_ADDRESS,
 
-                  'function claim(uint256)'
+    abi: parseAbi([
+        'function claim(uint256)'
+    ]),
 
-              ]),
+    functionName:'claim',
 
-              functionName:'claim',
+    args:[COMMUNITY_MEMBER_TYPE]
 
-              args:[COMMUNITY_MEMBER_TYPE]
-
-          })
+})
 
           await fetch('/api/membership/claimed',{
 
