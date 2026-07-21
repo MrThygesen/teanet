@@ -30,7 +30,12 @@ export default function Profile() {
   const { address } = useAccount()
   const publicClient = usePublicClient()
   const { writeContractAsync } = useWriteContract()
+
 const chainId = useChainId()
+
+console.log("wagmi chain:", chainId)
+console.log("window.ethereum.chainId:", window.ethereum?.chainId)
+
 const { switchChainAsync } = useSwitchChain()
 
   const [cards,setCards] = useState([])
@@ -245,8 +250,17 @@ if (chainId !== polygon.id) {
     alert("Switched to Polygon")
 }
 
-        console.log("About to call writeContractAsync")
-        alert("About to call writeContractAsync")
+        console.log("wagmi chain:", chainId)
+console.log("window.ethereum.chainId:", window.ethereum?.chainId)
+
+alert(
+    "wagmi chain: " + chainId +
+    "\nwindow.ethereum.chainId: " +
+    (window.ethereum?.chainId ?? "undefined")
+)
+
+console.log("About to call writeContractAsync")
+alert("About to call writeContractAsync")
 
         const hash = await writeContractAsync({
             chainId: polygon.id,
