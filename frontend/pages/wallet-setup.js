@@ -86,6 +86,11 @@ export default function WalletSetup() {
 
 {/* RECOMMENDED WALLETS */}
 
+<section className="max-w-4xl mx-auto px-6 pb-16">
+
+  <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
+
+
 <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
   <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
@@ -152,7 +157,12 @@ export default function WalletSetup() {
     interfaces may change over time.
   </div>
 
+</div> 
+
 </div>
+
+</section>
+
       {/* POLYGON */}
 
       <section className="max-w-4xl mx-auto px-6 pb-16">
