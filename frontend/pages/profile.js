@@ -643,11 +643,19 @@ please try again in a few moments.
 
 
 <button
-  onClick={() => {
+onClick={async () => {
+
     alert("BUTTON CLICK")
     console.log("BUTTON CLICK")
-    handleClaim()
-  }}
+
+    console.log("Before handleClaim")
+
+    await handleClaim()
+
+    console.log("After handleClaim")
+
+    alert("HANDLE FINISHED")
+}}
 
   disabled={claiming}
 
@@ -658,6 +666,10 @@ please try again in a few moments.
 
   className="mt-8 w-full px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-lg font-semibold"
 >
+
+
+
+
 
   {claiming
     ? 'Claiming Membership...'
