@@ -674,6 +674,8 @@ please try again in a few moments.
 
 >
 
+</div>
+
   {claiming
     ? 'Claiming Membership...'
     : 'Claim Community Membership'}
