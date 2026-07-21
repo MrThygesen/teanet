@@ -58,6 +58,7 @@ export default function WalletSetup() {
         <div className="max-w-3xl">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+
             Wallet Setup
           </div>
 
@@ -75,7 +76,7 @@ export default function WalletSetup() {
 
             Once your membership has been approved, simply connect a
             Polygon-compatible wallet and claim your Digital Membership directly from your profile.
-
+            Your wallet is also your access to NFT shown on the site. While the wallet also shows your different NFT-ccollectables. 
           </p>
 
         </div>
@@ -88,7 +89,7 @@ export default function WalletSetup() {
 <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
   <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-    Recommended Wallets
+    Recommended Wallets to view the NFTs and getting a link to OpenSea.
   </div>
 
   <h2 className="text-3xl font-bold mb-6">
