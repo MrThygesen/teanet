@@ -382,12 +382,16 @@ Update Your Wallet Information
 
 <div className="mt-10 mb-10 bg-zinc-900 border border-zinc-800 rounded-xl p-6">
 
-  <div className="text-xl font-semibold">
+  <div className="text-xl font-semibold mb-4">
     Connected Wallet
   </div>
 
-  <div className="font-mono text-sm mt-1 break-all">
-    {shortenAddress(address)}
+  <div className="flex justify-center sm:justify-start">
+    <ConnectButton
+      accountStatus="address"
+      chainStatus="icon"
+      showBalance={false}
+    />
   </div>
 
 </div>
