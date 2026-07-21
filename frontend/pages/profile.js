@@ -642,39 +642,22 @@ please try again in a few moments.
 </p>
 
 
-<div
-    onClick={() => {
-        alert("DIV CLICK")
-        console.log("DIV CLICK")
-    }}
-    style={{
-        background: "red",
-        padding: "20px",
-        position: "relative",
-        zIndex: 9999
-    }}
->
-
 <button
-
   onClick={() => {
-      alert("BUTTON CLICK")
-      console.log("BUTTON CLICK")
-      handleClaim()
+    alert("BUTTON CLICK")
+    console.log("BUTTON CLICK")
+    handleClaim()
   }}
 
   disabled={claiming}
 
   style={{
-      position: "relative",
-      zIndex: 9999
+    position: "relative",
+    zIndex: 9999
   }}
 
   className="mt-8 w-full px-6 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50 text-lg font-semibold"
-
 >
-
-</div>
 
   {claiming
     ? 'Claiming Membership...'
