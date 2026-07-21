@@ -251,6 +251,18 @@ alert("wagmi chain: " + chainId)
 console.log("About to call writeContractAsync")
 alert("About to call writeContractAsync")
 
+alert(JSON.stringify({
+    chainId,
+    contract: CONTRACT_ADDRESS
+}, null, 2))
+
+
+const walletChain = await window.ethereum.request({
+  method: 'eth_chainId',
+})
+
+alert("Injected provider chain: " + walletChain)
+
         const hash = await writeContractAsync({
             address: CONTRACT_ADDRESS,
             abi: parseAbi([
