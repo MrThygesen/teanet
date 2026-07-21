@@ -1,7 +1,13 @@
 'use client' 
 
 import { useEffect, useState, useCallback } from 'react'
-import { useAccount, usePublicClient, useWriteContract } from 'wagmi'
+import {
+  useAccount,
+  usePublicClient,
+  useWriteContract,
+  useChainId,
+  useSwitchChain
+} from 'wagmi'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { parseAbi } from 'viem'
 import { polygon } from 'wagmi/chains'
@@ -24,6 +30,8 @@ export default function Profile() {
   const { address } = useAccount()
   const publicClient = usePublicClient()
   const { writeContractAsync } = useWriteContract()
+const chainId = useChainId()
+const { switchChainAsync } = useSwitchChain()
 
   const [cards,setCards] = useState([])
   const [loading,setLoading] = useState(true)
@@ -225,6 +233,17 @@ async function handleClaim() {
     try {
 
         setClaiming(true)
+
+if (chainId !== polygon.id) {
+
+    alert(`Switching from chain ${chainId} to Polygon...`)
+
+    await switchChainAsync({
+        chainId: polygon.id,
+    })
+
+    alert("Switched to Polygon")
+}
 
         console.log("About to call writeContractAsync")
         alert("About to call writeContractAsync")
