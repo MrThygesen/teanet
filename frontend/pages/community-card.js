@@ -238,12 +238,12 @@ export default function CommunityCard() {
                 It only takes a few minutes.
               </p>
 
-              <a
-                href="/wallet-setup"
-                className="inline-flex mt-8 px-6 py-3 rounded-xl border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white transition font-semibold"
-              >
-                Claim Membership
-              </a>
+             <a
+  href="/wallet-setup"
+  className="inline-flex mt-8 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition font-semibold"
+>
+  Claim Membership
+</a>
 
             </div>
 
