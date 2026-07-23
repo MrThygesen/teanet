@@ -294,33 +294,33 @@ Explore the Network
         </div>
 
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          What's Happening
+          Participate & Grow
         </h2>
 
         <p className="text-zinc-400 max-w-3xl mb-12">
-Community updates, member opportunities and emerging initiatives.
+EDGE Spaces is built around contribution. Members discover opportunities to collaborate, learn, support others and grow within the innovation ecosystem.
         </p>
 
         <div className="grid md:grid-cols-4 gap-6">
 
           <FeatureCard
-            title="Builders Wanted"
-            text="Founders searching for technical collaborators and early contributors."
+            title="🤝 Find Your Team"
+            text="Meet founders, builders and specialists looking for collaborators, co-founders and early contributors."
           />
 
           <FeatureCard
-            title="Startup Programs"
-            text="Discover accelerator cohorts, venture builder programmes and founder initiatives."
+            title="💡 Advisory & Knowledge"
+            text="Share expertise, ask for feedback and connect with experienced founders, operators and specialists."
           />
 
           <FeatureCard
-            title="Investor Interest"
-            text="Themes and sectors currently attracting attention."
+            title="🚀 Programs & Selection"
+            text="Discover accelerators, hackathons, venture builders and curated cohorts. Community participation may open doors to future opportunities."
           />
 
           <FeatureCard
-            title="Workspace Opportunities (future)"
-            text="Shared offices, local communities and exclusive benefits."
+            title="🌐 Digital Membership"
+            text="Your EDGE Spaces Membership Card unlocks identity, participation and an expanding range of community and partner benefits as the ecosystem evolves."
           />
 
         </div>
