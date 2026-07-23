@@ -5,7 +5,7 @@ import { useAccount, usePublicClient, useWriteContract } from 'wagmi'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { parseAbi } from 'viem'
 import { polygon } from 'wagmi/chains'
-
+import Header from '../components/Header'
 
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
@@ -278,7 +278,9 @@ await writeContractAsync({
 
 <div className="min-h-screen bg-zinc-950 text-white">
 
-<div className="max-w-4xl mx-auto px-6 py-16">
+  <Header />
+
+  <div className="max-w-4xl mx-auto px-6 py-16">
 
 <h1 className="text-4xl font-bold">
 
