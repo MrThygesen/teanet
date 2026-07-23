@@ -93,6 +93,15 @@ export default function CommunityCard() {
 
 <section className="max-w-5xl mx-auto px-6 py-20 border-t border-zinc-800">
 
+<h2 className="text-3xl font-bold mb-6">
+  Your Digital Membership
+</h2>
+
+<p className="text-lg text-zinc-400 leading-relaxed">
+  This is an example of your wallet-based Digital Membership. It belongs to you and serves as your verifiable identity within the EDGE Spaces community.
+</p>
+
+
   {/* Centered image */}
   <div className="flex justify-center">
     <img
@@ -104,15 +113,6 @@ export default function CommunityCard() {
 
   {/* Text aligned with hero */}
   <div className="max-w-3xl mt-10">
-
-<h2 className="text-3xl font-bold mb-6">
-  Your Digital Membership
-</h2>
-
-<p className="text-lg text-zinc-400 leading-relaxed">
-  This is an example of your wallet-based Digital Membership. It belongs to you and serves as your verifiable identity within the EDGE Spaces community.
-</p>
-
 
 <p className="mt-6 text-zinc-500 leading-relaxed">
   To claim your Digital Membership you'll need a free digital wallet that supports the Polygon network. The setup takes only a few minutes and network fees are typically only a few cents.
