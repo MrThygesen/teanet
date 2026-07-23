@@ -107,8 +107,8 @@ export default function CommunityCard() {
           />
 
           <BenefitCard
-            title="Partner Benefits"
-            text="Exclusive opportunities from our future partner organizations."
+            title="Sponsored Digital Membership"
+            text="Sponsor benefits and customized cards from partners."
           />
 
           <BenefitCard
@@ -127,7 +127,7 @@ export default function CommunityCard() {
           />
 
           <BenefitCard
-            title="Future Ready"
+            title="Future Voting"
             text="Built for future community participation."
           />
 
