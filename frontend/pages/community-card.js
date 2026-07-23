@@ -192,6 +192,19 @@ export default function CommunityCard() {
             and community opportunities.
           </p>
 
+
+<div className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+  <h3 className="font-semibold mb-2">
+    Why a Digital Wallet?
+  </h3>
+
+  <p className="text-zinc-400 leading-relaxed">
+    Unlike a traditional membership card, your Digital Membership is stored in your own wallet. This gives you ownership of your membership, a verifiable digital identity and a foundation for future community participation, achievements and sponsored member benefits.
+  </p>
+</div>
+
+
+
           <div className="grid md:grid-cols-2 gap-8 mt-12 text-left">
 
             <div className="bg-black border border-zinc-800 rounded-2xl p-8">
@@ -215,17 +228,6 @@ export default function CommunityCard() {
             </div>
 
             <div className="bg-black border border-zinc-800 rounded-2xl p-8">
-
-<div className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
-  <h3 className="font-semibold mb-2">
-    Why a Digital Wallet?
-  </h3>
-
-  <p className="text-zinc-400 leading-relaxed">
-    Unlike a traditional membership card, your Digital Membership is stored in your own wallet. This gives you ownership of your membership, a verifiable digital identity and a foundation for future community participation, achievements and sponsored member benefits.
-  </p>
-</div>
-
 
               <div className="text-xl font-semibold mb-4">
                 Already a Member?
