@@ -24,16 +24,13 @@ export default function CommunityCard() {
             Digital Membership in EDGE Spaces
           </h1>
 
-          <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-            Your Digital Membership confirms that you are part of the
-            EDGE Spaces innovation network.
-          </p>
+<p className="mt-8 text-xl text-zinc-400 leading-relaxed">
+  Your Digital Membership is a wallet-based digital identity that confirms your membership in the EDGE Spaces innovation ecosystem.
+</p>
 
-          <p className="mt-6 text-zinc-500 leading-relaxed">
-            Your Digital Membership is the foundation for an expanding ecosystem of member services, 
-            sponsored initiatives, digital collections, community participation and future recognition.
-          </p>
-
+<p className="mt-6 text-zinc-500 leading-relaxed">
+  Built on modern Web3 infrastructure, your membership is designed to grow with your participation and provide access to future community initiatives, sponsored memberships, digital collections and member services.
+</p>
         </div>
 
       </section>
@@ -108,18 +105,19 @@ export default function CommunityCard() {
   {/* Text aligned with hero */}
   <div className="max-w-3xl mt-10">
 
-    <h2 className="text-3xl font-bold mb-6">
-      Your Community Membership
-    </h2>
+<h2 className="text-3xl font-bold mb-6">
+  Your Digital Membership
+</h2>
 
-    <p className="text-lg text-zinc-400 leading-relaxed">
-      Your permanent identity within the EDGE Spaces innovation network.
-    </p>
+<p className="text-lg text-zinc-400 leading-relaxed">
+  This is an example of your wallet-based Digital Membership. It belongs to you and serves as your verifiable identity within the EDGE Spaces community.
+</p>
 
-    <p className="mt-6 text-zinc-500 leading-relaxed">
-      To claim your membership you'll need a Polygon-compatible wallet.
-      The process takes only a few minutes and the network fee is very small.
-    </p>
+
+<p className="mt-6 text-zinc-500 leading-relaxed">
+  To claim your Digital Membership you'll need a free digital wallet that supports the Polygon network. The setup takes only a few minutes and network fees are typically only a few cents.
+</p>
+
 
 <div className="mt-8">
   <a
@@ -152,8 +150,7 @@ export default function CommunityCard() {
         </h2>
 
         <p className="text-zinc-400 max-w-3xl leading-relaxed">
-          As EDGE Spaces evolves, your Digital Membership can unlock
-          exclusive digital collections and new future member services depending on interest.
+          As the EDGE Spaces evolves, your Digital Membership can grow with new community initiatives, sponsored memberships, digital collections, recognition and future member services.
         </p>
 
         <div className="mt-10 space-y-3 text-zinc-300">
@@ -205,7 +202,7 @@ export default function CommunityCard() {
 
               <p className="text-zinc-400 leading-relaxed">
                 Apply to join our curated innovation network for founders,
-                builders, investors, advisors and partner organizations.
+                builders, active angels and advisors.
               </p>
 
               <a
@@ -218,6 +215,17 @@ export default function CommunityCard() {
             </div>
 
             <div className="bg-black border border-zinc-800 rounded-2xl p-8">
+
+<div className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
+  <h3 className="font-semibold mb-2">
+    Why a Digital Wallet?
+  </h3>
+
+  <p className="text-zinc-400 leading-relaxed">
+    Unlike a traditional membership card, your Digital Membership is stored in your own wallet. This gives you ownership of your membership, a verifiable digital identity and a foundation for future community participation, achievements and sponsored member benefits.
+  </p>
+</div>
+
 
               <div className="text-xl font-semibold mb-4">
                 Already a Member?
