@@ -1,5 +1,7 @@
 'use client'
 
+import Header from '../components/Header'
+
 export default function WalletSetup() {
 
   async function addPolygonNetwork() {
@@ -50,6 +52,7 @@ export default function WalletSetup() {
   return (
 
     <div className="bg-black text-white min-h-screen">
+  <Header />
 
       {/* HERO */}
 
