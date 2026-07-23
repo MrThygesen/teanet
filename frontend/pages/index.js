@@ -29,12 +29,12 @@ const spotlightItems = [
   },
 
   {
-title: 'Investors',
-subtitle: 'Fuel Innovation',
+title: 'Active Investors',
+subtitle: 'Invest. Mentor. Connect.',
 description:
-'Angel investors, venture investors and experienced operators supporting founders through capital, mentorship and strategic relationships.',
+'Experienced investors, angel investors and operators who actively support founders through capital, mentorship and strategic relationships.',
     image:
-     '/images/active-angels.jpg'
+     '/images/investors.jpg'
   },
 
   {
@@ -129,7 +129,7 @@ useEffect(() => {
 </h2>
 
 <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
-The innovation network for founders, builders, advisors and investors. Connect with the people, knowledge and opportunities that accelerate innovation from idea to execution.
+The innovation network for founders, builders, specialists and active investors. Connect with the people, knowledge and opportunities that accelerate innovation from idea to execution.
 </p>
         </div>
 
@@ -151,9 +151,12 @@ The innovation network for founders, builders, advisors and investors. Connect w
 
 <FeatureCard
  count={communityStats.angels}
-  title="Investors"
-text="Supporting founders through capital, experience and strategic relationships."
+  title="Active Investors"
+text="Experienced investors who actively support founders through capital, mentorship and strategic relationships."
 />
+
+
+
 
  <FeatureCard
    count={communityStats.specialists}
@@ -347,9 +350,8 @@ EDGE Spaces is built around contribution. Members discover opportunities to coll
 
 Join the EDGE Spaces community.
 
-Applications are reviewed manually to build a trusted community where founders, builders, advisors and investors connect, collaborate and create new opportunities.
+Applications are reviewed manually to build a trusted community where founders, builders, advisors and active investors connect, collaborate and create new opportunities.
 </p>
-
 
 <div className="max-w-4xl">
 
@@ -413,7 +415,7 @@ Telegram is free to use and creating an account takes about one minute.
 
   <p className="text-zinc-400 max-w-3xl leading-relaxed mb-12">
     EDGE Spaces is a curated innovation community where founders,
-    builders, specialists and investors collaborate around real
+    builders, specialists and active investors collaborate around real
     opportunities—not endless conversations.
   </p>
 
@@ -501,7 +503,7 @@ Telegram is free to use and creating an account takes about one minute.
   </div>
 
   <div className="mt-6 text-zinc-200 leading-relaxed">
-    A trusted innovation community connecting founders, builders, advisors and investors.
+    A trusted innovation community connecting founders, builders, advisors and active investors.
   </div>
 
 
