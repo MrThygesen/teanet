@@ -30,9 +30,8 @@ export default function CommunityCard() {
           </p>
 
           <p className="mt-6 text-zinc-500 leading-relaxed">
-            It is the foundation for future member services,
-            collaborations, digital collections and community
-            participation.
+            Your Digital Membership is the foundation for an expanding ecosystem of member services, 
+            sponsored initiatives, digital collections, community participation and future recognition.
           </p>
 
         </div>
@@ -62,7 +61,7 @@ export default function CommunityCard() {
     </h2>
 
     <p className="text-lg text-zinc-400 leading-relaxed">
-      Your Digital Membership is issued by EDGE Spaces and belongs to you.
+      Your permanent identity within the EDGE Spaces innovation network.
     </p>
 
     <p className="mt-6 text-zinc-500 leading-relaxed">
@@ -92,7 +91,7 @@ export default function CommunityCard() {
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-800">
 
         <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-          Beyond Membership
+         Growing With You
         </div>
 
         <h2 className="text-4xl font-bold mb-10">
@@ -107,28 +106,28 @@ export default function CommunityCard() {
           />
 
           <BenefitCard
-            title="Sponsored Digital Membership"
-            text="Sponsor benefits and customized cards from partners."
+            title="Sponsored Membership"
+            text="Receive organization-sponsored memberships, partner benefits and ecosystem opportunities."
           />
 
           <BenefitCard
-            title="EDGE Collection"
-            text="Exclusive digital collections for members."
+            title="Digital Collections"
+            text="Collect exclusive community and partner collectibles connected to events, initiatives and collaborations."
           />
 
           <BenefitCard
-            title="Event Collectibles"
-            text="Digital keepsakes from community events."
+            title="Member Benefits"
+            text= "Access future services, partner offers, collaborations and community initiatives as the ecosystem grows."
           />
 
           <BenefitCard
             title="Community Recognition"
-            text="Recognition for contributions to the community."
+            text="Build a verifiable history of your contributions, participation and achievements."
           />
 
           <BenefitCard
-            title="Future Voting"
-            text="Built for future community participation."
+            title="Community Participation"
+            text="Participate in future community initiatives, voting and member-driven activities."
           />
 
         </div>
