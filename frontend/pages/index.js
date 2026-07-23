@@ -34,7 +34,7 @@ subtitle: 'Fuel Innovation',
 description:
 'Angel investors, venture investors and experienced operators supporting founders through capital, mentorship and strategic relationships.',
     image:
-     '/images/investors.jpg'
+     '/images/active-angels.jpg'
   },
 
   {
