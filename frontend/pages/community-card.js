@@ -115,7 +115,10 @@ export default function CommunityCard() {
   <div className="max-w-3xl mt-10">
 
 <p className="mt-6 text-zinc-500 leading-relaxed">
-  To claim your Digital Membership you'll need a free digital wallet that supports the Polygon network. The setup takes only a few minutes and network fees are typically only a few cents.
+  After your membership application has been approved, simply sign in to your
+  <a href="/profile" className="text-blue-400 hover:text-blue-300"> Profile</a>
+  to claim your Digital Membership. If you don't already have a compatible wallet,
+  our wallet setup guide will help you get started in just a few minutes.
 </p>
 
 
