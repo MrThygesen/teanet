@@ -115,7 +115,7 @@ useEffect(() => {
 </h2>
 
 <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
-The innovation network for founders, builders, specialists and active investors. Connect with the people, knowledge and opportunities that accelerate innovation from idea to execution.
+A trusted innovation network connecting founders, builders, specialists and active investors. Connect with the people, knowledge and opportunities that accelerate innovation from idea to execution.
 </p>
         </div>
 
@@ -287,7 +287,7 @@ Explore the Network
         </h2>
 
         <p className="text-zinc-400 max-w-3xl mb-12">
-EDGE Spaces is built around contribution. Members discover opportunities to collaborate, learn, support others and grow within the innovation ecosystem.
+ EDGE Spaces is built around contribution. Members discover opportunities to collaborate, learn, support others and grow through the community.
         </p>
 
         <div className="grid md:grid-cols-4 gap-6">
@@ -506,7 +506,7 @@ Telegram is free to use and creating an account takes about one minute.
   </div>
 
   <div className="mt-6 text-zinc-200 leading-relaxed">
-    A trusted innovation community connecting founders, builders, advisors and active investors.
+    A trusted community connecting founders, builders, advisors and active investors..
   </div>
 
 

@@ -25,8 +25,11 @@ export default function CommunityCard() {
           </h1>
 
 <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-  Your Digital Membership is a wallet-based digital identity that confirms your membership in the EDGE Spaces innovation ecosystem.
+  Your Digital Membership is a wallet-based digital identity that confirms your membership in the EDGE Spaces community.
 </p>
+
+
+
 
 <p className="mt-6 text-zinc-500 leading-relaxed">
   Built on modern Web3 infrastructure, your membership is designed to grow with your participation and provide access to future community initiatives, sponsored memberships, digital collections and member services.
@@ -218,7 +221,7 @@ export default function CommunityCard() {
 
               <p className="text-zinc-400 leading-relaxed">
                 Apply to join our curated innovation network for founders,
-                builders, active angels and advisors.
+                builders, active investors, mentors and advisors.
               </p>
 
               <a
