@@ -418,11 +418,9 @@ Telegram is free to use and creating an account takes about one minute.
 
 <div className="space-y-3 text-zinc-300">
 
-  <div>✓ Access to the EDGE Spaces community</div>
+  <div>✓ Access to the private EDGE Spaces community</div>
 
   <div>✓ Membership by application</div>
-
-  <div>✓ Private Telegram collaboration</div>
 
   <div>✓ Founder, builder and investor connections</div>
 
@@ -432,6 +430,23 @@ Telegram is free to use and creating an account takes about one minute.
 
 </div>
 
+<div className="mt-8 border-t border-zinc-800 pt-6">
+
+  <div className="text-sm uppercase tracking-wide text-blue-400 mb-3">
+    Next Steps
+  </div>
+
+  <div className="space-y-2 text-zinc-400">
+
+    <div>1. Apply and receive membership approval.</div>
+
+    <div>2. Join the private EDGE Spaces Telegram community.</div>
+
+    <div>3. Sign in to your <a href="/profile" className="text-blue-400 hover:text-blue-300">Profile</a> to claim your Digital Membership Card.</div>
+
+  </div>
+
+</div>
     <a
       href="/community-card"
       className="inline-block mt-8 text-blue-400 hover:text-blue-300"
