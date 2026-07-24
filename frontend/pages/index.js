@@ -199,11 +199,11 @@ Explore the Network
 
     <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-300 group-hover:border-zinc-500 group-hover:shadow-2xl group-hover:shadow-blue-500/20">
 
-      <img
-        src={spotlight.image}
-        alt={spotlight.title}
-        className="block w-full aspect-[4/5] md:aspect-square object-cover transition-transform duration-300 group-hover:scale-[1.01]"
-      />
+    <img
+  src={spotlight.image}
+  alt={spotlight.title}
+  className="block w-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
+/>
 
 
     </div>
