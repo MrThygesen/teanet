@@ -29,7 +29,7 @@ const spotlightItems = [
   },
 
   {
-title: 'Active Investors',
+title: 'Investors',
 subtitle: 'Invest. Mentor. Connect.',
 description:
 'Experienced investors, angel investors and operators who actively support founders through capital, mentorship and strategic relationships.',
@@ -92,20 +92,6 @@ useEffect(() => {
 
 }, [])
 
-
-useEffect(() => {
-
-  const interval = setInterval(() => {
-
-    setActiveSpotlight(prev =>
-      (prev + 1) % spotlightItems.length
-    )
-
-  }, 5000)
-
-  return () => clearInterval(interval)
-
-}, [])
 
   const spotlight = spotlightItems[activeSpotlight]
 
@@ -211,7 +197,7 @@ Explore the Network
     className="block group cursor-pointer"
   >
 
-    <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-300 group-hover:border-blue-500 group-hover:shadow-2xl group-hover:shadow-blue-500/20">
+    <div className="relative overflow-hidden rounded-3xl border border-zinc-800 transition-all duration-300 group-hover:border-zinc-500 group-hover:shadow-2xl group-hover:shadow-blue-500/20">
 
       <img
         src={spotlight.image}
@@ -224,65 +210,65 @@ Explore the Network
 
   </a>
 
-  {/* CARD PREVIEW ROW */}
-
-<div className="hidden md:grid md:grid-cols-5 gap-4 mt-6">
-    {spotlightItems.map((item, index) => (
-
-      <div
-        key={index}
-        onClick={() => setActiveSpotlight(index)}
-        className={`cursor-pointer rounded-xl overflow-hidden border transition-all duration-300 ${
-          activeSpotlight === index
-            ? 'border-blue-500 ring-2 ring-blue-500'
-            : 'border-zinc-800 opacity-60 hover:opacity-100'
-        }`}
-      >
-
-        <img
-          src={item.image}
-          alt={item.title}
-          className="block w-full h-28 object-cover"
-        />
-
-      </div>
-
-    ))}
-
-  </div>
 
 {/* MOBILE CONTROLS */}
 
- <div className="flex md:hidden items-center justify-center gap-6 mt-6">
+{/* NAVIGATION */}
 
-   <button
-     onClick={() =>
-       setActiveSpotlight(
-         activeSpotlight === 0
-           ? spotlightItems.length - 1
-           : activeSpotlight - 1
-       )
-     }
-     className="px-4 py-2 rounded-lg border border-zinc-700 hover:border-blue-500"
-   >
-     ←  
-   </button>
+<div className="flex items-center justify-between mt-8">
 
-   <button
-     onClick={() =>
-       setActiveSpotlight(
-         (activeSpotlight + 1) % spotlightItems.length
-       )
-     }
-     className="px-4 py-2 rounded-lg border border-zinc-700 hover:border-blue-500"
-   >
-     →
-   </button>
+  <button
+    onClick={() =>
+      setActiveSpotlight(
+        activeSpotlight === 0
+          ? spotlightItems.length - 1
+          : activeSpotlight - 1
+      )
+    }
+    className="px-4 py-2 rounded-xl border border-zinc-600 hover:border-zinc-500 transition"
+  >
+    ← Previous
+  </button>
 
- </div>
-
+  <button
+    onClick={() =>
+      setActiveSpotlight(
+        (activeSpotlight + 1) % spotlightItems.length
+      )
+    }
+    className="px-4 py-2 rounded-xl border border-zinc-600 hover:border-zinc-500 transition"
+  >
+    Next →
+  </button>
 
 </div>
+
+</div>
+
+{/* PERSONA NAVIGATION */}
+
+<div className="hidden md:flex justify-center gap-3 mt-8">
+
+  {spotlightItems.map((item, index) => (
+
+    <button
+      key={index}
+      onClick={() => setActiveSpotlight(index)}
+      className={`px-4 py-2 rounded-xl border text-sm font-medium transition-all duration-300 ${
+        activeSpotlight === index
+          ? 'border-blue-500 bg-zinc-900 border-blue-500 text-blue-300 shadow-md shadow-blue-500/10'
+          : 'border-zinc-700 text-zinc-400 hover:border-zinc-500 hover:text-white'
+      }`}
+    >
+      {item.title}
+    </button>
+
+  ))}
+
+</div>
+
+
+
 </section>
 
       {/* INSIGHTS */}
