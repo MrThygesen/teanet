@@ -202,7 +202,7 @@ Explore the Network
       <img
         src={spotlight.image}
         alt={spotlight.title}
-        className="block w-full aspect-[4/5] md:aspect-square object-contain transition-transform duration-300 group-hover:scale-[1.01]"
+        className="block w-full aspect-[4/5] md:aspect-square object-cover transition-transform duration-300 group-hover:scale-[1.01]"
       />
 
 
