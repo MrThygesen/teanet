@@ -316,6 +316,65 @@ EDGE Spaces is built around contribution. Members discover opportunities to coll
 
       </section>
 
+{/* INSIDE THE COMMUNITY */}
+
+<section className="max-w-6xl mx-auto px-6 py-12 border-t border-zinc-800">
+
+  <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
+    Inside the Community
+  </div>
+
+  <h2 className="text-3xl md:text-4xl font-bold mb-6">
+    More than a chat group
+  </h2>
+
+  <p className="text-zinc-400 max-w-3xl leading-relaxed mb-12">
+    EDGE Spaces is a curated innovation community where founders,
+    builders, specialists and active investors collaborate around real
+    opportunities—not endless conversations.
+  </p>
+
+  <div className="grid md:grid-cols-2 gap-10 items-center">
+
+    {/* LEFT */}
+
+    <div className="space-y-4 text-zinc-300 leading-relaxed">
+
+      <div>✓ Structured discussion topics</div>
+
+      <div>✓ Founder & startup introductions</div>
+
+      <div>✓ Technical collaboration</div>
+
+      <div>✓ Investor & funding opportunities</div>
+
+      <div>✓ Grants & accelerator programs</div>
+
+      <div>✓ Partnerships & ecosystem connections</div>
+
+      <div>✓ Events & hackathons</div>
+
+      <div>✓ AI, Web3 and emerging technology discussions</div>
+
+      <div>✓ Curated community with manual approval</div>
+
+    </div>
+
+    {/* RIGHT */}
+
+    <div className="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
+      <img
+        src="/images/community-preview.jpg"
+        alt="EDGE Spaces Telegram Community"
+        className="w-full"
+      />
+    </div>
+
+  </div>
+
+</section>
+
+
 
       {/* MEMBERSHIP */}
 
@@ -387,63 +446,6 @@ Telegram is free to use and creating an account takes about one minute.
 
       </section>
 
-{/* INSIDE THE COMMUNITY */}
-
-<section className="max-w-6xl mx-auto px-6 py-12 border-t border-zinc-800">
-
-  <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-    Inside the Community
-  </div>
-
-  <h2 className="text-3xl md:text-4xl font-bold mb-6">
-    More than a chat group
-  </h2>
-
-  <p className="text-zinc-400 max-w-3xl leading-relaxed mb-12">
-    EDGE Spaces is a curated innovation community where founders,
-    builders, specialists and active investors collaborate around real
-    opportunities—not endless conversations.
-  </p>
-
-  <div className="grid md:grid-cols-2 gap-10 items-center">
-
-    {/* LEFT */}
-
-    <div className="space-y-4 text-zinc-300 leading-relaxed">
-
-      <div>✓ Structured discussion topics</div>
-
-      <div>✓ Founder & startup introductions</div>
-
-      <div>✓ Technical collaboration</div>
-
-      <div>✓ Investor & funding opportunities</div>
-
-      <div>✓ Grants & accelerator programs</div>
-
-      <div>✓ Partnerships & ecosystem connections</div>
-
-      <div>✓ Events & hackathons</div>
-
-      <div>✓ AI, Web3 and emerging technology discussions</div>
-
-      <div>✓ Curated community with manual approval</div>
-
-    </div>
-
-    {/* RIGHT */}
-
-    <div className="rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900">
-      <img
-        src="/images/community-preview.jpg"
-        alt="EDGE Spaces Telegram Community"
-        className="w-full"
-      />
-    </div>
-
-  </div>
-
-</section>
 
 
       {/* APPLICATION FORM */}
