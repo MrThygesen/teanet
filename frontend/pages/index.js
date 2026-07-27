@@ -1,3 +1,4 @@
+
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -111,11 +112,11 @@ useEffect(() => {
 </div>
 
 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-  The Innovation Network
+  The Community Behind Innovation
 </h2>
 
 <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
-A trusted innovation network connecting founders, builders, specialists and active investors. Connect with the people, knowledge and opportunities that accelerate innovation from idea to execution.
+A trusted community where founders, builders, specialists and active investors collaborate, contribute and help each other build better products, stronger companies and lasting professional relationships.
 </p>
         </div>
 
