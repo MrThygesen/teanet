@@ -58,7 +58,7 @@ export default function WalletSetup() {
 
   <meta
     name="description"
-    content="Set up a Polygon-compatible wallet and claim your EDGE Spaces Digital Membership in just a few minutes."
+    content="Set up a Polygon-compatible wallet and claim your EDGE Membership in just a few minutes."
   />
 
   <meta
@@ -68,7 +68,7 @@ export default function WalletSetup() {
 
   <meta
     property="og:description"
-    content="Recommended wallets, Polygon setup and everything you need to claim your Digital Membership."
+    content="Recommended wallets, Polygon setup and everything you need to claim your EDGE Membership."
   />
 
   <meta
@@ -118,7 +118,7 @@ export default function WalletSetup() {
           <p className="mt-6 text-zinc-500 leading-relaxed">
 
             Once your membership has been approved, simply connect a
-            Polygon-compatible wallet and claim your Digital Membership directly from your profile.
+            Polygon-compatible wallet and claim your EDGE Membership directly from your profile.
             Your wallet is also your access to NFT shown on the site. While the wallet also shows your different NFT-ccollectables. 
           </p>
 
@@ -222,7 +222,7 @@ export default function WalletSetup() {
 
           <p className="text-zinc-400 leading-relaxed">
 
-          Digital Memberships are issued on Polygon Mainnet.
+          EDGE Memberships are issued on Polygon Mainnet.
 
             <br /><br />
 
@@ -281,7 +281,7 @@ export default function WalletSetup() {
         <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-3">
-            Claim Your Digital Membership
+            Claim Your EDGE Membership
           </div>
 
           <h2 className="text-3xl font-bold mb-6">
@@ -296,7 +296,7 @@ export default function WalletSetup() {
 
             <br /><br />
 
-            Your Digital Membership will be issued directly to your wallet.
+            Your EDGE Membership will be issued directly to your wallet.
 
             <br /><br />
 
@@ -337,7 +337,7 @@ export default function WalletSetup() {
 
           <p className="text-zinc-400 leading-relaxed">
 
-             Your Digital Membership is issued immediately on Polygon Mainnet...
+             Your EDGE Membership is issued immediately on Polygon Mainnet...
 
             <br /><br />
 
@@ -345,7 +345,7 @@ export default function WalletSetup() {
 
             <br /><br />
 
-           After importing, your Digital Membership will appear in your wallet with its image, title and description.
+           After importing, your EDGE Membership will appear in your wallet with its image, title and description.
 
             <br /><br />
 
@@ -368,7 +368,7 @@ export default function WalletSetup() {
               href="/community-card"
               className="px-6 py-3 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition"
             >
-              Learn About Digital Membership
+              Learn About EDGE Membership
             </a>
 
           </div>

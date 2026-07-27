@@ -163,7 +163,7 @@ return (
 </div>
 
 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-  A Trusted Startup Community That Builds Together
+  Where Founders, Builders and Investors Build Together
 </h2>
 
 <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
@@ -360,7 +360,7 @@ Who's Inside EDGE Spaces
           />
 
           <FeatureCard
-            title="🌐 Digital Membership"
+            title="🌐 EDGE Membership."
             text="Your EDGE Spaces Membership Card unlocks identity, participation and an expanding range of community and partner benefits as the ecosystem evolves."
           />
 
@@ -478,7 +478,7 @@ Telegram is free to use and creating an account takes about one minute.
 
   <div>✓ Curated introductions and collaboration opportunities</div>
 
-  <div✓ Optional Digital Membership with future community and partner benefits</div>
+  <div>✓ Optional EDGE Membership with future community and partner benefits </div>
 
 
 

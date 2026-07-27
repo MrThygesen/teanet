@@ -282,7 +282,7 @@ await writeContractAsync({
 
   <meta
     name="description"
-    content="Manage your EDGE Spaces membership, connect your wallet and claim your Digital Membership."
+    content="Manage your EDGE Spaces membership, connect your wallet and claim your EDGE Membership."
   />
 
   <meta
@@ -328,7 +328,7 @@ My Membership
 
 <p className="text-zinc-400 mt-2">
 
-Your Digital Membership and community information.
+Your EDGE Membership and community information.
 
 </p>
 
@@ -344,7 +344,7 @@ Connect Your Wallet
 
 <p className="text-zinc-400 mb-4">
 
-Connect your Polygon-compatible wallet to access your Digital Membership.
+Connect your Polygon-compatible wallet to access your EDGE Membership.
 
 </p>
 <div className="flex justify-center mb-8">
@@ -407,7 +407,7 @@ Update Your Wallet Information
 
 <p className="text-zinc-400 mt-2">
 
- If you applied without providing a wallet, enter the email address you used for your membership application below. Your connected wallet must be Polygon-compatible. We'll link it to your approved membership so you can claim your Digital Membership.
+ If you applied without providing a wallet, enter the email address you used for your membership application below. Your connected wallet must be Polygon-compatible. We'll link it to your approved membership so you can claim your EDGE Membership.
 
 </p>
 
@@ -649,7 +649,7 @@ Your membership application has been approved.
 <p className="text-zinc-400 mt-2">
 
 Click below to issue your official EDGE Spaces
-Digital Membership to this wallet.
+Membership to this wallet.
 
 </p>
 
@@ -665,7 +665,7 @@ Digital Membership to this wallet.
 
 <p className="text-zinc-400 mt-2">
 
-We're synchronizing your Digital Membership.
+We're synchronizing your EDGE Membership.
 
 If your Digital Membership doesn't appear after refreshing the page,
 please try again in a few moments.
@@ -718,7 +718,7 @@ Community Membership Claimed
 
 Your Community Membership has already been claimed.
 
-We're synchronizing your Digital Membership.
+We're synchronizing your EDGE Membership.
 
  If your Digital Membership doesn't appear after refreshing the page, please try again in a few moments.
 
@@ -819,7 +819,7 @@ Already an approved member?
 
 If you previously joined without providing a wallet, enter your membership email below.
 
-If your email matches an approved membership, this wallet will be linked to your account so you can claim your Community Membership credential.
+If your email matches an approved account, this wallet will be linked to your account so you can claim your EDGE Membership.
 
 </p>
 

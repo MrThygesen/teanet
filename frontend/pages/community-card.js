@@ -7,21 +7,21 @@ export default function CommunityCard() {
   return (
 <>   
  <Head>
-        <title>Digital Membership | EDGE Spaces</title>
+        <title>EDGE Membership | EDGE Spaces</title>
 
         <meta
           name="description"
-          content="Learn how the EDGE Spaces Digital Membership provides a wallet-based digital identity, community participation and access to future member initiatives."
+          content="Learn how the EDGE Spaces EDGE Membership provides a wallet-based digital identity, community participation and access to future member initiatives."
         />
 
         <meta
          property="og:title"
-          content="Digital Membership | EDGE Spaces"
+          content="EDGE Membership | EDGE Spaces"
         />
 
         <meta
           property="og:description"
-          content="A wallet-based digital membership designed for trusted participation, community recognition and future member benefits."
+          content="A wallet-based EDGE Membership designed for trusted participation, community recognition and future member benefits."
         />
 
         <meta
@@ -56,15 +56,15 @@ export default function CommunityCard() {
         <div className="max-w-3xl">
 
           <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-4">
-            Digital Membership
+            EDGE Membership
           </div>
 
           <h1 className="text-5xl font-bold leading-tight">
-            Digital Membership in EDGE Spaces
+            EDGE Membership in EDGE Spaces
           </h1>
 
 <p className="mt-8 text-xl text-zinc-400 leading-relaxed">
-  Your Digital Membership is a wallet-based digital identity that confirms your membership in the EDGE Spaces community.
+  Your EDGE Membership is a wallet-based digital identity that confirms your membership in the EDGE Spaces community.
 </p>
 
 
@@ -95,7 +95,7 @@ export default function CommunityCard() {
         <div className="grid md:grid-cols-3 gap-6">
 
           <BenefitCard
-            title="Community Membership"
+            title="EDGE Membership"
             text="Your permanent membership in EDGE Spaces."
           />
 
@@ -130,17 +130,17 @@ export default function CommunityCard() {
 
 
       {/* ===================================================== */}
-      {/* DIGITAL MEMBERSHIP */}
+      {/* EDGE Membership */}
       {/* ===================================================== */}
 
 <section className="max-w-5xl mx-auto px-6 py-20 border-t border-zinc-800">
 
 <h2 className="text-3xl font-bold mb-6">
-  Your Digital Membership
+  Your EDGE Membership
 </h2>
 
 <p className="text-lg text-zinc-400 leading-relaxed">
-  This is an example of your wallet-based Digital Membership. It belongs to you and serves as your verifiable identity within the EDGE Spaces community.
+  This is an example of your wallet-based EDGE Membership. It belongs to you and serves as your verifiable identity within the EDGE Spaces community.
 </p>
 
 
@@ -148,7 +148,7 @@ export default function CommunityCard() {
   <div className="flex justify-center">
     <img
       src="/data/example-membership-card.jpg"
-      alt="EDGE Spaces Digital Membership"
+      alt="EDGE Spaces EDGE Membership"
       className="w-full max-w-lg rounded-3xl border border-zinc-800"
     />
   </div>
@@ -157,10 +157,10 @@ export default function CommunityCard() {
   <div className="max-w-3xl mt-10">
 
 <p className="mt-6 text-zinc-500 leading-relaxed">
-  After your membership application has been approved, simply sign in to your
+  After your community membership application has been approved you can join our community. and you can also collect the digtial membership card, simply sign in to your
   <a href="/profile" className="text-blue-400 hover:text-blue-300"> Profile</a>
-  to claim your Digital Membership. If you don't already have a compatible wallet,
-  our wallet setup guide will help you get started in just a few minutes.
+  to claim your EDGE Membership (optional). If you don't already have a compatible wallet,
+  our wallet setup guide will help you get started so you can collec the card with a Polygon compatible wallet, in just a few minutes.
 </p>
 
 
@@ -195,7 +195,7 @@ export default function CommunityCard() {
         </h2>
 
         <p className="text-zinc-400 max-w-3xl leading-relaxed">
-          As the EDGE Spaces evolves, your Digital Membership can grow with new community initiatives, sponsored memberships, digital collections, recognition and future member services.
+          As the EDGE Spaces evolves, your EDGE Membership can grow with new community initiatives, sponsored memberships, digital collections, recognition and future member services.
         </p>
 
         <div className="mt-10 space-y-3 text-zinc-300">
@@ -232,7 +232,7 @@ export default function CommunityCard() {
           </h2>
 
           <p className="max-w-3xl mx-auto text-zinc-400 leading-relaxed">
-            Join the EDGE Spaces innovation network or claim your Digital
+            Join the EDGE Spaces Community on Telegram, and claim your EDGE
             Membership to access future member initiatives, digital collections
             and community opportunities.
           </p>
@@ -240,11 +240,11 @@ export default function CommunityCard() {
 
 <div className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
   <h3 className="font-semibold mb-2">
-    Why a Digital Wallet?
+    Why connect a Wallet?
   </h3>
 
   <p className="text-zinc-400 leading-relaxed">
-    Unlike a traditional membership card, your Digital Membership is stored in your own wallet. This gives you ownership of your membership, a verifiable digital identity and a foundation for future community participation, achievements and sponsored member benefits.
+    Unlike a traditional membership card, your EDGE Membership is stored in your own wallet. This gives you ownership of your membership, a verifiable digital identity and a foundation for future community participation, achievements and sponsored member benefits.
   </p>
 </div>
 
@@ -279,7 +279,7 @@ export default function CommunityCard() {
               </div>
 
               <p className="text-zinc-400 leading-relaxed">
-                Connect your wallet and claim your Digital Membership.
+                Connect your wallet and claim your EDGE Membership.
                 It only takes a few minutes.
               </p>
 
