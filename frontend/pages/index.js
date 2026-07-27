@@ -1,13 +1,14 @@
-
 'use client'
 
 import { useState, useEffect } from 'react'
 import { useAccount } from 'wagmi'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import Head from 'next/head'
 
 import AdminSBTManager from '../components/AdminSBTManager'
 import MembershipForm from '../components/MembershipForm'
 import Header from '../components/Header'
+
 
 const spotlightItems = [
 
@@ -96,11 +97,38 @@ useEffect(() => {
 
   const spotlight = spotlightItems[activeSpotlight]
 
-  return (
-<div className="bg-black text-white min-h-dvh">
+return (
+  <>
+    <Head>
+      <title>EDGE Spaces | The Community Behind Innovation</title>
 
-<Header />
-   
+      <meta
+        name="description"
+        content="A trusted community where founders, builders, specialists and active investors collaborate to build better products, stronger companies and lasting professional relationships."
+      />
+
+      <meta
+        property="og:title"
+        content="The Community Behind Innovation"
+      />
+
+      <meta
+        property="og:description"
+        content="A trusted community where founders, builders, specialists and active investors collaborate to build better products, stronger companies and lasting professional relationships."
+      />
+
+      <meta
+        property="og:image"
+        content="https://edgespaces.xyz/images/community-preview.jpg"
+      />
+
+      <meta property="og:type" content="website" />
+    </Head>
+
+    <div className="bg-black text-white min-h-dvh">
+
+      <Header />   
+
       {/* HERO */}
 
       <section className="max-w-6xl mx-auto px-6 py-10 md:py-16">
@@ -116,7 +144,7 @@ useEffect(() => {
 </h2>
 
 <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
-A trusted community where founders, builders, specialists and active investors collaborate, contribute and help each other build better products, stronger companies and lasting professional relationships.
+A trusted community where founders, builders, specialists and active investors collaborate, contribute and help each other build better products, stronger companies and lasting professional relationships. 
 </p>
         </div>
 
@@ -559,10 +587,9 @@ Telegram is free to use and creating an account takes about one minute.
 </footer>
 
     </div>
-
-  )
+  </>
+)
 }
-
 
 /* ===================================================== */
 /* COMPONENTS */
@@ -609,7 +636,5 @@ function StatCard({ value, label }) {
       </div>
 
     </div>
-
   )
-
 }
