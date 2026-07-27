@@ -1,17 +1,17 @@
 {
-  "name": "EDGE Spaces Community",
-  "description": "Digital credential issued by EDGE Spaces.",
-"image": "https://edgespaces.xyz/images/community2.png",
+  "name": "EDGE Membership",
+  "description": "Official digital membership credential issued by EDGE Alliance for participation across the EDGE ecosystem.",
+  "image": "https://edgespaces.xyz/images/edge-membership.png",
   "external_url": "https://edgespaces.xyz",
 
   "attributes": [
     {
-      "trait_type": "Credential",
-      "value": "Community"
+      "trait_type": "Issued By",
+      "value": "EDGE Alliance"
     },
     {
-      "trait_type": "Issued By",
-      "value": "EDGE Spaces"
+      "trait_type": "Credential",
+      "value": "EDGE Membership"
     },
     {
       "trait_type": "Status",
@@ -22,4 +22,4 @@
       "value": "2026"
     }
   ]
-} 
+}

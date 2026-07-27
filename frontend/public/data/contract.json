@@ -1,11 +1,8 @@
 {
-  "name": "EDGE Spaces Membership",
-  "description": "Digital credentials for founders, builders, advisors and investors participating in the EDGE Spaces ecosystem.",
+  "name": "EDGE Membership",
+  "description": "Official digital membership issued by EDGE Alliance. EDGE Membership serves as a trusted digital credential for participation across the EDGE ecosystem, providing access to ecosystem services, communities, governance, and future platform capabilities.",
   "image": "https://edgespaces.xyz/images/community.jpg",
   "banner_image": "https://edgespaces.xyz/images/banner.jpg",
   "featured_image": "https://edgespaces.xyz/images/banner.jpg",
   "external_link": "https://edgespaces.xyz"
 }
-
-
-
