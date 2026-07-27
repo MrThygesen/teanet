@@ -1,6 +1,7 @@
 'use client'
 
 import Header from '../components/Header'
+import Head from 'next/head' 
 
 export default function WalletSetup() {
 
@@ -50,6 +51,45 @@ export default function WalletSetup() {
   }
 
   return (
+ <>
+
+<Head>
+  <title>Wallet Setup | EDGE Spaces</title>
+
+  <meta
+    name="description"
+    content="Set up a Polygon-compatible wallet and claim your EDGE Spaces Digital Membership in just a few minutes."
+  />
+
+  <meta
+    property="og:title"
+    content="Wallet Setup | EDGE Spaces"
+  />
+
+  <meta
+    property="og:description"
+    content="Recommended wallets, Polygon setup and everything you need to claim your Digital Membership."
+  />
+
+  <meta
+    property="og:image"
+    content="https://edgespaces.xyz/images/community-preview.jpg"
+  />
+
+  <meta
+    property="og:url"
+    content="https://edgespaces.xyz/wallet-setup"
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EDGE Spaces" />
+  <meta property="og:locale" content="en_US" />
+
+  <link
+    rel="canonical"
+    href="https://edgespaces.xyz/wallet-setup"
+  />
+</Head>
 
     <div className="bg-black text-white min-h-screen">
   <Header />
@@ -337,7 +377,8 @@ export default function WalletSetup() {
 
       </section>
 
-    </div>
+ </div>
+</>
 
   )
 }

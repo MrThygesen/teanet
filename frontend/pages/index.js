@@ -99,35 +99,58 @@ useEffect(() => {
 
 return (
   <>
-    <Head>
-      <title>EDGE Spaces | The Community Behind Innovation</title>
+ <Head>
+  <title>EDGE Spaces | The Community Behind Innovation</title>
 
-      <meta
-        name="description"
-        content="A trusted community where founders, builders, specialists and active investors collaborate to build better products, stronger companies and lasting professional relationships."
-      />
+  <meta
+    name="description"
+    content="A trusted community where founders, builders, specialists and active investors collaborate to build better products, stronger companies and lasting professional relationships."
+  />
 
-      <meta
-        property="og:title"
-        content="The Community Behind Innovation"
-      />
+  <meta
+    property="og:title"
+    content="The Community Behind Innovation"
+  />
 
-      <meta
-        property="og:description"
-        content="A trusted community where founders, builders, specialists and active investors collaborate to build better products, stronger companies and lasting professional relationships."
-      />
+  <meta
+    property="og:description"
+    content="A trusted community where founders, builders, specialists and active investors collaborate to build better products, stronger companies and lasting professional relationships."
+  />
 
-      <meta
-        property="og:image"
-        content="https://edgespaces.xyz/images/community-preview.jpg"
-      />
+  <meta
+    property="og:image"
+    content="https://edgespaces.xyz/images/community-preview.jpg"
+  />
 
-      <meta property="og:type" content="website" />
-    </Head>
+  <meta
+    property="og:url"
+    content="https://edgespaces.xyz/"
+  />
 
-    <div className="bg-black text-white min-h-dvh">
+  <meta
+    property="og:type"
+    content="website"
+  />
 
-      <Header />   
+  <meta
+    property="og:site_name"
+    content="EDGE Spaces"
+  />
+
+  <meta
+    property="og:locale"
+    content="en_US"
+  />
+
+  <link
+    rel="canonical"
+    href="https://edgespaces.xyz/"
+  />
+</Head>
+
+<div className="bg-black text-white min-h-dvh">
+
+  <Header />
 
       {/* HERO */}
 
@@ -140,11 +163,11 @@ return (
 </div>
 
 <h2 className="text-3xl md:text-4xl font-bold mb-6">
-  The Community Behind Innovation
+  A Trusted Startup Community That Builds Together
 </h2>
 
 <p className="mt-8 text-lg md:text-xl text-zinc-400 leading-relaxed max-w-3xl">
-A trusted community where founders, builders, specialists and active investors collaborate, contribute and help each other build better products, stronger companies and lasting professional relationships. 
+A trusted startup community where founders, builders, specialists and active investors solve challenges, build better products, grow stronger companies and create lasting professional relationships.
 </p>
         </div>
 
@@ -214,7 +237,7 @@ text="Experienced investors who actively support founders through capital, mento
       >
 
 <div className="text-sm uppercase tracking-[0.2em] text-blue-400 mb-8">
-Explore the Network
+Who's Inside EDGE Spaces
 </div>
 
 {/* SPOTLIGHT CARD */}
@@ -312,7 +335,7 @@ Explore the Network
         </div>
 
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Participate & Grow
+          How Members Participate
         </h2>
 
         <p className="text-zinc-400 max-w-3xl mb-12">
@@ -354,7 +377,7 @@ Explore the Network
   </div>
 
   <h2 className="text-3xl md:text-4xl font-bold mb-6">
-    More than a chat group
+    Designed for Meaningful Participation
   </h2>
 
   <p className="text-zinc-400 max-w-3xl leading-relaxed mb-12">
@@ -424,7 +447,7 @@ Explore the Network
 
 Join the EDGE Spaces community.
 
-Applications are reviewed manually to build a trusted community where founders, builders, advisors and active investors connect, collaborate and create new opportunities.
+Apply to join a curated startup community built for founders, builders, specialists and active investors.
 </p>
 
 <div className="max-w-4xl">
@@ -480,7 +503,7 @@ Telegram is free to use and creating an account takes about one minute.
       href="/community-card"
       className="inline-block mt-8 text-blue-400 hover:text-blue-300"
     >
-      Learn about Digital Membership Card →
+      Learn about our web3 Digital Membership →
     </a>
 
   </div>

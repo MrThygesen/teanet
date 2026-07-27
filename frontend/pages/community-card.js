@@ -1,11 +1,50 @@
 'use client'
 
+import Head from 'next/head'
 import Header from '../components/Header'
 
 export default function CommunityCard() {
   return (
-    <div className="bg-black text-white min-h-dvh">
+<>   
+ <Head>
+        <title>Digital Membership | EDGE Spaces</title>
 
+        <meta
+          name="description"
+          content="Learn how the EDGE Spaces Digital Membership provides a wallet-based digital identity, community participation and access to future member initiatives."
+        />
+
+        <meta
+         property="og:title"
+          content="Digital Membership | EDGE Spaces"
+        />
+
+        <meta
+          property="og:description"
+          content="A wallet-based digital membership designed for trusted participation, community recognition and future member benefits."
+        />
+
+        <meta
+          property="og:image"
+          content="https://edgespaces.xyz/data/example-membership-card.jpg"
+        />
+
+        <meta
+          property="og:url"
+          content="https://edgespaces.xyz/community-card"
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="EDGE Spaces" />
+        <meta property="og:locale" content="en_US" />
+
+        <link
+          rel="canonical"
+          href="https://edgespaces.xyz/community-card"
+        />
+      </Head>
+
+      <div className="bg-black text-white min-h-dvh">
       <Header />
 
       {/* ===================================================== */}
@@ -280,8 +319,10 @@ export default function CommunityCard() {
       </footer>
 
     </div>
-  )
-}
+    </>
+   )
+ }
+
 
 /* ===================================================== */
 /* BENEFIT CARD */

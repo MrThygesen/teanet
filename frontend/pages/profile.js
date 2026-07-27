@@ -6,6 +6,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { parseAbi } from 'viem'
 import { polygon } from 'wagmi/chains'
 import Header from '../components/Header'
+import Head from 'next/head'
 
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS
 
@@ -275,9 +276,46 @@ await writeContractAsync({
   }
 
   return(
+<>
+<Head>
+  <title>My Membership | EDGE Spaces</title>
+
+  <meta
+    name="description"
+    content="Manage your EDGE Spaces membership, connect your wallet and claim your Digital Membership."
+  />
+
+  <meta
+    property="og:title"
+    content="My Membership | EDGE Spaces"
+  />
+
+  <meta
+    property="og:description"
+    content="Access your membership profile, community credentials and Digital Membership."
+  />
+
+  <meta
+    property="og:image"
+    content="https://edgespaces.xyz/data/example-membership-card.jpg"
+  />
+
+  <meta
+    property="og:url"
+    content="https://edgespaces.xyz/profile"
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EDGE Spaces" />
+  <meta property="og:locale" content="en_US" />
+
+  <link
+    rel="canonical"
+    href="https://edgespaces.xyz/profile"
+  />
+</Head>
 
 <div className="min-h-screen bg-zinc-950 text-white">
-
   <Header />
 
   <div className="max-w-4xl mx-auto px-6 py-16">
@@ -817,7 +855,7 @@ If your email matches an approved membership, this wallet will be linked to your
     </div>
 
 </div>
-
+  </>
   )
 
 }

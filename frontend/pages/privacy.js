@@ -1,11 +1,49 @@
 import Header from '../components/Header'
+import Head from 'next/head'
 
 export default function Privacy() {
 
   return (
+<>
+<Head>
+  <title>Privacy Policy | EDGE Spaces</title>
+
+  <meta
+    name="description"
+    content="Read the EDGE Spaces Privacy Policy and learn how we collect, use and protect member information."
+  />
+
+  <meta
+    property="og:title"
+    content="Privacy Policy | EDGE Spaces"
+  />
+
+  <meta
+    property="og:description"
+    content="Learn how EDGE Spaces handles personal information, Digital Membership data and community applications."
+  />
+
+  <meta
+    property="og:image"
+    content="https://edgespaces.xyz/images/community-preview.jpg"
+  />
+
+  <meta
+    property="og:url"
+    content="https://edgespaces.xyz/privacy"
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EDGE Spaces" />
+  <meta property="og:locale" content="en_US" />
+
+  <link
+    rel="canonical"
+    href="https://edgespaces.xyz/privacy"
+  />
+</Head>
 
     <div className="bg-black text-white min-h-screen">
-
       <Header />
 
       <main className="max-w-4xl mx-auto px-6 py-16">
@@ -80,10 +118,8 @@ export default function Privacy() {
           </section>
 
         </div>
-
       </main>
-
     </div>
-
-  )
+</>
+ )
 }

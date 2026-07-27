@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Header from '../components/Header'
+import Head from 'next/head'
 
 export default function Contact() {
   const [loading, setLoading] = useState(false)
@@ -67,7 +68,46 @@ export default function Contact() {
 
 return (
     <>
-      <div className="bg-black text-white min-h-dvh">
+<Head>
+  <title>Contact | EDGE Spaces</title>
+
+  <meta
+    name="description"
+    content="Contact EDGE Spaces regarding membership, partnerships, events or collaboration."
+  />
+
+  <meta
+    property="og:title"
+    content="Contact | EDGE Spaces"
+  />
+
+  <meta
+    property="og:description"
+    content="Questions about membership, partnerships or collaboration? We'd love to hear from you."
+  />
+
+  <meta
+    property="og:image"
+    content="https://edgespaces.xyz/images/community-preview.jpg"
+  />
+
+  <meta
+    property="og:url"
+    content="https://edgespaces.xyz/contact"
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EDGE Spaces" />
+  <meta property="og:locale" content="en_US" />
+
+  <link
+    rel="canonical"
+    href="https://edgespaces.xyz/contact"
+  />
+</Head>     
+
+
+ <div className="bg-black text-white min-h-dvh">
       <Header />
       <div className="max-w-4xl mx-auto px-6 py-14">
 
