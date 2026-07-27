@@ -56,7 +56,7 @@ export default function Header() {
             href="/community-card"
             className="text-zinc-400 hover:text-white transition"
           >
-            Digital Card
+            EDGE Card
           </a>
 
          <a
