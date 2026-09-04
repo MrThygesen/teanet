@@ -1,0 +1,55 @@
+{
+  "name": "test",
+  "description": "",
+  "image": null,
+  "external_url": null,
+  "attributes": [
+    {
+      "trait_type": "SPV",
+      "value": "test"
+    },
+    {
+      "trait_type": "Legal Entity",
+      "value": "test"
+    },
+    {
+      "trait_type": "Jurisdiction",
+      "value": "Denmark"
+    },
+    {
+      "trait_type": "Structure"
+    },
+    {
+      "trait_type": "Participation Model",
+      "value": "Direct Equity Allocation"
+    },
+    {
+      "trait_type": "Asset Class",
+      "value": "Private Equity"
+    },
+    {
+      "trait_type": "Instrument Type",
+      "value": "Equity"
+    },
+    {
+      "trait_type": "Pool Size",
+      "value": 1000000
+    },
+    {
+      "trait_type": "Currency",
+      "value": "EUR"
+    },
+    {
+      "trait_type": "Minimum Ticket",
+      "value": 1000
+    },
+    {
+      "trait_type": "Typical Ticket",
+      "value": 10000
+    },
+    {
+      "trait_type": "Compliance",
+      "value": "KYC_REQUIRED"
+    }
+  ]
+}
