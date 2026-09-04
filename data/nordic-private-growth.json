@@ -1,0 +1,22 @@
+{
+  "name": "Nordic Private Growth",
+  "description": "A private-market investment pool focused on established and growing companies in the Nordic region, with a long-term approach to value creation.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/nordic-private-growth.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/nordic-private-growth.pdf",
+  "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
+    { "trait_type": "Structure", "value": "Alternative Finance" },
+    { "trait_type": "Participation Model", "value": "Bilateral" },
+    { "trait_type": "Asset Class", "value": "Private Equity" },
+    { "trait_type": "Instrument Type", "value": "Investment Participation Certificate" },
+    { "trait_type": "Model", "value": "Bilateral SPV" },
+    { "trait_type": "Pool Size", "value": "10000000" },
+    { "trait_type": "Minimum Ticket", "value": "50000" },
+    { "trait_type": "Typical Ticket", "value": "250000" },
+    { "trait_type": "Investor Rights", "value": "Defined economic participation" },
+    { "trait_type": "Jurisdiction", "value": "Denmark" },
+    { "trait_type": "SPV", "value": "Nordic Private Growth" },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
+  ]
+}

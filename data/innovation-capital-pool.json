@@ -1,0 +1,22 @@
+{
+  "name": "Innovation Capital Pool",
+  "description": "A private-market investment pool focused on innovative technology companies developing scalable solutions with measurable long-term potential.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/innovation-capital-pool.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/innovation-capital-pool.pdf",
+  "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
+    { "trait_type": "Structure", "value": "Alternative Finance" },
+    { "trait_type": "Participation Model", "value": "Bilateral" },
+    { "trait_type": "Asset Class", "value": "Technology" },
+    { "trait_type": "Instrument Type", "value": "Investment Participation Certificate" },
+    { "trait_type": "Model", "value": "Bilateral SPV" },
+    { "trait_type": "Pool Size", "value": "10000000" },
+    { "trait_type": "Minimum Ticket", "value": "25000" },
+    { "trait_type": "Typical Ticket", "value": "100000" },
+    { "trait_type": "Investor Rights", "value": "Defined economic participation" },
+    { "trait_type": "Jurisdiction", "value": "Denmark" },
+    { "trait_type": "SPV", "value": "Innovation Capital Pool" },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
+  ]
+}

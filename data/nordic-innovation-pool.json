@@ -1,0 +1,22 @@
+{
+  "name": "Nordic Innovation Pool",
+  "description": "A private-market investment pool focused on innovative companies in the Nordic region with strong growth potential and positive societal impact.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/nordic-innovation-pool.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/nordic-innovation-pool.pdf",
+  "attributes": [
+    { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
+    { "trait_type": "Structure", "value": "Alternative Finance" },
+    { "trait_type": "Participation Model", "value": "Bilateral" },
+    { "trait_type": "Asset Class", "value": "Private Market Investments" },
+    { "trait_type": "Instrument Type", "value": "Investment Participation Certificate" },
+    { "trait_type": "Model", "value": "Bilateral SPV" },
+    { "trait_type": "Pool Size", "value": "5000000" },
+    { "trait_type": "Minimum Ticket", "value": "25000" },
+    { "trait_type": "Typical Ticket", "value": "100000" },
+    { "trait_type": "Investor Rights", "value": "Defined economic participation" },
+    { "trait_type": "Jurisdiction", "value": "Denmark" },
+    { "trait_type": "SPV", "value": "Nordic Innovation Pool" },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
+  ]
+}
