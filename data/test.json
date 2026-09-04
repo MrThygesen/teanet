@@ -1,55 +1,22 @@
 {
   "name": "test",
-  "description": "",
-  "image": null,
-  "external_url": null,
+  "description": "Test investment pool for Issura.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/test.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/test.pdf",
   "attributes": [
-    {
-      "trait_type": "SPV",
-      "value": "test"
-    },
-    {
-      "trait_type": "Legal Entity",
-      "value": "test"
-    },
-    {
-      "trait_type": "Jurisdiction",
-      "value": "Denmark"
-    },
-    {
-      "trait_type": "Structure"
-    },
-    {
-      "trait_type": "Participation Model",
-      "value": "Direct Equity Allocation"
-    },
-    {
-      "trait_type": "Asset Class",
-      "value": "Private Equity"
-    },
-    {
-      "trait_type": "Instrument Type",
-      "value": "Equity"
-    },
-    {
-      "trait_type": "Pool Size",
-      "value": 1000000
-    },
-    {
-      "trait_type": "Currency",
-      "value": "EUR"
-    },
-    {
-      "trait_type": "Minimum Ticket",
-      "value": 1000
-    },
-    {
-      "trait_type": "Typical Ticket",
-      "value": 10000
-    },
-    {
-      "trait_type": "Compliance",
-      "value": "KYC_REQUIRED"
-    }
+    { "trait_type": "Legal Document Name", "value": "Investor Allocation Agreement v1" },
+    { "trait_type": "Structure", "value": "Alternative Finance" },
+    { "trait_type": "Participation Model", "value": "Bilateral" },
+    { "trait_type": "Asset Class", "value": "Test Asset" },
+    { "trait_type": "Instrument Type", "value": "Investment Participation Certificate" },
+    { "trait_type": "Model", "value": "Bilateral SPV" },
+    { "trait_type": "Pool Size", "value": "1000000" },
+    { "trait_type": "Minimum Ticket", "value": "10000" },
+    { "trait_type": "Typical Ticket", "value": "50000" },
+    { "trait_type": "Investor Rights", "value": "Defined economic participation" },
+    { "trait_type": "Jurisdiction", "value": "Denmark" },
+    { "trait_type": "SPV", "value": "test" },
+    { "trait_type": "Compliance", "value": "KYC + Investor Policy" },
+    { "trait_type": "Transferable", "value": "No (Soulbound)" }
   ]
 }
