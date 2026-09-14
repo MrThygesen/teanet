@@ -1,8 +1,8 @@
 {
-  "name": "Innovation Capital Syndicate",
+  "name": "Innovation Capital Pool I",
   "description": "A private-market investment syndicate focused on innovative technology companies developing scalable solutions with measurable long-term potential.",
-  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/innovation-capital-syndicate.jpg",
-  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/innovation-capital-syndicate-investor-allocation-agreement.pdf",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/innovation-capital-pool-i.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/innovation-capital-pool-i.pdf",
   "attributes": [
     {
       "trait_type": "SPV",
