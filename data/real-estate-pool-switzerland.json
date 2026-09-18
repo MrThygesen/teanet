@@ -1,0 +1,56 @@
+{
+  "name": "Real Estate Pool Switzerland",
+  "description": "A private-market real estate investment pool providing investors with direct equity participation in selected Swiss real estate opportunities.",
+  "image": "https://raw.githubusercontent.com/MrThygesen/teanet/main/data/real-estate-pool-switzerland.jpg",
+  "external_url": "https://raw.githubusercontent.com/MrThygesen/teanet/main/legal/real-estate-pool-switzerland.pdf",
+  "attributes": [
+    {
+      "trait_type": "SPV",
+      "value": "Real Estate Pool Switzerland"
+    },
+    {
+      "trait_type": "Legal Entity",
+      "value": "DeReal Switzerland"
+    },
+    {
+      "trait_type": "Jurisdiction",
+      "value": "Luxembourg"
+    },
+    {
+      "trait_type": "Structure",
+      "value": "Alternative Finance"
+    },
+    {
+      "trait_type": "Participation Model",
+      "value": "Direct Equity Allocation"
+    },
+    {
+      "trait_type": "Asset Class",
+      "value": "Real Assets"
+    },
+    {
+      "trait_type": "Instrument Type",
+      "value": "Equity"
+    },
+    {
+      "trait_type": "Pool Size",
+      "value": 5000000
+    },
+    {
+      "trait_type": "Currency",
+      "value": "EUR"
+    },
+    {
+      "trait_type": "Minimum Ticket",
+      "value": 10000
+    },
+    {
+      "trait_type": "Typical Ticket",
+      "value": 25000
+    },
+    {
+      "trait_type": "Compliance",
+      "value": "KYC_REQUIRED"
+    }
+  ]
+}
